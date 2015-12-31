@@ -1,0 +1,20 @@
+# Dependencies
+markdown:       kramdown
+highlighter:    rouge
+
+# Setup
+title:          padhi
+tagline:        ''
+description:    ''
+url:            http://saswatpadhi.github.io
+baseurl:        /
+
+author:
+  name:         'Saswat Padhi'
+  url:          http://saswatpadhi.github.io
+
+github:
+  repo:         https://github.com/SaswatPadhi
+
+gems:
+  - jekyll-last-modified-at
