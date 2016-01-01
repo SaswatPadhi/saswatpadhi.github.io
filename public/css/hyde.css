@@ -62,22 +62,6 @@ html {
   font-family: "Lora", serif;
 }
 
-footer {
-  bottom: 0px;
-  position: fixed;
-  padding-top: 4px;
-  font-size: 0.64em;
-  padding-bottom: 4px;
-  color: rgba(0,0,0,.48);
-  background: rgb(255,255,255);
-}
-
-@media (min-width: 48em) {
-  footer {
-    width: 38rem;
-  }
-}
-
 /*
  * Sidebar
  *

@@ -15,6 +15,3 @@ author:
 
 github:
   repo:         https://github.com/SaswatPadhi
-
-gems:
-  - jekyll-last-modified-at
