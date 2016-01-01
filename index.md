@@ -11,23 +11,24 @@ title: Home
 
 <div class="message">
   <img src='public/img/me.jpg'/>
-  <div markdown="1" style='padding-right: 256px;'>
+  <div markdown="1" style='padding-right: 256px; text-align: right;'>
 
-*Hello!*
+MS/PhD Graduate Student  
+Advisor: [Professor Todd Millstein](Todd)  
+PLSE Group, [CS Dept.](CS@UCLA), [UCLA]
 
-I am Saswat, a second year PhD student in the [CS][CS@UCLA]
-at [UCLA]. I am advised by [Prof. Todd Millstein][Todd]
-and work in the PLSE Lab.
+3440 Boelter Hall,  
+Los Angeles, CA 90095-1596
 
-I am interested in _Compilers_,
-_Program Analysis_, _Program Verification_ and _Programming Language Theory_.
+<i class="fa fa-skype"></i> saswat.padhi  
+<i class="fa fa-envelope"></i> padhi <i class="fa fa-at"></i> cs &middot; ucla &middot; edu  
+<i class="fa fa-github-alt"></i> [saswatpadhi](https://github.com/SaswatPadhi) &bull; <i class="fa fa-linkedin-square"></i> [saswatpadhi](https://www.linkedin.com/in/saswatpadhi)  
 
   </div>
   <div style="clear: both;"></div>
 </div>
 
 
-Thanks for visiting!
 
 
 

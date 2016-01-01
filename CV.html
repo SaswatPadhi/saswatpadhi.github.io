@@ -1,0 +1,14 @@
+---
+layout: blank_page
+title: CV
+---
+
+<object id="CVpdf" data="{{ site.baseurl }}public/pdf/CV.pdf" type="application/pdf" style="width: 100%; padding-top: 12px; border-bottom: 2px solid black;">
+    Your browser does not support PDF objects in HTML.<br>
+    Please download the PDF version <a href="{{ site.baseurl }}public/pdf/CV.pdf">here</a>
+</object>
+
+<script>
+  $(window).resize(function() { $("#CVpdf").height($(window).height() - $("#CVpdf").offset().top - 24); });
+  $(window).load(function() { $(window).resize(); });
+</script>

@@ -1,0 +1,15 @@
+---
+layout: blank_page
+title: PLDI'16
+nav: false
+---
+
+<object id="pdfData" data="{{ site.baseurl }}public/pdf/pldi16-pie.pdf" type="application/pdf" style="width: 100%; padding-top: 12px; border-bottom: 2px solid black;">
+    Your browser does not support PDF objects in HTML.<br>
+    Please download the PDF version <a href="{{ site.baseurl }}public/pdf/pldi16-pie.pdf">here</a>
+</object>
+
+<script>
+  $(window).resize(function() { $("#pdfData").height($(window).height() - $("#pdfData").offset().top - 24); });
+  $(window).load(function() { $(window).resize(); });
+</script>
