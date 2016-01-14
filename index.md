@@ -11,7 +11,7 @@ title: Home
 
 <div class="message">
   <img src='public/img/me.jpg'/>
-  <div markdown="1" style='padding-right: 256px; text-align: right;'>
+  <div markdown="1" class="msg">
 
 MS/PhD Graduate Student  
 Advisor: [Professor Todd Millstein](Todd)  

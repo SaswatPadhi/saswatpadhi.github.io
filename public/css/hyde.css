@@ -40,12 +40,26 @@ html {
   float: right;
 }
 
+.message .msg {
+  padding-right: 0px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
 @media (min-width: 48em) {
   html {
     font-size: 16px;
   }
+}
+
+@media (min-width: 54em) {
   .message img {
-    width: 144px;
+    width: 185px;
+  }
+  .message .msg {
+     padding-right: 195px;
+     text-align: right;
+     font-size: 1.1em;
   }
 }
 
@@ -54,7 +68,23 @@ html {
     font-size: 20px;
   }
   .message img {
-    width: 225px;
+    width: 100%;
+  }
+  .message .msg {
+    padding-right: 0px;
+     text-align: center;
+     font-size: 1.2em;
+  }
+}
+
+@media (min-width: 72em) {
+  .message img {
+    width: 230px;
+  }
+  .message .msg {
+     padding-right: 240px;
+     text-align: right;
+     font-size: 1.1em;
   }
 }
 
