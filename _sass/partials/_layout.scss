@@ -1,0 +1,39 @@
+.layout {
+  margin: 0 auto;
+  max-width: $site-max-width + px;
+  width: 100%;
+}
+
+.site-main {
+  @include media(small) {
+    margin: ($site-header-vspace-small-screen + px) ($default-gap-thicker + px) ($site-footer-vspace-small-screen + px) ($default-gap-thicker + px);
+  }
+
+
+  @include media(medium) {
+    margin: ($site-header-vspace-medium-screen + px) ($default-gap-thicker + px) ($site-footer-vspace-medium-screen + px) ($default-gap-thicker + px);
+  }
+
+
+  margin: ($site-header-vspace + px) ($default-gap-thicker + px) ($site-footer-vspace + px) ($default-gap-thicker + px);
+  z-index: 0;
+
+  img {
+    margin: 0.25rem;
+  }
+}
+
+.site-container {
+  box-sizing: border-box;
+  width: 100%;
+
+  li {
+    margin: 0.2em 0;
+  }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

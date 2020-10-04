@@ -1,0 +1,122 @@
+---
+layout: base
+
+mathjax: true
+prismjs: true
+revealjs: true
+---
+
+<div class='reveal paused'>
+  <div class='slides' style='display:none'>
+    <div class='slide-counter'></div>
+    <div class='goto-viewer'><span class='message'></span></div>
+
+    <footer>
+      <nav>Saswat Padhi</nav>
+      <nav>{{ page.heading }}</nav>
+      <nav>{{ page.target | remove: "[" | remove: "]" }} {% unless page.location == "" %} &thinsp; @ &thinsp; {{ page.location }} {% endunless %}</nav>
+    </footer>
+
+    {% include tools/text_process.md no_abbrv=true data=content %}
+  </div>
+</div>
+
+<script>
+  "use strict"
+
+  Reveal.initialize({
+    center: false,
+    controls: false,
+    display: 'block',
+    height: 768,
+    hideCursorTime: 500,
+    hash: true,
+    history: false,
+    keyboard: true,
+    margin: 0,
+    overview: false,
+    progress: true,
+    slideNumber: false,
+    transition: '{{ page.transition | default: "none" }}',
+    transitionSpeed: '{{ page.transitionSpeed | default: "default" }}',
+    width: 1024,
+    viewDistance: 1024,
+    zoomKey: 'shift',
+    dependencies: [
+      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/zoom-js/zoom.js', async: true },
+      { src: '{{ site.baseurl}}/assets/js/revealjs-notes.js', async: true },
+      { src: '{{ site.baseurl}}/assets/js/revealjs-mouse-pointer.js', async: true },
+    ]
+  })
+
+  const footer = document.querySelector('.reveal footer')
+  const counter = document.querySelector('.reveal .slide-counter')
+
+  function update (event) {
+    var present = document.querySelector('.reveal .present')
+    if (present.classList.contains('title-slide') || Reveal.isOverview()) {
+      counter.style.opacity = footer.style.opacity = 0
+    } else {
+      counter.innerHTML = Reveal.getIndices().h
+      counter.style.opacity = footer.style.opacity = 1
+    }
+    var persistent_title = document.querySelector('.reveal .present .persistent-title')
+    if (persistent_title) {
+      persistent_title.style.right = counter.scrollWidth + 24 + 'px'
+    }
+  };
+
+  Reveal.addEventListener('slidechanged', update)
+  Reveal.addEventListener('ready', update)
+
+  Reveal.addEventListener( 'fragmentshown', function(event) {
+    if (typeof event.fragment.dataset.fragmentShowCallback !== 'undefined')
+      window[event.fragment.dataset.fragmentShowCallback].call (event.fragment, event)
+  });
+  Reveal.addEventListener( 'fragmenthidden', function(event) {
+    if (typeof event.fragment.dataset.fragmentHideCallback !== 'undefined')
+      window[event.fragment.dataset.fragmentHideCallback].call (event.fragment, event)
+  });
+
+  const goto_viewer = document.querySelector('.reveal .goto-viewer')
+  const goto_message = document.querySelector('.reveal .goto-viewer .message')
+
+  let goto_slide = ''
+  let last_timer = undefined
+
+  function clearGoto () {
+    goto_viewer.style.opacity = 0
+    goto_slide = ''
+  }
+
+  function keyHandle (event) {
+    let isSpecialKey = event.shiftKey || event.ctrlKey || event.altKey || event.metaKey
+    let isNumberKey = event.which >= 48 && event.which <= 57
+
+    if (isNumberKey && !isSpecialKey) {
+      clearTimeout(last_timer)
+      goto_viewer.style.opacity = 1
+      goto_slide += String.fromCharCode(event.charCode)
+      goto_message.innerHTML = goto_slide
+      last_timer = setTimeout(clearGoto, 1024)
+    } else {
+      last_timer = setTimeout(clearGoto, 32)
+      if (event.which === 13 && goto_slide !== '') {
+        goto_message.innerHTML = goto_slide + ' &#x23CE;'
+        Reveal.slide(goto_slide, -1, -1)
+      }
+      goto_slide = ''
+    }
+  }
+
+  Reveal.addEventListener('ready', function(event) {
+    document.querySelector('.reveal .slides').style.display = "";
+    update()
+    {% unless layout.mathjax or page.mathjax -%}
+      Reveal.togglePause()
+    {%- endunless %}
+    document.onkeypress = keyHandle
+  })
+
+  Reveal.addKeyBinding({ keyCode:1000, key:'[number] RETURN', description:'Jump to [number] slide' }, null)
+</script>

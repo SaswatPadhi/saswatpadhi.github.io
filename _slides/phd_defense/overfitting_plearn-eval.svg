@@ -1,0 +1,74 @@
+<svg viewBox='-30 0 540 225' xmlns='http://www.w3.org/2000/svg'
+     style='border-radius:0.25em; box-shadow:0.03125em 0.03125em 0.09375em 1px DarkGray; margin:0.375em auto 0; width:85%'
+     class='fragment' data-fragment-index='1'>
+  <rect x='-30' y='0' width='100%' height='100%' fill='White' />
+
+  <image x='10' y='12' height='208px' width='384px' transform='scale(0.425 0.425)' href='images/lig-plearn.png' />
+  <text x='60' y='103' class='subheading' font-size='0.3em' font-weight='bold' fill='DarkMagenta'
+        font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
+    LoopInvGen
+  </text>
+  <text x='133.5' y='99' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+    <a href='https://github.com/SaswatPadhi/LoopInvGen'>
+      [&nearr;]
+    </a>
+  </text>
+
+  <image x='391' y='11' height='208px' width='384px' transform='scale(0.4275 0.4275)'
+         href='images/cvc4-plearn.png' />
+  <text x='231' y='103' class='subheading' font-size='0.3em' font-weight='bold' fill='DarkMagenta'
+        font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
+    CVC4
+  </text>
+  <text x='267' y='99' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+    <a href='https://github.com/CVC4/CVC4'>
+      [&nearr;]
+    </a>
+  </text>
+
+  <image x='10' y='274' height='208px' width='384px' transform='scale(0.425 0.425)'
+         href='images/stoch-plearn.png' />
+  <text x='78' y='215' class='subheading' fill='DarkMagenta' font-size='0.3em' font-weight='bold'
+        font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
+    Stoch
+  </text>
+
+  <image x='394' y='275.875' height='208px' width='384px' transform='scale(0.42325 0.42325)'
+         href='images/sketch-plearn.png' />
+  <text x='218' y='215' class='subheading' font-size='0.3em' font-weight='bold' fill='DarkMagenta'
+        font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
+    SketchAC
+  </text>
+  <text x='279' y='210' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+    <a href='https://github.com/plum-umd/adaptive-concretization'>
+      [&nearr;]
+    </a>
+  </text>
+
+  <image x='769' y='271.25' height='208px' width='384px' transform='scale(0.42775 0.42775)'
+         href='images/eusolver-plearn.png' />
+  <text x='382' y='215' class='subheading' font-size='0.3em' font-weight='bold' fill='DarkMagenta'
+        font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
+    EUSolver
+  </text>
+  <text x='442.5' y='210' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+    <a href='https://bitbucket.org/abhishekudupa/eusolver/src/master/'>
+      [&nearr;]
+    </a>
+  </text>
+
+  <foreignObject x='345' y='3' width='40%' height='40%'>
+<div xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.2725em;'>
+  <span style='color:#2F5597;'>&#x2716; Original failure count</span> <br>
+  &emsp;&thinsp;(U-shaped trend)
+  <br><br>
+  <span style='color:#ED7C31;'>&#x25CF; Failure count with =sc^PLearn^sc=</span> <br>
+  &emsp;&thinsp;(decreasing trend)
+</div>
+  </foreignObject>
+
+  <text x='-20' y='112' transform='rotate(-90, 15, 135)' class='subheading' font-size='0.3em' font-weight='bold'
+        dominant-baseline='middle'>
+    Number of failures
+  </text>
+</svg>

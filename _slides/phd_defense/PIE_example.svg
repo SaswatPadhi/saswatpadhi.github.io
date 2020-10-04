@@ -1,0 +1,176 @@
+<svg viewBox='-40 14 620 340' xmlns='http://www.w3.org/2000/svg'
+     style='margin:0.35em auto 0; width:83%'
+     class='fragment' data-fragment-index='4'>
+
+  <svg x='-68' y='12' width='230' height='64'>
+    <foreignobject x='25%' y='-38%' width='100%' height='125%'>
+      <span style='color:Olive; font-size:0.325em'>
+      $t_1 = \mathtt{("pie", 1, -1)}$
+      </span>
+    </foreignobject>
+    <foreignobject x='25%' y='-16%' width='100%' height='125%'>
+      <span style='color:Olive; font-size:0.325em'>
+      $t_2 = \mathtt{("xy", 2, 3)}$
+      </span>
+    </foreignobject>
+    <foreignobject x='25%' y='6%' width='100%' height='125%'>
+      <span style='color:Olive; font-size:0.325em'>
+      $t_3 = \mathtt{("a", -1, 3)}$
+      </span>
+    </foreignobject>
+    <foreignobject x='25%' y='28%' width='100%' height='125%'>
+      <span style='color:Olive; font-size:0.325em'>
+      $t_4 = \mathtt{("siva", 1, 2)}$
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 125,19 C 135,19 125,45 135,45' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+  <path d='M 135,45 L 176,45' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+  <path d='M 125,72 C 135,72 125,45 135,45' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+
+  <svg x='180' y='30' width='152' height='30'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='#444' />
+    <text x='50%' y='52.5%' fill='LightGray' font-size='0.375em' font-weight='bold' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      substring(s, i, l)
+    </text>
+  </svg>
+
+  <path d='M 256,60 L 256,86' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+  <svg x='196' y='90' width='120' height='36'>
+    <polygon points='59.5,34 60.5,34 118,18 60.5,2 59.5,2 2,18' fill='#444'
+             stroke-linejoin='round' stroke-width='4' stroke='#444' />
+    <text x='50%' y='50%' fill='LightGray' font-size='0.37em' font-weight='bold' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      no exception
+    </text>
+  </svg>
+
+  <path d='M 196,108 L 186,108 Q 176,108 176,120 L 176,144' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+  <svg x='126' y='148' width='100' height='36' class='fragment' data-fragment-index='5'>
+    <ellipse cx='50%' cy='50%' rx='49%' ry='47%' fill='#FAFFFA' stroke='ForestGreen' stroke-width='2' />
+    <foreignobject x='46%' y='-52%' width='100%' height='125%'>
+      <span style='color:ForestGreen; font-size:0.4em'>
+      $t_4$
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 316,108 L 326,108 Q 336,108 336,120 L 336,144' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+  <svg x='286' y='148' width='100' height='36' class='fragment' data-fragment-index='5'>
+    <ellipse cx='50%' cy='50%' rx='49%' ry='47%' fill='#FFFAFA' stroke='DarkRed' stroke-width='2' />
+    <foreignobject x='25%' y='-52%' width='100%' height='125%'>
+      <span style='color:DarkRed; font-size:0.4em'>
+      $t_1, t_2, t_3$
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 176,184 L 176,192 Q 176,200 186,200 L 222,200 Q 232,200 232,208 L 232,216' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='6' />
+  <path d='M 336,184 L 336,192 Q 336,200 326,200 L 290,200 Q 280,200 280,208 L 280,216' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='6' />
+  <svg x='181' y='220' width='150' height='36' class='fragment' data-fragment-index='6'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='SlateGray' />
+    <text x='50%' y='35%' fill='White' font-size='0.35em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Boolean-Function
+    </text>
+    <text x='50%' y='70%' fill='White' font-size='0.35em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Learner
+    </text>
+  </svg>
+
+  <path d='M 126,238 L 176,238' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='7' />
+  <svg x='17' y='220' width='102' height='36' class='fragment' data-fragment-index='7'>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.45em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Feature Set
+    </text>
+  </svg>
+
+  <path d='M 62,195 L 62,225' fill='none' stroke-dasharray='1.5 2.5'
+        stroke-linecap='round' stroke-linejoin='round' stroke='Olive' stroke-width='0.5'
+        class='fragment' data-fragment-index='7' />
+  <svg x='5' y='146' width='120' height='49' class='fragment' data-fragment-index='7'>
+    <rect x='0' y='0' width='100%' height='100%' fill='none'
+          stroke='Olive' stroke-width='1.5' stroke-dasharray='1.5 2.5' />
+    <text x='50%' y='25%' fill='Olive' font-size='0.275em' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      (l != 0), (l &geq; 0),
+    </text>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.275em' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      (i &geq; 0), (s != ""),
+    </text>
+    <text x='50%' y='80%' fill='Olive' font-size='0.275em' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      (i + l &leq; s.length) &hellip;
+    </text>
+  </svg>
+
+  <path d='M 155,150 L 65,124.5' fill='none' stroke-dasharray='1.5 2.5'
+        stroke-linecap='round' stroke-linejoin='round' stroke='ForestGreen' stroke-width='0.5'
+        class='fragment' data-fragment-index='8' />
+  <svg x='10' y='90' width='111' height='35' class='fragment' data-fragment-index='8'>
+    <rect x='0' y='0' width='100%' height='100%' fill='none'
+          stroke='ForestGreen' stroke-width='1.5' stroke-dasharray='1.5 2.5' />
+    <foreignobject x='12%' y='-55%' width='100%' height='140%'>
+      <span style='color:ForestGreen; font-size:0.35em'>
+      $p(t_i) = \mathtt{true}$
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 360,150 L 437,125' fill='none' stroke-dasharray='1.5 2.5'
+        stroke-linecap='round' stroke-linejoin='round' stroke='DarkRed' stroke-width='0.5'
+        class='fragment' data-fragment-index='8' />
+  <svg x='382' y='90' width='111' height='35' class='fragment' data-fragment-index='8'>
+    <rect x='0' y='0' width='100%' height='100%' fill='none'
+          stroke='DarkRed' stroke-width='1.5' stroke-dasharray='1.5 2.5' />
+    <foreignobject x='12%' y='-55%' width='100%' height='140%'>
+      <span style='color:DarkRed; font-size:0.35em'>
+      $p(t_i) = \mathtt{false}$
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 331,238 L 380,238' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='8' />
+  <svg x='390' y='227' width='180' height='50' class='fragment' data-fragment-index='8'>
+    <foreignobject x='0' y='-52%' width='100%' height='150%'>
+      <span style='color:ForestGreen; font-size:0.5em'>
+      $p = $
+      </span>
+      <span style='color:ForestGreen; font-size:0.35em' class='mono'>
+      (i &geq; 0) &wedge; (l &geq; 0)
+      </span>
+    </foreignobject>
+    <foreignobject x='14%' y='-15%' width='100%' height='150%'>
+      <span style='color:ForestGreen; font-size:0.35em' class='mono'>
+      &wedge; (i + l &leq; s.length)
+      </span> 
+    </foreignobject>
+  </svg>
+
+
+</svg>

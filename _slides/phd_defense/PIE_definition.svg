@@ -1,0 +1,32 @@
+<svg viewBox='32 0 256 116' xmlns='http://www.w3.org/2000/svg'
+     style='margin:-0.25em auto 0.25em; width:90%'>
+
+  <path d='M 128,0 L 128,32' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        stroke-dasharray='1 5' />
+  <svg x='135' y='5' width='120' height='24'>
+    <text x='50%' y='52.5%' fill='DarkMagenta' font-size='0.5em' font-weight='bold' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      assume Pre
+    </text>
+  </svg>
+
+  <svg x='68' y='40' width='120' height='36'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='SlateGray' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.65em' font-weight='bold' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      Code
+    </text>
+  </svg>
+
+  <path d='M 128,80 L 128,112' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        stroke-dasharray='1 5' />
+  <svg x='138' y='85' width='120' height='24'>
+    <text x='50%' y='52.5%' fill='DarkMagenta' font-size='0.5em' font-weight='bold' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      assert Post
+    </text>
+  </svg>
+
+</svg>

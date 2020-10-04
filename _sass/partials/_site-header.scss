@@ -1,0 +1,58 @@
+$header-border-height: $default-border-thickness;
+
+$header-font-size: 1.3rem;
+$header-font-size-medium: 1.5rem;
+
+.site-header {
+  background-color: $color-background;
+  border-bottom: ($header-border-height + px) solid fade-out($color-highlight, $default-color-delta-huge / 100);
+  font-size: $header-font-size;
+  max-width: inherit;
+  padding-bottom: ($default-gap-medium + px);
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+
+  .site-header-container {
+    margin: 0;
+
+    * {
+      vertical-align: middle;
+    }
+
+    .site-header-title {
+      color: inherit;
+      font: bold 1.5em $site-font-stack-head;
+      margin: auto 0px;
+      transition: none;
+    }
+
+    .site-header-links {
+      margin: auto 0px;
+
+      font: bold 1em $site-font-stack-head;
+      @include media(medium) {
+        @if $site-tagline == 0 {
+          font-size: 1.2em;
+        } @else {
+          font-size: 1.4em;
+        }
+      }
+    }
+
+    .site-header-subtitle {
+      font-family: $site-font-stack-base;
+      font-size: 0.75em;
+    }
+
+    @include set_color_and_hover($color-highlight);
+
+    @include media(medium) {
+      margin: 0 ($default-gap-medium + px);
+    }
+  }
+
+  @include media(medium) {
+    font-size: $header-font-size-medium;
+  }
+}

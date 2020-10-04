@@ -1,0 +1,256 @@
+html {
+  font-size: 14px;
+  line-height: 1.375;
+
+  @include media(medium) {
+    font-size: 16px;
+  }
+}
+
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  font-family: $site-font-stack-base;
+}
+
+code, kbd, pre, samp, .mono {
+  font-family: $site-font-stack-mono;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote {
+  text-align: justify;
+  margin-left: 0.5em;
+  margin-right: 0em;
+  padding: 0.5em;
+  border-radius: 1em 0 1em 1em;
+  background: #F8F8F9;
+  border: 1px solid #F0F0F0;
+}
+
+a {
+  text-decoration: none;
+  cursor:pointer;
+}
+
+p {
+  margin: 1em 0;
+}
+
+#{headings()}, .heading {
+  margin: 1rem 0 0.5rem 0;
+  font-family: $site-font-stack-head;
+  font-weight: bold;
+
+  + p {
+    margin-top: 0;
+  }
+
+  + pre {
+    margin-top: 0.625em !important;
+  }
+}
+@include set_heading_font_sizes();
+
+.subscript {
+  vertical-align: sub;
+  font-size: 0.75em;
+}
+
+.superscript {
+  vertical-align: super;
+  font-size: 0.75em;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+abbr[title], acronym[title], .small-caps {
+  letter-spacing: 0.0625em;
+}
+
+details {
+  border: 1px solid #DADADA;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em 0.35em;
+
+  &[open] {
+    padding: 0.25em 0.5em 0;
+
+    > summary::after {
+      content: "\00A0\00A0[hide]";
+      font-variant: small-caps;
+    }
+  }
+
+  > summary::after {
+    content: "\00A0\00A0[show]";
+    font-variant: small-caps;
+  }
+
+  summary:focus, summary:active {
+    outline: none;
+  }
+}
+
+.ps-algorithmic {
+  margin: 0.25em 0 0.5em;
+
+  > .ps-block {
+    > .ps-line {
+      margin-top: 0.75em;
+
+      &:first-of-type {
+        margin-top: inherit;
+      }
+    }
+
+    .ps-comment {
+      color: #888;
+    }
+
+    .ps-linenum {
+      color: #999;
+    }
+  }
+}
+.tweet p::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+  content: "\F099";
+  margin-left: 0.75em;
+  margin-right: 1.5em;
+  color: #CCC;
+  transition: color 0.2s ease;
+}
+
+.tweet:hover p::before, .tweet.hovering p::before {
+  color: #38A1F3;
+}
+
+ol.custom {
+  list-style: none;
+  counter-reset: item;
+  margin-left: 0em;
+
+  > li::before {
+    content: var(--prefix) counter(item) ".";
+    counter-increment: item;
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2em;
+  }
+}
+
+.footnotes {
+  font-size: 0.9em;
+
+  &:first-of-type {
+    counter-reset: footnote;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: 1px dashed #BBB;
+  }
+
+  &:last-of-type {
+    margin-bottom: 1em;
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+
+    li {
+      p {
+        display: inline;
+      }
+
+      &::before {
+        counter-increment: footnote;
+        content: counter(footnote) ".";
+        display: inline-block;
+        width: 1.25em;
+        margin-left: -1.5em;
+      }
+    }
+  }
+}
+
+.definition {
+  counter-increment: theorem;
+  display: block;
+
+  font-family: $site-font-stack-head;
+  outline: 5px dotted #FAEFEF;
+  outline-offset: -3px;
+  background-color: #FAEFEF;
+  margin: 0.5em 0.25em;
+  padding: 0.5em;
+
+  p { display: inline; }
+
+  &:before {
+    content: "Definition " counter(theorem) ". ";
+    font-weight: bold;
+  }
+
+  &[name]:before {
+    content: "Definition " counter(theorem) " (" attr(name) "). ";
+  }
+}
+
+.lemma {
+  counter-increment: theorem;
+  display: block;
+
+  font-family: $site-font-stack-head;
+  outline: 4px dashed #EFEFFA;
+  outline-offset: -2px;
+  background-color: #EFEFFA;
+  margin: 0.5em 0.25em;
+  padding: 0.5em;
+
+  p { display: inline; }
+
+  &:before {
+    content: "Lemma " counter(theorem) ". ";
+    font-weight: bold;
+  }
+
+  &[name]:before {
+    content: "Lemma " counter(theorem) " (" attr(name) "). ";
+  }
+}
+
+.theorem {
+  counter-increment: theorem;
+  display: block;
+
+  font-family: $site-font-stack-head;
+  outline: 4px dashed #EFEFFA;
+  outline-offset: -2px;
+  background-color: #EFEFFA;
+  margin: 0.5em 0.25em;
+  padding: 0.5em;
+
+  p { display: inline; }
+
+  &:before {
+    content: "Theorem " counter(theorem) ". ";
+    font-weight: bold;
+  }
+
+  &[name]:before {
+    content: "Theorem " counter(theorem) " (" attr(name) "). ";
+  }
+}

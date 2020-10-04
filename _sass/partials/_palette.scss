@@ -1,0 +1,47 @@
+$color-background: #FFFFFC;
+$color-foreground: #263238;
+$color-highlight: #2E7D32;
+$color-hyperlink: #0277BD;
+$color-accent: #A52624;
+$color-medium-accent: #862286;
+
+@include make_colors(((background, $color-background),
+                      (foreground, $color-foreground),
+                      (highlight, $color-highlight),
+                      (hyperlink, $color-hyperlink),
+                      (accent, $color-accent),
+                      (medium-accent, $color-medium-accent)));
+
+.color-faded { opacity: 0.85; }
+
+.color-more-faded { opacity: 0.7; }
+
+body {
+  background-color: $color-background;
+  color: $color-foreground;
+}
+
+h1 { color: $color-foreground; }
+#{headings(2)} {
+  color: lighten($color-foreground, percentage($default-color-delta-small / 100));
+}
+
+a {
+  @include set_color_and_hover($color-hyperlink);
+  &[class*="highlighted"] {
+    @include set_color_and_hover($color-highlight);
+  }
+}
+
+details {
+  > summary {
+    @include set_color_and_hover($color-accent);
+  }
+}
+
+svg a {
+  @include set_color_and_hover($color-hyperlink, $color-attrib: fill);
+  &[class*="highlighted"] {
+    @include set_color_and_hover($color-highlight, $color-attrib: fill);
+  }
+}

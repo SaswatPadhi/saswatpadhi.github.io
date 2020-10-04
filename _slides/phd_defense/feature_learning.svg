@@ -1,0 +1,65 @@
+<svg viewBox='25 10 525 110' xmlns='http://www.w3.org/2000/svg'
+     style='margin:0.25em auto; width:95%'>
+
+  <text x='70' y='38' fill='Olive' class='subheading' font-size='0.35em' dominant-baseline='middle'>
+    Data
+  </text>
+
+  <path d='M 110,38 L 160,38' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <svg x='165' y='20' width='140' height='36'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='SlateGray' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Synthesizer
+    </text>
+  </svg>
+
+  <text x='360' y='38.5' class='color-highlight subheading fragment fade-out' font-size='0.4em'
+        dominant-baseline='middle' data-fragment-index='1'>
+    Properties
+  </text>
+
+  <path d='M 305,38 L 351,38' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <foreignobject x='219' y='66.5' width='56' height='56'
+                 class='fragment fade-in' data-fragment-index='1'>
+    <i class='fas fa-fw fa-user' style='font-size:0.65em; color:DarkMagenta'></i>
+  </foreignobject>
+
+  <path d='M 217,107 C 195,107.5 195,85 213,85 S 230,85 230,60' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment fade-in' data-fragment-index='1' />
+
+  <text x='355' y='83' fill='DarkRed' class='subheading fragment fade-in' font-size='0.325em'
+        dominant-baseline='middle' data-fragment-index='1'>
+    [Prior techniques]
+  </text>
+  <text x='325' y='98' fill='Gray' class='fragment fade-in' font-size='0.2em'
+        dominant-baseline='middle' data-fragment-index='1'>
+    P. Garg et al. CAV =qq= 14, R. Sharma et al. CAV =qq= 14,
+  </text>
+  <text x='325' y='108' fill='Gray' class='fragment fade-in' font-size='0.2em'
+        dominant-baseline='middle' data-fragment-index='1'>
+    T. Gehr et al. CAV =qq= 15, P. Garg et al. POPL =qq= 16, &hellip;
+  </text>
+
+  <text x='80' y='85' fill='Olive' class='subheading fragment fade-in' font-size='0.275em'
+        dominant-baseline='middle' data-fragment-index='1'>
+    Features over data
+  </text>
+  <foreignobject x='102' y='60' width='60' height='56' class='fragment fade-in' data-fragment-index='1'>
+    <span style='font-size:0.275em; color:Olive'>$\{ f_1, \ldots, f_n \}$</span>
+  </foreignobject>
+
+  <foreignobject x='360' y='1' width='128' height='72' class='fragment fade-in' data-fragment-index='1'>
+    <span style='font-size:0.375em; color:Olive'>$ (f_1 \vee \neg f_3) \wedge f_2 \ldots $</span>
+  </foreignobject>
+
+  <rect x='74' y='75' width='112' rx='1.5%' height='36' fill='red' fill-opacity='0.1'
+        stroke='DarkRed' stroke-width='2'
+        class='fragment fade-in' data-fragment-index='2' />
+
+</svg>

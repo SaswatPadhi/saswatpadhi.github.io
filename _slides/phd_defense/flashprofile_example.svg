@@ -1,0 +1,18 @@
+<svg viewBox='0 0 450 80' xmlns='http://www.w3.org/2000/svg'
+     style='margin:0.15em auto 0.1em; width:70%'
+     class='fragment' data-fragment-index='5'>
+
+  <path d='M 282,2 Q 305,36 285,74' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='3' />
+
+  <path d='M 165,78 Q 139.5,40 162,6' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='3' />
+
+  <text x='157' y='33' class='color-accent' font-size='0.45em' dominant-baseline='middle'>
+    User-controlled
+  </text>
+  <text x='178' y='58' class='color-accent' font-size='0.45em' dominant-baseline='middle'>
+    refinement
+  </text>
+
+</svg>

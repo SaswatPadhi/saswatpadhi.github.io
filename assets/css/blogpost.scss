@@ -1,0 +1,74 @@
+---
+---
+
+{% include sass_config.md %}
+
+.utterances {
+  max-width: 100%;
+}
+
+.tagline {
+  font-size: 0.95em;
+  margin-top: -0.625em;
+  letter-spacing: 0.025em;
+  font-style: italic;
+}
+
+.post-header {
+  margin: 1.5em 0;
+  opacity: 0.8;
+
+  .date {
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: $site-font-stack-mono;
+  }
+
+  .category {
+    display: inline-block;
+    height: 1.5em;
+    letter-spacing: 0.02em;
+    margin: 0 0.3125em;
+    border-radius: 0.3125em;
+    background: gray;
+    color: white
+  }
+
+  .right {
+    float: right;
+    opacity: 0.6;
+  }
+}
+
+.post-content {
+  text-align: justify;
+  counter-reset: figure;
+
+  h2, h3, h4, h5, h6, .heading {
+    margin-top: 1.625rem;
+  }
+
+  ul {
+    list-style: none;
+  
+    > li::before {
+      content: "\2022";
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  ol.heading-list-items {
+    li {
+      margin-top: 0.75em;
+    }
+  }
+}
+
+.post-footer {
+  text-align: justify;
+  font-size: 0.725em;
+  margin-bottom: 1em;
+}

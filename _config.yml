@@ -1,0 +1,126 @@
+## Plugin Configurations
+
+liquid:
+  error_mode: strict
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    disable : true
+
+sass:
+  style: compressed
+
+
+## Globals
+
+url:        https://www.padhi.us
+baseurl:
+repository: SaswatPadhi/saswatpadhi.github.io
+permalink:  pretty
+
+title:      'Saswat Padhi'
+timezone:   'America/Los_Angeles'
+
+author:
+  name:     'Saswat Padhi'
+  link:     https://www.padhi.us
+  photo:
+    alt:    'Avatar from GitHub'
+    remote: https://avatars3.githubusercontent.com/u/1577944
+#    local: assets/img/photo.jpg
+
+github: [metadata]
+
+## Theme and Layout
+
+default_icon:
+  award: award
+  position: id-badge
+  publication: file-alt
+  service: user-cog
+  talk: microphone
+  teaching: chalkboard-teacher
+
+default_highlight:
+  award: accent
+  position: medium-accent
+  publication: highlight
+
+# Defaults:
+# ---------
+# theme:
+#   tooltips:    enabled
+#   hover_light: enabled
+#
+# fonts:
+#   base: Noto Sans
+#   head: Montserrat
+#   mono: Ubuntu Mono
+#
+# layout:
+#   header:
+#     style: scroll # (can be: scroll | fixed | disabled)
+#   footer:
+#     style: scroll # (can be: scroll | fixed | disabled)
+
+layout:
+  header:
+    style: fixed
+
+topmenu:
+  Resume:
+    updates:
+      local: updates.md
+    cv:
+      local: CV.md
+    LinkedIn:
+      url:   https://www.linkedin.com/in/saswatpadhi
+      title: LinkedIn
+      icon:  fab fa-linkedin-in
+  Main:
+    publications:
+      local: publications.md
+    slides:
+      local: slides.md
+    GitHubProfile:
+      url:   https://github.com/SaswatPadhi
+      title: GitHub
+      icon:  fab fa-github
+  Misc:
+    blog:
+      local: blog.md
+    other:
+      local: personal.md
+
+collections:
+  blogposts:
+    output: true
+    permalink: 'blog/:path.html'
+  publications:
+    output: true
+  slides:
+    output: true
+    permalink: '/:collection/:path.html'
+  updates:
+    output: false
+
+defaults:
+  - scope:
+      path: ''
+      type: slides
+    values:
+      layout: slide
+  - scope:
+      path: ''
+      type: blogposts
+    values:
+      layout: blogpost
+  - scope:
+      path: ''
+      type: publications
+    values:
+      layout: article

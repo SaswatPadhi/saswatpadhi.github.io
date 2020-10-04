@@ -1,0 +1,86 @@
+---
+---
+
+h4 {
+  margin-top: 1.25em;
+}
+
+hr {
+  margin-top: 1.75em;
+  border: none;
+  border-top: 1px dashed #ddd;
+}
+
+.instructions {
+  margin: 0.75em 0 -1em 0;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.paper-table {
+  margin: 0.8em 0;
+}
+
+.paper-left {
+  text-align: right;
+  margin-top: -0.1em;
+
+  .target {
+    font-size: 0.9em;
+    margin: 0.1875em 0 0.1875em 0;
+  }
+
+  .icons {
+    margin-top: 0.125em;
+    font-size: 0.825em;
+    letter-spacing: 0.16em;
+  }
+
+  sup {
+    top: -0.125em;
+  }
+}
+
+.paper-right {
+  > div {
+    margin-left: 1em;
+  }
+
+  .authors {
+    font-size: 0.875em;
+    margin-top: -0.05em;
+  }
+
+  .title {
+    letter-spacing: 0.04em;
+    text-shadow: 0px 0px 0px #070, 0px 0px 0px #070;
+  }
+
+  .awards {
+    margin-top: 0.05em;
+    font-size: 0.8em;
+  }
+
+  div > .tweet {
+    border-top: none;
+    background: linear-gradient(white, #F0F0F0);
+    border-radius: 0 0 1em 1em;
+    font-size: 0.875em;
+    height: auto;
+    overflow: hidden;
+    padding: 0em;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.1s ease, opacity 0.075s ease;
+  }
+
+  div.hovering > .tweet {
+    padding: 0.5em;
+    margin: 0.25em 0 0 0;
+    opacity: 1;
+    max-height: 40em;
+    transition: margin 0s ease, padding 0s ease, max-height 0.35s ease, opacity 0.25s ease;
+    transition-delay: 0.5s;
+  }
+}

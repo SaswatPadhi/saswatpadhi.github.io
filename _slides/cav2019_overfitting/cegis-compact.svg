@@ -1,0 +1,83 @@
+<svg viewBox='0 0 720 130' xmlns='http://www.w3.org/2000/svg' style='margin:-0.25em auto 0.25em auto; width:90%'>
+  <defs>
+    <marker id='cegis-compact-arrow' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 16 16'>
+      <path d='M0,0 L0,6 L7,3 z' fill='SlateGray' />
+    </marker>
+    <marker id='cegis-compact-arrow-2' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 8 8'>
+      <path d='M0,0 L0,6 L7,3 z' fill='DarkMagenta' />
+    </marker>
+  </defs>
+
+  <text x='5' y='10' fill='Olive' font-size='0.4em' class='subheading' dominant-baseline='middle'>
+    Specification
+  </text>
+
+  <path d='M 116,10 C 140,10 140,25 180,25' marker-end='url(#cegis-compact-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <text x='32' y='50' fill='Olive' class='subheading' font-size='0.4em' dominant-baseline='middle'>
+    Grammar
+  </text>
+
+  <path d='M 116,50 C 140,50 140,35 180,35' marker-end='url(#cegis-compact-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <svg x='185' y='12' width='100' height='36'>
+    <rect x='0' y='0' width='100%' rx='10%' height='100%' fill='SlateGray' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Learner
+    </text>
+  </svg>
+
+  <svg x='190' y='95' width='90' height='30'>
+    <rect x='0' y='0' width='100%' rx='10%' height='100%' fill='LightSlateGray' />
+    <text x='50%' y='57.5%' fill='White' font-size='0.45em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Verifier
+    </text>
+  </svg>
+
+  <path d='M 190,110 C 170,112.5 170,90 185,90 S 210,90 210,52.5' marker-end='url(#cegis-compact-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <path d='M 260,48 C 260,90 265,90 285,90 C 300,90 300,110 285,110' marker-end='url(#cegis-compact-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <text x='100' y='75' fill='Olive' class='subheading' font-size='0.3em' dominant-baseline='middle'>
+    Counterexample
+  </text>
+
+  <text x='270' y='75' fill='Olive' class='subheading' font-size='0.3em' dominant-baseline='middle'>
+    Likely Implementation
+  </text>
+
+  <line x1='285' y1='30' x2='353' y2='30' marker-end='url(#cegis-compact-arrow)'
+        stroke-linecap='round' stroke='SlateGray' stroke-width='2' />
+
+  <text x='395' y='22.625' fill='Olive' font-size='0.4em' class='subheading' dominant-baseline='middle'>
+    Verified
+  </text>
+  <text x='364' y='41.25' fill='Olive' font-size='0.4em' class='subheading' dominant-baseline='middle'>
+    Implementation
+  </text>
+
+  <rect x='50' y='65' width='400' height='64' rx='12.5' fill='none'
+           stroke='DarkMagenta' stroke-width='1' stroke-dasharray='3 5' />
+
+  <path d='M 450,100 C 500,100 500,100 500,78 C 500,60 500,60 528,60' fill='none'
+           stroke='DarkMagenta' stroke-width='1' stroke-dasharray='3 5'
+           marker-end='url(#cegis-compact-arrow-2)' />
+
+  <text x='540' y='41.25' fill='DarkMagenta' font-size='0.5em' dominant-baseline='middle'>
+    Rounds:
+  </text>
+  <text x='540' y='65' fill='DarkMagenta' font-size='0.35em' dominant-baseline='middle'>
+    The number of times the
+  </text>
+  <text x='541' y='82.5' fill='DarkMagenta' font-size='0.35em' dominant-baseline='middle'>
+    learner queries the verifier
+  </text>
+</svg>

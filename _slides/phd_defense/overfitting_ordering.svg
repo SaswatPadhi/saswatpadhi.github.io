@@ -1,0 +1,128 @@
+<svg viewBox='5 0 495 210' xmlns='http://www.w3.org/2000/svg'
+     style='margin:-0.5em auto 0; width:90%'>
+  <defs>
+    <marker id='wo-arrow' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 16 16'>
+      <path d='M0,0 L0,6 L7,3 z' fill='LightGray' />
+    </marker>
+    <marker id='wo-arrow-2' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 12 12'>
+      <path d='M0,0 L0,6 L7,3 z' fill='SlateGray' />
+    </marker>
+    <pattern id='pattern' x='5' y='-7.5' width='55' height='25' patternUnits='userSpaceOnUse'>
+      <circle cx='27.5' cy='12.5' r='4' fill='LightGray' />
+    </pattern>
+    <pattern id='diagonal-stripes' patternUnits='userSpaceOnUse' width='4' height='4'>
+      <path d='M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2' stroke='ForestGreen' stroke-width='0.25' opacity='0.5' />
+    </pattern>
+  </defs>
+
+  <foreignObject x='81' y='-22.5' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em;'> $ \mathcal{E}_1 $ </span>
+  </foreignObject>
+  <foreignObject x='110' y='-25' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.3em;'> $ \subseteq $ </span>
+  </foreignObject>
+  <foreignObject x='136' y='-22.5' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em;'> $ \mathcal{E}_2 $ </span>
+  </foreignObject>
+  <foreignObject x='165' y='-25' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.3em;'> $ \subseteq $ </span>
+  </foreignObject>
+  <foreignObject x='191' y='-22.5' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em;'> $ \mathcal{E}_3 $ </span>
+  </foreignObject>
+  <foreignObject x='220' y='-25' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.3em;'> $ \subseteq $ </span>
+  </foreignObject>
+  <foreignObject x='246' y='-22.5' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em;'> $ \mathcal{E}_4 $ </span>
+  </foreignObject>
+  <foreignObject x='275' y='-25' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.3em;'> $ \subseteq $ </span>
+  </foreignObject>
+  <foreignObject x='301' y='-22.5' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em;'> $ \mathcal{E}_5 $ </span>
+  </foreignObject>
+  <foreignObject x='330' y='-25' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.3em;'> $ \subseteq $ </span>
+  </foreignObject>
+  <foreignObject x='356' y='-22.5' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em;'> $ \mathcal{E}_6 $ </span>
+  </foreignObject>
+
+  <line x1='10' y1='30' x2='485' y2='30' marker-end='url(#wo-arrow)'
+        stroke-linecap='round' stroke='LightGray' stroke-width='2' />
+  <text x='395' y='15' fill='Olive' class='subheading' font-size='0.4em'
+        dominant-baseline='middle'>
+    Grammars
+  </text>
+
+  <line x1='32' y1='10' x2='32' y2='195' marker-end='url(#wo-arrow)'
+        stroke-linecap='round' stroke='LightGray' stroke-width='2' />
+  <text x='-190' y='17.5' fill='Olive' class='subheading' font-size='0.4em'
+        transform='rotate(-90)' dominant-baseline='middle'>
+    Sizes
+  </text>
+
+  <line x1='87' y1='24' x2='87' y2='36' stroke='LightGray' stroke-width='2' />
+  <line x1='142' y1='24' x2='142' y2='36' stroke='LightGray' stroke-width='2' />
+  <line x1='197' y1='24' x2='197' y2='36' stroke='LightGray' stroke-width='2' />
+  <line x1='252' y1='24' x2='252' y2='36' stroke='LightGray' stroke-width='2' />
+  <line x1='307' y1='24' x2='307' y2='36' stroke='LightGray' stroke-width='2' />
+  <line x1='362' y1='24' x2='362' y2='36' stroke='LightGray' stroke-width='2' />
+
+  <line x1='26' y1='55' x2='38' y2='55' stroke='LightGray' stroke-width='2' />
+  <line x1='26' y1='80' x2='38' y2='80' stroke='LightGray' stroke-width='2' />
+  <line x1='26' y1='105' x2='38' y2='105' stroke='LightGray' stroke-width='2' />
+  <line x1='26' y1='130' x2='38' y2='130' stroke='LightGray' stroke-width='2' />
+
+  <foreignObject x='10' y='20' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.4em;'> $ 1 $ </span>
+  </foreignObject>
+  <foreignObject x='10' y='45' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.4em;'> $ 2 $ </span>
+  </foreignObject>
+  <foreignObject x='10' y='70' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.4em;'> $ 3 $ </span>
+  </foreignObject>
+  <foreignObject x='10' y='95' width='10%' height='25%'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.4em;'> $ 4 $ </span>
+  </foreignObject>
+
+  <circle cx='362.25' cy='130.125' r='9' fill='DarkMagenta' />
+
+  <polyline points='65,92.5 250,113.75 260,110.125 276.5,92.5' fill='ForestGreen' fill-opacity='0.6'
+            stroke='ForestGreen' stroke-width='0.5' class='fragment' data-fragment-index='2' />
+  <circle cx='252.25' cy='105.125' r='9' fill='ForestGreen' class='fragment' data-fragment-index='2' />
+
+  <rect x='59.5' y='42.5' rx='8' fill='url(#diagonal-stripes)' width='222.5' height='50'
+        stroke='ForestGreen' class='fragment' data-fragment-index='2' />
+  <rect x='59.5' y='42.5' fill='url(#pattern)' width='350' height='100' />
+
+  <foreignObject x='50' y='120' width='100%' height='37.5%' class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em; width:100%; color:DarkRed'>
+      &bull; A path through all the points on this grid
+    </span>
+  </foreignObject>
+
+  <foreignObject x='50' y='139' width='100%' height='37.5%' class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em; width:100%; color:DarkRed'>
+      &bull; Expressions must be enumerated only once
+    </span>
+  </foreignObject>
+  <foreignObject x='50' y='158' width='100%' height='37.5%' class='fragment' data-fragment-index='2'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.35em; width:100%; color:DarkRed'>
+      &bull; An expression must be enumerated <em>after</em> all its subexpressions
+    </span>
+  </foreignObject>
+
+  <path d='M 435,112.5 C 435,130 435,130 379,130' fill='none' marker-end='url(#wo-arrow-2)'
+        stroke='SlateGray' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' />
+  <foreignObject x='382.5' y='47.5' width='22%' height='37.5%'>
+    <p xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.25em; width:100%; text-align:justify'>
+      Expressions of size $ 4 $ that appear only in $ \mathcal{E}_6 $,
+      but not in $ \mathcal{E}_1, \ldots, \mathcal{E}_5$
+    </p>
+  </foreignObject>
+</svg>

@@ -1,0 +1,55 @@
+<svg viewbox='0 0 500 240' xmlns='http://www.w3.org/2000/svg'
+     style='margin: 0 auto; width:27rem'>
+
+  <image href='icons/sel4.svg'
+         x='35' y='0' height='64px' width='160px' />
+  <text x='43' y='85' font-size='0.5em'>
+    Verified OS Kernel
+  </text>
+  <text x='45' y='102' font-size='0.4em'>
+    <a href='https://dl.acm.org/doi/10.1145/1629575.1629596'>
+      G. Klein et al. SOSP =qq= 09
+    </a>
+  </text>
+
+  <text x='250' y='47' fill='DimGray'
+        font-size='1.75em' font-weight='bold' class='mono'>
+    CompCert
+  </text>
+
+  <text x='296' y='85' font-size='0.5em'>
+    Verified C Compiler
+  </text>
+  <text x='323' y='102' font-size='0.4em'>
+    <a href='https://dl.acm.org/doi/10.1145/1538788.1538814'>
+      X. Leroy POPL =qq= 06
+    </a>
+  </text>
+
+  <image href='icons/fscq.png'
+         x='38' y='115' height='64px' width='160px' />
+  <text x='38' y='196' font-size='0.5em'>
+    Verified File System
+  </text>
+  <text x='45' y='213' font-size='0.4em'>
+    <a href='https://dl.acm.org/doi/10.1145/2815400.2815402'>
+      H. Chen et al. SOSP =qq= 14
+    </a>
+  </text>
+
+  <image href='icons/quark.png'
+         x='275' y='135' height='42px' width='42px' />
+  <text x='323' y='166' fill='DimGray'
+        font-size='1.25em' font-weight='bold' class='subheading'>
+    Quark
+  </text>
+  <text x='285' y='196' font-size='0.5em'>
+    Verified Web Browser
+  </text>
+  <text x='270' y='213' font-size='0.4em'>
+    <a href='https://dl.acm.org/doi/10.5555/2362793.2362801'>
+      D. Jang et al. USENIX Security =qq= 14
+    </a>
+  </text>
+
+</svg>

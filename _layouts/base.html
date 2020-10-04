@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+  <head>
+    {% include head.html %}
+
+    {% if layout.prismjs or page.prismjs -%}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.css"
+            integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" />
+    {%- endif %}
+
+    {% if layout.revealjs or page.revealjs -%}
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.css' />
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/{{ page.theme | default: layout.theme | default: 'solarized' }}.min.css' id='theme'/>
+
+      <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/reveal.css' />
+
+      <script src='https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.js'>
+      </script>
+    {%- endif %}
+
+    {%- if layout.mathjax or page.mathjax %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+    {%- endif -%}
+
+    {% for sheet in layout.css -%}
+      <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
+    {%- endfor %}
+    {%- for sheet in page.css %}
+      <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
+    {%- endfor %}
+  </head>
+
+  <body>
+    {{ content }}
+    {% if layout.prismjs or page.prismjs -%}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js"
+              integrity="sha512-WkVkkoB31AoI9DAk6SEEEyacH9etQXKUov4JRRuM1Y681VsTq7jYgrRw06cbP6Io7kPsKx+tLFpH/HXZSZ2YEQ==" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/autoloader/prism-autoloader.min.js"
+              integrity="sha512-ROhjG07IRaPZsryG77+MVyx3ZT5q3sGEGENoGItwc9xgvx+dl+s3D8Ob1zPdbl/iKklMKp7uFemLJFDRw0bvig==" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/autolinker/prism-autolinker.min.js"
+              integrity="sha512-/uypNVmpEQdCQLYz3mq7J2HPBpHkkg23FV4i7/WSUyEuTJrWJ2uZ3gXx1IBPUyB3qbIAY+AODbanXLkIar0NBQ==" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.js"
+              integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA==" crossorigin="anonymous">
+      </script>
+      <script src='{{ site.author.link }}/prismjs-bibtex/prism-bibtex.min.js'
+              integrity='sha256-LdLe3QDoMjP5ed5hKliTe+/DmOChPYalAAjUNS+j2Lg=' crossorigin="anonymous">
+      </script>
+    {%- endif -%}
+    {%- if layout.mathjax or page.mathjax %}
+      <script>
+        MathJax = {
+          options: {
+            renderActions: {
+              findScripts: [11, function (doc) {
+                for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                  const display = !!node.type.match(/; *mode=display/)
+                  const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                  const text = document.createTextNode('')
+                  node.parentNode.replaceChild(text, node)
+                  math.start = {node: text, delim: '', n: 0}
+                  math.end = {node: text, delim: '', n: 0}
+                  doc.math.push(math)
+                }
+              }, '']
+            }
+          },
+          loader: {
+            load: [
+              '[tex]/color',
+              '[tex]/newcommand',
+            ]
+          },
+          tex : {
+            inlineMath : [ ['$','$'] ],
+            displayMath : [ ['DISPLAY$', '$DISPLAY'] ],
+            packages: {
+              '[+]': [
+                'color',
+                'newcommand',
+              ],
+            },
+            processEnvironments : false,
+            processEscapes : false,
+            processRefs : false,
+            tags : 'ams',
+          }
+          {%- if layout.revealjs or page.revealjs -%},
+          startup : {
+              ready: () => {
+                MathJax.startup.defaultReady()
+                MathJax.startup.promise.then(() => {
+                  Reveal.togglePause()
+                })
+              }
+            }
+          {%- endif %}
+        }
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js"
+              integrity="sha512-WIPUeuVusAT6dUtN6xKArYCBEa76ltyvaz3ltvQd+dy7ISdGJv1Y3y7eDBEF986YfNtmZGLdAaEBSgeBb+8OSg==" crossorigin="anonymous">
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js">
+      </script>
+    {%- endif %}
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<svg viewBox='0 -8 460 88' xmlns='http://www.w3.org/2000/svg'
+     style='margin:0.25em auto; width:94%'>
+
+  <defs>
+    <marker id='arrow2' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 20 20'>
+      <path d='M0,0 L0,6 L7,3 z' fill='#596673' />
+    </marker>
+  </defs>
+
+  <text x='45.5' y='2' fill='Olive' font-size='0.4em' class='subheading' dominant-baseline='middle'>
+    Dataset
+  </text>
+
+  <path d='M 116,2 C 140,2 140,20 180,20' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <text x='18.5' y='74' fill='Olive' class='subheading' font-size='0.4em'
+        dominant-baseline='middle'>
+    Size bound
+  </text>
+
+  <path d='M 116,74 C 140,74 140,56 180,56' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <svg x='185' y='-5' width='150' height='86'>
+    <rect x='0' y='0' width='100%' rx='6%' height='100%' fill='SlateGray' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'
+          class='fragment fade-out' data-fragment-index='2'>
+      FlashProfile
+    </text>
+  </svg>
+
+  <text x='5' y='26' fill='Olive' class='fragment subheading' font-size='0.3em'
+        dominant-baseline='middle' data-fragment-index='1'>
+    Custom patterns
+  </text>
+
+  <path d='M 116,25.5 C 140,25.5 140,32 180,32' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='1' />
+
+  <text x='41' y='51' fill='Olive' class='fragment subheading' font-size='0.3em'
+        dominant-baseline='middle' data-fragment-index='1'>
+    Thresholds
+  </text>
+
+  <path d='M 116,51 C 140,51 140,44 180,44' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='1' />
+
+  <text x='400' y='38.5' class='subheading color-highlight' font-size='0.4em'
+        dominant-baseline='middle'>
+    Profile
+  </text>
+
+  <path d='M 335,38 L 390,38' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <svg x='193' y='3' width='134' height='24' class='fragment fade-in' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='4%' height='100%' fill='#596673' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.35em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Clustering
+    </text>
+  </svg>
+
+  <svg x='193' y='49' width='134' height='24' class='fragment fade-in' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='4%' height='100%' fill='#596673' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.35em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Synthesis
+    </text>
+  </svg>
+
+  <path d='M 250,27 L 250,45' marker-end='url(#arrow2)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='#596673' stroke-width='2.25'
+        stroke-dasharray='2 4' class='fragment fade-in' data-fragment-index='2' />
+  <path d='M 270,49 L 270,31' marker-end='url(#arrow2)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='#596673' stroke-width='2.25'
+        stroke-dasharray='2 4' class='fragment fade-in' data-fragment-index='2' />
+
+  <text x='198' y='34' class='subheading' font-size='0.2em' fill='#DDDDDD'
+        dominant-baseline='middle' class='fragment fade-in' data-fragment-index='2'>
+    Candidate
+  </text>
+  <text x='206.75' y='42' class='subheading' font-size='0.2em' fill='#DDDDDD'
+        dominant-baseline='middle' class='fragment fade-in' data-fragment-index='2'>
+    clusters
+  </text>
+
+  <text x='282.5' y='34' class='subheading' font-size='0.2em' fill='#DDDDDD'
+        dominant-baseline='middle' class='fragment fade-in' data-fragment-index='2'>
+    Patterns
+  </text>
+  <text x='282.5' y='42' class='subheading' font-size='0.2em' fill='#DDDDDD'
+        dominant-baseline='middle' class='fragment fade-in' data-fragment-index='2'>
+    & costs
+  </text>
+
+</svg>

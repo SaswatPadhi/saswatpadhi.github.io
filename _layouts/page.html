@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h1>
+    <i class="fa fa-fw fa-{{ page.icon | default: layout.icon }}"></i>
+    &nbsp;<span class='small-caps'>{{ page.title | default: layout.title }}</span>
+</h1>
+{{ content }}

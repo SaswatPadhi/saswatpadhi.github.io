@@ -1,0 +1,264 @@
+---
+---
+
+{% include sass_config.md %}
+
+@import 'https://fonts.googleapis.com/css?family={{ head_font | uri_escape }}:500,500i,600,600i&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap';
+
+html {
+  font-size: 16px;
+}
+
+.reveal {
+  font-family: $site-font-stack-base;
+
+  .progress {
+    bottom: auto;
+    top: 0;
+  }
+
+  .slides {
+    /* FIXME: Not sure why sections are being hidden early! */
+    > section {
+      display: block !important;
+    }
+
+    .subheading {
+      font-family: $site-font-stack-head;
+    }
+
+    h1, h2, h3, h4, h5, h6, .heading {
+      font-family: 'Roboto Slab', serif;
+      text-transform: none;
+      font-weight: 600;
+      letter-spacing: inherit;
+    }
+
+    ul ul, ol ul, ol ol, ul ol {
+      margin-left: 0.75em;
+    }
+
+    p {
+      line-height: 1.2;
+    }
+
+    svg {
+      display: block;
+
+      image {
+        opacity: 0.9;
+      }
+    }
+
+    table {
+      background: rgba(white, 0.75);
+      border-radius: 0.5em;
+      border-style: hidden;
+      border-collapse: collapse;
+      box-shadow: 0.125em 0.125em 0.25em DarkGray;
+
+      tr:last-child td:first-child,
+      tr:last-child th:first-child {
+        border-bottom-left-radius: 0.5em;
+      }
+
+      tr:last-child td:last-child,
+      tr:last-child th:last-child {
+        border-bottom-right-radius: 0.5em;
+      }
+
+      tr:first-child td:first-child,
+      tr:first-child th:first-child {
+        border-top-left-radius: 0.5em;
+      }
+
+      tr:first-child td:last-child,
+      tr:first-child th:last-child {
+        border-top-right-radius: 0.5em;
+      }
+
+      td, th {
+        text-align: center;
+        padding: 0.35em 0.5em;
+        border-bottom: 1px dashed DarkGray;
+        border-right: 1px dashed DarkGray;
+      }
+
+      th {
+        font-family: $site-font-stack-head;
+        font-weight: 600;
+      }
+
+      .heading {
+        border:none;
+        background:DarkGray;
+        color:White;
+        font-weight:bold;
+      }
+    }
+
+    .columns {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+
+      > .separator {
+        width: 0.00001em;
+        border-left: 0.05em dashed DarkGray;
+        border-radius: 1em;
+        margin: 0 !important;
+      }
+
+      > * {
+        margin: 0 0.75em !important;
+      }
+    }
+
+    .with-shadow {
+      border: 0.025em solid DimGray;
+      border-radius: 0.3125em;
+      box-shadow: 0.125em 0.125em 0.25em DarkGray;
+    }
+
+    .focus-box {
+      background: #FBFBFB;
+      border: 0.05em solid DimGray;
+      border-radius: 0.3125em;
+      box-shadow: 0.125em 0.125em 0.25em DarkGray;
+      font-size: 0.9em;
+      margin: auto;
+      padding-bottom: 0.25em;
+      position: relative;
+      text-align: center;
+      width: 75%;
+
+      h1,h2,h3,h4,h5,h6 {
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0.625em auto -0.25em;
+      }
+
+      p {
+        margin: 0.3125em;
+      }
+
+      .annot {
+        border-bottom: 0.1em solid DimGray;
+        border-right: 0.1em solid DimGray;
+        border-bottom-right-radius: 0.5em;
+        font-family: $site-font-stack-head;
+        font-size: 0.575em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0 0.375em;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    .color-accent.focus-box {
+      background: #FFF9F9;
+      border-color: DarkRed;
+      .annot { border-color: DarkRed; }
+      h1,h2,h3,h4,h5,h6 { color: DarkRed; }
+    }
+
+    .color-highlight.focus-box {
+      background: #FAFFFA;
+      border-color: DarkGreen;
+      .annot { border-color: DarkGreen; }
+      h1,h2,h3,h4,h5,h6 { color: DarkGreen; }
+    }
+
+    .color-medium-accent.focus-box {
+      background: #FAFAFF;
+      border-color: Indigo;
+      .annot { border-color: Indigo; }
+      h1,h2,h3,h4,h5,h6 { color: Indigo; }
+    }
+
+    /*
+    * Config for components follow
+    */
+
+    section:not(.title-slide) {
+      text-align: left;
+    }
+
+    .goto-viewer {
+      display: grid;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity 0.2s ease;
+      width: 100%;
+      z-index: 9999999;
+
+      .message {
+        background: rgba(#862286, 0.9);
+        box-shadow: 0 0 1em white;
+        border-radius: 0.75em;
+        color: white;
+        font-size: 3em;
+        font-weight: bold;
+        margin: auto;
+        opacity: 0.9;
+        padding: 0.5em;
+      }
+    }
+
+    .persistent-title {
+      border-bottom: 4px solid rgba(black, 0.25);
+      color: rgba(black, 0.25);
+      font-family: 'Roboto Slab', serif;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 64px;
+      top: 2px;
+      z-index: 999999;
+
+      p { padding: 0; margin: 0; }
+    }
+
+    .slide-counter {
+      background: rgba(black, 0.35);
+      border-radius: 0.25em;
+      color: white;
+      font-family: $site-font-stack-mono;
+      font-size: 0.75em;
+      margin: 0.125em;
+      padding: 0.25em;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      z-index: 999999;
+    }
+
+    footer {
+      background: linear-gradient(0deg, rgba(black, 0.4) 80%, rgba(black, 0.25) 90%, rgba(black, 0) 100%);
+      border-radius: 0.75em 0.75em 0 0;
+      bottom: 0;
+      color: white;
+      display: flex;
+      font-family: $site-font-stack-head;
+      font-size: 0.333em;
+      justify-content: space-between;
+      left: 4px;
+      opacity: 0;
+      padding: 0.4em 0.75em 0.3125em 0.75em;
+      position: absolute;
+      right: 4px;
+      text-align: center;
+      text-shadow: 0 0 0.02em white;
+      transition: opacity 0.15s ease;
+      z-index: 999999;
+    }
+  }
+}

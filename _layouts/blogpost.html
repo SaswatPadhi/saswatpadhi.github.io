@@ -1,0 +1,44 @@
+---
+layout: default
+
+mathjax: true
+prismjs: true
+
+css: [ 'blogpost' ]
+---
+
+<h1>
+  <i class="fa fa-fw fa-{{ page.icon | default: layout.icon }}"></i>
+  &nbsp;<span class='small-caps clearfix'>
+    {%- include tools/text_process.md data=page.title -%}
+  </span>
+</h1>
+
+<p class='tagline'>{% include tools/text_process.md data=page.tagline %} &hellip;</p>
+
+<div class='post-header clearfix'>
+<div class='date'>{{ page.post_date | date_to_long_string }}</div>
+&nbsp;&bull;&thinsp;
+{% for cat in page.categories -%}
+  <span class='category'>&ensp;#&thinsp;{{ cat }}&ensp;</span>
+{% endfor -%}
+<span class='right color-faded'>
+  (&asymp; {{ content | number_of_words }} words |
+  {{ content | number_of_words | divided_by: 175.0 | ceil }} min.)
+</span>
+</div>
+
+<div class='post-content'>
+  {% include tools/text_process.md para=true data=content %}
+</div>
+
+<hr style='margin-top:2em;'>
+
+<script src="https://utteranc.es/client.js"
+        repo="SaswatPadhi/saswatpadhi.github.io"
+        issue-term="og:title"
+        label="T: comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

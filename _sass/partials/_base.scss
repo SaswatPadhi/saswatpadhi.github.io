@@ -1,0 +1,107 @@
+$default-border-thickness: 1;
+
+$default-color-delta-huge: 50;
+$default-color-delta-large: 25;
+$default-color-delta-medium: 15;
+$default-color-delta-small: 10;
+$default-color-delta-slight: 4;
+
+$default-delay-small: 0.2;
+
+$default-gap-thin: 2;
+$default-gap-medium: 4;
+$default-gap-thick: 8;
+$default-gap-thicker: 12;
+
+$site-max-width: 976;
+
+@function headings($from: 1, $to: 6) {
+  @if $from == $to {
+    @return "h#{$from}";
+  }
+  @else {
+    @return "h#{$from}," + headings($from + 1, $to);
+  }
+}
+
+@mixin media($size: small) {
+  @if $size == small {
+    @media screen and (min-width: 35.5em) { @content; }
+  }
+  @else if $size == medium {
+    @media screen and (min-width: 48em) { @content; }
+  }
+  @else if $size == large {
+    @media screen and (min-width: 64em) { @content; }
+  }
+  @else if $size == xlarge {
+    @media screen and (min-width: 80em) { @content; }
+  }
+}
+
+@mixin set_color_and_hover($color, $color-attrib: color, $factor: percentage($default-color-delta-medium / 100)) {
+  #{$color-attrib}: $color;
+
+  @if $site-hover-light == enabled {
+    transition: $color-attrib ($default-delay-small + s) ease;
+
+    &:hover, &:focus, &.hovering {
+      #{$color-attrib}: if($factor < 0, darken($color, -$factor), lighten($color, $factor));
+    }
+  }
+}
+
+@mixin set_heading_font_sizes($start: 2, $step: 0.9) {
+  @for $i from 1 through 6 {
+    $start: $start * $step;
+
+    h#{$i} {
+      font-size: $start + rem;
+    }
+  }
+}
+
+@mixin make_colors($colors) {
+  @each $name, $code in $colors {
+    .color-#{$name} { color: $code; fill: $code; }
+  }
+}
+
+@each $med in (small, medium, large, xlarge) {
+  .visible-at-#{$med} {
+    display: none;
+    @include media($med) { display: initial; }
+  }
+
+  .hidden-at-#{$med} {
+    @include media($med) { display: none; }
+  }
+
+  .text-align-left-#{$med} {
+    text-align: center;
+    @include media($med) { text-align: left; }
+  }
+
+  .text-align-right-#{$med} {
+    text-align: center;
+    @include media($med) { text-align: right; }
+  }
+
+  .float-left-#{$med} {
+    @include media($med) { float: left; }
+  }
+
+  .float-right-#{$med} {
+    @include media($med) { float: right; }
+  }
+}
+
+/* Default values for uninitialized variables */
+
+$site-header-vspace: 0;
+$site-header-vspace-small-screen: 0;
+$site-header-vspace-medium-screen: 0;
+
+$site-footer-vspace: 0;
+$site-footer-vspace-small-screen: 0;
+$site-footer-vspace-medium-screen: 0;

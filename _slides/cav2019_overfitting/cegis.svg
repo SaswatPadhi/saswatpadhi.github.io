@@ -1,0 +1,111 @@
+<svg viewBox='0 0 500 167.5' xmlns='http://www.w3.org/2000/svg' style='margin-top:-0.125em'>
+  <defs>
+    <marker id='cegis-arrow' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 16 16'>
+      <path d='M0,0 L0,6 L7,3 z' fill='SlateGray' />
+    </marker>
+  </defs>
+
+  <text x='5' y='10' fill='Olive' font-size='0.4em' class='subheading' dominant-baseline='middle'>
+    Specification
+  </text>
+
+  <path d='M 116,10 C 140,10 140,25 180,25' marker-end='url(#cegis-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <text x='32' y='50' fill='Olive' class='subheading' font-size='0.4em'
+        dominant-baseline='middle'>
+    Grammar
+  </text>
+
+  <path d='M 116,50 C 140,50 140,35 180,35' marker-end='url(#cegis-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <svg x='185' y='12' width='100' height='36'>
+    <rect x='0' y='0' width='100%' rx='10%' height='100%' fill='SlateGray' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Learner
+    </text>
+  </svg>
+
+  <svg x='190' y='90' width='90' height='30'
+       class='fragment' data-fragment-index='1'>
+    <rect x='0' y='0' width='100%' rx='10%' height='100%' fill='LightSlateGray' />
+    <text x='50%' y='57.5%' fill='White' font-size='0.45em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Verifier
+    </text>
+  </svg>
+
+  <path d='M 190,105 C 170,107.5 170,85 185,85 S 210,85 210,52.5' marker-end='url(#cegis-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='1' />
+
+  <path d='M 260,48 C 260,85 265,85 285,85 C 300,85 300,105 285,105' marker-end='url(#cegis-arrow)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='1' />
+
+  <text x='105' y='72.5' fill='DarkMagenta' class='subheading' font-size='0.3em'
+        class='fragment' data-fragment-index='1' dominant-baseline='middle'>
+    Counterexample
+  </text>
+
+  <text x='270' y='72.5' fill='DarkMagenta' class='subheading' font-size='0.3em'
+        class='fragment' data-fragment-index='1' dominant-baseline='middle'>
+    Likely Implementation
+  </text>
+
+  <line x1='285' y1='30' x2='353' y2='30' marker-end='url(#cegis-arrow)'
+        stroke-linecap='round' stroke='SlateGray' stroke-width='2' />
+
+  <text x='364' y='31.25' fill='Olive' font-size='0.4em' class='subheading'
+        class='fragment fade-out' data-fragment-index='1' dominant-baseline='middle'>
+    Implementation
+  </text>
+
+  <text x='395' y='22.5' fill='DarkMagenta' font-size='0.4em' class='subheading'
+        class='fragment fade-in' data-fragment-index='1' dominant-baseline='middle'>
+    Verified
+  </text>
+  <text x='364' y='40' fill='Olive' font-size='0.4em' class='subheading'
+        class='fragment fade-in' data-fragment-index='1' dominant-baseline='middle'>
+    Implementation
+  </text>
+
+  <path d='M 70,130 L 70,60' fill='none' stroke-dasharray='1.5 2'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='0.25' />
+  <svg x='0' y='130' width='150' height='35'>
+    <rect x='0' y='0' width='100%' rx='5%' height='100%' fill='none'
+          stroke-width='0.75' stroke-dasharray='2 1' stroke='DarkGray' />
+    <text x='50%' y='35%' fill='Gray' font-size='0.375em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      SyGuS Framework
+    </text>
+    <text x='50%' y='75%' font-size='0.2em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      <a href='http://ieeexplore.ieee.org/document/6679385/'>
+        [Alur et al, FMCAD'13]
+      </a>
+    </text>
+  </svg>
+
+  <path d='M 345,147.5 L 235,147.5 L 235,120' fill='none' stroke-dasharray='1.5 2'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='0.25'
+        class='fragment' data-fragment-index='1' />
+  <svg x='345' y='130' width='150' height='35'
+       class='fragment' data-fragment-index='1'>
+    <rect x='0' y='0' width='100%' rx='5%' height='100%' fill='none'
+          stroke-width='0.75' stroke-dasharray='2 1' stroke='DarkGray' />
+    <text x='50%' y='35%' fill='Gray' font-size='0.375em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      CEGIS Framework
+    </text>
+    <text x='50%' y='75%' font-size='0.2em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      <a href='https://doi.org/10.1007/s10009-012-0249-7'>
+        [Solar-Lezama, STTT'13]
+      </a>
+    </text>
+  </svg>
+</svg>

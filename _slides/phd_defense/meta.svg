@@ -1,0 +1,23 @@
+<svg viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'
+     style='position:absolute'>
+
+  <defs>
+    <marker id='arrow1' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 16 16'>
+      <path d='M0,0 L0,6 L7,3 z' fill='SlateGray' />
+    </marker>
+    <marker id='arrow-green' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 16 16'>
+      <path d='M0,0 L0,6 L7,3 z' fill='ForestGreen' />
+    </marker>
+    <marker id='arrow-olive' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 16 16'>
+      <path d='M0,0 L0,6 L7,3 z' fill='Olive' />
+    </marker>
+    <marker id='arrow-red' markerWidth='10' markerHeight='10' markerUnits='strokeWidth'
+            refX='3' refY='3' orient='auto' viewBox='0 0 16 16'>
+      <path d='M0,0 L0,6 L7,3 z' fill='DarkRed' />
+    </marker>
+  </defs>
+
+</svg>

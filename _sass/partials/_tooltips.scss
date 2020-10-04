@@ -1,0 +1,57 @@
+@if $site-tooltips == enabled {
+  .tooltip, .tooltip-down, .tooltip-img-down {
+    display: inline;
+    position: relative;
+  }
+
+  .tooltip:hover:after, .tooltip-down:hover:after, .tooltip-img-down:hover:after {
+    background: fade-out($color-foreground, $default-color-delta-medium / 100);
+    border-radius: 5px;
+    color: $color-background;
+    content: attr(data-tooltip);
+    font: 0.8rem $site-font-stack-head;
+    left: -25%;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: left;
+    width: 96px;
+    word-wrap: break-word;
+    z-index: 998;
+  }
+
+  .tooltip:hover:after {
+    bottom: 26px;
+  }
+
+  .tooltip-down:hover:after {
+    top: 46px;
+  }
+
+  .tooltip-img-down:hover:after {
+    top: 26px;
+  }
+
+  .tooltip:hover:before, .tooltip-down:hover:before, .tooltip-img-down:hover:before {
+    border: solid;
+    border-color: fade-out($color-foreground, $default-color-delta-medium / 100) transparent;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 999;
+  }
+
+  .tooltip:hover:before {
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+  }
+
+  .tooltip-down:hover:before {
+    border-width: 0px 6px 6px 6px;
+    top: 40px;
+  }
+
+  .tooltip-img-down:hover:before {
+    border-width: 0px 6px 6px 6px;
+    top: 20px;
+  }
+}

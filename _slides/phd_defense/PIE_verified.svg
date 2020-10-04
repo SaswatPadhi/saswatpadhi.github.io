@@ -1,0 +1,163 @@
+<svg viewBox='0 -40 512 345' xmlns='http://www.w3.org/2000/svg'
+     style='margin:-0.25em auto; width:90%'>
+
+  <svg x='186' y='-35' width='140' height='36'>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.5em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Tests
+    </text>
+  </svg>
+
+  <path d='M 256,-1 L 256,20' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <svg x='196' y='24' width='120' height='36' class='fragment fade-out' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='#444' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.4em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Executable
+    </text>
+  </svg>
+  <svg x='196' y='24' width='120' height='36' class='fragment' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='#444' />
+    <rect x='2' y='2' width='96.75%' rx='6%' height='89.5%' fill='White' />
+    <text x='50%' y='52.5%' fill='SlateGray' font-size='0.4em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Source Code
+    </text>
+  </svg>
+
+  <path d='M 256,60 L 256,86' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <svg x='196' y='90' width='120' height='36' class='fragment fade-out' data-fragment-index='2'>
+    <polygon points='59.5,34 60.5,34 118,18 60.5,2 59.5,2 2,18' fill='#444'
+             stroke-linejoin='round' stroke-width='4' stroke='#444' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.375em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Assertion
+    </text>
+  </svg>
+  <svg x='196' y='90' width='120' height='36' class='fragment fade-in' data-fragment-index='2'>
+    <polygon points='59.5,34 60.5,34 118,18 60.5,2 59.5,2 2,18' fill='White'
+             stroke-linejoin='round' stroke-width='4' stroke='#444' />
+    <polygon points='59.5,35 60.5,35 119,18 60.5,1 59.5,1 1,18' fill='White'
+             stroke-linejoin='round' stroke-width='2' stroke='#444' />
+    <text x='50%' y='52.5%' fill='SlateGray' font-size='0.375em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Assertion
+    </text>
+  </svg>
+
+  <path d='M 196,108 L 186,108 Q 176,108 176,120 L 176,144' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <svg x='136' y='148' width='80' height='36'>
+    <ellipse cx='50%' cy='50%' rx='49%' ry='47%' fill='#FAFFFA' stroke='ForestGreen' stroke-width='2' />
+    <text x='50%' y='52.5%' fill='ForestGreen' font-size='0.35em' dominant-baseline='middle' text-anchor='middle'>
+      +ve Tests
+    </text>
+  </svg>
+
+  <path d='M 316,108 L 326,108 Q 336,108 336,120 L 336,144' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <svg x='296' y='148' width='80' height='36'>
+    <ellipse cx='50%' cy='50%' rx='49%' ry='47%' fill='#FFFAFA' stroke='DarkRed' stroke-width='2' />
+    <text x='50%' y='52.5%' fill='DarkRed' font-size='0.35em' dominant-baseline='middle' text-anchor='middle'>
+      -ve Tests
+    </text>
+  </svg>
+
+  <path d='M 176,184 L 176,192 Q 176,200 186,200 L 222,200 Q 232,200 232,208 L 232,216' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <path d='M 336,184 L 336,192 Q 336,200 326,200 L 290,200 Q 280,200 280,208 L 280,216' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <svg x='181' y='220' width='150' height='36'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='SlateGray' />
+    <text x='50%' y='35%' fill='White' font-size='0.35em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Boolean-Function
+    </text>
+    <text x='50%' y='70%' fill='White' font-size='0.35em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Learner
+    </text>
+  </svg>
+
+  <svg x='8' y='220' width='120' height='36'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='SlateGray' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.4em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Synthesizer
+    </text>
+  </svg>
+
+  <path d='M 182,244 Q 155,256 132,244' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <svg x='125' y='240' width='60' height='36'>
+    <text x='50%' y='52.5%' fill='DarkRed' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Conflict
+    </text>
+  </svg>
+
+  <path d='M 128,232 Q 150,220 176,232' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <svg x='124' y='200' width='60' height='36'>
+    <text x='50%' y='52.5%' fill='ForestGreen' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Feature
+    </text>
+  </svg>
+
+  <path d='M 256,256 L 256,279' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment fade-out' data-fragment-index='1' />
+  <svg x='186' y='279' width='140' height='36' class='fragment fade-out' data-fragment-index='1'>
+    <text x='50%' y='52.5%' fill='ForestGreen' font-size='0.5em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Precondition
+    </text>
+  </svg>
+
+  <path d='M 331,238 L 455,238 Q 465,238 465,230 L 465,66' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='1' />
+  <svg x='330' y='212' width='140' height='36' class='fragment' data-fragment-index='1'>
+    <text x='50%' y='52.5%' fill='ForestGreen' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Precondition
+    </text>
+  </svg>
+  <svg x='425' y='24' width='80' height='36' class='fragment' data-fragment-index='1'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='SlateGray' />
+    <text x='50%' y='52.5%' fill='White' font-size='0.4em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Verifier
+    </text>
+  </svg>
+
+  <path d='M 316,35 L 420,35' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='2' />
+  <path d='M 278,97 L 326,97 Q 336,97 336,89 L 336,57 Q 336,49 346,49 L 420,49' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='2' />
+  <path d='M 465,24 L 465,-9 Q 465,-17 455,-17 L 294,-17' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='3' />
+  <svg x='330' y='-26' width='140' height='36' class='fragment' data-fragment-index='3'>
+    <text x='50%' y='52.5%' fill='DarkRed' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Counterexample
+    </text>
+  </svg>
+
+  <path d='M 256,256 L 256,279' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='4' />
+  <svg x='136' y='279' width='240' height='36' class='fragment' data-fragment-index='4'>
+    <text x='50%' y='52.5%' fill='ForestGreen' font-size='0.5em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Verified Precondition
+    </text>
+  </svg>
+
+</svg>

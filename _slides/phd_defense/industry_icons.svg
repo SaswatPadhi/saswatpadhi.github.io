@@ -1,0 +1,64 @@
+<svg viewbox='0 0 500 240' xmlns='http://www.w3.org/2000/svg'
+     style='margin: 0 auto; width:27rem'>
+
+  <image href='icons/linux.png'
+         x='48' y='-2' height='64px' width='85px' />
+  <image href='icons/mac.png'
+         x='115' y='-6' height='66px' width='85px' />
+  <svg x='24' y='46' width='210' height='42' class='fragment' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='6%' height='100%' fill='#FFDDDD' />
+    <image href='icons/shellshock.png'
+           x='12' y='4' height='32px' width='32px' />
+    <text x='59%' y='56%' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      <a href='https://en.wikipedia.org/wiki/Shellshock_(software_bug)'>
+        Shellshock (2014)
+      </a>
+    </text>
+  </svg>
+
+  <image href='icons/openssl.png'
+         x='250' y='7' height='50px' width='240px' />
+  <svg x='265' y='46' width='210' height='42' class='fragment' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='6%' height='100%' fill='#FFDDDD' />
+    <image href='icons/heartbleed.svg'
+           x='8' y='6' height='32px' width='32px' />
+    <text x='58%' y='56%' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      <a href='https://en.wikipedia.org/wiki/Heartbleed'>
+        Heartbleed (2014)
+      </a>
+    </text>
+  </svg>
+
+  <image href='icons/samba.svg'
+         x='48' y='125' height='50px' width='160px' />
+  <svg x='24' y='170' width='210' height='42' class='fragment' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='6%' height='100%' fill='#FFDDDD' />
+    <image href='icons/badlock.svg'
+           x='22' y='4' height='32px' width='32px' />
+    <text x='58%' y='56%' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      <a href='https://en.wikipedia.org/wiki/Badlock'>
+        Badlock (2016)
+      </a>
+    </text>
+  </svg>
+
+  <text x='290' y='160' fill='DimGray'
+        font-size='1.75em' font-weight='bold' class='subheading'>
+    glibc
+  </text>
+  <svg x='265' y='170' width='210' height='42' class='fragment' data-fragment-index='2'>
+    <rect x='0' y='0' width='100%' rx='6%' height='100%' fill='#FFDDDD' />
+    <image href='icons/ghost.svg'
+           x='30' y='6' height='32px' width='32px' />
+    <text x='58%' y='56%' font-size='0.5em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      <a href='https://access.redhat.com/security/vulnerabilities/ghost'>
+        Ghost (2015)
+      </a>
+    </text>
+  </svg>
+
+</svg>

@@ -1,0 +1,11 @@
+{% if site.author.photo %}
+  {%- if site.author.photo.local -%}
+    {%- assign photo_url = site.baseurl | append: '/' | append: site.author.photo.local -%}
+  {%- else -%}
+    {%- assign photo_url = site.author.photo.remote -%}
+  {%- endif %}
+  <div>
+    <img alt='{{ site.author.photo.alt }}' src='{{ photo_url }}'
+         style='width: 60%; max-width: 200px; margin: 1.25em auto 0 auto; border-radius: 0.5em; box-shadow: 0em 0.15em 0.5em gray; display: block;'/>
+  </div>
+{% endif %}

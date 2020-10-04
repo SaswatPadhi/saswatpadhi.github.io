@@ -1,0 +1,124 @@
+<svg viewBox='0 -90 512 240' xmlns='http://www.w3.org/2000/svg'
+     style='margin:0 auto; width:91%'>
+
+  <svg x='160' y='-94' width='136' height='36'
+       class='fragment' data-fragment-index='2'>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.375em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Loop-head States
+    </text>
+  </svg>
+
+  <path d='M 228,-65 L 228,-42' marker-end='url(#arrow-olive)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='Olive' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+
+  <svg x='5' y='28' width='150' height='40'
+       class='fragment' data-fragment-index='3'>
+    <foreignobject x='10%' y='-50%' width='100%' height='125%'>
+      <span style='color:SlateGray; font-size:0.375em'>
+      $ \mathcal{I} := (\neg G \Rightarrow Q) $
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 139,45 L 185,45' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='4' />
+
+  <svg x='190' y='20' width='180' height='50'
+       class='fragment' data-fragment-index='4'>
+    <polygon points='89,48 91,48 178,25 91,2 89,2 2,25' fill='#444'
+             stroke-linejoin='round' stroke-width='4' stroke='#444' />
+    <polygon points='89.5,49 90.5,49 179.5,25 90.5,1 89.5,1 0.5,25' fill='White'
+             stroke-linejoin='round' stroke-width='2' stroke='#444' />
+    <foreignobject x='17%' y='-25.5%' width='100%' height='125%'>
+      <span style='color:DarkMagenta; font-size:0.35em'>
+      $ \\\{ \, \mathcal{I} \wedge G \, \\\} \;\;S\;\; \\\{ \, \mathcal{I} \, \\\} $
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 286,22 Q 295,2 285,-7' marker-end='url(#arrow-red)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='DarkRed' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+
+  <path d='M 273,-9 Q 265,8 274,18' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
+        class='fragment' data-fragment-index='5' />
+
+  <svg x='130' y='-40' width='285' height='40'
+       class='fragment' data-fragment-index='5'>
+    <foreignobject x='0' y='-50%' width='100%' height='125%'>
+      <span style='color:SlateGray; font-size:0.375em'>
+      $ \mathcal{I} := \mathcal{I} \;\wedge\; \mathsf{VPIE}([\mathtt{assume (}\mathcal{I} \wedge G\mathtt{) ;} S],\; \mathcal{I}) $
+      </span>
+    </foreignobject>
+  </svg>
+
+  <svg x='420' y='25' width='80' height='40'
+       class='fragment' data-fragment-index='6'>
+    <polygon points='39,38 41,38 78,20 41,2 39,2 2,20' fill='#444'
+             stroke-linejoin='round' stroke-width='4' stroke='#444' />
+    <polygon points='39.5,39 40.5,39 79.5,20 40.5,1 39.5,1 0.5,20' fill='White'
+             stroke-linejoin='round' stroke-width='2' stroke='#444' />
+    <foreignobject x='20%' y='-40%' width='100%' height='125%'>
+      <span style='color:DarkMagenta; font-size:0.35em'>
+      $ P \Rightarrow \mathcal{I} $
+      </span>
+    </foreignobject>
+  </svg>
+
+  <path d='M 370,45 L 415,45' marker-end='url(#arrow-green)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='ForestGreen' stroke-width='2'
+        class='fragment' data-fragment-index='6' />
+
+  <path d='M 460,25 L 460,-68 Q 460,-76 450,-76 L 305,-76' marker-end='url(#arrow-red)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='DarkRed' stroke-width='2'
+        class='fragment' data-fragment-index='7' />
+
+  <path d='M 154,-76 L 90,-76 Q 80,-76 80,-68 L 80,28' marker-end='url(#arrow-red)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='DarkRed' stroke-width='2'
+        stroke-dasharray='1 4' class='fragment' data-fragment-index='8' />
+
+  <svg x='360' y='-99' width='85' height='50'
+       class='fragment' data-fragment-index='7'>
+    <text x='50%' y='30%' fill='DarkRed' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Counterexample
+    </text>
+    <text x='50%' y='65%' fill='DarkRed' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      (Weakening)
+    </text>
+  </svg>
+
+  <svg x='180' y='-4' width='85' height='20'
+       class='fragment' data-fragment-index='5'>
+    <text x='50%' y='52.5%' fill='SlateGray' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      (Strengthening)
+    </text>
+  </svg>
+
+  <svg x='95' y='-99' width='85' height='50'
+       class='fragment' data-fragment-index='8'>
+    <text x='25%' y='65%' fill='DarkRed' font-size='0.25em' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      (Restart)
+    </text>
+  </svg>
+
+  <path d='M 460,65 L 460,81' marker-end='url(#arrow-green)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='ForestGreen' stroke-width='2'
+        class='fragment' data-fragment-index='9' />
+
+  <svg x='420' y='80' width='80' height='40'
+       class='fragment' data-fragment-index='9'>
+    <foreignobject x='43.5%' y='-40%' width='100%' height='125%'>
+      <span style='color:ForestGreen; font-size:0.375em'>
+      $ \mathcal{I} $
+      </span>
+    </foreignobject>
+  </svg>
+</svg>

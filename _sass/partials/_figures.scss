@@ -1,0 +1,31 @@
+html {
+  counter-reset: figure;
+}
+
+figure {
+  padding: 0.3125em 0.5em;
+  margin: 0.25em;
+  text-align: center;
+
+  img {
+    margin: 0 auto !important;
+    display: block !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  pre {
+    margin: 0 !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  figcaption {
+    font-family: $site-font-stack-head;
+  }
+  
+  figcaption:before {
+    font-family: $site-font-stack-head;
+    font-weight: bold;
+    counter-increment: figure;
+    content: 'Fig. ' counter(figure) '\00A0\2022\00A0';
+  }
+}

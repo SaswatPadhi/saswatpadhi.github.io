@@ -1,0 +1,29 @@
+---
+---
+
+{% include sass_config.md %}
+
+@import 'libs.scss';
+
+@import 'https://fonts.googleapis.com/css?family={{ base_font | uri_escape }}:400,700,400italic|{{ head_font | uri_escape }}:400,700,400italic|{{ mono_font | uri_escape }}:400,700,400italic&display=swap';
+
+@import 'partials/fix';
+@import 'partials/base';
+@import 'partials/palette';
+@import 'partials/figures';
+@import 'partials/tooltips';
+@import 'partials/highlight';
+@import 'partials/typography';
+
+{% assign sections = 'header footer' | split: ' ' %}
+{% for section in sections %}
+  {% unless site.layout[section].style == 'disabled' %}
+    {% if site.layout[section].style == 'fixed' %}
+      @import 'partials/site-{{ section }}-fixed';
+    {% else %}
+      @import 'partials/site-{{ section }}';
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+
+@import 'partials/layout';

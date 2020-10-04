@@ -1,0 +1,21 @@
+abbr[title], acronym[title] {
+  text-decoration: none;
+  border-bottom:1px dotted
+}
+
+img {
+  max-width: 100%;
+}
+
+mjx-container[jax="CHTML"] {
+  font-size: 1.1em !important;
+  line-height: 0 !important;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  margin: 0.375em 0 !important;
+}
+
+.hidden, [hidden] {
+    display: none !important;
+}

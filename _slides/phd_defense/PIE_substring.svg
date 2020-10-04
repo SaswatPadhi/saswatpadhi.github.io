@@ -1,0 +1,49 @@
+<svg viewBox='0 -4 170 64' xmlns='http://www.w3.org/2000/svg'
+     style='margin:0.25em auto -0.25em; width:60%'>
+
+  <svg x='0' y='10' width='32' height='24'>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.4em' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      s
+    </text>
+  </svg>
+  <svg x='8' y='10' width='32' height='24'>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.4em'
+          dominant-baseline='middle' text-anchor='middle'>
+      :
+    </text>
+  </svg>
+
+  <svg x='40' y='-8' width='32' height='22'>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.4em' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      i
+    </text>
+  </svg>
+
+  <rect x='48' y='12' width='64' rx='1%' height='20' fill='#CCEEBB' />
+
+  <rect x='32' y='12' width='128' rx='1%' height='20' fill='none'
+        stroke='SlateGray' stroke-width='2' />
+  <rect x='48' y='12' width='96' rx='1%' height='20' fill='none'
+        stroke='SlateGray' stroke-width='2' />
+  <rect x='64' y='12' width='64' rx='1%' height='20' fill='none'
+        stroke='SlateGray' stroke-width='2' />
+  <rect x='80' y='12' width='32' rx='1%' height='20' fill='none'
+        stroke='SlateGray' stroke-width='2' />
+  <rect x='96' y='12' width='0.25' rx='1%' height='20' fill='none'
+        stroke='SlateGray' stroke-width='2' />
+
+  <path d='M 48,35 Q 48,40 55,40 L 74,40 Q 80,40 80,43' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+  <path d='M 112,35 Q 112,40 105,40 L 86,40 Q 80,40 80,43' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2' />
+
+  <svg x='65' y='43' width='32' height='24'>
+    <text x='50%' y='52.5%' fill='Olive' font-size='0.4em' class='mono'
+          dominant-baseline='middle' text-anchor='middle'>
+      l
+    </text>
+  </svg>
+
+</svg>

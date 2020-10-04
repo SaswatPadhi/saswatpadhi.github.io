@@ -1,0 +1,13 @@
+---
+layout: base
+---
+
+{%- capture target -%}
+  {% include tools/text_process.md no_abbrv=true data=page.link %}
+{%- endcapture -%}
+
+Redirecting to external page: <a href='{{ target }}'><code>{{ target }}</code></a>
+
+<script>
+  location.replace("{{ target }}");
+</script>

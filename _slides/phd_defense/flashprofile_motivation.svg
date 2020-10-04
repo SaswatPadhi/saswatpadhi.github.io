@@ -1,0 +1,63 @@
+<svg viewBox='15 -25 440 200' xmlns='http://www.w3.org/2000/svg'
+     style='margin:0.25em auto; width:96%'>
+
+  <text x='52.5' y='-16' fill='Olive' class='subheading' font-size='0.3em'
+        dominant-baseline='middle'>
+    Dataset
+  </text>
+
+  <path d='M 118,38 L 158,38' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='1.75'
+        class='fragment' data-fragment-index='3' />
+
+  <svg x='165' y='25' width='140' height='26' class='fragment' data-fragment-index='3'>
+    <rect x='0' y='0' width='100%' rx='7%' height='100%' fill='SlateGray' />
+    <text x='50%' y='55%' fill='White' font-size='0.45em' font-weight='bold' class='subheading'
+          dominant-baseline='middle' text-anchor='middle'>
+      Profiler
+    </text>
+  </svg>
+
+  <text x='356' y='6' class='color-highlight fragment subheading' font-size='0.3em'
+        dominant-baseline='middle' data-fragment-index='3'>
+    Data Profile
+  </text>
+
+  <path d='M 305,38 L 354,38' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='1.75'
+        class='fragment' data-fragment-index='3' />
+
+  <text x='270' y='80' class='color-medium-accent fragment' font-size='0.25em'
+        dominant-baseline='middle' data-fragment-index='4'>
+    Candidate profiles
+  </text>
+
+  <path d='M 240,51 C 240,85 240,85 255,85 C 273,85 273,105 255,105' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='1.75'
+        class='fragment' data-fragment-index='4' />
+
+  <text x='140' y='80' class='color-medium-accent fragment' font-size='0.25em'
+        dominant-baseline='middle' data-fragment-index='4'>
+    Intents and
+  </text>
+  <text x='130' y='92' class='color-medium-accent fragment ' font-size='0.25em'
+        dominant-baseline='middle' data-fragment-index='4'>
+    requirements
+  </text>
+
+  <path d='M 217,107 C 195,107.5 195,85 213,85 S 230,85 230,55' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='1.75'
+        class='fragment' data-fragment-index='4' />
+
+  <path d='M 237,128 L 237,140 Q 237,150 229,150 L 128,150 Q 120,150 120,160 L 120,170' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='1.75'
+        class='fragment' data-fragment-index='1' />
+  <path d='M 237,128 L 237,140 Q 237,150 245,150 L 345,150 Q 355,150 355,160 L 355,170' marker-end='url(#arrow1)' fill='none'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='1.75'
+        class='fragment' data-fragment-index='2' />
+
+  <path d='M 394,64 L 394,128 Q 394,138 380,138 L 244,138' marker-end='url(#arrow1)' fill='none' stroke-dasharray='1 4'
+        stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='1.75'
+        class='fragment' data-fragment-index='3' />
+
+</svg>

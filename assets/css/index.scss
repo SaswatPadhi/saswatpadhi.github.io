@@ -1,0 +1,87 @@
+---
+---
+
+p.indented {
+  line-height: 1.6em;
+  margin-left: 0.5em;
+}
+
+div.top-left {
+  margin: 0.5em 0em;
+}
+
+div.top-right {
+  margin-top: 0.35em;
+  margin-bottom: -0.5em;
+
+  h4:nth-of-type(2) {
+    margin-top: 1.125em;
+  }
+}
+
+div.bot-right > .table {
+  margin-top: 0.75rem;
+
+  .event-description {
+    margin-bottom: 1.625em;
+  }
+
+  .event-location {
+    font-size: 0.825rem;
+    font-style: italic;
+    margin-bottom: -0.25em;
+  }
+
+  .event-icon {
+    text-align: center;
+    font-size: 1.05em;
+    margin-left: -0.4em;
+    margin-right: 0.4em;
+  }
+
+  .event-date {
+    text-align: right;
+    margin-right: 1em;
+    margin-left: -1em;
+
+    i {
+      font-size: 0.7em;
+      vertical-align: super;
+      font-style: normal;
+      padding-left: 0.25em;
+    }
+
+    .multimonth {
+      margin-top: -0.625em;
+      font-size: 0.95em;
+
+      b {
+        margin-right: 1.25em;
+        font-size: 0.95em;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+div.bot-right > h4 > em {
+  opacity: 0.25;
+}
+
+div.bot-left, div.bot-right {
+  margin-bottom: -0.5em;
+}
+
+div.bot-left {
+  p {
+    margin: 0.625em auto;
+  }
+
+  p:first-of-type {
+    margin-top: 1em;
+  }
+
+  p:last-of-type {
+    margin-bottom: 1em;
+  }
+}

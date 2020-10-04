@@ -1,0 +1,98 @@
+---
+layout: default
+
+mathjax: true
+prismjs: true
+
+artifact_badges:
+  acm_available:
+    image: acm_available.jpg
+    info: https://www.acm.org/publications/policies/artifact-review-badging#available
+  acm_functional:
+    image: acm_functional.jpg
+    info: https://www.acm.org/publications/policies/artifact-review-badging#functional
+  acm_replicated:
+    image: acm_replicated.jpg
+    info: https://www.acm.org/publications/policies/artifact-review-badging#replicated
+  acm_reproduced:
+    image: acm_reproduced.jpg
+    info: https://www.acm.org/publications/policies/artifact-review-badging#reproduced
+  acm_reusable:
+    image: acm_reusable.jpg
+    info: https://www.acm.org/publications/policies/artifact-review-badging#reusable
+  cav_evaluated:
+    image: cav.png
+    info: http://i-cav.org/2019/artifacts/
+
+icons:
+  DOI: book-open
+  PDF: file-pdf
+  Slides: desktop
+  Tool: terminal
+  Talk: video
+---
+
+<h3>{{ page.title }}</h3>
+
+<div style='font-size: 1.15em; margin-top: -0.3125em;'>
+  {% include tools/format_authors.md data=page.authors tag="b" %}
+</div>
+
+{% if page.artifact_badges or page.awards -%}
+<p style='font-size: 1.3em;' class='color-accent color-faded'>
+  {% for award in page.awards %}
+    &loang;&hairsp;<i class='fas fa-fw fa-sm fa-{{ award.icon }}'></i>&nbsp; {% include tools/text_process.md data=award.desc %}&hairsp;&roang; &nbsp;
+  {% endfor %}
+  {% if page.artifact_badges and page.awards %} <br style='display: block; margin: 1em 0; line-height: 2em; content: ""'> {% endif %}
+  {% for badge in page.artifact_badges %}
+    <a href="{{ layout.artifact_badges[badge].info }}">
+      <img style="width: 5em; padding-right: 1em;" src="{{ site.baseurl }}/assets/img/artifact_evaluation/{{ layout.artifact_badges[badge].image }}" alt="[artifact {{ badge }}]"/>
+    </a>
+  {% endfor %}
+</p>
+{%- endif %}
+
+<p>
+  {% if page.target.full -%}
+    {%- include tools/text_process.md data=page.target.full -%}
+    <br>
+  {%- endif -%}
+  {% if page.type != 'patent' -%}
+    &langle;&thinsp;{% if page.target.link -%}
+      <a style='font-size: 1.05em;' href='{{ page.target.link }}'>
+        {{- page.target.short }}{% if page.type != 'manuscript' %} {{ page.year }}{%- endif -%}
+      </a>
+    {%- else -%}
+      {{ page.target.short }}{% if page.type != 'manuscript' %} {{ page.year }}{% endif %}
+    {%- endif %}&thinsp;&rangle;
+  {%- else -%}
+    <p>{{ page.DOI.target }}&thinsp;{{ page.DOI.number }} assigned to <em>{{ page.target.owner }}</em></p>
+  {%- endif %}
+</p>
+
+{% if page.links or page.DOI -%}
+<div class='pure-g' style='font-size: 1.2em; text-align: center;'>
+  {%- if page.DOI %}
+    <div class='pure-u-1-3 pure-u-sm-1-5'>
+      <i class='fas fa-fw fa-{{ layout.icons.DOI }}'></i>&nbsp;
+      {% if page.type != 'patent' -%}
+        <a href='https://doi.org/{{ page.DOI.number }}'>{{ page.DOI.target }}</a>
+      {%- else -%}
+        <a href='https://patents.google.com/patent/US{{ page.DOI.number }}/en'>Details</a>
+      {%- endif %}
+    </div>
+  {%- endif %}
+  {%- for link_data in page.links %}
+    <div class='pure-u-1-3 pure-u-sm-1-5'>
+      {% assign link_name = link_data[0] -%}
+      {% assign link_url = link_data[1] -%}
+      <i class='fas fa-fw fa-{{ layout.icons[link_name] }}'></i>&nbsp;
+      <a href='{% include tools/text_process.md no_abbrv=true data=link_url %}'>{{ link_name }}</a>
+    </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+<div style='text-align:justify'>
+  {% include tools/text_process.md data=content %}
+</div>
