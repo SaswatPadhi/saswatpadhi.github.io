@@ -73,6 +73,7 @@
 {% comment %}             COMPETITIONS, CONFERENCES etc.
 {% endcomment %}
 [CAV 2019]:               http://i-cav.org/2019
+[CAV 2021]:               http://i-cav.org/2021
 [CC 2019]:                https://cc-conference.github.io/19
 [ICLR 2019]:              https://iclr.cc/Conferences/2019
 [OOPSLA 2018]:            https://2018.splashcon.org/track/splash-2018-OOPSLA
