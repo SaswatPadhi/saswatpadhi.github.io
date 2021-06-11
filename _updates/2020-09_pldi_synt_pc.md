@@ -12,5 +12,5 @@ I am serving on the program committee of the [PLDI 2021] conference,
 and the [SYNT workshop](https://workshops.inf.ed.ac.uk/SYNT2021/) at [CAV 2021].
 Look forward to reading about some cutting-edge PL research.
 <br>
-<small>**PLDI Deadline:** &nbsp; 20<sup>th</sup> November ([papers][PLDI 2021])</small>
+<small>**PLDI Deadline:** &nbsp; 20<sup>th</sup> November ([papers][PLDI 2021])</small><br>
 <small>**SYNT Deadline:** &nbsp; 27<sup>th</sup> May ([papers](https://workshops.inf.ed.ac.uk/SYNT2021/))</small>

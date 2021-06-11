@@ -8,7 +8,7 @@
         font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
     LoopInvGen
   </text>
-  <text x='133.5' y='99' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+  <text x='139' y='99' class='subheading' font-size='0.15em' dominant-baseline='middle'>
     <a href='https://github.com/SaswatPadhi/LoopInvGen'>
       [&nearr;]
     </a>
@@ -20,7 +20,7 @@
         font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
     CVC4
   </text>
-  <text x='267' y='99' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+  <text x='272.5' y='99' class='subheading' font-size='0.15em' dominant-baseline='middle'>
     <a href='https://github.com/CVC4/CVC4'>
       [&nearr;]
     </a>
@@ -39,7 +39,7 @@
         font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
     SketchAC
   </text>
-  <text x='279' y='210' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+  <text x='284.5' y='210' class='subheading' font-size='0.15em' dominant-baseline='middle'>
     <a href='https://github.com/plum-umd/adaptive-concretization'>
       [&nearr;]
     </a>
@@ -51,7 +51,7 @@
         font-variant='small-caps' letter-spacing='0.75' dominant-baseline='middle'>
     EUSolver
   </text>
-  <text x='442.5' y='210' class='subheading' font-size='0.15em' dominant-baseline='middle'>
+  <text x='448' y='210' class='subheading' font-size='0.15em' dominant-baseline='middle'>
     <a href='https://bitbucket.org/abhishekudupa/eusolver/src/master/'>
       [&nearr;]
     </a>

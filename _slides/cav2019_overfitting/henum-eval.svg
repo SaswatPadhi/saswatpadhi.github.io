@@ -2,7 +2,7 @@
      style='margin-top:0.125em; border-radius:0.25em; box-shadow:0.03125em 0.03125em 0.09375em 1px DarkGray;'>
   <rect x='0%' y='0%' width='100%' height='100%' fill='White' />
 
-  <image x='10' y='24' height='256px' width='686px' transform='scale(0.695 0.695)' href='data/henum-eval.png' />
+  <image x='10' y='24' height='256px' width='686px' transform='scale(0.695 0.695)' href='images/henum-eval.png' />
 
   <text x='70' y='164' font-size='0.3em'>
     <a href='https://github.com/SaswatPadhi/2019_CAV_Artifact_100/blob/master/grammars/Intervals.g'>

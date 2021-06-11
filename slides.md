@@ -27,9 +27,9 @@ text_of_type:
   <div class='clearfix' style='width:100%'>
     <a href='{{ slides_url }}' style='float:left'>
       <img src="{{ site.baseurl }}{{ slides.url | split: '/' | reverse | shift | reverse | join: '/' | append: '/thumb.png' }}"
-          alt="thumbnail" style='height:8.25em; border-radius:0.75em; box-shadow:-1px 2px 6px rgba(0,0,0,0.4)'>
+          alt="thumbnail" style='height:8em; border-radius:0.75em; box-shadow:-1px 2px 6px rgba(0,0,0,0.4)'>
     </a>
-    <div style='float:left; margin:0.125em 0 0 1em'>
+    <div style='float:left; margin:0 0 0 1em'>
       <div style='font-size:1.075em; margin:0.75em 0 -0.25em 0'>
         <b>{% include tools/text_process.md data=slides.target %}</b>{% if slides.location %},
         &thinsp;{%- include tools/text_process.md data=slides.location %}{% endif %}

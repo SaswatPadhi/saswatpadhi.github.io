@@ -38,23 +38,18 @@ title: Home
 <div class='pure-g' style='text-align: justify; margin-top: -1em'>
 <div class='pure-u-1 pure-u-md-22-24' markdown='1'>
 
-I recently started working as an <span class='color-medium-accent'>applied scientist</span>
+I am an <span class='color-medium-accent'>applied scientist</span>
 in [Michael Whalen]’s proof platforms (P2) team
 within the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
 
-My current research is focused on <span class='color-highlight'>using program synthesis
-to aid users in writing highly reliable software</span>.
-I design techniques to help developers generate [formal specifications] for their programs
-{% comment -%}
-<span class='superscript'>[&thinsp;[PLDI&apos;16]({{ site.baseurl }}/publications/pldi2016_pie), [OOPSLA&apos;18]({{ site.baseurl }}/publications/oopsla2018_flashprofile)&thinsp;]</span>
-{%- endcomment -%}
-as well as synthesize sufficient [invariants] that provably establish their correctness.
-{% comment -%}
-<span class='superscript'>[&thinsp;[PLDI&apos;16]({{ site.baseurl }}/publications/pldi2016_pie), [CAV&apos;19]({{ site.baseurl }}/publications/cav2019_overfitting)&thinsp;]</span>
-{%- endcomment %}
-
-I graduated with a Ph.D. in [CS][CS@UCLA] from [UCLA] in 2020,
+Before joining AWS, I graduated with a Ph.D. in [CS][CS@UCLA] from [UCLA] in 2020,
 and a B.Tech. (Hons.) in [CSE][CS@IITB] from [IIT Bombay] in 2014.
+
+I am interested in all aspects of
+<span class='color-highlight'>designing and implementing high-performance systems
+that have strong correctness guarantees</span>.
+My PhD research was focused around using program synthesis and statistical learning techniques
+to aid development of formally verified software.
 
 </div>
 </div>

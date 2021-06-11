@@ -132,8 +132,8 @@ tech: {icon: 'fab fa-html5', name: 'HTML5 (Reveal.js)'}
 <div class='fragment' data-fragment-index='3'
      style='background: rgba(255, 0, 0, 0.125);
             position: absolute;
-            top: 10.775em; left: 18.125em;
-            width: 2.45em; height: 2em;
+            top: 11.325em; left: 18.125em;
+            width: 2.45em; height: 1em;
             border: 3px solid FireBrick;
             border-radius: 0.5em'>
 </div>
