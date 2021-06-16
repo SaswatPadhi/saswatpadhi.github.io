@@ -1,7 +1,7 @@
 ---
 layout: article
 
-type: manuscript
+type: draft
 year: 2019
 month: 8
 

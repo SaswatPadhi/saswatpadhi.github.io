@@ -2,22 +2,22 @@
 layout: article
 
 type: patent
-year: 2018
-month: 05
+year: 2020
+month: 11
 
 title: 'Record Profiling for Dataset Sampling'
 authors: ['Daniel G. Simmons', 'Kevin D. J. Grealish', '[Sumit Gulwani]', 'Ranvijay Kumar', '[Kevin Michael Ellis]' , 'Saswat Padhi']
 
 DOI:
-  target: App.
-  number: 20180121525A1
+  target: Grant
+  number: US10394874B2
 
 target:
-  full: 'United States Patent Application Publication (2018)'
+  full: 'United States Patent Application Publication (2020)'
   owner: 'Microsoft Technology Licensing, LLC'
 
 links:
-  PDF: 'https://patentimages.storage.googleapis.com/e3/9d/16/2332cea71923fa/US20180121525A1.pdf'
+  PDF: 'https://patentimages.storage.googleapis.com/b1/74/90/ca18093fcc5a52/US10394874.pdf'
 ---
 
 ###### Abstract
@@ -39,17 +39,17 @@ and a representation status of the pattern in the smaller dataset.
 ###### BibTeX Citation
 
 ```bibtex {% raw %}
-@misc{patent/20180121525,
+@misc{patent/US10394874B2,
   title     = {Record Profiling for Dataset Sampling},
-  number    = {US20180121525},
+  number    = {US10394874B2},
   author    = {Daniel G. Simmons and
                Kevin D. J. Grealish and
                Sumit Gulwani and
                Ranvijay Kumar and
                Kevin M. Ellis and
                Saswat Padhi},
-  year      = {2018},
-  month     = {May},
-  url       = {https://patents.google.com/patent/US20180121525A1}
+  year      = {2020},
+  month     = {November},
+  url       = {https://patents.google.com/patent/US10394874B2}
 }
 {% endraw %} ```

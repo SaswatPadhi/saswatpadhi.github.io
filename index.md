@@ -26,7 +26,7 @@ title: Home
 #### <i class='fas fa-fw fa-sm fa-glasses'></i> Research Interests
 
 <p>
-    Programming Languages, &nbsp; Program Synthesis and Verification, &nbsp; Statistical Learning
+    Programming Languages, &nbsp; Software Verification, &nbsp; Statistical Learning, &nbsp; Program Synthesis
 </p>
 
 </div>
@@ -38,9 +38,9 @@ title: Home
 <div class='pure-g' style='text-align: justify; margin-top: -1em'>
 <div class='pure-u-1 pure-u-md-22-24' markdown='1'>
 
-I am an <span class='color-medium-accent'>applied scientist</span>
-in [Michael Whalen]’s proof platforms (P2) team
+I am an <span class='color-medium-accent'>applied scientist</span> in the proof platforms (P2) team
 within the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
+I am currently working on adding unbounded proof support to our verification infrastructure.
 
 Before joining AWS, I graduated with a Ph.D. in [CS][CS@UCLA] from [UCLA] in 2020,
 and a B.Tech. (Hons.) in [CSE][CS@IITB] from [IIT Bombay] in 2014.

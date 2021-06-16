@@ -1,6 +1,6 @@
 <div class='pure-g table'>
     {%- assign sorted_updates = site.updates | sort: 'date' | reverse -%}
-    {%- for event in sorted_updates limit: 5 -%}
+    {%- for event in sorted_updates limit: 6 -%}
         {%- assign eventdate = event.date | date: '%s' -%}
         {%- assign highlight = event.highlight | default: site.default_highlight[event.type] -%}
         <div class='pure-u-1-8 pure-u-sm-1-12 pure-u-md-1-6 event-date'>

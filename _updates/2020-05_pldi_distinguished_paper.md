@@ -5,7 +5,7 @@ type: award
 
 icon: star
 
-headline: PLDI Distinguished Paper Award
+headline: '[Distinguished Paper Award](https://conf.researchr.org/home/pldi-2020#distinguished-papers) @ PLDI'
 ---
 
 Our [=sc^Hanoi^sc=]({{ site.baseurl }}/publications/pldi2020_hanoi) paper
