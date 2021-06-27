@@ -17,17 +17,17 @@ sass:
 
 ## Globals
 
-url:        https://www.padhi.us
+url:        https://saswat.padhi.me
 baseurl:
 repository: SaswatPadhi/saswatpadhi.github.io
 permalink:  pretty
 
 title:      'Saswat Padhi'
-timezone:   'America/Los_Angeles'
+timezone:   'America/New_York'
 
 author:
   name:     'Saswat Padhi'
-  link:     https://www.padhi.us
+  link:     https://saswat.padhi.me
   photo:
     alt:    'Avatar from GitHub'
     remote: https://avatars3.githubusercontent.com/u/1577944
