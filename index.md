@@ -18,9 +18,9 @@ title: Home
 <p class='indented' markdown='1'>
     <em>Office</em>: &nbsp; [BOS17 - Amazon], Boston, MA
     <br>
-    <em>Email</em>: &nbsp; saspadhi <i class='fas fa-fw fa-sm fa-at'></i> amazon.com
+    <em>Email (Work)</em>: &nbsp; saspadhi <i class='fas fa-fw fa-sm fa-at'></i> amazon <i class='fas fa-fw fa-xs fa-circle' style='font-size: 0.5em; vertical-align: 25%;'></i> com
     <br>
-    <em>Skype</em>: &nbsp; saswat[d<i class='fas fa-fw fa-xs fa-circle' style='font-size: 0.5em; vertical-align: 25%;'></i>t]padhi
+    <em>Email (Private)</em>: &nbsp; saswatpadhi <i class='fas fa-fw fa-sm fa-at'></i> protonmail <i class='fas fa-fw fa-xs fa-circle' style='font-size: 0.5em; vertical-align: 25%;'></i> com
 </p>
 
 #### <i class='fas fa-fw fa-sm fa-glasses'></i> Research Interests
