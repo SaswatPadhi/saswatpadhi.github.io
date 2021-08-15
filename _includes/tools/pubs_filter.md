@@ -1,8 +1,9 @@
+{%- assign allowed_types = include.type | split: '|' -%}
 {%- assign grouped_publications = site.publications | group_by: 'year' | sort: 'name' | reverse -%}
 {%- for year_publications in grouped_publications -%}
   {%- assign publications = year_publications.items | sort: 'month' | reverse -%}
   {%- for article in publications -%}
-    {%- if article.type != include.type -%} {%- continue -%} {%- endif -%}
+    {%- unless allowed_types contains article.type -%} {%- continue -%} {%- endunless -%}
 
 <div class='pure-g paper-table'>
   <div class='pure-u-1-3 pure-u-sm-1-4 pure-u-md-5-24 pure-u-lg-1-6 paper-left'>

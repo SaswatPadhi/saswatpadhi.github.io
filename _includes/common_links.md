@@ -1,17 +1,21 @@
-{% comment %}             AWESOME PEOPLE
+{% comment %}             COLLABORATORS
 {% endcomment %}
 [Abhishek Udupa]:         https://abhishekudupa.github.io
 [Aditya Nori]:            https://www.microsoft.com/en-us/research/people/adityan
 [Adnan Darwiche]:         http://web.cs.ucla.edu/~darwiche/
 [Amey Karkare]:           https://www.cse.iitk.ac.in/users/karkare
+[Andrew Reynolds]:        http://homepage.divms.uiowa.edu/~ajreynol/
 [Ben Zorn]:               https://www.microsoft.com/en-us/research/people/zorn
+[Chenglong Wang]:         https://chenglongwang.org/
 [Dana Fisman]:            https://www.cs.bgu.ac.il/~dana
 [David Walker]:           https://www.cs.princeton.edu/~dpw
+[Elizabeth Polgreen]:     https://polgreen.github.io/
 [Jens Palsberg]:          https://web.cs.ucla.edu/~palsberg/
 [Kevin Michael Ellis]:    https://web.mit.edu/ellisk/www
 [Marc Brockschmidt]:      https://www.microsoft.com/en-us/research/people/mabrocks
 [Michael Whalen]:         https://www-users.cs.umn.edu/~mwwhalen/
 [Miryung Kim]:            http://web.cs.ucla.edu/~miryung/
+[Mukund Raghothaman]:     https://r-mukund.github.io
 [Oleksandr Polozov]:      https://www.microsoft.com/en-us/research/people/polozov
 [Prateek Jain]:           https://www.prateekjain.org
 [Rajeev Alur]:            https://www.cis.upenn.edu/~alur
@@ -86,6 +90,7 @@
 [SyGuS-Comp 2017]:        https://www.sygus.org/comp/2017
 [SyGuS-Comp 2018]:        https://www.sygus.org/comp/2018
 [SyGuS-Comp 2019]:        https://www.sygus.org/comp/2019
+[SYNT 2021]:              https://workshops.inf.ed.ac.uk/SYNT2021/
 
 
 {% comment %}             BOOKS, JOURNALS etc.

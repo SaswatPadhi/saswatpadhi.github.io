@@ -31,14 +31,13 @@ title: Publications
 
 <hr>
 
+#### <i class='fas fa-fw fa-file-invoice'></i> Reports &amp; Theses
+
+{% include tools/pubs_filter.md type="report|thesis" %}
+
 #### <i class='far fa-fw fa-file-alt'></i> Manuscripts
 
 {% include tools/pubs_filter.md type="manuscript" %}
-
-#### <i class='fas fa-fw fa-file-invoice'></i> Reports &amp; Theses
-
-{% include tools/pubs_filter.md type="report" %}
-{% include tools/pubs_filter.md type="thesis" %}
 
 <hr>
 
