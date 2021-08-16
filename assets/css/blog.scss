@@ -1,0 +1,41 @@
+---
+---
+
+{% include sass_config.md %}
+
+.container {
+  margin-top: 1.25em;
+  font-size: 1.125em;
+
+  .post {
+    margin: 1em 0;
+
+    .categories {
+      margin-left: 0.75em;
+      opacity: 0.8;
+      font-size: 0.75em;
+
+      .cat {
+        display: inline-block;
+        height: 1.5em;
+        letter-spacing: 0.025em;
+        margin: 0em 0.3125em;
+        border-radius: 0.3125em;
+        background: #666;
+        color: white;
+      }
+    }
+
+    .date {
+      opacity: 0.7;
+      font-size: 0.975em;
+      letter-spacing: 0.075em;
+    }
+
+    .tagline {
+      margin: 0.125em 0 0 7.875em;
+      font-size: 0.725em;
+      font-style: italic;
+    }
+  }
+}

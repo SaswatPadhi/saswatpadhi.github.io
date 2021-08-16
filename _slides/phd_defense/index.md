@@ -277,7 +277,7 @@ by **automated synthesis** of formal properties
   ![Microsoft logo]({{ site.baseurl }}/assets/img/logos/microsoft.png){: .plain .color-faded style='margin:0 0 0.125em 0.05em; height:1em; vertical-align:bottom' }
 </p>
 
-<div style='font-size:0.7em; position:absolute; top:9rem; left:18.5rem; width:15em'>
+<div style='font-size:0.7em; position:absolute; top:8rem; left:18.5rem; width:15em'>
 Real-life datasets are often
 incomplete and inconsistent
 </div>
@@ -285,12 +285,12 @@ incomplete and inconsistent
 
 {% include_relative flashprofile_motivation.svg %}
 
-<div style='position:absolute; font-size:1.45em; top:21.875rem; left:29.75rem'>
+<div style='position:absolute; font-size:1.45em; top:20.875rem; left:29.75rem'>
 =fa^user^fa=
 </div>
 {: .color-medium-accent }
 
-<table class='mono' style='font-size:0.3em; letter-spacing:0.0125em; line-height:1.025; position:absolute; top:10.75rem; left:4.75rem'>
+<table class='mono' style='font-size:0.3em; letter-spacing:0.0125em; line-height:1.025; position:absolute; top:9.75rem; left:4.75rem'>
   <tr><th class='heading'>Reference ID</th></tr>
   <tr><td>PMC9035311</td></tr>
   <tr><td>doi:&blank;10.1016/S1387-<br>7003(03)00113-8</td></tr>
@@ -314,16 +314,16 @@ incomplete and inconsistent
 </div>
 {: .focus-box .fragment data-fragment-index='3' }
 
-<div style='font-size:0.75em; font-weight:bold; position:absolute; top:25.75rem; left:21rem'>
+<div style='font-size:0.75em; font-weight:bold; position:absolute; top:24.75rem; left:21rem'>
 Process a large dataset
 </div>
 
-<div style='font-size:0.725em; position:absolute; top:35.25rem; left:6.25rem'>
+<div style='font-size:0.725em; position:absolute; top:34.25rem; left:6.25rem'>
 Write a script manually
 </div>
 {: .fragment data-fragment-index='1' }
 
-<div style='font-size:0.725em; position:absolute; top:35.25rem; left:36.25rem'>
+<div style='font-size:0.725em; position:absolute; top:34.25rem; left:36.25rem'>
 Programming by examples
 </div>
 {: .fragment data-fragment-index='2' }
@@ -686,7 +686,7 @@ $DISPLAY
 <div style='background:white; margin:4em 0 0 -2.25em; padding:0.25em 0.5em; width:100%'>
 DISPLAY$
 \begin{array}{rl}
-  \text{Constant strings} & \;\text{Character classes} \\[0.25em]
+  \text{Constant strings} & \;\text{Character classes} \\\\[0.25em]
   \text{Regular exprs.} & \;\text{String predicates}
 \end{array}
 $DISPLAY

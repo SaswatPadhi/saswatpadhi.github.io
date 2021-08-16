@@ -1,5 +1,5 @@
 ---
-icon: cogs
+icon: code
 
 post_date: 2019-09-15
 
@@ -11,10 +11,6 @@ categories: [ 'latex', 'productivity' ]
 
 Recently, while drafting a paper I found myself wishing for arbitrary-arity macros in LaTeX.
 
-
-
-#### =fa^info-circle^fa= Motivation
-
 As concrete examples, consider two macros `\List` and `\Tuple`,
 that should render lists and tuples of arbitrary lengths, respectively.
 For example:
@@ -24,17 +20,17 @@ For example:
 - `\List{1}{\ldots}{n}` should generate $[ 1; \ldots; n ]$, and
 - `\Tuple{x_1}{\ldots}{x_n}` should generate $\langle x_1, \ldots, x_n \rangle$
 
-These macros should just work; like any other LaTeX macro without defying common intuition,
-and without the cognitive burden of having to remember anything in particular about them.
+These macros should "just work", like any other LaTeX macro,
+without the user having to remember anything in particular about them.
 
 <details markdown='1'>
 <summary>Yes, I did try the obvious approaches ...</summary>
 Of course, I could always write `[1,2,3,4]` and `\langle 1,2 \rangle`
 to generate the lists and tuples directly,
-but that takes away the key power of LaTeX and of macros ---
-the ability to easily customize the formatting of _all_ my lists.
+but that takes away the key power of using LaTeX macros ---
+the ability to easily reformat _all_ my lists.
 For example, if I wanted to generate comma-separated lists instead,
-like $[1,2,3,4]$, I would have to manually replace every semicolon with a comma,
+like $[1,2,3,4]$, I would have had to manually replace every semicolon with a comma,
 as opposed to simply tweaking my `\List` macro.
 
 One idea, inspired by the [`cons` construct][cons] from [functional programming],
@@ -52,11 +48,11 @@ There had to be a better way to typeset this ...
 </details>
 
 To be more specific, I was looking for a solution with these properties:
-(in that order of importance)
+(in that order of importance)[^braces]
 
 1. _No special syntax_:
    The macro should look and behave just like regular LaTeX macros.
-   For example, it shouldn't parse a long string that uses another delimiter to separate the real arguments, like in case of `\List{1|2|3|4}`.[^braces]
+   For example, it shouldn't parse a long string that uses another delimiter to separate the real arguments, like in case of `\List{1|2|3|4}`.
 1. _No special packages_:
    Ideally one should be able to create and use these macros easily without having to install any third-party packages.
 1. _No special context_:
@@ -74,7 +70,8 @@ I was aware of [variadic functions][variadic function]
 --- a feature that is supported by most modern programming languages.
 So, I started to look for LaTeX's equivalent of those.
 Well, to be precise, what I was actually looking for was a variadic _[macro]_.
-The C-family of languages [support such macros][gcc-variadic-macros]
+In addition to variadic functions,
+the C-family of languages also [support variadic macros][gcc-variadic-macros]
 via two special macros: `__VA_ARGS__` and `__VA_OPT__`.
 However, after a fair amount of Googling and StackOverflowing,
 I was convinced that LaTeX didn't have any built-in support for variadic macros.
@@ -85,8 +82,7 @@ The solutions were very close to what I was looking for,
 but there were two main aspects of these solutions that left me wishing for something better:
 
 - _Violated **P1**_:
-  The commands had to be invoked via the `\usedecl` macro,
-  so something like `\usedecl{List}{1}{2}{3}`.
+  They had to be invoked via the `\usedecl` macro, e.g. `\usedecl{List}{1}{2}{3}`.
 - _Violated **P2**_:
   They used third-party packages, such `etoolbox` or `xparse`.
 </details>
@@ -139,10 +135,10 @@ and I soon found myself using a whole bunch of them, such as `\List`, `\Tuple`, 
 But for every new variadic macro, I had to create these two intermediate Check and Gobble macros too.
 
 Since these macros have very similar structure,
-I began to wonder if I could write _a macro that creates a variadic macro_ &#x1F92F;
-along with its required intermediate macros.
-With such a generator macro --- call it `\VARIADIC` ---
-I could simply say `\VARIADIC{List}...` to create a new variadic macro named `\List`.
+I began to wonder if I could write _a macro that defines a variadic macro_ &#x1F92F
+(i.e., along with its required intermediate macros).
+With such a generator macro, say `\VARIADIC`,
+I could simply write `\VARIADIC{List}...` to create a new variadic macro named `\List`.
 
 
 
@@ -177,15 +173,15 @@ Now I could easily generate several variadic macros:
 
 <details markdown='1'>
 <summary>What is this sorcery though?</summary>
-In addition to the main ideas behind the `\List`-specific macros above,
+In addition to the main ideas behind the intermediate macros for `\List`,
 there are two other key ideas here:
 
-- The `\expandafter` macro has been used to delay the expansion of `\newcommand` till its argument,
+- The `\expandafter` macro has been used to delay the expansion of `\newcommand` until its argument,
   in this case the name of the new macro, has been expanded.
   This is necessary since the macro names are constructed dynamically,
   e.g. `Check#1Arg` expands to `CheckListArg` for `\VARIADIC{List}...`.
 - The `#` character has been escaped for arguments to the generated macros,
-  e.g. while `#1` expands to the first argument to `\VARIADIC`,
+  e.g. while `#1` expands to the first argument to `\VARIADIC` itself,
   `###1` expands to `#1` which becomes the first argument to the generated macro.
 
 Also see [this TeX.StakExchange thread](https://tex.stackexchange.com/a/519/187728)
@@ -196,7 +192,7 @@ Awesome! But, there was still something missing ...
 The `\VARIADIC` macros were not easily _composable_ with other macros.
 For example, I wanted my `\List` and `\Tuple` macros to automatically use math mode
 by wrapping them inside `\ensuremath`.
-The following obvious hack does not work:
+The following straightforward hack does not work:
 
 ```latex {% raw %}
 \VARIADIC {Tuple} {\ensuremath\bgroup\langle} {,} {\rangle\egroup}
@@ -208,7 +204,7 @@ Of course I could hardcode `\ensuremath` this within `\VARIADIC` itself,
 but I didn't want it to be applied to _every_ variadic macro.
 Plus, I wanted a more general solution that would allow me to apply an arbitrary
 macro (or environment).
-The main issue was delaying the application of the macro till the entire
+The main issue was delaying the application of the macro until the entire
 variadic part had been expanded.
 After a fair bit of hacking, I gave up and turned to the TeX gurus ---
 I opened [this question on TeX.StackExchange][variadic-macro-question].
@@ -309,7 +305,8 @@ and "reduces" the given arguments by repeating applying this macro.
 Go ahead and try some examples on [Overleaf](https://www.overleaf.com/read/bwkjcwcktsqd).
 Cheers! &#x1F642;
 
-[^braces]: _Disclaimer_: I am prioritizing convenience over robustness here.
+[^braces]: _Disclaimer_: I am prioritizing convenience of using the macro
+           over its robustness here.
            Although the approaches I discuss in this post are fairly robust,
            they involve low-level handling of braces.
            If you notice something that doesn't work with `\VARIADIC` macros,

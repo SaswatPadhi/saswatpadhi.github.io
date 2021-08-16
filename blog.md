@@ -1,16 +1,18 @@
 ---
 layout: page
 
+css: [ 'blog' ]
+
 icon: edit
 title: Blog
 ---
 
-<div style='margin-top: 1.25em; font-size: 1.125em'>
+<div class='container'>
 {% assign blogposts = site.blogposts | sort: 'post_date' | reverse -%}
 {% for post in blogposts -%}
   {% assign post_url = post.url | split: "index.html" | first %}
-  <div style='margin: 1em 0'>
-    <span class='heading' style='opacity: 0.7; font-size: 0.975em; letter-spacing: 0.075em;'>
+  <div class='post'>
+    <span class='date heading'>
       {%- capture post_date -%}
         {{- post.post_date | date: "%b =qq= %y" -}}
       {%- endcapture -%}
@@ -19,13 +21,13 @@ title: Blog
     </span>
     <i class='fas fa-sm fa-fw fa-{{ post.icon }}'></i>
     &thinsp;<a href='{{ post_url }}'>{% include tools/text_process.md data=post.title %}</a>
-    <span class='visible-at-medium' style=' margin-left: 0.75em; opacity: 0.8; font-size: 0.75em'>
+    <span class='categories visible-at-medium'>
     {%- for cat in post.categories -%}
-      <span style='display: inline-block; height: 1.5em; letter-spacing: 0.025em; margin: 0em 0.3125em; border-radius: 0.3125em; background: gray; color: white'>&ensp;#&thinsp;{{ cat }}&ensp;</span>
+      <span class='cat'>&ensp;#&thinsp;{{ cat }}&ensp;</span>
     {%- endfor -%}
     </span>
     <br>
-    <div style='margin: 0.125em 0 0 7.875em; font-size: 0.725em; font-style: italic'>
+    <div class='tagline'>
       {% include tools/text_process.md data=post.tagline %}
     </div>
   </div>

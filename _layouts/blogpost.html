@@ -18,14 +18,21 @@ css: [ 'blogpost' ]
 
 <div class='post-header clearfix'>
 <div class='date'>{{ page.post_date | date_to_long_string }}</div>
+<span class='visible-at-small'>
 &nbsp;&bull;&thinsp;
 {% for cat in page.categories -%}
   <span class='category'>&ensp;#&thinsp;{{ cat }}&ensp;</span>
 {% endfor -%}
+</span>
 <span class='right color-faded'>
   (&asymp; {{ content | number_of_words }} words |
   {{ content | number_of_words | divided_by: 175.0 | ceil }} min.)
 </span>
+<div class='hidden-at-small' style='margin-top:1em;'>
+{% for cat in page.categories -%}
+  <span class='category'>&ensp;#&thinsp;{{ cat }}&ensp;</span>
+{% endfor -%}
+</div>
 </div>
 
 <div class='post-content'>

@@ -24,7 +24,7 @@ function unstylize () {
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     LoopInvGen
   </text>
-  <text x='99.5' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
+  <text x='104.5' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
     <a href='https://github.com/SaswatPadhi/LoopInvGen'>
       [&nearr;]
     </a>
@@ -43,7 +43,7 @@ function unstylize () {
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     SketchAC
   </text>
-  <text x='190' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
+  <text x='195' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
     <a href='https://github.com/plum-umd/adaptive-concretization'>
       [&nearr;]
     </a>
@@ -62,7 +62,7 @@ function unstylize () {
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     EUSolver
   </text>
-  <text x='285.5' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
+  <text x='290.5' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
     <a href='https://bitbucket.org/abhishekudupa/eusolver/src/master/'>
       [&nearr;]
     </a>

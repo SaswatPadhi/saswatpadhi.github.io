@@ -50,7 +50,7 @@ title: Publications
 
 <div class='pure-g paper-table'>
   <div class='pure-u-1-3 pure-u-sm-1-4 pure-u-md-5-24 pure-u-lg-1-6 paper-left'>
-    <span style='letter-spacing: -0.025em;' class='target'>
+    <span class='target'>
       {{ article.DOI.target }} {{ article.year }}
     </span>
     <br>
