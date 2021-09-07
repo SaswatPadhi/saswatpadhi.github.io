@@ -64,8 +64,6 @@ To be more specific, I was looking for a solution with these properties:
 
 #### =fa^search^fa= Research
 
-<details markdown='1'>
-<summary>Some background and existing techniques</summary>
 I was aware of [variadic functions][variadic function]
 --- a feature that is supported by most modern programming languages.
 So, I started to look for LaTeX's equivalent of those.
@@ -85,7 +83,6 @@ but there were two main aspects of these solutions that left me wishing for some
   They had to be invoked via the `\usedecl` macro, e.g. `\usedecl{List}{1}{2}{3}`.
 - _Violated **P2**_:
   They used third-party packages, such `etoolbox` or `xparse`.
-</details>
 
 After some more searching, I came across [this blog post][variadic-macro-blog-post],
 which took the essence of these answers and outlined a very neat solution.
@@ -171,8 +168,6 @@ Now I could easily generate several variadic macros:
 \VARIADIC {Tuple} {\langle} {,} {\rangle}      % generates a variadic \Tuple macro
 {% endraw %} ```
 
-<details markdown='1'>
-<summary>What is this sorcery though?</summary>
 In addition to the main ideas behind the intermediate macros for `\List`,
 there are two other key ideas here:
 
@@ -186,7 +181,6 @@ there are two other key ideas here:
 
 Also see [this TeX.StakExchange thread](https://tex.stackexchange.com/a/519/187728)
 to learn more about `\expandafter`.
-</details>
 
 Awesome! But, there was still something missing ...
 The `\VARIADIC` macros were not easily _composable_ with other macros.
@@ -305,6 +299,9 @@ and "reduces" the given arguments by repeating applying this macro.
 Go ahead and try some examples on [Overleaf](https://www.overleaf.com/read/bwkjcwcktsqd).
 Cheers! &#x1F642;
 
+
+
+
 [^braces]: _Disclaimer_: I am prioritizing convenience of using the macro
            over its robustness here.
            Although the approaches I discuss in this post are fairly robust,
@@ -314,6 +311,7 @@ Cheers! &#x1F642;
 
 [^cons]:   This isn't exactly the type-correct `cons` operator,
            but let's not be pedantic and make things harder than necessary.
+
 
 [cons]:                     https://en.wikipedia.org/wiki/Cons
 [fold]:                     https://en.wikipedia.org/wiki/Fold_(higher-order_function)

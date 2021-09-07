@@ -1,0 +1,64 @@
+.focus-box {
+  background: #FBFBFB;
+  border: 0.05em solid DimGray;
+  border-radius: 0.3125em;
+  box-shadow: 0.125em 0.125em 0.25em DarkGray;
+  font-size: 0.9em;
+  margin: auto;
+  padding-bottom: 0.25em;
+  position: relative;
+  width: 80%;
+
+  h1,h2,h3,h4,h5,h6 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0.625em auto -0.25em;
+    text-align: center;
+  }
+
+  p {
+    margin: 0.75em;
+  }
+
+  .annot {
+    border-bottom: 0.1em solid DimGray;
+    border-right: 0.1em solid DimGray;
+    border-bottom-right-radius: 0.5em;
+    font-family: $site-font-stack-head;
+    font-size: 0.575em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0.375em;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.color-accent.focus-box {
+  background: #FFF9F9;
+  border-color: DarkRed;
+  .annot { border-color: DarkRed; }
+  h1,h2,h3,h4,h5,h6 { color: DarkRed; }
+}
+
+.color-warning.focus-box {
+  background: #FFFFF9;
+  border-color: DarkGoldenRod;
+  .annot { border-color: DarkGoldenRod; }
+  h1,h2,h3,h4,h5,h6 { color: DarkGoldenRod; }
+}
+
+.color-highlight.focus-box {
+  background: #FAFFFA;
+  border-color: DarkGreen;
+  .annot { border-color: DarkGreen; }
+  h1,h2,h3,h4,h5,h6 { color: DarkGreen; }
+}
+
+.color-medium-accent.focus-box {
+  background: #FAFAFF;
+  border-color: Indigo;
+  .annot { border-color: Indigo; }
+  h1,h2,h3,h4,h5,h6 { color: Indigo; }
+}

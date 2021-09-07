@@ -65,7 +65,7 @@ hr {
   div > .tweet {
     border-top: none;
     background: linear-gradient(white, #F0F0F0);
-    border-radius: 0 0 1em 1em;
+    border-radius: 0 0 0.75em 0.75em;
     font-size: 0.875em;
     height: auto;
     overflow: hidden;
@@ -83,5 +83,11 @@ hr {
     max-height: 40em;
     transition: margin 0s ease, padding 0s ease, max-height 0.35s ease, opacity 0.25s ease;
     transition-delay: 0.5s;
+    border: 1px none;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
   }
 }

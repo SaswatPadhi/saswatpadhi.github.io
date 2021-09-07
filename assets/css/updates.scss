@@ -6,10 +6,17 @@ h1 {
 }
 
 .tweet {
+  border: 1px none;
+  border-radius: 0 0 0.75em 0.75em;
   margin-top: -0.75em;
   margin-bottom: 1.5em;
-  box-shadow: 0.1em 0.1em 0.125em #C2C2C2;
+  box-shadow: 0.125em 0.125em 0.25em #C2C2C2;
   transition: background-color 0.2s ease;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
 
   &:hover, &.hovering {
     background-color: #F0F4F0;

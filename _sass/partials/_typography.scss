@@ -16,19 +16,26 @@ code, kbd, pre, samp, .mono {
   font-family: $site-font-stack-mono;
 }
 
-blockquote p {
-  margin: 0;
-  padding: 0;
-}
-
 blockquote {
   text-align: justify;
-  margin-left: 0.5em;
-  margin-right: 0em;
-  padding: 0.5em;
-  border-radius: 1em 0 1em 1em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  padding: 0.25em 0.75em;
   background: #F8F8F9;
-  border: 1px solid #F0F0F0;
+  border-left: 8px solid #F0F0F0;
+  border-radius: 6px;
+
+  > p.source {
+    margin: -0.3125em -0.9375em;
+    padding: 0.3125em 1em;
+    background: #F0F0F0;
+    font-size: 0.8em;
+    font-family: $site-font-stack-head;
+    text-align: left;
+    &::before {
+      content: "Source: ";
+    }
+  }
 }
 
 a {
@@ -118,6 +125,7 @@ details {
     }
   }
 }
+
 .tweet p::before {
   display: inline-block;
   font-style: normal;
@@ -142,24 +150,27 @@ ol.custom {
   counter-reset: item;
   margin-left: 0em;
 
-  > li::before {
-    content: var(--prefix) counter(item) ".";
+  > li {
     counter-increment: item;
-    font-weight: bold;
-    display: inline-block;
-    width: 2em;
-    margin-left: -2em;
+
+    &::before {
+      content: var(--prefix) counter(item) ".";
+      font-weight: bold;
+      display: inline-block;
+      width: 2em;
+      margin-left: -2em;
+    }
   }
 }
 
 .footnotes {
   font-size: 0.9em;
+  border-top: 1px dashed #BBB;
 
   &:first-of-type {
     counter-reset: footnote;
     margin-top: 1em;
     padding-top: 0.5em;
-    border-top: 1px dashed #BBB;
   }
 
   &:last-of-type {
@@ -171,12 +182,13 @@ ol.custom {
     margin: 0;
 
     li {
+      counter-increment: footnote;
+
       p {
         display: inline;
       }
 
       &::before {
-        counter-increment: footnote;
         content: counter(footnote) ".";
         display: inline-block;
         width: 1.25em;

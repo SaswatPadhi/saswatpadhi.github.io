@@ -3,6 +3,7 @@ $color-foreground: #263238;
 $color-highlight: #2E7D32;
 $color-hyperlink: #0277BD;
 $color-accent: #A52624;
+$color-warning: #A57C00;
 $color-medium-accent: #862286;
 
 @include make_colors(((background, $color-background),
@@ -10,6 +11,7 @@ $color-medium-accent: #862286;
                       (highlight, $color-highlight),
                       (hyperlink, $color-hyperlink),
                       (accent, $color-accent),
+                      (warning, $color-warning),
                       (medium-accent, $color-medium-accent)));
 
 .color-faded { opacity: 0.85; }
@@ -35,7 +37,7 @@ a {
 
 details {
   > summary {
-    @include set_color_and_hover($color-accent);
+    @include set_color_and_hover($color-medium-accent);
   }
 }
 

@@ -16,6 +16,8 @@
                    | replace: "<section>", "<section markdown='1'>"
                    | replace: " =qq= ", "&nbsp;&apos;&hairsp;"
                    | replace: "=fa^", "<i class='fas fa-fw fa-"
+                   | replace: "=fab^", "<i class='fab fa-fw fa-"
+                   | replace: "=far^", "<i class='far fa-fw fa-"
                    | replace: "^fa=", "'></i>"
                    | replace: "=sc^", "<span class='small-caps'>"
                    | replace: "^sc=", "</span>"
