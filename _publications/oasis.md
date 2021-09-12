@@ -36,10 +36,10 @@ This enables the use of state-of-the-art ILP techniques
 that combine enumerative search with continuous optimization;
 thus ensuring fast convergence for a large class of verification tasks
 while still ensuring low sample complexity.
-We instantiate our technique as the open-source =sc^Oasis^sc= tool using an off-the-shelf ILP solver,
+We instantiate our technique as the open-source _Oasis_{:.small-caps} tool using an off-the-shelf ILP solver,
 and evaluate it on more than $ 300 $ benchmark tasks
 collected from the annual SyGuS competition and recent prior work.
-Our experiments show that =sc^Oasis^sc= outperforms the state-of-the-art tools,
+Our experiments show that _Oasis_{:.small-caps} outperforms the state-of-the-art tools,
 including the winner of last year’s SyGuS competition,
 and is able to solve $ 9 $ challenging tasks that existing tools fail on.
 

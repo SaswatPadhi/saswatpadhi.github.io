@@ -6,7 +6,7 @@ type: competition
 
 title: 'SyGuS-Comp (LoopInvGen) Slides'
 
-heading: '=sc^LoopInvGen^sc='
+heading: '_LoopInvGen_{:.small-caps}'
 publink: syguscomp_loopinvgen
 
 target: '[SyGuS-Comp](https://sygus.org)'

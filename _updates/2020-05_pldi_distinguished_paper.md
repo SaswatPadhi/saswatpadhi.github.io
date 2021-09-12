@@ -8,7 +8,7 @@ icon: star
 headline: '[Distinguished Paper Award](https://conf.researchr.org/home/pldi-2020#distinguished-papers) @ PLDI'
 ---
 
-Our [=sc^Hanoi^sc=]({{ site.baseurl }}/publications/pldi2020_hanoi) paper
+Our [_Hanoi_{:.small-caps}]({{ site.baseurl }}/publications/pldi2020_hanoi) paper
 received a distinguished paper award at [PLDI 2020].
 This year $5$ out of the $341$ submitted papers received this award.
 <br>

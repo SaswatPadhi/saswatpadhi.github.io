@@ -5,10 +5,10 @@ type: award
 
 icon: certificate
 
-headline: 'Winner of [SyGuS-Comp =qq= 17][SyGuS-Comp 2018] (=sc^Inv^sc=)'
+headline: 'Winner of [SyGuS-Comp =qq= 17][SyGuS-Comp 2018] (_Inv_{:.small-caps})'
 ---
 
-Our loop invariant inference tool [=sc^LoopInvGen^sc=][LoopInvGen]
+Our loop invariant inference tool [_LoopInvGen_{:.small-caps}][LoopInvGen]
 (based on [PIE]({{ site.baseurl }}/publications/pldi2016_pie))
-won the =sc^Inv^sc= track of [SyGuS-Comp 2017].
-On an average, =sc^LoopInvGen^sc= was ~70x faster than the runner-up ([CVC4]).
+won the _Inv_{:.small-caps} track of [SyGuS-Comp 2017].
+On an average, _LoopInvGen_{:.small-caps} was ~70x faster than the runner-up ([CVC4]).

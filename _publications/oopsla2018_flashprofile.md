@@ -14,7 +14,7 @@ DOI:
 
 artifact_badges: ['acm_available', 'acm_functional']
 
-tweet: 'We present a technique, called =sc^FlashProfile^sc=, to generate _hierarchical_ data profiles.
+tweet: 'We present a technique, called _FlashProfile_{:.small-caps}, to generate _hierarchical_ data profiles.
         Existing tools, including commercial ones, generate a single _flat_ profile, and are often overly general or incomplete.
         Furthermore, we show that data profiles can improve accuracy and efficiency of PBE techniques.'
 
@@ -45,10 +45,10 @@ followed by identifying patterns that succinctly describe each cluster.
 We present a technique for synthesizing such profiles over a given language of patterns,
 that also allows for interactive refinement by requesting a desired number of clusters.
 
-Using a state-of-the-art inductive synthesis framework, PROSE, we have implemented our technique as =sc^FlashProfile^sc=.
+Using a state-of-the-art inductive synthesis framework, PROSE, we have implemented our technique as _FlashProfile_{:.small-caps}.
 Across $153$ tasks over $75$ large real datasets, we observe a median profiling time of only ∼$0.7$s.
 Furthermore, we show that access to syntactic profiles may allow for more accurate synthesis of programs,
-i.e. using fewer examples, in programming-by-example (PBE) workflows such as =sc^Flash Fill^sc=.
+i.e. using fewer examples, in programming-by-example (PBE) workflows such as _Flash Fill_{:.small-caps}.
 
 ###### BibTeX Citation
 

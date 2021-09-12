@@ -62,7 +62,7 @@
   <span style='color:#2F5597;'>&#x2716; Original failure count</span> <br>
   &emsp;&thinsp;(U-shaped trend)
   <br><br>
-  <span style='color:#ED7C31;'>&#x25CF; Failure count with =sc^PLearn^sc=</span> <br>
+  <span style='color:#ED7C31;'>&#x25CF; Failure count with <span class='small-caps'>PLearn</span></span> <br>
   &emsp;&thinsp;(decreasing trend)
 </div>
   </foreignObject>

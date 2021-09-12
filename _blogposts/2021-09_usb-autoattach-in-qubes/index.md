@@ -10,14 +10,14 @@ categories: [ 'notes', 'qubes' ]
 ---
 
 {% if true -%}
-$
+<span class='hidden'>$
 \newcommand{\sysusb}{\textsf{sys-usb}}
 \newcommand{\DomZ}{\textsf{Dom0}}
-$
+$</span>
 {%- endif -%}
 
-I have been using [Qubes](https://www.qubes-os.org/intro/) as my primary OS for a while now,
-and I am extremely happy with the level of control it provides me over my apps.[^qubes]
+I have been using [Qubes](https://www.qubes-os.org/intro/) as my primary OS[^qubes] for a while now,
+and I am extremely happy with the level of control it provides me over my apps.
 Recently someone raised an interesting question on the [Qubes OS forum](https://forum.qubes-os.org/):
 
 > Hello,
@@ -33,13 +33,13 @@ Recently someone raised an interesting question on the [Qubes OS forum](https://
 
 <details markdown='1'>
 <summary>But what exactly is $\sysusb$?</summary>
-Typically, $\sysusb$ a minimal VM to which all USB controllers are assigned.
-So all USB devices would be attached to $\sysusb$ when plugged in,
-and not $\DomZ$ which has direct access to rest of the hardware.
+Typically, $\sysusb$ is a minimal VM to which all USB controllers are assigned.
+So all USB devices are attached to $\sysusb$ when plugged in,
+and not to $\DomZ$ that has direct access to rest of the hardware.
 Attaching untrusted USB devices to $\DomZ$ is a potentially fatal security risk.
 Many ready-to-use implementations of common attacks already exist,
 e.g. the USB [Rubber Ducky].
-Therefore, it's strongly recommended to use a dedicated USB qube,
+Therefore, it's strongly recommended to use a dedicated USB VM,
 and only [passthrough](https://wiki.xenproject.org/wiki/Xen_USB_Passthrough) trusted devices to VMs that need to access them.
 
 Below are some excellent resources
@@ -48,19 +48,20 @@ on understanding the rationale behind using $\sysusb$:
 - [Qubes OS documentation on USB qubes](https://www.qubes-os.org/doc/usb-qubes/)
 - [Discussion on Qubes OS Forum](https://forum.qubes-os.org/t/what-is-the-purpose-of-sys-usb-if-using-a-usb-keyboard)
 
-Also note that running applications, such as your password managers etc.
+Also note that running applications, such as your password manager etc.
 directly in $\sysusb$ defeats the whole point of using Qubes OS ---
 _compartmentalization_.
-A malicious USB device, if connected, could potentially extract all of your application data.
+A malicious USB device, if connected,
+could potentially extract all of your application data.
 So, $\sysusb$ should only be used as a handler,
-and we should only passthrough _trusted_ devices
-to desired application VMs (called _AppVMs_ in Qubes).
+and only _trusted_ devices should be connected to application VMs
+(called _AppVMs_ in Qubes).
 </details>
 
-I have wondered about this before myself.
+I have wondered about this sort of automation before.
 I have a bunch of USB devices: external disks, crypto wallets,
 password managers, etc.
-which I attach to specific VMs right after plugging in.
+which I attach to specific VMs immediately after plugging in.
 It would be nice to be able to attach trusted devices to certain VMs automatically.
 
 On a "regular" OS, such as [Debian] or [Fedora],
@@ -70,10 +71,11 @@ We could match on the Vendor ID / Model ID etc.
 to detect when a particular USB device is added or removed,
 and may `RUN` a desired script on that event.
 However, this isn't as straightforward with $\sysusb$ on Qubes OS,
-since it typically would have no access to other running VMs.
+since it typically would have no access to other running VMs
+and cannot attach devices to them directly.
 
 <div>
-# =fa^skull-crossbones^fa= CAUTION: POTENTIAL SECURITY RISK =fa^skull-crossbones^fa=
+# =fa^skull-crossbones^fa= POTENTIAL SECURITY RISK =fa^skull-crossbones^fa=
 
 Before trying out the proposed changes on your system,
 please remember that we are _trading off security for convenience_.
@@ -94,11 +96,11 @@ The high-level plan is outlined below:
    called [Qrexec], so we must write some new Qrexec service
    that receives a device attachment request and fulfills it.
 3. Our Qrexec service will be listening in $\DomZ$,
-   and a $\sysusb$ client must pass the target VM name and device name to this service.
+   and a $\sysusb$ client must pass the target VM name and device name to this service from a udev trigger.
 4. Finally, we must also setup an appropriate [Qrexec policy]
    for this service in $\DomZ$.
 
-If you are unsure of what [RPC] / [Qrexec] / [udev] are,
+If you are unsure of what RPC / Qrexec / udev are,
 then I would strongly suggest familiarizing yourself with those tools first
 before making any changes to your system.
 
@@ -116,8 +118,8 @@ You may compromise the security of your system, or damage it otherwise.
 #### =fa^user-lock^fa= Changes in $\DomZ$
 
 There are two main changes necessary in $\DomZ$:
-(a) a new [Qrexec] service to listen to device attachment requests from $\sysusb$,
-(b) a [Qrexec policy] to restrict the source and destination VMs for RPC calls to this service.
+(a) a new Qrexec service to listen to device attachment requests from $\sysusb$,
+(b) a Qrexec policy to restrict the source and destination VMs for calls to this service.
 
 #### The Qrexec Service
 
@@ -136,6 +138,8 @@ I chose to use a _service argument_,
 which is actually passed as a single _command-line argument_ to the service.
 A service argument, unlike stdin/stdout communication,
 is visible on the $\DomZ$ prompt, so the communication is a bit more transparent.
+Moreover the service argument is also *sanitized* by Qrexec,
+before being supplied to the script.
 
 However, since Qrexec only allows a single service argument currently,
 we must _pack_ our target VM name and device name together.
@@ -153,33 +157,11 @@ together by concatenating both using `+__+`.
   </figcaption>
 </figure>
 
-The service script itself is pretty simply, as I show below.
+The service script itself is pretty simple, as I show below.
 
-```bash {% raw %}
-#!/usr/bin/bash
-
-# Exit immediately if any of the following commands fail
-set -e
-
-# Expect exactly one argument -- the service argument
-[ "$#" -eq 1 ]
-
-# Unpack service argument and expect exactly 2 strings
-ARG=($(sed 's;+__+; ;g' <<< $1))
-[ "${#ARG[@]}" -eq 2 ]
-
-# Make sure we have a remote VM name from Qrexec
-[ -n "$QREXEC_REMOTE_DOMAIN" ]
-
-# Start the target VM, if needed
-qvm-start --skip-if-running "${ARG[0]}"
-
-# Attach the target device from remote VM to target VM
-qvm-block attach "${ARG[0]}" "${QREXEC_REMOTE_DOMAIN}:${ARG[1]}"
-
-# Report success
-exit 0
-{% endraw %} ```
+```bash
+{% include_relative dom0_device_attach_script.sh %}
+```
 {: .line-numbers }
 
 To make it available to Qrexec as a new service,
@@ -194,9 +176,9 @@ However, full USB passthrough is less secure.
 #### The Qrexec Policy
 
 For each Qrexec service,
-we must also specify a [Qrexec policy] to whitelist RPC calls from specific VMs.
+we must also specify a Qrexec policy to whitelist RPC calls from specific VMs.
 In this case,
-since we only want communication from $\sysusb$ to $\DomZ$,
+since we a single source VM and a single target VM,
 the Qrexec policy is quite straightforward:
 
 ```text {% raw %}
@@ -204,18 +186,17 @@ sys-usb dom0 ask,default_target=dom0
 
 @anyvm @anyvm deny
 {% endraw %}```
-{: .line-numbers }
 
 If you have multiple USB qubes,
 perhaps with different USB controllers assigned to each one,
-you might create copies of line 1 and modify accordingly.
-Line 3 prevents all other (non-USB) qubes from triggering this Qrexec call.
+you might create copies of the first line and modify accordingly.
+The last line prevents all other (non-USB) qubes from triggering this Qrexec call.
 
-This file should under under `/etc/qubes-rpc/policy`,
+This file should exist under `/etc/qubes-rpc/policy`,
 and must have the same name as the service file.
 I used `/etc/qubes-rpc/policy/custom.USBDeviceAttach`, for instance.
 
-The `ask` in line 1 could be changed to `allow` to skip the $\DomZ$ prompt,
+The `ask` in the first line could be changed to `allow` to skip the $\DomZ$ prompt,
 and allow all requests from $\sysusb$,
 but beware that this is a significant security risk.
 A compromised $\sysusb$ may request $\DomZ$
@@ -228,15 +209,15 @@ and these requests would be fulfilled without without any user approval!
 
 Finally, in $\sysusb$ we need to trigger our new Qrexec service
 when USB devices are connected to automatically attach them to desired VMs.
-But, before automating this process with [udev],
+But, before automating this process with udev,
 we should first manually test the RPC call by running:
 
 ```console
-qrexec-client-vm dom0 custom.USBDeviceAttach+my-target-vm+__+sda
+qrexec-client-vm dom0 custom.USBDeviceAttach+my-vm+__+sda
 ```
 
-where $\textsf{sda}$ should be a block device in $\sysusb$,
-and $\textsf{my-target-vm}$ should be some target VM.
+where $\textsf{sda}$ should be a block device (e.g., `/dev/sda`) in $\sysusb$,
+and $\textsf{my-vm}$ should be some target VM.
 If everything has been setup correctly,
 $\DomZ$ should display a prompt, similar to one in my screenshot above.
 On approving this request in $\DomZ$,
@@ -244,22 +225,24 @@ the device should be correctly attached to the target VM,
 which can be checked by running `qvm-block` in $\DomZ$.
 
 If everything works correctly,
-then this Qrexec call could be automated via a [udev] rule in $\sysusb$.
+then this Qrexec call could be automated via a udev rule in $\sysusb$.
 As an example,
 I have the following rule in a new file `/etc/udev/rules.d/50-auto-attach.rules`:
 
 ```udev
 ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", \
-RUN+="/bin/sh -c 'qrexec-client-vm dom0 custom.USBDeviceAttach+my-target-vm+__+%k &'"
+RUN+="/bin/sh -c 'qrexec-client-vm dom0 custom.USBDeviceAttach+my-vm+__+%k &'"
 ```
 
 This rule will match new block devices with kernel names matching `sd[a-z]` regex,
-so partitions such as `sda1`, `sda2` etc. wouldn't match this rule.
-Upon a successful match, the `RUN` command is triggered,
-and $\DomZ$ is requested to attach the device to $\textsf{my-target-vm}$.
-Beware that this rule is generally not very secure and must be strengthened
+so partitions such as `sda1` etc. wouldn't match this rule.
+Upon a successful match, the `RUN` command is executed,
+and $\DomZ$ is requested to attach the device to $\textsf{my-vm}$.
+Beware that this rule is not very secure and must be constrained
 with additional `ATTRS` or `ENV` values of the particular device to match on.
 [An introduction to Udev](https://opensource.com/article/18/11/udev) is an excellent quick tutorial on this topic.
+
+##### Unblocking udev
 
 Observe that the `RUN` command has an `&` at the end,
 and thus runs in a detached shell.
@@ -270,14 +253,38 @@ but is _necessary_ to resolve a dependency cycle:
    a USB device is connected and available in $\sysusb$ only after this script terminates
 2. However, the Qrexec call triggered by the run script
    expects the device to already be available in $\sysusb$,
-   and attempts to attach it to $\textsf{my-target-vm}$!
+   and attempts to attach it to $\textsf{my-vm}$!
 
 To resolve this dependency cycle,
 we run the Qrexec call in a detached shell and unblock udev.
-By the time $\DomZ$ processes the RPC call, receives user approval (via the prompt),
+By the time $\DomZ$ processes the RPC call,
+receives user approval (via the prompt),
 and attempts to attach the USB device to another VM,
 udev should have finished connecting the device (usually instantaneous).
 
+This (using `&`) is not the _correct_ way to detach scripts from udev.
+There are multiple threads online regarding this, e.g., see:
+[this StackOverflow thread](https://stackoverflow.com/questions/49349712/udev-detach-script-to-wait-for-mounting),
+[this AskUbuntu thread](https://askubuntu.com/questions/667922/udev-script-doesnt-run-in-the-background),
+and [this blogpost](https://bkhome.org/news/202012/how-to-run-long-time-process-on-udev-event.html).
+However, this approach suffices for our case, because
+Qrexec does not require the client to stay alive after making the RPC call.
+So although udev would kill the detached script after connecting the USB devices,
+$\DomZ$ would have received the call and would carry out the requested operation.
+$\DomZ$ might show a warning popup if the client is killed
+before $\DomZ$ finishes attaching the device and returns a success code to client:
+
+<figure>
+  <img src='dom0_warning.png' alt='A Dom0 Warning'/>
+  <figcaption>
+    A $\DomZ$ warning shown if the client is killed
+    before $\DomZ$ returns a success code.
+  </figcaption>
+</figure>
+
+However, this warning is completely harmless.
+Any of the solutions proposed in the above threads could be implemented
+to properly detach the script and get rid of the warning.
 
 
 ##### Persistent udev Rules
@@ -287,7 +294,7 @@ Since the root filesystem for AppVMs is discarded on shutdown and reset to the c
 the new rules saved under `/etc/udev/rules.d/` would not persist across reboots.
 Therefore, the `50-auto-attach.rules` file should be saved in the AppVM persistent storage (within `/rw`),
 and must be loaded into udev during boot.
-For instance, I have it at `/rw/config/50-auto-attach.rules` and have the following in my `/rw/config/rc.local` init script:
+For instance, I have saved it at `/rw/config/50-auto-attach.rules` and have the following in my `/rw/config/rc.local` init script:
 
 ```bash
 cp /rw/config/*.rules /etc/udev/rules.d/

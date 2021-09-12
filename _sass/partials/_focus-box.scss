@@ -12,7 +12,7 @@
   h1,h2,h3,h4,h5,h6 {
     font-size: 1em;
     font-weight: bold;
-    margin: 0.625em auto -0.25em;
+    margin: 0.625em auto -0.25em !important;
     text-align: center;
   }
 
@@ -27,7 +27,7 @@
     font-family: $site-font-stack-head;
     font-size: 0.575em;
     font-weight: bold;
-    margin: 0;
+    margin: 0 !important;
     padding: 0 0.375em;
     position: absolute;
     left: 0;

@@ -16,7 +16,7 @@ awards:
 
 tweet: 'We present a counterexample-driven algorithm to infer provably sufficient representation invariants
         that certify correctness of data-structure implementations.
-        Our implementation, =sc^Hanoi^sc=, can automatically infer representation invariants for several common
+        Our implementation, _Hanoi_{:.small-caps}, can automatically infer representation invariants for several common
         recursive data structures, such as sets, lists, trees, etc.'
 
 target:
@@ -43,12 +43,12 @@ as it alternates between weakening and strengthening candidate invariants.
 The algorithm is parameterized by an example-based synthesis engine and a verifier,
 and we prove that it is sound and complete for first-order modules over finite types,
 assuming that the synthesizer and verifier are as well.
-We implement these ideas in a tool called =sc^Hanoi^sc=,
+We implement these ideas in a tool called _Hanoi_{:.small-caps},
 which synthesizes representation invariants for recursive data types.
-=sc^Hanoi^sc= not only handles invariants for first-order code, but higher-order code as well.
-In its back end, =sc^Hanoi^sc= uses an enumerative synthesizer called Myth
+_Hanoi_{:.small-caps} not only handles invariants for first-order code, but higher-order code as well.
+In its back end, _Hanoi_{:.small-caps} uses an enumerative synthesizer called Myth
 and an enumerative testing tool as a verifier.
-Because =sc^Hanoi^sc= uses testing for verification, it is not sound,
+Because _Hanoi_{:.small-caps} uses testing for verification, it is not sound,
 though our empirical evaluation shows that it is successful on the benchmarks we investigated.
 
 ###### BibTeX Citation

@@ -6,7 +6,7 @@ type: conference
 
 title: 'OOPSLA 2018 (FlashProfile) Slides'
 
-heading: '=sc^FlashProfile^sc=: A Framework for Synthesizing Data Profiles'
+heading: '_FlashProfile_{:.small-caps}: A Framework for Synthesizing Data Profiles'
 publink: oopsla2018_flashprofile
 
 target: '[OOPSLA 2018]'

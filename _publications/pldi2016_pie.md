@@ -14,12 +14,12 @@ DOI:
 
 awards:
   - icon: trophy
-    desc: 'Winner of SyGuS-Comp (=sc^Inv^sc= Track) 2017&hairsp;--&hairsp;18'
+    desc: 'Winner of SyGuS-Comp (_Inv_{:.small-caps} Track) 2017&hairsp;--&hairsp;18'
 
 tweet: 'We present a technique, called the _precondition inference engine_ (PIE),
         which uses on-demand feature learning to automatically infer a precondition
         that would satisfy a given postcondition.
-        We use PIE to also construct a novel automatic verification system called =sc^LoopInvGen^sc=.'
+        We use PIE to also construct a novel automatic verification system called _LoopInvGen_{:.small-caps}.'
 
 target:
   short: PLDI

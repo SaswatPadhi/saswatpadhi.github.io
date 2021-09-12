@@ -48,7 +48,7 @@ is to run multiple learners with varying expressiveness in parallel.
 We demonstrate that this insight can immediately benefit existing SyGuS tools.
 We also propose a novel single-threaded technique called _hybrid enumeration_,
 which interleaves different grammars, and outperforms the winner of the 2018 SyGuS competition
-(=sc^Inv^sc= track) by solving more problems and achieving a $ 5 \times $ mean speed up.
+(_Inv_{:.small-caps} track) by solving more problems and achieving a $ 5 \times $ mean speed up.
 
 ###### BibTeX Citation
 

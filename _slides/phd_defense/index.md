@@ -187,20 +187,20 @@ by **automated synthesis** of formal properties
 {: style='text-align:center'}
 
 <div style='width:14em'>
-##### =sc^PIE^sc=
+##### _PIE_{:.small-caps}
 <p class='annot'>[PLDI 2016]$\,^\star$</p>
 <span style='font-size:0.825em'>
   Feature learning for black-box precondition inference
 </span>
 <div style='font-size:0.5em; margin:0.25em 0 -0.375em'>
-  Adopted by =sc^CVC4^sc=, =sc^Alive-Infer^sc= (used by =sc^LLVM^sc=)
+  Adopted by _CVC4_{:.small-caps}, _Alive-Infer_{:.small-caps} (used by _LLVM_{:.small-caps})
 </div>
 {: .color-faded .color-accent }
 </div>
 {: .focus-box .color-highlight }
 
 <div style='margin-top:0.875em; width:14em'>
-##### =sc^FlashProfile^sc=
+##### _FlashProfile_{:.small-caps}
 <p class='annot'>[OOPSLA 2018]</p>
 <span style='font-size:0.825em'>
   Input specifications for <br> data-processing workflows
@@ -217,7 +217,7 @@ by **automated synthesis** of formal properties
 {: style='text-align:center'}
 
 <div style='width:14em'>
-##### =sc^LoopInvGen^sc=
+##### _LoopInvGen_{:.small-caps}
 <p class='annot'>[PLDI 2016]$\,^\star$</p>
 <span style='font-size:0.825em'>
   Feature learning for white-box loop invariant inference
@@ -230,7 +230,7 @@ by **automated synthesis** of formal properties
 {: .focus-box .color-highlight }
 
 <div style='margin-top:0.875em; width:14em'>
-##### =sc^Hanoi^sc=
+##### _Hanoi_{:.small-caps}
 <p class='annot'>[PLDI 2020]</p>
 <span style='font-size:0.825em'>
   Representation invariants for data-type implementations
@@ -261,7 +261,7 @@ by **automated synthesis** of formal properties
 
 
 <section data-transition='slide-in fade-out'>
-### =sc^FlashProfile^sc=
+### _FlashProfile_{:.small-caps}
 
 <p class='subheading' style='margin:-0.75em 0 0 0.125em; font-size:0.575em'>
   <span class='color-faded color-medium-accent'>S. Padhi</span>,
@@ -345,7 +345,7 @@ set of examples
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^FlashProfile^sc=
+  _FlashProfile_{:.small-caps}
 </div>
 
 ### Data Profiles
@@ -393,9 +393,9 @@ Microsoft SSDT
 </div>
 <div style='font-size:0.375em; width:100%'>
 - `1024` &nbsp; PMC <strong class='color-faded color-highlight'>D</strong><span class='superscript'>+</span>
-- ` 204` &nbsp; ISBN: &blank; 0- <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong>
-- ` 113` &nbsp; <strong class='color-faded color-highlight'>.</strong><span class='superscript'>*</span>
-- ` 110` &nbsp; doi: &blank;<span class='superscript'>+</span> 10. <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> / <strong class='color-faded color-highlight'>D</strong><span class='superscript'>+</span>
+- `&nbsp;204` &nbsp; ISBN: &blank; 0- <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong>
+- `&nbsp;113` &nbsp; <strong class='color-faded color-highlight'>.</strong><span class='superscript'>*</span>
+- `&nbsp;110` &nbsp; doi: &blank;<span class='superscript'>+</span> 10. <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> / <strong class='color-faded color-highlight'>D</strong><span class='superscript'>+</span>
 {: style='margin:0 0 0.1em -1.625em; line-height:1.9'}
 </div>
 {: .focus-box }
@@ -408,11 +408,11 @@ Ataccama One
 </div>
 <div style='font-size:0.375em; width:100%'>
 - `1024` &nbsp; <strong class='color-faded color-highlight'>W</strong> <strong class='color-faded color-highlight'>N</strong>
-- ` 267` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>D</strong>
-- ` 110` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>N</strong> . <strong class='color-faded color-highlight'>N</strong> / <strong class='color-faded color-highlight'>N</strong>
-- `  34` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>L</strong>
-- `  11` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>N</strong> . <strong class='color-faded color-highlight'>N</strong> / <strong class='color-faded color-highlight'>L</strong> <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> ( <strong class='color-faded color-highlight'>N</strong> ) <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>D</strong>
-- `   5` &nbsp; <strong class='color-faded color-highlight'>W</strong> _ <strong class='color-faded color-highlight'>W</strong>
+- `&nbsp;267` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>D</strong>
+- `&nbsp;110` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>N</strong> . <strong class='color-faded color-highlight'>N</strong> / <strong class='color-faded color-highlight'>N</strong>
+- `&nbsp;&nbsp;34` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>L</strong>
+- `&nbsp;&nbsp;11` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>N</strong> . <strong class='color-faded color-highlight'>N</strong> / <strong class='color-faded color-highlight'>L</strong> <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> ( <strong class='color-faded color-highlight'>N</strong> ) <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>D</strong>
+- `&nbsp;&nbsp;&nbsp;5` &nbsp; <strong class='color-faded color-highlight'>W</strong> _ <strong class='color-faded color-highlight'>W</strong>
 {: style='margin:0 0 0.1em -1.625em; line-height:1.55'}
 </div>
 {: .focus-box }
@@ -421,16 +421,16 @@ Ataccama One
 </div>
 
 <div class='heading' style='font-size:0.55em; letter-spacing:0.025em; margin:-1em 0 -0.625em; text-align:center'>
-=sc^FlashProfile^sc=
+_FlashProfile_{:.small-caps}
 </div>
 {: .fragment data-fragment-index='3' }
 <div style='font-size:0.425em; width:61%'>
 - `1024` &nbsp; PMC <strong class='color-faded color-highlight'>D</strong><span class='superscript'>7</span>
-- ` 267` &nbsp; ISBN: &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>3</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> - <strong class='color-faded color-highlight'>D</strong>
-- ` 110` &nbsp; doi: &blank;<span class='superscript'>+</span> 10.13039/ <strong class='color-faded color-highlight'>D</strong><span class='superscript'>+</span>
-- `  34` &nbsp; ISBN: &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>3</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> -X
-- `  11` &nbsp; doi: &blank;<span class='superscript'>+</span> 10.1016/ <strong class='color-faded color-highlight'>U</strong> <strong class='color-faded color-highlight'>D</strong><span class='superscript'>4</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>4</span> ( <strong class='color-faded color-highlight'>D</strong><span class='superscript'>2</span> ) <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> - <strong class='color-faded color-highlight'>D</strong>
-- `   5` &nbsp; not_available<span class='superscript'>&nbsp;</span>
+- `&nbsp;267` &nbsp; ISBN: &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>3</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> - <strong class='color-faded color-highlight'>D</strong>
+- `&nbsp;110` &nbsp; doi: &blank;<span class='superscript'>+</span> 10.13039/ <strong class='color-faded color-highlight'>D</strong><span class='superscript'>+</span>
+- `&nbsp;&nbsp;34` &nbsp; ISBN: &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>3</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> -X
+- `&nbsp;&nbsp;11` &nbsp; doi: &blank;<span class='superscript'>+</span> 10.1016/ <strong class='color-faded color-highlight'>U</strong> <strong class='color-faded color-highlight'>D</strong><span class='superscript'>4</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>4</span> ( <strong class='color-faded color-highlight'>D</strong><span class='superscript'>2</span> ) <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> - <strong class='color-faded color-highlight'>D</strong>
+- `&nbsp;&nbsp;&nbsp;5` &nbsp; not_available<span class='superscript'>&nbsp;</span>
 {: style='margin:0 0 0.1em -1.375em; line-height:1.75'}
 </div>
 {: .focus-box .fragment data-fragment-index='3' }
@@ -439,9 +439,9 @@ Ataccama One
 
 <div style='font-size:0.425em; width:36%'>
 - `1024` &nbsp; PMC <strong class='color-faded color-highlight'>D</strong><span class='superscript'>7</span>
-- ` 301` &nbsp; ISBN: &blank; <strong class='color-faded color-medium-accent'>[ISBN]</strong><span class='superscript'>&nbsp;</span>
-- ` 121` &nbsp; doi: &blank;<span class='superscript'>+</span> <strong class='color-faded color-medium-accent'>[DOI]</strong>
-- `   5` &nbsp; not_available<span class='superscript'>&nbsp;</span>
+- `&nbsp;301` &nbsp; ISBN: &blank; <strong class='color-faded color-medium-accent'>[ISBN]</strong><span class='superscript'>&nbsp;</span>
+- `&nbsp;121` &nbsp; doi: &blank;<span class='superscript'>+</span> <strong class='color-faded color-medium-accent'>[DOI]</strong>
+- `&nbsp;&nbsp;&nbsp;5` &nbsp; not_available<span class='superscript'>&nbsp;</span>
 {: style='margin:0 0 0.1em -2.5em; line-height:1.75'}
 </div>
 {: .focus-box .fragment data-fragment-index='4' }
@@ -454,7 +454,7 @@ Ataccama One
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^FlashProfile^sc=
+  _FlashProfile_{:.small-caps}
 </div>
 
 ### Key Challenges
@@ -511,7 +511,7 @@ Exponentially many ways of generalizing strings to patterns
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^FlashProfile^sc=
+  _FlashProfile_{:.small-caps}
 </div>
 
 ### Formalization
@@ -586,7 +586,7 @@ $DISPLAY
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^FlashProfile^sc=
+  _FlashProfile_{:.small-caps}
 </div>
 
 ### Tractable Approximation
@@ -644,7 +644,7 @@ $DISPLAY
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^FlashProfile^sc=
+  _FlashProfile_{:.small-caps}
 </div>
 
 ### Architecture
@@ -693,7 +693,7 @@ $DISPLAY
 </div>
 {: .focus-box }
 <p style='font-size:0.9em; margin:0.3em 0 0 -3.5em; text-align:center'>
-  (kinds of base patterns in =sc^FlashProfile^sc=)
+  (kinds of base patterns in _FlashProfile_{:.small-caps})
 </p>
 </div>
 </div>
@@ -704,7 +704,7 @@ $DISPLAY
 
 <section data-transition='fade-in slide-out'>
 <div class='persistent-title'>
-  =sc^FlashProfile^sc=
+  _FlashProfile_{:.small-caps}
 </div>
 
 ### Results & Impact
@@ -773,14 +773,14 @@ Profiling time: little correlation with dataset size; increases with string leng
 
 <div class='columns' style='font-size:0.85em; margin-top:0.75em'>
 <div style='width:16em'>
-##### =sc^PIE^sc=
+##### _PIE_{:.small-caps}
 <span style='font-size:0.825em'>
   Black-box precondition inference
 </span>
 </div>
 {: .focus-box .color-highlight }
 <div style='width:16em'>
-##### =sc^LoopInvGen^sc=
+##### _LoopInvGen_{:.small-caps}
 <span style='font-size:0.825em'>
   White-box loop invariant inference
 </span>
@@ -794,7 +794,7 @@ Profiling time: little correlation with dataset size; increases with string leng
 
 <section data-transition='slide-in fade-out'>
 <div class='persistent-title'>
-  =sc^PIE^sc=
+  _PIE_{:.small-caps}
 </div>
 
 ### Precondition Inference
@@ -833,7 +833,7 @@ Guess precondition from test executions
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^PIE^sc=
+  _PIE_{:.small-caps}
 </div>
 
 ### Issue with Fixed Features
@@ -922,7 +922,7 @@ over the given features!
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^PIE^sc=
+  _PIE_{:.small-caps}
 </div>
 
 ### Conflict Resolution
@@ -1038,7 +1038,7 @@ Learned **Pre**&thinsp;: <span class='mono color-highlight'> i &geq; 0 &wedge; l
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^PIE^sc=
+  _PIE_{:.small-caps}
 </div>
 
 ### Architecture
@@ -1050,7 +1050,7 @@ Learned **Pre**&thinsp;: <span class='mono color-highlight'> i &geq; 0 &wedge; l
 
 <section data-transition='fade-in fade-out'>
 <div class='persistent-title'>
-  =sc^PIE^sc=
+  _PIE_{:.small-caps}
 </div>
 
 ### Properties
@@ -1073,7 +1073,7 @@ at least up to given test cases
 ##### Strong Convergence
 
 If a sufficient and necessary precondition exists in the synthesizer's grammar,
-then =sc^PIE^sc= will find it in finite time
+then _PIE_{:.small-caps} will find it in finite time
 {: style='margin-top:0.75em' }
 </div>
 {: .focus-box .color-highlight .fragment data-fragment-index='2' }
@@ -1083,7 +1083,7 @@ then =sc^PIE^sc= will find it in finite time
 
 <section data-transition='fade-in slide-out'>
 <div class='persistent-title'>
-  =sc^PIE^sc=
+  _PIE_{:.small-caps}
 </div>
 
 ### PIE =fa^long-arrow-alt-right fa-fw^fa= Verified PIE
@@ -1118,7 +1118,7 @@ then =sc^PIE^sc= will find it in finite time
 
 <section data-transition='slide-in fade-out'>
 <div class='persistent-title'>
-  =sc^LoopInvGen^sc=
+  _LoopInvGen_{:.small-caps}
 </div>
 
 ### Verifying Loopy Code
@@ -1191,7 +1191,7 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 
 <section data-transition='fade-in slide-out'>
 <div class='persistent-title'>
-  =sc^LoopInvGen^sc=
+  _LoopInvGen_{:.small-caps}
 </div>
 
 ### Architecture
@@ -1238,14 +1238,14 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 
 <section>
 <div class='persistent-title'>
-  =sc^PIE^sc= + =sc^LoopInvGen^sc=
+  _PIE_{:.small-caps} + _LoopInvGen_{:.small-caps}
 </div>
 
 ### Results & Impact
 
 <div style='font-size:0.775em; line-height:1.5; margin-right:2rem'>
 
-- =sc^PIE^sc=: Learning specifications for OCaml libraries$^\star$
+- _PIE_{:.small-caps}: Learning specifications for OCaml libraries$^\star$
   - Postconditions: emptiness, no exceptions
   - <span class='color-faded color-highlight'>Found incorrect documentation</span> for 2 functions in <span class='mono color-medium-accent'>AVLTree</span>
   - Generated sufficient and necessary preconditions for first-order functions
@@ -1253,15 +1253,15 @@ Prior data-driven approaches required a fixed set of features to be provided a p
   {: style='font-size:0.825em' }
 {: style='margin-top:-0.425em; margin-bottom:0.5em' }
 
-- =sc^PIE^sc=: <span class='color-faded color-highlight'>Adopted by several state-of-the-art tools</span>
-  - =sc^Alive-Infer^sc= <span style='font-size:0.725em'>([D. Menendez et al. PLDI =qq= 17](https://doi.org/10.1145/3062341.3062372))</span>
+- _PIE_{:.small-caps}: <span class='color-faded color-highlight'>Adopted by several state-of-the-art tools</span>
+  - _Alive-Infer_{:.small-caps} <span style='font-size:0.725em'>([D. Menendez et al. PLDI =qq= 17](https://doi.org/10.1145/3062341.3062372))</span>
     - Used by LLVM developers to verify peep-hole optimizations
-  - =sc^CVC4^sc= <span style='font-size:0.725em'>([H. Barbosa et al. FMCAD =qq= 19](https://doi.org/10.23919/FMCAD.2019.8894267))</span>
+  - _CVC4_{:.small-caps} <span style='font-size:0.725em'>([H. Barbosa et al. FMCAD =qq= 19](https://doi.org/10.23919/FMCAD.2019.8894267))</span>
     - Used within the invariant-synthesis engine
   {: style='font-size:0.825em' }
 {: .fragment data-fragment-index='1' style='margin-bottom:0.5em' }
 
-- =sc^LoopInvGen^sc=: <span class='color-faded color-highlight'>Won Inv track of SyGuS-Comp 2017 and 2018</span>
+- _LoopInvGen_{:.small-caps}: <span class='color-faded color-highlight'>Won Inv track of SyGuS-Comp 2017 and 2018</span>
   - Won in all three categories: (a) most tasks solved,
     (b) fastest on most tasks, (c) smallest solution for most tasks
   - Runner up in SyGuS-Comp 2019
@@ -1356,8 +1356,8 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 
 <table style='font-size:0.55em; width:94%'>
   <tr>
-    <th class='heading'>
-      On increasing expressiveness for =sc^LoopInvGen^sc=:
+    <th class='heading' markdown='1'>
+      On increasing expressiveness for <span class='small-caps'>LoopInvGen</span>:
     </th>
     <th class='color-faded color-accent'>Increase</th>
     <th class='color-faded color-medium-accent' style='font-size:0.9em'>No Change</th>
@@ -1476,7 +1476,7 @@ Prior data-driven approaches required a fixed set of features to be provided a p
   Overfitting
 </div>
 
-### =sc^PLearn^sc=
+### _PLearn_{:.small-caps}
 {: style='margin-bottom:-0.125em' }
 
 <div style='font-size:0.75em; margin:0 auto; width:95%'>
@@ -1619,15 +1619,15 @@ using an arbitrary well order $ \lhd $
 
 <div style='font-size:0.725em; margin:1em auto; width:95%'>
 - Hybrid enumeration is <span class='color-faded color-highlight'>resilient to increasing expressiveness</span>
-  - Approaches the _ideal_ failure rate with =sc^PLearn^sc=
+  - Approaches the _ideal_ failure rate with _PLearn_{:.small-caps}
 
 <div class='fragment' data-fragment-index='1' style='margin-top:0.75em'>
 - <span class='color-faded color-highlight'>Negligible impact on total time</span> $ \tau = $ wall-clock time $ \times $ # threads
-  - Approaches the original running time of =sc^LoopInvGen^sc=
+  - Approaches the original running time of _LoopInvGen_{:.small-caps}
 </div>
 
 <div class='fragment' data-fragment-index='2' style='margin-top:0.75em'>
-- =sc^LoopInvGen+HE^sc= solves $2$ benchmarks that no other synthesizer could in [SyGuS-Comp 2018]
+- _LoopInvGen+HE_{:.small-caps} solves $2$ benchmarks that no other synthesizer could in [SyGuS-Comp 2018]
 </div>
 </div>
 
@@ -1639,7 +1639,7 @@ using an arbitrary well order $ \lhd $
 ### Recent Work
 
 <div style='font-size:0.725em; margin-top:1.5em; width:45%'>
-##### =sc^Hanoi^sc=
+##### _Hanoi_{:.small-caps}
 <p class='annot'>[PLDI 2020]</p>
 <span style='font-size:0.85em'>
   Inferring representation invariants for verifying data-type implementations
@@ -1648,7 +1648,7 @@ using an arbitrary well order $ \lhd $
 {: .focus-box }
 
 <div style='font-size:0.725em; margin-top:2em; width:45%'>
-##### =sc^Jura^sc=
+##### _Jura_{:.small-caps}
 <p class='annot'>(under review)</p>
 <span style='font-size:0.85em'>
   Automatically identifying data-frames and formulas within spreadsheets
@@ -1665,7 +1665,7 @@ using an arbitrary well order $ \lhd $
   Recent Work
 </div>
 
-### =sc^Hanoi^sc=
+### _Hanoi_{:.small-caps}
 
 <p class='subheading' style='margin:-0.75em 0 0 0.125em; font-size:0.675em'>
   A. Miltner,
@@ -1754,7 +1754,7 @@ let rec rep_inv : int list -> bool = function
 {: .fragment data-fragment-index='2' style='width:97.5%' }
 
 <div style='font-size:0.75em; margin-bottom:0.625em'>
-- =sc^Hanoi^sc= can handle arbitrary first-order modules
+- _Hanoi_{:.small-caps} can handle arbitrary first-order modules
 - Work on higher-order modules is on going
 {: style='margin-left:0.25em'}
 </div>
@@ -1779,7 +1779,7 @@ soundness and completeness
   Recent Work
 </div>
 
-### =sc^Jura^sc=
+### _Jura_{:.small-caps}
 
 <p class='subheading' style='margin:-0.75em 0 0 0.125em; font-size:0.675em'>
   <span class='color-faded color-medium-accent'>S. Padhi</span>,
@@ -1838,7 +1838,7 @@ within individual tables
 
 
 
-<!--<section>
+{% comment %}
 ### Future Directions
 
 <div class='columns' style='margin:0.75em 0 1.25em'>
@@ -1878,7 +1878,8 @@ within individual tables
 </div>
 {: .focus-box .color-highlight }
 
-</section>-->
+</section>
+{% endcomment %}
 
 
 

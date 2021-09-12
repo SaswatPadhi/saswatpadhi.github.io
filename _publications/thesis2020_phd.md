@@ -28,8 +28,8 @@ The proposed techniques leverage ideas from program synthesis and statistical le
 to automatically generate these formal requirements from readily available program-related data,
 such as test cases, execution traces etc.
 I detail three of these data-driven learning techniques --
-=sc^FlashProfile^sc= and PIE for specification learning,
-and =sc^LoopInvGen^sc= for invariant learning.
+_FlashProfile_{:.small-caps} and PIE for specification learning,
+and _LoopInvGen_{:.small-caps} for invariant learning.
 
 I conclude with some principles for building robust synthesis engines,
 which I learned while refining the aforementioned techniques.

@@ -19,8 +19,6 @@
                    | replace: "=fab^", "<i class='fab fa-fw fa-"
                    | replace: "=far^", "<i class='far fa-fw fa-"
                    | replace: "^fa=", "'></i>"
-                   | replace: "=sc^", "<span class='small-caps'>"
-                   | replace: "^sc=", "</span>"
   }}
 
   {% unless include.no_links -%}{%- include common_links.md -%}{%- endunless %}

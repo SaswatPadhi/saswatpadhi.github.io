@@ -9,7 +9,19 @@ title: Home
 
 <div class='pure-g'>
 
-<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-13-24 top-left'> {% include front_pic.html %} </div>
+<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-13-24 top-left'> 
+{% if site.author.photo %}
+  {%- if site.author.photo.local -%}
+    {%- assign photo_url = site.baseurl | append: '/' | append: site.author.photo.local -%}
+  {%- else -%}
+    {%- assign photo_url = site.author.photo.remote -%}
+  {%- endif %}
+  <div>
+    <img alt='{{ site.author.photo.alt }}' src='{{ photo_url }}'
+         style='width: 60%; max-width: 200px; margin: 1.25em auto 0 auto; border-radius: 0.5em; box-shadow: 0em 0.15em 0.5em gray; display: block;'/>
+  </div>
+{% endif %}
+</div>
 
 <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-11-24 top-right' markdown='1'>
 
@@ -59,7 +71,33 @@ to aid development of formally verified software.
 
 #### <i class='far fa-fw fa-sm fa-clock'></i> Recent Updates *&middot; &middot; &middot;* ([&#x200a;Details&#x200a;]({{ site.baseurl }}/updates))
 
-{% include front_updates.html %}
+<div class='pure-g table'>
+    {%- assign sorted_updates = site.updates | sort: 'date' | reverse -%}
+    {%- for event in sorted_updates limit: 6 -%}
+        {%- assign eventdate = event.date | date: '%s' -%}
+        {%- assign highlight = event.highlight | default: site.default_highlight[event.type] -%}
+        <div class='pure-u-1-8 pure-u-sm-1-12 pure-u-md-1-6 event-date'>
+        {%- if event.end_date == null -%}
+            {{- event.date | date: "%b" -}}<i>{{- event.date | date: "%y" -}}</i>
+        {%- else -%}
+            {%- assign year = event.date | date: "%y" -%}
+            {%- assign end_year = event.end_date | date: "%y" -%}
+            <div class='multimonth'>{{- event.end_date | date: "%b" -}}<i>{{- end_year -}}</i><br><b>&#8942;</b><br>
+            {{- event.date | date: "%b" -}}<i>{{- year -}}</i>
+            </div>
+        {% endif %}
+        </div>
+        <div class='pure-u-1-12 event-icon color-more-faded {% if highlight %} color-{{ highlight }} {% endif %}'>
+            <i class='fas fa-fw fa-{{ event.icon | default: site.default_icon[event.type] }}'></i>
+        </div>
+        <div class='pure-u-19-24 pure-u-sm-5-6 pure-u-md-3-4 event-description'>
+          {% include tools/text_process.md data=event.headline %}
+          {% if event.location != null -%}
+            <div class='event-location'>(&hairsp;{{event.location}}&hairsp;)</div>
+          {%- endif %}
+        </div>
+    {% endfor %}
+</div>
 
 </div>
 </div>

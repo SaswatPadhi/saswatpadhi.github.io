@@ -1,6 +1,6 @@
 abbr[title], acronym[title] {
   text-decoration: none;
-  border-bottom:1px dotted
+  border-bottom:1px dotted;
 }
 
 img {
@@ -14,8 +14,4 @@ mjx-container[jax="CHTML"] {
 
 mjx-container[jax="CHTML"][display="true"] {
   margin: 0.375em 0 !important;
-}
-
-.hidden, [hidden] {
-    display: none !important;
 }

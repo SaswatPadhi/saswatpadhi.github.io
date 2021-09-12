@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang='en-US'>
   <head>
-    {% include head.html %}
+    <title>
+      {%- capture title -%}
+        {%- if page.title == 'Home' -%}
+          {%- if site.tagline -%} {{ site.title }} &middot; {{ site.tagline }} {%- else -%} {{ site.title }} {%- endif -%}
+        {%- else -%}
+          {{ page.title | default: layout.title }} &raquo; {{ site.title }}
+        {%- endif -%}
+      {%- endcapture -%}
+      {%- capture clean_title -%}
+        {%- include tools/text_process.md strip=true data=title -%}
+      {%- endcapture -%}
+      {{- clean_title | strip_html }}
+    </title>
+
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=2'>
+
+    <meta property='og:title' content='{{ clean_title | strip_html }}'>
+
+    <link rel='canonical' href='{{ page.url }}' />
+    <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/purity.css'>
 
     {% if layout.prismjs or page.prismjs -%}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css"
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.css"
             integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autolinker/prism-autolinker.min.css"
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autolinker/prism-autolinker.min.css"
             integrity="sha512-4ZmAB2UXPu3Rgy5ZClpqnJ/zXXZBdulFXY1eWMLgIjp2HWgkHGIpr1b7kmCK+rdD5NYfivTp47UR+bQ4oTBllQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
     {%- endif %}
 
     {% if layout.revealjs or page.revealjs -%}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css"
-            integrity="sha512-zu0eodDPCBAZf1vnIgwZ6qchMBt1xqgGkS9vBjVmunoH8pU7cc9OQKBiSQCclpvqySupy9Y1pLZc87VB40G4Sw=="
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css"
+            integrity="sha512-WFGU7IgfYR0dq5aORzbD+NApAXdExNZFb7LaoO8olYImBW/iZxAwjKEuT+oYcFR6gOd+DAFssq/icMn8YVbQxQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/{{ page.theme | default: layout.theme | default: 'solarized' }}.min.css' id='theme'/>
 
       <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/reveal.css' />
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"
-              integrity="sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ=="
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js"
+              integrity="sha512-K7P1+dtPriNNHlE4aJr+JKx1X6R0wvy24QBqL2CxaHc4XdkQjrH2t2FCrgoxZGMh6s1TgigNLEdrWa6NJra6Zg=="
               crossorigin="anonymous" referrerpolicy="no-referrer">
       </script>
     {%- endif %}
@@ -41,20 +61,20 @@
   <body>
     {{ content }}
     {% if layout.prismjs or page.prismjs -%}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
-              integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg=="
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"
+              integrity="sha512-axJX7DJduStuBB8ePC8ryGzacZPr3rdLaIDZitiEgWWk2gsXxEFlm4UW0iNzj2h3wp5mOylgHAzBzM4nRSvTZA=="
               crossorigin="anonymous" referrerpolicy="no-referrer">
       </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
-              integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A=="
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"
+              integrity="sha512-xCfKr8zIONbip3Q1XG/u5x40hoJ0/DtP1bxyMEi0GWzUFoUffE+Dfw1Br8j55RRt9qG7bGKsh+4tSb1CvFHPSA=="
               crossorigin="anonymous" referrerpolicy="no-referrer">
       </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autolinker/prism-autolinker.min.js"
-              integrity="sha512-/uypNVmpEQdCQLYz3mq7J2HPBpHkkg23FV4i7/WSUyEuTJrWJ2uZ3gXx1IBPUyB3qbIAY+AODbanXLkIar0NBQ=="
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autolinker/prism-autolinker.min.js"
+              integrity="sha512-PaneznVpkV74O5FWaHuGG2Pa9aVgbrnDwLFbcebZikYcFVPUYimvlZUAX6AElPKDJsSDTBl7aN6V1WxFDi24aw=="
               crossorigin="anonymous" referrerpolicy="no-referrer">
       </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js"
-              integrity="sha512-br8H6OngKoLht57WKRU5jz3Vr0vF+Tw4G6yhNN2F3dSDheq4JiaasROPJB1wy7PxPk7kV/+5AIbmoZLxxx7Zow=="
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.js"
+              integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ=="
               crossorigin="anonymous" referrerpolicy="no-referrer">
       </script>
       <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.0.1/prism-bibtex.js"
@@ -66,6 +86,7 @@
       <script>
         MathJax = {
           options: {
+            enableMenu: false,
             renderActions: {
               findScripts: [11, function (doc) {
                 for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
@@ -112,8 +133,9 @@
           {%- endif %}
         }
       </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js"
-              integrity="sha512-WIPUeuVusAT6dUtN6xKArYCBEa76ltyvaz3ltvQd+dy7ISdGJv1Y3y7eDBEF986YfNtmZGLdAaEBSgeBb+8OSg==" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.min.js"
+              integrity="sha512-ltNRzeAAayNTp8BffFFNoNNB13TExcLcU/dcGRWy7shGot5HJRYWZTrhVIyJjOH9GDhcZtQRA3jRGG1/72LzqA=="
+              crossorigin="anonymous" referrerpolicy="no-referrer">
       </script>
       <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js">
       </script>

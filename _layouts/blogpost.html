@@ -25,7 +25,8 @@ css: [ 'blogpost' ]
 {% endfor -%}
 </span>
 <span class='right color-faded'>
-  (&asymp; {{ content | number_of_words }} words |
+  (&asymp; {{ content | number_of_words | round: -1 }} words
+  <b>&VerticalLine;</b>
   {{ content | number_of_words | divided_by: 175.0 | ceil }} min.)
 </span>
 <div class='hidden-at-small' style='margin-top:1em;'>

@@ -138,7 +138,7 @@ tech: {icon: 'fab fa-html5', name: 'HTML5 (Reveal.js)'}
             border-radius: 0.5em'>
 </div>
 
-(For =sc^LoopInvGen^sc= on all $ 180 $ benchmarks and all $ 6 $ grammars with $ 30 $ mins timeout per benchmark per grammar)
+(For _LoopInvGen_{:.small-caps} on all $ 180 $ benchmarks and all $ 6 $ grammars with $ 30 $ mins timeout per benchmark per grammar)
 {: .fragment data-fragment-index='1' style='text-align:center; font-size:0.4em; margin-top:0.25em' }
 
 <div class='fragment color-highlight focus-box' data-fragment-index='3'
@@ -157,29 +157,24 @@ tech: {icon: 'fab fa-html5', name: 'HTML5 (Reveal.js)'}
 ### Contributions
 
 **=fa^search^fa= &hairsp;Theoretical Insights**
-<ul class='fragment' data-fragment-index='1' style='font-size:0.775em; margin-top:-0.25em; margin-bottom:0.75em; line-height:1.45em'>
-  <li>
-    Formal notions of <span class='color-faded color-medium-accent'>learnability</span> and <span class='color-medium-accent'>overfitting</span> for SyGuS
-  </li>
-  <li style='margin-top:0.5em'>
-    <span class='color-faded color-medium-accent'>No free lunch </span> &mdash; overfitting is inevitable at high expressiveness
-  </li>
-</ul>
+<div class='fragment' data-fragment-index='1' style='font-size:0.775em; line-height:1.45em'>
+  - Formal notions of <span class='color-faded color-medium-accent'>learnability</span> and <span class='color-medium-accent'>overfitting</span> for SyGuS
+  {: style='margin-top:-0.25em' }
+  - <span class='color-faded color-medium-accent'>No free lunch </span> &mdash; overfitting is inevitable at high expressiveness
+  {: style='margin-top:0.5em; margin-bottom:0.75em' }
+</div>
 
 **=fa^cogs^fa= &thinsp;Practical Solutions**
-<ul class='fragment' data-fragment-index='2' style='font-size:0.775em; margin-top:-0.25em; line-height:1.4em'>
-  <li>
-    <span class='color-faded color-medium-accent'>=sc^PLearn^sc=</span>, a black-box technique inspired by <span class='color-faded color-medium-accent'>ensemble learning</span> &mdash; explores multiple grammars in parallel
-  </li>
-  <li style='margin-top:0.5em'>
-    <span class='color-faded color-medium-accent'>Hybrid enumeration (HE)</span> &mdash;
-    emulates =sc^PLearn^sc= by interleaving exploration of multiple grammars in a single thread
-  </li>
-  <li style='margin-top:0.5em'>
-    When combined with HE, the winning solver from the =sc^Inv^sc= track of <a href='https://sygus.org/comp/2018/'>SyGuS-Comp&apos;18</a>
+<div class='fragment' data-fragment-index='2' style='font-size:0.775em; line-height:1.4em'>
+  - _PLearn_{:.small-caps .color-faded .color-medium-accent}, a black-box technique inspired by <span class='color-faded color-medium-accent'>ensemble learning</span> &mdash; explores multiple grammars in parallel
+  {: style='margin-top:-0.25em' }
+  - <span class='color-faded color-medium-accent'>Hybrid enumeration (HE)</span> &mdash;
+    emulates _PLearn_{:.small-caps} by interleaving exploration of multiple grammars in a single thread
+  {: style='margin-top:0.5em' }
+  - When combined with HE, the winning solver from the _Inv_{:.small-caps} track of <a href='https://sygus.org/comp/2018/'>SyGuS-Comp&apos;18</a>
     is $ 5\times $ faster and solves $2$ more benchmarks
-  </li>
-</ul>
+  {: style='margin-top:0.5em' }
+</div>
 </section>
 
 
@@ -333,38 +328,31 @@ Potential for Overfitting = Number of such functions in the grammar
 <section>
 ### Contributions
 
-<div style='opacity:0.25'>
 **=fa^search^fa= &hairsp;Theoretical Insights**
-<ul style='font-size:0.775em; margin-top:-0.25em; margin-bottom:0.75em; line-height:1.45em'>
-  <li>
-    Formal notions of <span class='color-faded color-medium-accent'>learnability</span> and <span class='color-medium-accent'>overfitting</span> for SyGuS
-  </li>
-  <li style='margin-top:0.5em'>
-    <span class='color-faded color-medium-accent'>No free lunch </span> &mdash; overfitting is inevitable at high expressiveness
-  </li>
-</ul>
+<div class='fragment' data-fragment-index='1' style='font-size:0.775em; line-height:1.45em; opacity=0.25'>
+  - Formal notions of <span class='color-faded color-medium-accent'>learnability</span> and <span class='color-medium-accent'>overfitting</span> for SyGuS
+  {: style='margin-top:-0.25em' }
+  - <span class='color-faded color-medium-accent'>No free lunch </span> &mdash; overfitting is inevitable at high expressiveness
+  {: style='margin-top:0.5em; margin-bottom:0.75em' }
 </div>
 
 **=fa^cogs^fa= &thinsp;Practical Solutions**
-<ul style='font-size:0.775em; margin-top:-0.25em; line-height:1.4em'>
-  <li>
-    <span class='color-faded color-medium-accent'>=sc^PLearn^sc=</span>, a black-box technique inspired by <span class='color-faded color-medium-accent'>ensemble learning</span> &mdash; explores multiple grammars in parallel
-  </li>
-  <li style='margin-top:0.5em'>
-    <span class='color-faded color-medium-accent'>Hybrid enumeration (HE)</span> &mdash;
-    emulates =sc^PLearn^sc= by interleaving exploration of multiple grammars in a single thread
-  </li>
-  <li style='margin-top:0.5em'>
-    When combined with HE, the winning solver from the =sc^Inv^sc= track of <a href='https://sygus.org/comp/2018/'>SyGuS-Comp&apos;18</a>
+<div class='fragment' data-fragment-index='2' style='font-size:0.775em; line-height:1.4em'>
+  - _PLearn_{:.small-caps .color-faded .color-medium-accent}, a black-box technique inspired by <span class='color-faded color-medium-accent'>ensemble learning</span> &mdash; explores multiple grammars in parallel
+  {: style='margin-top:-0.25em' }
+  - <span class='color-faded color-medium-accent'>Hybrid enumeration (HE)</span> &mdash;
+    emulates _PLearn_{:.small-caps} by interleaving exploration of multiple grammars in a single thread
+  {: style='margin-top:0.5em' }
+  - When combined with HE, the winning solver from the _Inv_{:.small-caps} track of <a href='https://sygus.org/comp/2018/'>SyGuS-Comp&apos;18</a>
     is $ 5\times $ faster and solves $2$ more benchmarks
-  </li>
-</ul>
+  {: style='margin-top:0.5em' }
+</div>
 </section>
 
 
 
 <section>
-### =sc^PLearn^sc=
+### _PLearn_{:.small-caps}
 
 <div style='font-size:0.95em'>
 A technique inspired by <span class='color-faded color-medium-accent'>ensemble methods</span><a class='superscript subheading' style='font-size:0.6em'
@@ -383,7 +371,7 @@ A technique inspired by <span class='color-faded color-medium-accent'>ensemble m
 </div>
 
 <div class='fragment color-highlight focus-box' data-fragment-index='3' style='font-size:0.78em; margin:1em auto; width:90%'>
-  <span class='subheading'>=sc^PLearn^sc= Reduces Overfitting</span>: &nbsp;
+  <span class='subheading'>_PLearn_{:.small-caps} Reduces Overfitting</span>: &nbsp;
   Every subproblem has a lower potential for overfitting than the original problem.
   <br> (on <em>any</em> set of examples for the specification)
 </div>
@@ -392,7 +380,7 @@ A technique inspired by <span class='color-faded color-medium-accent'>ensemble m
 
 
 <section>
-### =sc^PLearn^sc=: Evaluation
+### _PLearn_{:.small-caps}: Evaluation
 
 {% include_relative plearn-eval.svg %}
 
@@ -416,7 +404,7 @@ A technique inspired by <span class='color-faded color-medium-accent'>ensemble m
 
 
 <section>
-### Limitations of =sc^PLearn^sc=
+### Limitations of _PLearn_{:.small-caps}
 
 - Extremely <span class='color-faded color-accent'>resource intensive</span> ---
   <br> runs multiple SyGuS instances in parallel
@@ -456,13 +444,13 @@ A technique inspired by <span class='color-faded color-medium-accent'>ensemble m
 
 
 <section>
-### Hybrid Enumeration (=sc^HE^sc=)
+### Hybrid Enumeration (_HE_{:.small-caps})
 
 <div style='font-size:0.9em'>
 An efficient implementation of this 2-D search for <span class='color-faded color-medium-accent'>component-based</span> grammars&thinsp;[[Jha et al, ICSE&apos;10]](https://doi.org/10.1145/1806799.1806833){: .subheading .superscript style='font-size:0.65em' }
 <br>
 <div style='font-size:0.85em; margin-top:0.5em'>
-Arguments to =sc^HE^sc=:
+Arguments to _HE_{:.small-caps}:
 - A SyGuS Problem: a specification $ \phi $, a grammar $ \mathcal{E} $
 - Component-based grammars: $ \mathcal{E}_1 \subset \cdots \subset \mathcal{E}_n \subseteq \mathcal{E} $
 - A well-ordering relation: $ \lhd $
@@ -473,19 +461,19 @@ Arguments to =sc^HE^sc=:
 
 <div class='fragment color-highlight focus-box' data-fragment-index='1' style='margin:0.5em auto; width:87.5%; font-size:0.9em'>
   <span class='subheading'>Completeness</span>: &nbsp;
-  =sc^HE^sc= can enumerate every expression in $ \mathcal{E}_n $ up to any size bound $ q $.
+  _HE_{:.small-caps} can enumerate every expression in $ \mathcal{E}_n $ up to any size bound $ q $.
 </div>
 
 <div class='fragment color-highlight focus-box' data-fragment-index='2' style='margin:0.5em auto; width:87.5%; font-size:0.9em'>
   <span class='subheading'>Efficiency</span>: &nbsp;
-  =sc^HE^sc= enumerates each syntactically <br> distinct expression in $ \mathcal{E}_n $ at most once.
+  _HE_{:.small-caps} enumerates each syntactically <br> distinct expression in $ \mathcal{E}_n $ at most once.
 </div>
 </section>
 
 
 
 <section>
-### =sc^HE^sc=: Performance
+### _HE_{:.small-caps}: Performance
 
 <div class='columns'>
 <div style='width:67.5%'>
@@ -561,7 +549,7 @@ Arguments to =sc^HE^sc=:
 </div>
 
 <div class='fragment' data-fragment-index='2' style='margin-top:1.25em'>
-- When combined with HE, the winning solver from the =sc^Inv^sc= track of <a href='https://sygus.org/comp/2018/'>SyGuS-Comp&apos;18</a>
+- When combined with HE, the winning solver from the _Inv_{:.small-caps} track of <a href='https://sygus.org/comp/2018/'>SyGuS-Comp&apos;18</a>
   is $ 5\times $ faster and solves $2$ more benchmarks
 </div>
 </div>
@@ -593,21 +581,17 @@ Arguments to =sc^HE^sc=:
 <section>
 ### Conclusion
 
-<ul style='font-size:0.825em; text-align:justify; margin-left:0.5em'>
-  <li>
-    No free lunch in SyGuS &mdash; a fundamental tradeoff between expressiveness vs counterexamples required for learning
-  </li>
-  <li class='fragment' style='margin-top:0.3125em'>
-    This is due to overfitting &mdash; the potential for overfitting increases with expressiveness
-  </li>
-  <li class='fragment' style='margin-top:0.3125em'>
-    =sc^PLearn^sc= is a black-box technique to combat overfitting by exploring multiple grammars in parallel
-  </li>
-  <li class='fragment' style='margin-top:0.3125em; margin-bottom:0.25em'>
-    Hybrid enumeration (=sc^HE^sc=) emulates the behavior of =sc^PLearn^sc=,
+<div style='font-size:0.825em; text-align:justify'>
+  - No free lunch in SyGuS &mdash; a fundamental tradeoff between expressiveness vs counterexamples required for learning
+  {: }
+  - This is due to overfitting &mdash; the potential for overfitting increases with expressiveness
+  {: .fragment style='margin-top:0.3em' }
+  - _PLearn_{:.small-caps} is a black-box technique to combat overfitting by exploring multiple grammars in parallel
+  {: .fragment style='margin-top:0.3em' }
+  - Hybrid enumeration (_HE_{:.small-caps}) emulates the behavior of _PLearn_{:.small-caps},
     but with negligible performance overhead
-  </li>
-</ul>
+  {: .fragment style='margin-top:0.3em; margin-bottom:0.275em' }
+</div>
 
 <div class='fragment'>
 <hr>
