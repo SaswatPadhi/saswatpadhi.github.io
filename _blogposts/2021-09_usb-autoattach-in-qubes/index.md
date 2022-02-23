@@ -4,9 +4,9 @@ icon: cubes
 post_date: 2021-09-06
 
 title: 'USB auto-attach in Qubes'
-tagline: 'Making sys-usb automatically attach devices to other VMs'
+tagline: 'Allowing Qubes USB VM to automatically attach devices to other VMs'
 
-categories: [ 'notes', 'qubes' ]
+categories: [ 'qubes' ]
 ---
 
 {% if true -%}
@@ -22,9 +22,11 @@ Recently someone raised an interesting question on the [Qubes OS forum](https://
 
 > Hello,
 >
-> Is there a way to attach a particular USB device (by Vendor ID/Product ID) to a Qube automatically on connect? I have a sys-usb to manage USB devices.
+> Is there a way to attach a particular USB device (by Vendor ID/Product ID)
+> to a Qube automatically on connect? I have a sys-usb to manage USB devices.
 >
-> The USB device I am using frequently becomes disconnected (and reconnected) during use and it only needs to be connected to one particular Qube.
+> The USB device I am using frequently becomes disconnected (and reconnected) during use
+> and it only needs to be connected to one particular Qube.
 >
 > Thanks,  
 > N

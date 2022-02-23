@@ -6,7 +6,7 @@ post_date: 2019-09-15
 title: 'Variadic Macros in LaTeX'
 tagline: 'Crafting LaTeX macros that accept any number of arguments'
 
-categories: [ 'latex', 'productivity' ]
+categories: [ 'latex' ]
 ---
 
 Recently, while drafting a paper I found myself wishing for arbitrary-arity macros in LaTeX.
@@ -53,9 +53,9 @@ To be more specific, I was looking for a solution with these properties:
 1. _No special syntax_:
    The macro should look and behave just like regular LaTeX macros.
    For example, it shouldn't parse a long string that uses another delimiter to separate the real arguments, like in case of `\List{1|2|3|4}`.
-1. _No special packages_:
+2. _No special packages_:
    Ideally one should be able to create and use these macros easily without having to install any third-party packages.
-1. _No special context_:
+3. _No special context_:
    The macros should not require special environments, nor should it make fragile assumptions such as no nesting etc.
    For example, `\List {\List{1}{2}} {\List{1}} {\List{1}{2}{3}}` should simply work as expected --- render a list of lists: $[[1;2];[1];[1;2;3]]$.
 {: .custom style="--prefix:'P'" }

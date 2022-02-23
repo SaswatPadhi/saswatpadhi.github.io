@@ -20,7 +20,9 @@ title: Blog
       &thinsp;<i class='fas fa-fw fa-sm fa-chevron-right'></i>
     </span>
     <i class='fas fa-sm fa-fw fa-{{ post.icon }}'></i>
-    &thinsp;<a href='{{ post_url }}'>{% include tools/text_process.md data=post.title %}</a>
+    &thinsp;<a href='{{ post_url }}' class='title'>
+      {%- include tools/text_process.md data=post.title -%}
+    </a>
     <span class='categories visible-at-medium'>
     {%- for cat in post.categories -%}
       <span class='cat'>&ensp;#&thinsp;{{ cat }}&ensp;</span>
