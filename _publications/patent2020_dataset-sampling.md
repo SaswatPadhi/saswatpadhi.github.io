@@ -10,7 +10,7 @@ authors: ['Daniel G. Simmons', 'Kevin D. J. Grealish', '[Sumit Gulwani]', 'Ranvi
 
 DOI:
   target: Grant
-  number: US10394874B2
+  number: 10394874B2
 
 target:
   full: 'United States Patent Application Publication (2020)'

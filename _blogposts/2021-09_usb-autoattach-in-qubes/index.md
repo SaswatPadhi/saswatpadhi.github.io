@@ -3,7 +3,7 @@ icon: cubes
 
 post_date: 2021-09-06
 
-title: 'USB auto-attach in Qubes'
+title: 'USB Auto-Attach in Qubes'
 tagline: 'Allowing Qubes USB VM to automatically attach devices to other VMs'
 
 categories: [ 'qubes' ]
@@ -119,11 +119,11 @@ You may compromise the security of your system, or damage it otherwise.
 
 #### =fa^user-lock^fa= Changes in $\DomZ$
 
-There are two main changes necessary in $\DomZ$:
-(a) a new Qrexec service to listen to device attachment requests from $\sysusb$,
+There are two main changes necessary in $\DomZ$:  
+(a) a new Qrexec service to listen to device attachment requests from $\sysusb$,  
 (b) a Qrexec policy to restrict the source and destination VMs for calls to this service.
 
-#### The Qrexec Service
+##### The Qrexec Service
 
 First, let's start with the new Qrexec service that would handle requests from $\sysusb$.
 I am only going to describe how to automatically attach [block devices],
@@ -162,7 +162,7 @@ together by concatenating both using `+__+`.
 The service script itself is pretty simple, as I show below.
 
 ```bash
-{% include_relative dom0_device_attach_script.sh %}
+{% include_relative dom0_device-attach-script.sh %}
 ```
 {: .line-numbers }
 
@@ -175,7 +175,7 @@ tweaking this script to work for full USB passthrough is easy ---
 the `qvm-block` in line 20 could be changed to `qvm-usb`.
 However, full USB passthrough is less secure.
 
-#### The Qrexec Policy
+##### The Qrexec Policy
 
 For each Qrexec service,
 we must also specify a Qrexec policy to whitelist RPC calls from specific VMs.

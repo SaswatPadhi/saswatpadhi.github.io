@@ -18,6 +18,3 @@ qvm-start --skip-if-running "${ARG[0]}"
 
 # Attach the target device from remote VM to target VM
 qvm-block attach "${ARG[0]}" "${QREXEC_REMOTE_DOMAIN}:${ARG[1]}"
-
-# Report success
-exit 0

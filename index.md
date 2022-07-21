@@ -28,7 +28,7 @@ title: Home
 #### <i class='far fa-fw fa-sm fa-paper-plane'></i> Contact Me
 
 <p class='indented' markdown='1'>
-    <em>Office</em>: &nbsp; [BOS17 - Amazon], Boston, MA
+    <em>Office</em>: &nbsp; [BOS21 - Amazon], Boston, MA
     <br>
     <em>Email (Work)</em>: &nbsp; saspadhi <i class='fas fa-fw fa-sm fa-at'></i> amazon <i class='fas fa-fw fa-xs fa-circle' style='font-size: 0.5em; vertical-align: 25%;'></i> com
     <br>
@@ -50,8 +50,8 @@ title: Home
 <div class='pure-g' style='text-align: justify; margin-top: -1em'>
 <div class='pure-u-1 pure-u-md-22-24' markdown='1'>
 
-I am an <span class='color-medium-accent'>applied scientist</span> in the proof platforms (P2) team
-within the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
+I am an <span class='color-medium-accent'>applied scientist</span>
+in the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
 I am currently working on adding unbounded proof support to our verification infrastructure.
 
 Before joining AWS, I graduated with a Ph.D. in [CS][CS@UCLA] from [UCLA] in 2020,
@@ -105,6 +105,6 @@ to aid development of formally verified software.
 {% include common_abbrv.md %}
 {% include common_links.md %}
 
-[BOS17 - Amazon]:        https://www.google.com/maps/place/BOS17+-+Amazon/@42.3500003,-71.0511696,15z/data=!4m5!3m4!1s0x0:0x4c0f5065bae455b2!8m2!3d42.3500003!4d-71.0511696
+[BOS21 - Amazon]:        https://www.google.com/maps/place/BOS21+-+Amazon/@42.3501776,-71.0469601,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37b21a0d5cc89:0x7bf05aadf19b7d13!8m2!3d42.35017!4d-71.0447632
 [formal specifications]: https://en.wikipedia.org/wiki/Formal_specification
 [invariants]:            https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science
