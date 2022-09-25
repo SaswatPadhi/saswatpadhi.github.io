@@ -7,7 +7,7 @@ layout: page
 {%- capture pdf -%} {% include tools/text_process.md data=page.pdf %} {%- endcapture -%}
 
 <object id='pdf' data='{{ pdf }}#view=fitH' type='application/pdf'
-        style='width: 100%; height: 100%; margin-top: -0.5em;'>
+        style='width: 100%; height: 100%; margin-top: -0.5em; opacity: 0;'>
   <p style='margin: -1em 0 1em;'>
     Your browser does not support PDF objects in HTML.<br>
     Please download the PDF version <a href='{{ pdf }}'>here</a>
@@ -19,6 +19,7 @@ layout: page
     document.getElementById('site-container').style.margin = '0px';
     document.getElementById('pdf').style.height =
       window.innerHeight - document.getElementById('pdf').offsetTop - document.getElementById('site-footer').offsetHeight - 8 + 'px';
+    document.getElementById('pdf').style.opacity = 1.0;
   };
   window.onload = window.onresize;
 </script>

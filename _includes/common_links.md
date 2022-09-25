@@ -40,6 +40,7 @@
 {% endcomment %}
 [ARG]:                    https://aws.amazon.com/security/provable-security/
 [AWS]:                    https://aws.amazon.com/
+[chromeOS]:               https://www.google.com/chromebook/chrome-os/
 [CS@IITB]:                https://www.cse.iitb.ac.in
 [CS@UCLA]:                https://cs.ucla.edu
 [GCC]:                    https://gcc.gnu.org

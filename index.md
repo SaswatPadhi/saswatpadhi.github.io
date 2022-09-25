@@ -28,17 +28,17 @@ title: Home
 #### <i class='far fa-fw fa-sm fa-paper-plane'></i> Contact Me
 
 <p class='indented' markdown='1'>
-    <em>Office</em>: &nbsp; [BOS21 - Amazon], Boston, MA
-    <br>
-    <em>Email (Work)</em>: &nbsp; saspadhi <i class='fas fa-fw fa-sm fa-at'></i> amazon <i class='fas fa-fw fa-xs fa-circle' style='font-size: 0.5em; vertical-align: 25%;'></i> com
-    <br>
-    <em>Email (Private)</em>: &nbsp; saswatpadhi <i class='fas fa-fw fa-sm fa-at'></i> protonmail <i class='fas fa-fw fa-xs fa-circle' style='font-size: 0.5em; vertical-align: 25%;'></i> com
+  <em>Office</em>: &nbsp; [Google TM-2], San Jose, CA
+  <br>
+  <em>Email (Work)</em>: &nbsp; spadhi <i class='fas fa-fw fa-sm fa-at'></i> google &bull; com
+  <br>
+  <em>Email (Private)</em>: &nbsp; saswatpadhi <i class='fas fa-fw fa-sm fa-at'></i> protonmail &bull; com
 </p>
 
 #### <i class='fas fa-fw fa-sm fa-glasses'></i> Research Interests
 
 <p>
-    Programming Languages, &nbsp; Software Verification, &nbsp; Statistical Learning, &nbsp; Program Synthesis
+  Programming Languages, &nbsp; Software Verification, &nbsp; Statistical Learning, &nbsp; Program Synthesis
 </p>
 
 </div>
@@ -48,19 +48,21 @@ title: Home
 #### <i class='fas fa-fw fa-sm fa-user'></i> Bio
 
 <div class='pure-g' style='text-align: justify; margin-top: -1em'>
-<div class='pure-u-1 pure-u-md-22-24' markdown='1'>
+<div id='bio' class='pure-u-1 pure-u-md-22-24' markdown='1'>
 
-I am an <span class='color-medium-accent'>applied scientist</span>
+I am a <span class='color-medium-accent'>senior software engineer</span>
+in the [chromeOS] performance team at Google.
+Prior to that, I was an <span class='color-medium-accent'>applied scientist</span>
 in the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
-I am currently working on adding unbounded proof support to our verification infrastructure.
 
-Before joining AWS, I graduated with a Ph.D. in [CS][CS@UCLA] from [UCLA] in 2020,
-and a B.Tech. (Hons.) in [CSE][CS@IITB] from [IIT Bombay] in 2014.
+Before joining the industry,
+I graduated with a <span class='color-medium-accent'>Ph.D.</span> in [CS][CS@UCLA] from [UCLA] in 2020,
+and a <span class='color-medium-accent'>B.Tech. (Hons.)</span> in [CSE][CS@IITB] from [IIT Bombay] in 2014.
 
-I am interested in all aspects of
-<span class='color-highlight'>designing and implementing high-performance systems
-that have strong correctness guarantees</span>.
-My PhD research was focused around using program synthesis and statistical learning techniques
+I am interested in
+<span class='color-highlight'>building high-performance systems
+with strong reliability guarantees</span>.
+My PhD research was focused on using program synthesis and statistical learning techniques
 to aid development of formally verified software.
 
 </div>
@@ -72,31 +74,31 @@ to aid development of formally verified software.
 #### <i class='far fa-fw fa-sm fa-clock'></i> Recent Updates *&middot; &middot; &middot;* ([&#x200a;Details&#x200a;]({{ site.baseurl }}/updates))
 
 <div class='pure-g table'>
-    {%- assign sorted_updates = site.updates | sort: 'date' | reverse -%}
-    {%- for event in sorted_updates limit: 6 -%}
-        {%- assign eventdate = event.date | date: '%s' -%}
-        {%- assign highlight = event.highlight | default: site.default_highlight[event.type] -%}
-        <div class='pure-u-1-8 pure-u-sm-1-12 pure-u-md-1-6 event-date'>
-        {%- if event.end_date == null -%}
-            {{- event.date | date: "%b" -}}<i>{{- event.date | date: "%y" -}}</i>
-        {%- else -%}
-            {%- assign year = event.date | date: "%y" -%}
-            {%- assign end_year = event.end_date | date: "%y" -%}
-            <div class='multimonth'>{{- event.end_date | date: "%b" -}}<i>{{- end_year -}}</i><br><b>&#8942;</b><br>
-            {{- event.date | date: "%b" -}}<i>{{- year -}}</i>
-            </div>
-        {% endif %}
-        </div>
-        <div class='pure-u-1-12 event-icon color-more-faded {% if highlight %} color-{{ highlight }} {% endif %}'>
-            <i class='fas fa-fw fa-{{ event.icon | default: site.default_icon[event.type] }}'></i>
-        </div>
-        <div class='pure-u-19-24 pure-u-sm-5-6 pure-u-md-3-4 event-description'>
-          {% include tools/text_process.md data=event.headline %}
-          {% if event.location != null -%}
-            <div class='event-location'>(&hairsp;{{event.location}}&hairsp;)</div>
-          {%- endif %}
-        </div>
-    {% endfor %}
+  {%- assign sorted_updates = site.updates | sort: 'date' | reverse -%}
+  {%- for event in sorted_updates limit: 6 -%}
+    {%- assign eventdate = event.date | date: '%s' -%}
+    {%- assign highlight = event.highlight | default: site.default_highlight[event.type] -%}
+    <div class='pure-u-1-8 pure-u-sm-1-12 pure-u-md-1-6 event-date'>
+    {%- if event.end_date == null -%}
+      {{- event.date | date: "%b" -}}<i>{{- event.date | date: "%y" -}}</i>
+    {%- else -%}
+      {%- assign year = event.date | date: "%y" -%}
+      {%- assign end_year = event.end_date | date: "%y" -%}
+      <div class='multimonth'>{{- event.end_date | date: "%b" -}}<i>{{- end_year -}}</i><br><b>&#8942;</b><br>
+      {{- event.date | date: "%b" -}}<i>{{- year -}}</i>
+      </div>
+    {% endif %}
+    </div>
+    <div class='pure-u-1-12 event-icon color-more-faded {% if highlight %} color-{{ highlight }} {% endif %}'>
+      <i class='fas fa-fw fa-{{ event.icon | default: site.default_icon[event.type] }}'></i>
+    </div>
+    <div class='pure-u-19-24 pure-u-sm-5-6 pure-u-md-3-4 event-description'>
+      {% include tools/text_process.md data=event.headline %}
+      {% if event.location != null -%}
+        <div class='event-location'>(&hairsp;{{event.location}}&hairsp;)</div>
+      {%- endif %}
+    </div>
+  {% endfor %}
 </div>
 
 </div>
@@ -105,6 +107,4 @@ to aid development of formally verified software.
 {% include common_abbrv.md %}
 {% include common_links.md %}
 
-[BOS21 - Amazon]:        https://www.google.com/maps/place/BOS21+-+Amazon/@42.3501776,-71.0469601,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37b21a0d5cc89:0x7bf05aadf19b7d13!8m2!3d42.35017!4d-71.0447632
-[formal specifications]: https://en.wikipedia.org/wiki/Formal_specification
-[invariants]:            https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science
+[Google TM-2]:           https://www.google.com/maps/place/255+W+Tasman+Dr,+San+Jose,+CA+95134/@37.4119214,-121.9559877,17z/data=!3m1!4b1!4m6!3m5!1s0x808fc9ac1afd3753:0xf9adfba7f8b6bdac!8m2!3d37.4119214!4d-121.953799!16s%2Fg%2F11bw4pl794
