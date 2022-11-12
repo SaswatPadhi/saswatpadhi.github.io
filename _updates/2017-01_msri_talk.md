@@ -1,7 +1,7 @@
 ---
 date: 2017-01-09
 
-type: talk
+type: lecture
 location: Bengaluru, India
 
 headline: Talk @ Microsoft Research

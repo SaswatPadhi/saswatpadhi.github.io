@@ -14,8 +14,8 @@ title: Updates
   <div class='cat'><i class='color-more-faded fas fa-fw fa-business-time'></i><br>positions</div>
   <div class='cat'><i class='color-more-faded fas fa-fw fa-file-invoice'></i><br>publications</div>
   <div class='cat'><i class='color-more-faded fas fa-fw fa-hands-helping'></i><br>service</div>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-microphone-alt'></i><br>talks</div>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-chalkboard-teacher'></i><br>teaching</div>
+  <div class='cat'><i class='color-more-faded fas fa-fw fa-microphone-alt'></i><br>lectures</div>
+  <div class='cat'><i class='color-more-faded fas fa-fw fa-cake-candles'></i><br>life event</div>
 </div>
 
 <div class='events'>
@@ -67,8 +67,8 @@ title: Updates
     'positions': 'type-position',
     'publications': 'type-publication',
     'service': 'type-service',
-    'talks': 'type-talk',
-    'teaching': 'type-teaching',
+    'lectures': 'type-lecture',
+    'life_event': 'type-life_event',
   };
   var events_container = document.getElementsByClassName('events')[0];
 
@@ -96,7 +96,7 @@ title: Updates
         Array.prototype.forEach.call(document.getElementsByClassName('cat'),
                                      cat => cat.classList.remove('selected'));
         cat.classList.add('selected');
-        select(cat.innerText.trim());
+        select(cat.innerText.trim().replace(' ', '_'));
       }
     };
   });

@@ -1,7 +1,7 @@
 ---
 date: 2016-06-15
 
-type: talk
+type: lecture
 location: Santa Barbara, CA
 
 icon: desktop

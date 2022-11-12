@@ -1,7 +1,7 @@
 ---
 date: 2018-11-09
 
-type: talk
+type: lecture
 location: Boston, MA
 
 icon: desktop

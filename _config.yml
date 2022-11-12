@@ -42,13 +42,14 @@ default_icon:
   position: id-badge
   publication: file-alt
   service: user-cog
-  talk: microphone
-  teaching: chalkboard-teacher
+  lecture: microphone
+  life_event: cake-candles
 
 default_highlight:
   award: accent
   position: medium-accent
   publication: highlight
+  life_event: hyperlink
 
 # Defaults:
 # ---------
