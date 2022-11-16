@@ -5,11 +5,11 @@ type: life_event
 
 icon: user-group
 
-headline: Wedding in India
+headline: Tied The Knot!
 
 photo: 'wedding.jpg'
 ---
 
-After being multiple replans and postponements, thanks to COVID,
+After multiple replans and postponements, thanks to COVID,
 my wife Ruchi and I were finally able to organize our wedding
 with our loving family and friends in India.

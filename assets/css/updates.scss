@@ -1,6 +1,10 @@
 ---
 ---
 
+{% include sass_config.md %}
+
+@import 'partials/base';
+
 h1 {
   margin-bottom: 0.75em;
 }
@@ -25,14 +29,16 @@ h1 {
 
 .events {
   opacity: 1;
-  margin-bottom: -0.75em;
   transition: opacity 0.2s ease;
+
+  .event:not(:last-child) .event-description > p {
+    margin-bottom: 1.5em;
+  }
 }
 
 .event-description {
   > p {
     margin-top: 0.25em;
-    margin-bottom: 1.5em;
     text-align: justify;
   }
 
@@ -88,9 +94,12 @@ h1 {
 }
 
 .categories {
+  @include media(medium) {
+    font-size: 1.15em;
+  }
+
   text-align: center;
   font-variant: small-caps;
-  font-size: 1.15em;
   margin: -0.5em auto 1.25em auto;
   display: flex;
   justify-content: space-between;
