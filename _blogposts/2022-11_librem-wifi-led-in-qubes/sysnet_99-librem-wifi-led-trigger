@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+IF=$1
+STATUS=$2
+
+if [[ "$IF" =~ ^wls.* ]]; then
+  if [ "$STATUS" == "up" ] || [ "$STATUS" == "down" ] ; then
+    qrexec-client-vm dom0 custom.SetWiFiLED+$STATUS
+  fi
+fi

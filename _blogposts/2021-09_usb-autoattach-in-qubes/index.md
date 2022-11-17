@@ -80,7 +80,7 @@ and cannot attach devices to them directly.
 # =fa^skull-crossbones^fa= POTENTIAL SECURITY RISK =fa^skull-crossbones^fa=
 
 Before trying out the proposed changes on your system,
-please remember that we are _trading off security for convenience_.
+please remember that we are _sacrificing security for convenience_.
 If implemented incorrectly, or without proper constraints,
 you might end up unintentionally attaching potentially harmful devices to your VMs **automatically**!
 </div>
@@ -178,10 +178,9 @@ However, full USB passthrough is less secure.
 ##### The Qrexec Policy
 
 For each Qrexec service,
-we must also specify a Qrexec policy to whitelist RPC calls from specific VMs.
-In this case,
-since we a single source VM and a single target VM,
-the Qrexec policy is quite straightforward:
+we must also specify a Qrexec policy to whitelist calls from specific VMs.
+In this case, we want to allow $\sysusb \rightarrow \DomZ$ calls,
+and deny all other calls:
 
 ```text {% raw %}
 sys-usb dom0 ask,default_target=dom0
@@ -212,7 +211,7 @@ and these requests would be fulfilled without without any user approval!
 Finally, in $\sysusb$ we need to trigger our new Qrexec service
 when USB devices are connected to automatically attach them to desired VMs.
 But, before automating this process with udev,
-we should first manually test the RPC call by running:
+we should first manually test the RPC by running:
 
 ```console
 qrexec-client-vm dom0 custom.USBDeviceAttach+my-vm+__+sda
@@ -259,7 +258,7 @@ but is _necessary_ to resolve a dependency cycle:
 
 To resolve this dependency cycle,
 we run the Qrexec call in a detached shell and unblock udev.
-By the time $\DomZ$ processes the RPC call,
+By the time $\DomZ$ processes the RPC,
 receives user approval (via the prompt),
 and attempts to attach the USB device to another VM,
 udev should have finished connecting the device (usually instantaneous).
@@ -270,7 +269,7 @@ There are multiple threads online regarding this, e.g., see:
 [this AskUbuntu thread](https://askubuntu.com/questions/667922/udev-script-doesnt-run-in-the-background),
 and [this blogpost](https://bkhome.org/news/202012/how-to-run-long-time-process-on-udev-event.html).
 However, this approach suffices for our case, because
-Qrexec does not require the client to stay alive after making the RPC call.
+Qrexec does not require the client to stay alive after making the RPC.
 So although udev would kill the detached script after connecting the USB devices,
 $\DomZ$ would have received the call and would carry out the requested operation.
 $\DomZ$ might show a warning popup if the client is killed
