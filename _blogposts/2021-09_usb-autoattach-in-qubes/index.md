@@ -216,6 +216,7 @@ we should first manually test the RPC by running:
 ```console
 qrexec-client-vm dom0 custom.USBDeviceAttach+my-vm+__+sda
 ```
+{: .command-line data-user="user" data-host="sys-usb" }
 
 where $\textsf{sda}$ should be a block device (e.g., `/dev/sda`) in $\sysusb$,
 and $\textsf{my-vm}$ should be some target VM.
@@ -234,6 +235,7 @@ I have the following rule in a new file `/etc/udev/rules.d/50-auto-attach.rules`
 ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", \
 RUN+="/bin/sh -c 'qrexec-client-vm dom0 custom.USBDeviceAttach+my-vm+__+%k &'"
 ```
+{: .line-numbers }
 
 This rule will match new block devices with kernel names matching `sd[a-z]` regex,
 so partitions such as `sda1` etc. wouldn't match this rule.
@@ -291,17 +293,20 @@ to properly detach the script and get rid of the warning.
 ##### Persistent udev Rules
 
 Typically $\sysusb$ is an application VM (called _AppVM_ in Qubes).
-Since the root filesystem for AppVMs is discarded on shutdown and reset to the corresponding _TemplateVM_ root filesystem,
+Since the root filesystem for AppVMs is discarded on shutdown
+and reset to the corresponding _TemplateVM_ root filesystem,
 the new rules saved under `/etc/udev/rules.d/` would not persist across reboots.
-Therefore, the `50-auto-attach.rules` file should be saved in the AppVM persistent storage (within `/rw`),
+Therefore, the `50-auto-attach.rules` file should be saved
+in the AppVM's persistent storage (within `/rw`),
 and must be loaded into udev during boot.
-For instance, I have saved it at `/rw/config/50-auto-attach.rules` and have the following in my `/rw/config/rc.local` init script:
+For instance, I have saved it at `/rw/config/50-auto-attach.rules`
+and have the following in my `/rw/config/rc.local` init script:
 
 ```bash
 cp /rw/config/*.rules /etc/udev/rules.d/
-
 udevadm control --reload-rules && udevadm trigger
 ```
+{: .command-line data-user="user" data-host="sys-usb" }
 
 Furthermore, for [persistent DispVM $\sysusb$ configuration][persistence],
 the changes above must be made in the DispVM template, and not $\sysusb$ directly.

@@ -56,6 +56,20 @@ pre[class*="language-"] {
   @include set_color_and_hover(#d69928, border-color, 9%);
   border-radius: 0.35em;
 
+  .command-line-prompt {
+    border-right: none;
+    margin-right: 0em;
+    letter-spacing: inherit;
+    opacity: 0.8;
+
+    // FIXME: Hack to remove the last line
+    // Root cause is that command-line plugin splits on `\n`
+    // and does not discard the last empty string.
+    span:last-of-type {
+      display: none;
+    }
+  }
+
   .token.comment,
   .token.prolog,
   .token.doctype,

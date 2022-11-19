@@ -133,6 +133,7 @@ by invoking this script in $\DomZ$.
 /etc/qubes-rpc/custom.SetWiFiLED up
 /etc/qubes-rpc/custom.SetWiFiLED down
 ```
+{: .command-line data-user="user" data-host="dom0" }
 
 ##### The Qrexec Policy
 
@@ -146,9 +147,14 @@ sys-net dom0 allow
 
 @anyvm @anyvm deny
 {% endraw %}```
+{: .line-numbers }
 
 Note that we used `allow` and not `ask` in the first line
 to skip a $\DomZ$ prompt each time the RPC is invoked.
+
+The policy file should exist under `/etc/qubes-rpc/policy`,
+and must have the same name as the service file.
+I used `/etc/qubes-rpc/policy/custom.SetWiFiLED`, for instance.
 
 #### =fa^network-wired^fa= Changes in $\sysnet$
 
@@ -161,6 +167,7 @@ we should first manually test the RPC by running :
 qrexec-client-vm dom0 custom.SetWiFiLED+up
 qrexec-client-vm dom0 custom.SetWiFiLED+down
 ```
+{: .command-line data-user="user" data-host="sys-net" }
 
 Notice that in Qrexec, the name and the argument for a service are passed together,
 delimited by a `+`.
