@@ -10,7 +10,7 @@
 */
 
 :not(pre) > code, pre[class*="language-"] {
-  @include set_color_and_hover(#fdfbf6, background-color, 1%);
+  @include set_color_and_hover(#fdfbf6, background-color, -1%);
   color: #657b83; /* base00 */
 
   text-align: left;
@@ -53,7 +53,7 @@ pre[class*="language-"] {
   overflow: auto;
   border-width: 1px;
   border-style: dashed;
-  @include set_color_and_hover(#d69928, border-color, 9%);
+  @include set_color_and_hover(#d69928, border-color, -10%);
   border-radius: 0.35em;
 
   .command-line-prompt {

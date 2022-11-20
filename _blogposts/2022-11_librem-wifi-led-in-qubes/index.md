@@ -22,7 +22,7 @@ There were a few initial hiccups back when it was launched in 2020:
 [buggy keymap], [fan noise], and battery issues
 ([constant discharge] and/or [crashes]).
 However, all of these issues were fully resolved by quick firmware updates,
-and I currently have had _zero_ hardware issues with my laptop.
+and I currently have _zero_ hardware issues with my laptop.
 I must admit, after reading the reviews for its predecessors: L13 and L15,
 both of which are now discontinued, I was a bit skeptical of buying the L14.
 However, I do now feel quite happy that I pulled the trigger on L14.

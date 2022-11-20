@@ -187,6 +187,7 @@ sys-usb dom0 ask,default_target=dom0
 
 @anyvm @anyvm deny
 {% endraw %}```
+{: .line-numbers }
 
 If you have multiple USB qubes,
 perhaps with different USB controllers assigned to each one,
@@ -304,9 +305,10 @@ and have the following in my `/rw/config/rc.local` init script:
 
 ```bash
 cp /rw/config/*.rules /etc/udev/rules.d/
+
 udevadm control --reload-rules && udevadm trigger
 ```
-{: .command-line data-user="user" data-host="sys-usb" }
+{: .line-numbers }
 
 Furthermore, for [persistent DispVM $\sysusb$ configuration][persistence],
 the changes above must be made in the DispVM template, and not $\sysusb$ directly.
