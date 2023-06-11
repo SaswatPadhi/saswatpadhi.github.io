@@ -9,7 +9,6 @@
     margin: ($site-header-vspace-small-screen + px) ($default-gap-thicker + px) ($site-footer-vspace-small-screen + px) ($default-gap-thicker + px);
   }
 
-
   @include media(medium) {
     margin: ($site-header-vspace-medium-screen + px) ($default-gap-thicker + px) ($site-footer-vspace-medium-screen + px) ($default-gap-thicker + px);
   }
