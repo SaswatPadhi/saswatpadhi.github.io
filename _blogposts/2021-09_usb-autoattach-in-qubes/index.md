@@ -6,7 +6,7 @@ post_date: 2021-09-06
 title: 'USB Auto-Attach in Qubes'
 tagline: 'Allowing Qubes USB VM to automatically attach devices to other VMs'
 
-categories: [ 'qubes' ]
+categories: [ 'hw/usb', 'sw/qubes' ]
 ---
 
 {% if true -%}

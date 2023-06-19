@@ -6,7 +6,7 @@ post_date: 2019-09-15
 title: 'Variadic Macros in LaTeX'
 tagline: 'Crafting LaTeX macros that accept any number of arguments'
 
-categories: [ 'latex' ]
+categories: [ 'sw/latex' ]
 ---
 
 Recently, while drafting a paper I found myself wishing for arbitrary-arity macros in LaTeX.

@@ -58,7 +58,7 @@ title: Publications
   </div>
   <div class='pure-u-2-3 pure-u-sm-3-4 pure-u-md-19-24 pure-u-lg-5-6 paper-right'>
   <div>
-    <a class='title highlighted' href='{{ article.url }}'>{{ article.title }}</a><br>
+    <a class='title color-highlight' href='{{ article.url }}'>{{ article.title }}</a><br>
     <div class='authors'>{% include tools/format_authors.md data=article.authors %}</div>
   </div>
   </div>

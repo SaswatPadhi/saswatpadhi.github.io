@@ -24,8 +24,15 @@ title: Blog
       {%- include tools/text_process.md data=post.title -%}
     </a>
     <span class='categories visible-at-medium'>
-    {%- for cat in post.categories -%}
-      <span class='cat'>&ensp;#&thinsp;{{ cat }}&ensp;</span>
+    {%- for all_cat in post.categories -%}
+      <span class='category'>&ensp;
+        {%- assign cats = all_cat | split: "/" -%}
+        {%- for cat in cats -%}
+          {%- if forloop.first -%} # {%- else -%} / {%- endif -%}
+          &thinsp;<a href='' class='color-medium-accent'>{{ cat }}</a>
+          {%- unless forloop.last -%} &thinsp; {%- endunless -%}
+        {%- endfor -%}
+      &ensp;</span>
     {%- endfor -%}
     </span>
     <br>

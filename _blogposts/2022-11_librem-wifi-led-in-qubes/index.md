@@ -6,7 +6,7 @@ post_date: 2022-11-17
 title: 'Librem LED Triggers in Qubes'
 tagline: 'Making Librem 14''s LEDs work with Qubes'' VMs'
 
-categories: [ 'librem', 'qubes' ]
+categories: [ 'hw/librem', 'sw/qubes' ]
 ---
 
 {% if true -%}
