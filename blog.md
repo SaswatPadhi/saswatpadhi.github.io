@@ -23,21 +23,12 @@ title: Blog
     &thinsp;<a href='{{ post_url }}' class='title'>
       {%- include tools/text_process.md data=post.title -%}
     </a>
-    <span class='categories visible-at-medium'>
-    {%- for all_cat in post.categories -%}
-      <span class='category'>&ensp;
-        {%- assign cats = all_cat | split: "/" -%}
-        {%- for cat in cats -%}
-          {%- if forloop.first -%} # {%- else -%} / {%- endif -%}
-          &thinsp;<a href='' class='color-medium-accent'>{{ cat }}</a>
-          {%- unless forloop.last -%} &thinsp; {%- endunless -%}
-        {%- endfor -%}
-      &ensp;</span>
-    {%- endfor -%}
-    </span>
     <br>
     <div class='tagline'>
       {% include tools/text_process.md data=post.tagline %}
+    </div>
+    <div class='categories'>
+      {% include tools/category_links.md categories=post.categories %}
     </div>
   </div>
 {%- endfor %}
