@@ -24,129 +24,126 @@
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/purity.css'>
 
     {% if layout.prismjs or page.prismjs -%}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.css"
-            integrity="sha512-4ZmAB2UXPu3Rgy5ZClpqnJ/zXXZBdulFXY1eWMLgIjp2HWgkHGIpr1b7kmCK+rdD5NYfivTp47UR+bQ4oTBllQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.css"
-            integrity="sha512-EgIkdlA87NL5dPmI6HztTCpg7XKfZRFQHbpEdDF3hCT45HjjmIJOx8K73r+YZha0vKyOcMpzC7fZ4RajCX25tg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
-            integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {%- endif %}
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.css"
+          integrity="sha512-4ZmAB2UXPu3Rgy5ZClpqnJ/zXXZBdulFXY1eWMLgIjp2HWgkHGIpr1b7kmCK+rdD5NYfivTp47UR+bQ4oTBllQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.css"
+          integrity="sha512-EgIkdlA87NL5dPmI6HztTCpg7XKfZRFQHbpEdDF3hCT45HjjmIJOx8K73r+YZha0vKyOcMpzC7fZ4RajCX25tg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+          integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {%- endif -%}
     {% if layout.revealjs or page.revealjs -%}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css"
-            integrity="sha512-WFGU7IgfYR0dq5aORzbD+NApAXdExNZFb7LaoO8olYImBW/iZxAwjKEuT+oYcFR6gOd+DAFssq/icMn8YVbQxQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/{{ page.theme | default: layout.theme | default: 'solarized' }}.min.css' id='theme'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css"
+          integrity="sha512-WFGU7IgfYR0dq5aORzbD+NApAXdExNZFb7LaoO8olYImBW/iZxAwjKEuT+oYcFR6gOd+DAFssq/icMn8YVbQxQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/{{ page.theme | default: layout.theme | default: 'solarized' }}.min.css' id='theme'/>
 
-      <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/reveal.css' />
+    <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/reveal.css' />
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js"
-              integrity="sha512-K7P1+dtPriNNHlE4aJr+JKx1X6R0wvy24QBqL2CxaHc4XdkQjrH2t2FCrgoxZGMh6s1TgigNLEdrWa6NJra6Zg=="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-    {%- endif %}
-
-    {%- if layout.mathjax or page.mathjax %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js"
+            integrity="sha512-K7P1+dtPriNNHlE4aJr+JKx1X6R0wvy24QBqL2CxaHc4XdkQjrH2t2FCrgoxZGMh6s1TgigNLEdrWa6NJra6Zg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    {%- endif -%}
+    {% if layout.mathjax or page.mathjax %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
     {%- endif -%}
-
     {% for sheet in layout.css -%}
-      <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
-    {%- endfor %}
-    {%- for sheet in page.css %}
-      <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
+    <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
+    {%- endfor -%}
+    {% for sheet in page.css %}
+    <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
     {%- endfor %}
   </head>
 
   <body>
     {{ content }}
     {% if layout.prismjs or page.prismjs -%}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
-              integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg=="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+            integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+            integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.js"
+            integrity="sha512-h92O152CCXt3xEUWDYTGLz58u+IOpZU8Z2MEkkBsXsRlAhckPFeEolarVn7tOhTVbjsJPpyknL0CFUrc2rlgPQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js"
+            integrity="sha512-6nsaJ4jytF/0bh+5QJY4SOLuZZmcd/TAXHBkLIX/SH1ENpWezpQDJ4LpK2D1IfpjKVyhJQQaNSSvfsQjuYfTow=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
+            integrity="sha512-BttltKXFyWnGZQcRWj6osIg7lbizJchuAMotOkdLxHxwt/Hyo+cl47bZU0QADg+Qt5DJwni3SbYGXeGMB5cBcw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.js"
+            integrity="sha256-A5GMUmGHpY8mVpfcaRLQFeHtmdjZLumKBOMpf81FXX0="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
       </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
-              integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.js"
-              integrity="sha512-h92O152CCXt3xEUWDYTGLz58u+IOpZU8Z2MEkkBsXsRlAhckPFeEolarVn7tOhTVbjsJPpyknL0CFUrc2rlgPQ=="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js"
-              integrity="sha512-6nsaJ4jytF/0bh+5QJY4SOLuZZmcd/TAXHBkLIX/SH1ENpWezpQDJ4LpK2D1IfpjKVyhJQQaNSSvfsQjuYfTow=="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
-              integrity="sha512-BttltKXFyWnGZQcRWj6osIg7lbizJchuAMotOkdLxHxwt/Hyo+cl47bZU0QADg+Qt5DJwni3SbYGXeGMB5cBcw=="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.js"
-              integrity="sha256-A5GMUmGHpY8mVpfcaRLQFeHtmdjZLumKBOMpf81FXX0="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
-        </script>
-      </script>
+    </script>
     {%- endif -%}
     {%- if layout.mathjax or page.mathjax %}
-      <script>
-        MathJax = {
-          options: {
-            enableMenu: false,
-            renderActions: {
-              findScripts: [11, function (doc) {
-                for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-                  const display = !!node.type.match(/; *mode=display/)
-                  const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-                  const text = document.createTextNode('')
-                  node.parentNode.replaceChild(text, node)
-                  math.start = {node: text, delim: '', n: 0}
-                  math.end = {node: text, delim: '', n: 0}
-                  doc.math.push(math)
-                }
-              }, '']
-            }
-          },
-          loader: {
-            load: [
-              '[tex]/color',
-              '[tex]/newcommand',
-            ]
-          },
-          tex : {
-            inlineMath : [ ['$','$'] ],
-            displayMath : [ ['DISPLAY$', '$DISPLAY'] ],
-            packages: {
-              '[+]': [
-                'color',
-                'newcommand',
-              ],
-            },
-            processEnvironments : false,
-            processEscapes : false,
-            processRefs : false,
-            tags : 'ams',
-          }
-          {%- if layout.revealjs or page.revealjs -%},
-          startup : {
-              ready: () => {
-                MathJax.startup.defaultReady()
-                MathJax.startup.promise.then(() => {
-                  Reveal.togglePause()
-                })
+    <script>
+      MathJax = {
+        options: {
+          enableMenu: false,
+          renderActions: {
+            findScripts: [11, function (doc) {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
               }
-            }
-          {%- endif %}
+            }, '']
+          }
+        },
+        loader: {
+          load: [
+            '[tex]/color',
+            '[tex]/newcommand',
+          ]
+        },
+        tex : {
+          inlineMath : [ ['$','$'] ],
+          displayMath : [ ['DISPLAY$', '$DISPLAY'] ],
+          packages: {
+            '[+]': [
+              'color',
+              'newcommand',
+            ],
+          },
+          processEnvironments : false,
+          processEscapes : false,
+          processRefs : false,
+          tags : 'ams',
         }
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.min.js"
-              integrity="sha512-ltNRzeAAayNTp8BffFFNoNNB13TExcLcU/dcGRWy7shGot5HJRYWZTrhVIyJjOH9GDhcZtQRA3jRGG1/72LzqA=="
-              crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js">
-      </script>
+        {%- if layout.revealjs or page.revealjs -%},
+        startup : {
+            ready: () => {
+              MathJax.startup.defaultReady()
+              MathJax.startup.promise.then(() => {
+                Reveal.togglePause()
+              })
+            }
+          }
+        {%- endif %}
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.min.js"
+            integrity="sha512-PbLRl9V4qEM7j3xggKupLNdcodHT0w+x77S/JoTWxrhPEVZ0NkTPp90bzUeTyFXsBzsaApVOZdCHIzL6o51KiA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js">
+    </script>
     {%- endif %}
   </body>
 </html>
