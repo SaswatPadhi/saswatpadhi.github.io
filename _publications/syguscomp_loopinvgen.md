@@ -1,7 +1,7 @@
 ---
 layout: article
 
-type: manuscript
+type: report
 year: 2019
 month: 06
 

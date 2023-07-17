@@ -5,6 +5,7 @@
 [Adnan Darwiche]:         http://web.cs.ucla.edu/~darwiche/
 [Amey Karkare]:           https://www.cse.iitk.ac.in/users/karkare
 [Andrew Reynolds]:        http://homepage.divms.uiowa.edu/~ajreynol/
+[Ankush Das]:              https://ankushdas.github.io/
 [Ben Zorn]:               https://www.microsoft.com/en-us/research/people/zorn
 [Chenglong Wang]:         https://chenglongwang.org/
 [Dana Fisman]:            https://www.cs.bgu.ac.il/~dana
@@ -25,6 +26,7 @@
 [Sumit Gulwani]:          https://www.microsoft.com/en-us/research/people/sumitg
 [Todd Millstein]:         https://web.cs.ucla.edu/~todd
 [Uday Khedker]:           https://www.cse.iitb.ac.in/~uday
+[Vaibhav Sharma]:         https://sites.google.com/view/vaibhavbsharma/home
 [Wolf-Tilo Balke]:        http://www.ifis.cs.tu-bs.de/staff/balke
 
 

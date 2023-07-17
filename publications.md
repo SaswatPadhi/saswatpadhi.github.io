@@ -29,15 +29,15 @@ title: Publications
 
 {% include tools/pubs_filter.md type="journal" %}
 
+#### <i class='fas fa-fw fa-file-alt'></i> Workshop &amp; Industry Papers
+
+{% include tools/pubs_filter.md type="workshop|industry" %}
+
 <hr>
 
 #### <i class='fas fa-fw fa-file-invoice'></i> Reports &amp; Theses
 
 {% include tools/pubs_filter.md type="report|thesis" %}
-
-#### <i class='far fa-fw fa-file-alt'></i> Manuscripts
-
-{% include tools/pubs_filter.md type="manuscript" %}
 
 <hr>
 
