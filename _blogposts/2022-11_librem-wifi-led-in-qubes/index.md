@@ -4,7 +4,7 @@ icon: lightbulb
 post_date: 2022-11-17
 
 title: 'Librem LED Triggers in Qubes'
-tagline: 'Making Librem 14''s LEDs work with Qubes'' VMs'
+tagline: 'Accessing Librem 14''s LEDs from within Qubes VMs'
 
 categories: [ 'hw/librem', 'sw/qubes' ]
 ---

@@ -33,17 +33,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
           integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.css"
+          integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     {%- endif -%}
     {% if layout.revealjs or page.revealjs -%}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css"
-          integrity="sha512-WFGU7IgfYR0dq5aORzbD+NApAXdExNZFb7LaoO8olYImBW/iZxAwjKEuT+oYcFR6gOd+DAFssq/icMn8YVbQxQ=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css"
+          integrity="sha512-1vDOkqtCXgcn0zgLIrxVjSIHvXOB/Ho2k33zwIDMqStDdHWvQyVU+BGG2fK4nnOgDbg0jEzVqzTYTL65orMyWw=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/{{ page.theme | default: layout.theme | default: 'solarized' }}.min.css' id='theme'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/{{ page.theme | default: layout.theme | default: 'solarized' }}.min.css' id='theme'/>
 
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/reveal.css' />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js"
-            integrity="sha512-K7P1+dtPriNNHlE4aJr+JKx1X6R0wvy24QBqL2CxaHc4XdkQjrH2t2FCrgoxZGMh6s1TgigNLEdrWa6NJra6Zg=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"
+            integrity="sha512-TC5IA+BA/5YPBb/MJyk97ypzvXYUIlAksfuxlUXlhD7cM7y/stM4JuytDeYJlsiKxmRDV5krDyuugOoMOHwyJg=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     {%- endif -%}
@@ -79,6 +82,10 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
             integrity="sha512-BttltKXFyWnGZQcRWj6osIg7lbizJchuAMotOkdLxHxwt/Hyo+cl47bZU0QADg+Qt5DJwni3SbYGXeGMB5cBcw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.js"
+            integrity="sha512-255MpVHZHmxNdOj/PivQ+WSTYFjBxTMfmIszxwsJobUeaoDNUAnAQjYF5TznbiZXrXqpCy8q4QyvJzhykpof3Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.js"

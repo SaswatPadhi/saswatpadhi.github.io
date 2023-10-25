@@ -9,7 +9,8 @@
  Modified by Saswat Padhi
 */
 
-:not(pre) > code, pre[class*="language-"] {
+:not(pre) > code,
+pre[class*="language-"] {
   @include set_color_and_hover(#fdfbf6, background-color, -1%);
   color: #657b83; /* base00 */
 
@@ -46,6 +47,11 @@ a > code {
   color: inherit;
 }
 
+.site-container pre[data-line],
+pre[class*="language-"] {
+  padding: 0.25em 0.4em;
+}
+
 /* Code blocks */
 pre[class*="language-"] {
   margin: 1.125em 0;
@@ -55,6 +61,10 @@ pre[class*="language-"] {
   border-style: dashed;
   @include set_color_and_hover(#d69928, border-color, -10%);
   border-radius: 0.35em;
+
+  .line-highlight {
+    margin-top: 0.29em;
+  }
 
   .command-line-prompt {
     border-right: none;
