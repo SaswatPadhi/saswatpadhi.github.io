@@ -11,7 +11,7 @@ authors: ['Sahil Bhatia', 'Saswat Padhi', 'Nagarajan Natarajan', '[Rahul Sharma]
 target:
   short: CAP @ NeurIPS
   full: 'Proceedings of the NeurIPS 2020 Workshop on Computer-Assisted Programming'
-  link: 'https://capworkshop.github.io/'
+  link: 'https://nips.cc/virtual/2020/public/workshop_16161.html'
 
 links:
   PDF: '%BASE_URL%/assets/pdf/cap_neurips2020_oasis.pdf'
@@ -38,7 +38,7 @@ from the invariant synthesis track of the Syntax Guided Synthesis competition.
                    Rahul Sharma and
                    Prateek Jain},
   booktitle     = {Proceedings of the NeurIPS 2020 Workshop on Computer-Assisted Programming,
-                   December 12-13, 2020},
+                   December 12, 2020},
   year          = {2020},
   url           = {https://openreview.net/pdf?id=T591RKxIh6Q}
 }

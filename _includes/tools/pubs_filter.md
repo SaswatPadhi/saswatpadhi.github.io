@@ -6,7 +6,7 @@
     {%- unless allowed_types contains article.type -%} {%- continue -%} {%- endunless -%}
 
 <div class='pure-g paper-table'>
-  <div class='pure-u-1-3 pure-u-sm-1-4 pure-u-md-5-24 pure-u-lg-1-6 paper-left'>
+  <div class='pure-u-1-3 pure-u-sm-1-4 pure-u-md-5-24 paper-left'>
       {% if article.type != "manuscript" -%}
         <span style='letter-spacing: 0.025em;' class='target'>
           {%- capture target -%}
@@ -30,7 +30,7 @@
         {%- endif %}
     {% endif %})</div>
   </div>
-  <div class='pure-u-2-3 pure-u-sm-3-4 pure-u-md-19-24 pure-u-lg-5-6 paper-right'>
+  <div class='pure-u-2-3 pure-u-sm-3-4 pure-u-md-19-24 paper-right'>
     <div>
       <a class='title color-highlight' href='{{ article.url }}'>{{ article.title }}</a><br>
       <div class='authors'>{% include tools/format_authors.md data=article.authors %}</div>

@@ -87,10 +87,17 @@
 
 {% comment %}             COMPETITIONS, CONFERENCES etc.
 {% endcomment %}
+[CAP]:                    https://capworkshop.github.io/
+[CAP 2020]:               https://nips.cc/virtual/2020/public/workshop_16161.html
 [CAV 2019]:               http://i-cav.org/2019
 [CAV 2021]:               http://i-cav.org/2021
+[CAV 2023]:               http://i-cav.org/2023
 [CC 2019]:                https://cc-conference.github.io/19
 [ICLR 2019]:              https://iclr.cc/Conferences/2019
+[ML4Sys]:                 https://mlforsystems.org/
+[ML4Sys 2023]:            https://neurips.cc/virtual/2023/workshop/66501
+[NeurIPS 2020]:           https://neurips.cc/Conferences/2020
+[NeurIPS 2023]:           https://neurips.cc/Conferences/2023
 [OOPSLA 2018]:            https://2018.splashcon.org/track/splash-2018-OOPSLA
 [OOPSLA 2019]:            https://2019.splashcon.org/track/splash-2019-OOPSLA
 [PLDI 2016]:              https://conf.researchr.org/home/pldi-2016
