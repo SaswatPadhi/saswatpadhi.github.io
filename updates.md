@@ -11,39 +11,39 @@ title: Updates
 
 <div class='categories'>
   <div class='cat type-award'>
-    &emsp;
+    &nbsp;
     <i class='color-more-faded fas fa-fw fa-trophy'></i>
-    &emsp;
+    &nbsp;
     <p class='visible-at-small'><br>awards</p>
   </div>
   <div class='cat type-position'>
-    &emsp;
+    &nbsp;
     <i class='color-more-faded fas fa-fw fa-business-time'></i>
-    &emsp;
+    &nbsp;
     <p class='visible-at-small'><br>positions</p>
   </div>
   <div class='cat type-publication'>
-    &emsp;
+    &nbsp;
     <i class='color-more-faded fas fa-fw fa-file-invoice'></i>
-    &emsp;
+    &nbsp;
     <p class='visible-at-small'><br>publications</p>
   </div>
   <div class='cat type-service'>
-    &emsp;
+    &nbsp;
     <i class='color-more-faded fas fa-fw fa-hands-helping'></i>
-    &emsp;
+    &nbsp;
     <p class='visible-at-small'><br>service</p>
   </div>
   <div class='cat type-lecture'>
-    &emsp;
+    &nbsp;
     <i class='color-more-faded fas fa-fw fa-microphone-alt'></i>
-    &emsp;
+    &nbsp;
     <p class='visible-at-small'><br>lectures</p>
   </div>
   <div class='cat type-life_event'>
-    &emsp;
+    &nbsp;
     <i class='color-more-faded fas fa-fw fa-cake-candles'></i>
-    &emsp;
+    &nbsp;
     <p class='visible-at-small'><br>life events</p>
   </div>
 </div>
