@@ -10,12 +10,42 @@ title: Updates
 ---
 
 <div class='categories'>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-trophy'></i><br>awards</div>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-business-time'></i><br>positions</div>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-file-invoice'></i><br>publications</div>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-hands-helping'></i><br>service</div>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-microphone-alt'></i><br>lectures</div>
-  <div class='cat'><i class='color-more-faded fas fa-fw fa-cake-candles'></i><br>life events</div>
+  <div class='cat type-award'>
+    &emsp;
+    <i class='color-more-faded fas fa-fw fa-trophy'></i>
+    &emsp;
+    <p class='visible-at-small'><br>awards</p>
+  </div>
+  <div class='cat type-position'>
+    &emsp;
+    <i class='color-more-faded fas fa-fw fa-business-time'></i>
+    &emsp;
+    <p class='visible-at-small'><br>positions</p>
+  </div>
+  <div class='cat type-publication'>
+    &emsp;
+    <i class='color-more-faded fas fa-fw fa-file-invoice'></i>
+    &emsp;
+    <p class='visible-at-small'><br>publications</p>
+  </div>
+  <div class='cat type-service'>
+    &emsp;
+    <i class='color-more-faded fas fa-fw fa-hands-helping'></i>
+    &emsp;
+    <p class='visible-at-small'><br>service</p>
+  </div>
+  <div class='cat type-lecture'>
+    &emsp;
+    <i class='color-more-faded fas fa-fw fa-microphone-alt'></i>
+    &emsp;
+    <p class='visible-at-small'><br>lectures</p>
+  </div>
+  <div class='cat type-life_event'>
+    &emsp;
+    <i class='color-more-faded fas fa-fw fa-cake-candles'></i>
+    &emsp;
+    <p class='visible-at-small'><br>life events</p>
+  </div>
 </div>
 
 <div class='events'>
@@ -62,21 +92,12 @@ title: Updates
 </div>
 
 <script>
-  var type_of_cat = {
-    'awards': 'type-award',
-    'positions': 'type-position',
-    'publications': 'type-publication',
-    'service': 'type-service',
-    'lectures': 'type-lecture',
-    'life_events': 'type-life_event',
-  };
   var events_container = document.getElementsByClassName('events')[0];
 
   function select(cat) {
-    type = typeof cat === 'undefined' ? '---' : type_of_cat[cat];
     setTimeout(function() {
       Array.prototype.forEach.call(document.getElementsByClassName('event'), function(e) {
-        if(typeof cat === 'undefined' || e.classList.contains(type)) {
+        if(typeof cat === 'undefined' || e.classList.contains(cat)) {
           e.style.display = 'flex';
         } else {
           e.style.display = 'none';
@@ -95,8 +116,9 @@ title: Updates
       } else {
         Array.prototype.forEach.call(document.getElementsByClassName('cat'),
                                      cat => cat.classList.remove('selected'));
+        class_cat = Array.from(cat.classList).filter(c => c.startsWith('type-'))[0];
         cat.classList.add('selected');
-        select(cat.innerText.trim().replace(' ', '_'));
+        select(class_cat);
       }
     };
   });

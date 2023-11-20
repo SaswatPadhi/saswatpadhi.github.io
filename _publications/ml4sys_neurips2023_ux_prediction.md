@@ -6,7 +6,7 @@ year: 2023
 month: 12
 
 title: 'Predicting User Experience on Laptops from Hardware Specifications'
-authors: ['Saswat Padhi', 'Udaya Kiran Ammu', 'Alex Bergman', 'Sunil Bhasin', 'Allan Knies']
+authors: ['Saswat Padhi', 'Sunil Bhasin', 'Udaya Kiran Ammu', 'Alex Bergman', 'Allan Knies']
 
 target:
   short: ML4Sys @ NeurIPS
@@ -49,13 +49,13 @@ and a mean MAAPE (percentage error in prediction on unseen data) of 10.1%.
 @article{ml4sys_neurips23/padhi/predicting,
   title         = {Predicting User Experience on Laptops from Hardware Specifications},
   author        = {Saswat Padhi and
+                   Sunil Bhasin and
                    Udaya Kiran Ammu and
                    Alex Bergman and
-                   Sunil Bhasin and
                    Allan Knies},
   booktitle     = {Proceedings of the NeurIPS 2023 Workshop on Machine Learning for Systems,
                    December 16, 2023},
   year          = {2023},
-  url           = {https://openreview.net/pdf?id=T591RKxIh6Q}
+  url           = {https://openreview.net/pdf?id=mHShSE7MSU}
 }
 {% endraw %} ```
