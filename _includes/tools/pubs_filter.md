@@ -25,6 +25,9 @@
         {% if article.links.PDF -%}
           <a href='{% include tools/text_process.md data=article.links.PDF %}'><i class='far fa-file-pdf'></i></a>
         {%- endif %}
+        {% if article.links.Poster -%}
+          <a href='{% include tools/text_process.md data=article.links.Poster %}'><i class='far fa-file-image'></i></a>
+        {%- endif %}
         {% if article.links.Slides -%}
           <a href='{% include tools/text_process.md data=article.links.Slides %}'><i class='fas fa-fw fa-desktop'></i></a>
         {%- endif %}

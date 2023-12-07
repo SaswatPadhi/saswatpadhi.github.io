@@ -1,6 +1,6 @@
 ---
-layout: external
-link: '%BASE_URL%/assets/pdf/oopsla2018_flashprofile_slides.pdf'
+layout: pdf-view
+pdf: '%BASE_URL%/assets/pdf/oopsla2018_flashprofile_slides.pdf'
 
 type: conference
 

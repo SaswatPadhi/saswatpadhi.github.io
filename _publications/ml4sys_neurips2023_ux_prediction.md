@@ -8,6 +8,10 @@ month: 12
 title: 'Predicting User Experience on Laptops from Hardware Specifications'
 authors: ['Saswat Padhi', 'Sunil Bhasin', 'Udaya Kiran Ammu', 'Alex Bergman', 'Allan Knies']
 
+awards:
+  - icon: microphone
+    desc: 'Oral Spotlight Presentation'
+
 target:
   short: ML4Sys @ NeurIPS
   full: 'Proceedings of the NeurIPS 2023 Workshop on Machine Learning for Systems'
@@ -15,6 +19,8 @@ target:
 
 links:
   PDF: '%BASE_URL%/assets/pdf/ml4sys_neurips2023_ux_prediction.pdf'
+  Poster: '%BASE_URL%/assets/pdf/poster_ml4sys_neurips2023_ux_prediction.pdf'
+  Slides: '%BASE_URL%/slides/ml4sys_neurips2023_ux_prediction'
 ---
 
 ###### Abstract

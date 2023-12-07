@@ -2,18 +2,18 @@
 layout: article
 
 type: patent
-year: 2019
-month: 8
+year: 2021
+month: 12
 
 title: 'Syntactic Profiling of Alphanumeric Strings'
 authors: ['[Sumit Gulwani]', '[Prateek Jain]', 'Daniel A. Perelman' , 'Saswat Padhi', '[Oleksandr Polozov]']
 
 DOI:
   target: Grant
-  number: 10394874B2
+  number: 11210327B2
 
 target:
-  full: 'United States Patent Application Publication (2019)'
+  full: 'United States Patent Application Publication (2021)'
   owner: 'Microsoft Technology Licensing, LLC'
 
 links:
@@ -44,16 +44,16 @@ candidate pair of multi-string clusters.
 ###### BibTeX Citation
 
 ```bibtex {% raw %}
-@misc{patent/US10394874B2,
+@misc{patent/US11210327B2,
   title     = {Syntactic Profiling of Alphanumeric Strings},
-  number    = {US10394874B2},
+  number    = {US11210327B2},
   author    = {Sumit Gulwani and
                Prateek Jain and
                Daniel A. Perelman and
                Saswat Padhi and
                Oleksandr Polozov},
-  year      = {2019},
-  month     = {August},
-  url       = {https://patents.google.com/patent/US10394874B2}
+  year      = {2021},
+  month     = {December},
+  url       = {https://patents.google.com/patent/US11210327B2}
 }
 {% endraw %} ```
