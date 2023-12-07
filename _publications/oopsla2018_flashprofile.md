@@ -19,7 +19,7 @@ tweet: 'We present a technique, called _FlashProfile_{:.small-caps}, to generate
         Furthermore, we show that data profiles can improve accuracy and efficiency of PBE techniques.'
 
 target:
-  short: OOPSLA
+  short: 'PACMPL: OOPSLA'
   full: 'Proceedings of the ACM on Programming Languages Vol. 2 (OOPSLA), 2018'
   link: 'https://2018.splashcon.org/track/splash-2018-OOPSLA'
 

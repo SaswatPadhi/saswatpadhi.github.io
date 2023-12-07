@@ -9,7 +9,7 @@ title: 'LoopInvGen: A Loop Invariant Generator based on Precondition Inference'
 authors: ['Saswat Padhi', '[Rahul Sharma]', '[Todd Millstein]']
 
 target:
-  short: SyGuS-Comp Contribution
+  short: SyGuS-Comp Entry
   full: 'Overview of _LoopInvGen_{:.small-caps}, our submission to the _Inv_{:.small-caps} track of the SyGuS Competition 2019'
   link: 'http://sygus.org/comp/2018'
 
