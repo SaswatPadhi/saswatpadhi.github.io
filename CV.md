@@ -1,7 +1,7 @@
 ---
 layout: pdf-view
 
-icon: id-card
+icon: scroll
 title: CV
 
 pdf: '%BASE_URL%/assets/pdf/CV.pdf'
