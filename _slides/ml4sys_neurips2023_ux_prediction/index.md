@@ -1,6 +1,6 @@
 ---
 layout: external
-link: https://docs.google.com/presentation/
+link: https://docs.google.com/presentation/d/1FTsPbvERR7ac1b9cztINmmFEZOs7nIKLXZFFRIuY3n8
 
 type: conference
 
