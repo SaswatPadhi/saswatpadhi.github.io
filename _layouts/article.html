@@ -78,6 +78,8 @@ icons:
       <i class='fas fa-fw fa-{{ layout.icons.DOI }}'></i>&nbsp;
       {% if page.DOI.target == 'OpenReview' -%}
         <a href='https://openreview.net/forum?id={{ page.DOI.number }}'>OpenReview</a>
+      {%- elsif page.DOI.target == 'arXiv' -%}
+        <a href='https://arxiv.org/abs/{{ page.DOI.number }}'>arXiv</a>
       {%- elsif page.type != 'patent' -%}
         <a href='https://doi.org/{{ page.DOI.number }}'>{{ page.DOI.target }}</a>
       {%- else -%}

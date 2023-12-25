@@ -8,6 +8,10 @@ month: 7
 title: 'The SyGuS Language Standard Version 2.1'
 authors: ['Saswat Padhi', '[Elizabeth Polgreen]', '[Mukund Raghothaman]', '[Andrew Reynolds]', '[Abhishek Udupa]']
 
+DOI:
+  target: arXiv
+  number: 2312.06001
+
 target:
   short: 'SyGuS Standard'
 
@@ -45,13 +49,18 @@ the SMT-LIB 2.6 standard.
 
 ```bibtex {% raw %}
 @article{sygus21/padhi/standard,
-  title   = {The SyGuS Language Standard Version 2.1},
-  author  = {Saswat Padhi and
-             Elizabeth Polgreen and
-             Mukund Raghothaman and
-             Andrew Reynolds and
-             Abhishek Udupa},
-  year    = {2021},
-  url     = {https://sygus.org/assets/pdf/SyGuS-IF_2.1.pdf}
+  title         = {The SyGuS Language Standard Version 2.1},
+  author        = {Saswat Padhi and
+                   Elizabeth Polgreen and
+                   Mukund Raghothaman and
+                   Andrew Reynolds and
+                   Abhishek Udupa},
+  journal       = {CoRR},
+  volume        = {abs/2312.06001},
+  year          = {2021},
+  eprint        = {2312.06001},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.PL},
+  url           = {https://arxiv.org/pdf/2312.06001.pdf}
 }
 {% endraw %} ```

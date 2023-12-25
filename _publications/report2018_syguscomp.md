@@ -8,6 +8,10 @@ month: 12
 title: 'SyGuS-Comp 2018: Results and Analysis'
 authors: ['[Rajeev Alur]', '[Dana Fisman]', 'Saswat Padhi', '[Rishabh Singh]', '[Abhishek Udupa]']
 
+DOI:
+  target: arXiv
+  number: 1904.07146
+
 target:
   short: SyGuS-Comp
   full: 'The 5&hairsp;<sup>th</sup> Annual Syntax-Guided Synthesis Competition, 2018'
@@ -46,6 +50,6 @@ This paper presents and analyses the results of this year's [(2018) SyGuS compet
   eprint        = {1904.07146},
   archivePrefix = {arXiv},
   primaryClass  = {cs.PL},
-  url           = {http://arxiv.org/abs/1904.07146}
+  url           = {http://arxiv.org/pdf/1904.07146.pdf}
 }
 {% endraw %} ```
