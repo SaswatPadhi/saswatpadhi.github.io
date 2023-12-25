@@ -32,7 +32,7 @@ title: Home
   <br>
   <em>Email (Work)</em>: &nbsp; spadhi <i class='fas fa-fw fa-sm fa-at'></i> google &bull; com
   <br>
-  <em>Email (Private)</em>: &nbsp; saswatpadhi <i class='fas fa-fw fa-sm fa-at'></i> protonmail &bull; com
+  <em>Email (Personal)</em>: &nbsp; saswatpadhi <i class='fas fa-fw fa-sm fa-at'></i> protonmail &bull; com
 </p>
 
 #### <i class='fas fa-fw fa-sm fa-glasses'></i> Research Interests
@@ -45,7 +45,7 @@ title: Home
 <br>
 <div class='pure-u-1 pure-u-md-13-24 bot-left' markdown='1'>
 
-#### <i class='fas fa-fw fa-sm fa-user'></i> Bio
+#### <i class='fas fa-fw fa-sm fa-user'></i> About Me
 
 <div class='pure-g' style='text-align: justify; margin-top: -1em'>
 <div id='bio' class='pure-u-1 pure-u-md-22-24' markdown='1'>
@@ -62,7 +62,7 @@ and a <span class='color-medium-accent'>B.Tech. (Hons.)</span> in [CSE][CS@IITB]
 I am interested in
 <span class='color-highlight'>building high-performance systems
 with strong reliability guarantees</span>.
-My PhD research was focused on using program synthesis and statistical learning techniques
+My doctoral research was focused on using program synthesis and statistical learning techniques
 to aid development of formally verified software.
 
 </div>
