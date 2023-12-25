@@ -10,6 +10,10 @@ authors: ['Anders Miltner', 'Saswat Padhi', '[Todd Millstein]', '[David Walker]'
 
 artifact_badges: ['acm_available', 'acm_functional', 'acm_reusable']
 
+DOI:
+  target: ACM DL
+  number: 10.1145/3385412.3385967
+
 awards:
   - icon: star
     desc: 'ACM SIGPLAN Distinguished Paper'
@@ -65,6 +69,7 @@ though our empirical evaluation shows that it is successful on the benchmarks we
                June 15-20, 2020},
   publisher = {ACM},
   year      = {2020},
-  note      = {To appear}
+  url       = {https://doi.org/10.1145/3385412.3385967},
+  doi       = {10.1145/3385412.3385967}
 }
 {% endraw %} ```

@@ -8,6 +8,10 @@ month: 12
 title: 'OASIS: ILP-Guided Synthesis of Loop Invariants'
 authors: ['Sahil Bhatia', 'Saswat Padhi', 'Nagarajan Natarajan', '[Rahul Sharma]', '[Prateek Jain]']
 
+DOI:
+  target: OpenReview
+  number: T591RKxIh6Q
+
 target:
   short: CAP @ NeurIPS
   full: 'Proceedings of the NeurIPS 2020 Workshop on Computer-Assisted Programming'

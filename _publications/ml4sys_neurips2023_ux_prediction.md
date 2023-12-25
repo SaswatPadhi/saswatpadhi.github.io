@@ -8,6 +8,10 @@ month: 12
 title: 'Predicting User Experience on Laptops from Hardware Specifications'
 authors: ['Saswat Padhi', 'Sunil Bhasin', 'Udaya Kiran Ammu', 'Alex Bergman', 'Allan Knies']
 
+DOI:
+  target: OpenReview
+  number: mHShSE7MSU
+
 awards:
   - icon: microphone
     desc: 'Oral Spotlight Presentation'

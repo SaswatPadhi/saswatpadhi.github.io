@@ -44,7 +44,7 @@ icons:
   {% for award in page.awards %}
     &loang;&hairsp;<i class='fas fa-fw fa-sm fa-{{ award.icon }}'></i>&nbsp; {% include tools/text_process.md data=award.desc %}&hairsp;&roang; &nbsp;
   {% endfor %}
-  {% if page.artifact_badges and page.awards %} <br style='display: block; margin: 1em 0; line-height: 2em; content: ""'> {% endif %}
+  {% if page.artifact_badges and page.awards %} <br style='display: block; margin: 0.5em 0; line-height: 2em; content: ""'> {% endif %}
   {% for badge in page.artifact_badges %}
     <a href="{{ layout.artifact_badges[badge].info }}">
       <img style="width: 5em; padding-right: 1em;" src="{{ site.baseurl }}/assets/img/artifact_evaluation/{{ layout.artifact_badges[badge].image }}" alt="[artifact {{ badge }}]"/>
@@ -76,7 +76,9 @@ icons:
   {%- if page.DOI %}
     <div class='pure-u-1-3 pure-u-sm-1-5'>
       <i class='fas fa-fw fa-{{ layout.icons.DOI }}'></i>&nbsp;
-      {% if page.type != 'patent' -%}
+      {% if page.DOI.target == 'OpenReview' -%}
+        <a href='https://openreview.net/forum?id={{ page.DOI.number }}'>OpenReview</a>
+      {%- elsif page.type != 'patent' -%}
         <a href='https://doi.org/{{ page.DOI.number }}'>{{ page.DOI.target }}</a>
       {%- else -%}
         <a href='https://patents.google.com/patent/US{{ page.DOI.number }}/en'>Details</a>
