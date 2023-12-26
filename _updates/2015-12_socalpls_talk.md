@@ -1,7 +1,7 @@
 ---
 date: 2015-12-5
 
-type: lecture
+type: talk
 location: Pomona College, CA
 
 headline: 'Talk @ [SoCalPLS =qq= 15F](https://socalpls.github.io/archive/2015dec/)'

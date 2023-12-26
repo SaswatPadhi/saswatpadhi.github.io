@@ -16,6 +16,9 @@ awards:
   - icon: microphone
     desc: 'Oral Spotlight Presentation'
 
+tweet: 'We present regression-based models for predicting ChromeOS user experience metrics
+        from hardware specifications of Chromebook laptops.'
+
 target:
   short: ML4Sys @ NeurIPS
   full: 'Proceedings of the NeurIPS 2023 Workshop on Machine Learning for Systems'

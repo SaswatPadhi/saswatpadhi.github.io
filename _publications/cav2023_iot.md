@@ -12,6 +12,9 @@ DOI:
   target: Springer
   number: 10.1007/978-3-031-37706-8_2
 
+tweet: 'We present a collection of automated analyzers that help AWS customers
+        verify that their IoT Event detector models are free of common defects.'
+
 target:
   short: CAV
   full: 'Proceedings of the 35&hairsp;<sup>th</sup> International Conference on Computer-Aided Verification, 2023'

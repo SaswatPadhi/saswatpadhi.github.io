@@ -1,7 +1,7 @@
 ---
 date: 2016-05-27
 
-type: lecture
+type: talk
 location: Stanford, CA
 
 headline: Talk @ Stanford University

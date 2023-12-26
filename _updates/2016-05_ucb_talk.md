@@ -1,7 +1,7 @@
 ---
 date: 2016-05-26
 
-type: lecture
+type: talk
 location: Berkeley, CA
 
 headline: Talk @ UC Berkeley

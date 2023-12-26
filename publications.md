@@ -5,7 +5,7 @@ mathjax: true
 
 css: [ 'publications' ]
 
-icon: paperclip
+icon: regular fa-copy
 title: Publications
 ---
 

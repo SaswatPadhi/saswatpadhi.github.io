@@ -12,6 +12,9 @@ DOI:
   target: OpenReview
   number: T591RKxIh6Q
 
+tweet: 'We present a new approach to synthesizing provably sufficient loop invariants
+        by leveraging integer linear programming (ILP).'
+
 target:
   short: CAP @ NeurIPS
   full: 'Proceedings of the NeurIPS 2020 Workshop on Computer-Assisted Programming'

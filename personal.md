@@ -70,23 +70,31 @@ or my <a onclick='play_name();'>full name</a>.
 
 
 
-#### <i class='fas fa-fw fa-list-ol'></i>&nbsp; [Erd&#337;s Number][ErdosNumber] (&thinsp;<span class='color-faded color-accent'>4</span>&thinsp;)
+#### <i class='fas fa-fw fa-people-arrows'></i>&nbsp; Co-Authorship Distance
 
-(Source = [MathSciNet])&thinsp;**:**
+&nbsp;&bull; [Erd&#337;s Number][ErdosNumber] = <span class='color-faded color-accent'>4</span> (see [CS Authors][Erdos CS Authors])&thinsp;**:**
 &nbsp;
 [Paul Erd&#337;s](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s)
     <i class='fas fa-fw fa-long-arrow-alt-right'></i>
-[Peter Montgomery](https://en.wikipedia.org/wiki/Peter_Montgomery_(mathematician))
+[P. Montgomery](https://en.wikipedia.org/wiki/Peter_Montgomery_(mathematician))
     <i class='fas fa-fw fa-long-arrow-alt-right'></i>
-[Ramarathnam Venkatesan](https://www.microsoft.com/en-us/research/people/venkie/)
+[R. Venkatesan](https://www.microsoft.com/en-us/research/people/venkie/)
     <i class='fas fa-fw fa-long-arrow-alt-right'></i>
-[Sumit Gulwani](https://www.microsoft.com/en-us/research/people/sumitg/)
+[S. Gulwani](https://www.microsoft.com/en-us/research/people/sumitg/)
     <i class='fas fa-fw fa-long-arrow-alt-right'></i>
 Me
 
-
-
-#### <i class='fas fa-fw fa-laptop-code'></i>&nbsp; Open Source Support
+&nbsp;&bull; Dijsktra Number = <span class='color-faded color-accent'>4</span> (see [CS Authors][Dijkstra CS Authors])&thinsp;**:**
+&nbsp;
+[Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
+    <i class='fas fa-fw fa-long-arrow-alt-right'></i>
+[C. A. R. Hoare](https://en.wikipedia.org/wiki/Tony_Hoare)
+    <i class='fas fa-fw fa-long-arrow-alt-right'></i>
+[S. Rajamani](https://www.microsoft.com/en-us/research/people/sriram/)
+    <i class='fas fa-fw fa-long-arrow-alt-right'></i>
+[A. Nori](https://www.microsoft.com/en-us/research/people/adityan/)
+    <i class='fas fa-fw fa-long-arrow-alt-right'></i>
+Me
 
 
 <script>
@@ -140,5 +148,6 @@ Me
     }
 </script>
 
-[ErdosNumber]: https://en.wikipedia.org/wiki/Erd%C5%91s_number
-[MathSciNet]:  https://mathscinet.ams.org/mathscinet/collaborationDistance.html?AuthorSourceName=Gulwani,%20Sumit&AuthorTargetName=Erdos,%20Paul&group_target=189017
+[ErdosNumber]:          https://en.wikipedia.org/wiki/Erd%C5%91s_number
+[Erdos CS Authors]:     https://www.csauthors.net/distance/paul-erdos/saswat-padhi
+[Dijkstra CS Authors]:  https://www.csauthors.net/distance/edsger-w-dijkstra/saswat-padhi

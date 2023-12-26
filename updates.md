@@ -5,7 +5,7 @@ mathjax: true
 
 css: [ 'updates' ]
 
-icon: user-clock
+icon: timeline
 title: Updates
 ---
 
@@ -34,11 +34,11 @@ title: Updates
     &nbsp;
     <p class='visible-at-small'><br>service</p>
   </div>
-  <div class='cat type-lecture'>
+  <div class='cat type-talk'>
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-microphone-alt'></i>
     &nbsp;
-    <p class='visible-at-small'><br>lectures</p>
+    <p class='visible-at-small'><br>talks</p>
   </div>
   <div class='cat type-life_event'>
     &nbsp;

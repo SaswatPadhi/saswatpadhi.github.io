@@ -1,7 +1,7 @@
 ---
 date: 2019-07-16
 
-type: lecture
+type: talk
 location: New York City, NY
 
 icon: desktop

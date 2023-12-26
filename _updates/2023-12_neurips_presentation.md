@@ -1,7 +1,7 @@
 ---
 date: 2023-12-16
 
-type: lecture
+type: talk
 location: New Orleans, LA
 
 icon: desktop

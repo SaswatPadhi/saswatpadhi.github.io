@@ -42,7 +42,7 @@ default_icon:
   position: id-badge
   publication: file-alt
   service: user-cog
-  lecture: microphone
+  talk: microphone
   life_event: cake-candles
 
 default_highlight:

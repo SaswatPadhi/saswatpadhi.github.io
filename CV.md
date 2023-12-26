@@ -1,7 +1,7 @@
 ---
 layout: pdf-view
 
-icon: scroll
+icon: file-lines
 title: CV
 
 pdf: '%BASE_URL%/assets/pdf/CV.pdf'

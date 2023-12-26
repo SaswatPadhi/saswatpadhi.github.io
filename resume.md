@@ -1,7 +1,7 @@
 ---
 layout: pdf-view
 
-icon: id-card
+icon: file-invoice
 title: Résumé
 
 pdf: '%BASE_URL%/assets/pdf/Resume.pdf'
