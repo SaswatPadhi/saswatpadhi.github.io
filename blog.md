@@ -27,9 +27,11 @@ title: Blog
     <div class='tagline'>
       {% include tools/text_process.md data=post.tagline %}
     </div>
+    {% if post.categories -%}
     <div class='categories'>
       {% include tools/category_links.md categories=post.categories %}
     </div>
+    {%- endif -%}
   </div>
 {%- endfor %}
 </div>

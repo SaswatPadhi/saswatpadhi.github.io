@@ -5,6 +5,12 @@
   font-size: 1.075em;
 }
 
+h4 {
+  i.fas, i.far {
+    opacity: 0.75;
+  }
+}
+
 p.indented {
   line-height: 1.6em;
   margin-left: 0.5em;
@@ -68,7 +74,7 @@ div.bot-right > .table {
   }
 }
 
-div.bot-right > h4 > em {
+div.bot-right > h4 > b {
   opacity: 0.25;
 }
 

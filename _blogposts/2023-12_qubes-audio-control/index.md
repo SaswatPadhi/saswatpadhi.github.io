@@ -3,10 +3,10 @@ icon: terminal
 
 post_date: 2023-12-27
 
-title: 'Command-Line Audio Control in Qubes'
-tagline: 'Controlling Qubes AppVM volume from a CLI'
+title: 'CLI Audio Control in Qubes'
+tagline: 'Controlling Qubes AppVM volume from a shell'
 
-categories: [ 'hw/audio', 'sw/shell', 'sw/qubes' ]
+categories: [ 'hw/audio', 'sw/qubes' ]
 
 mermaid: true
 ---
@@ -381,6 +381,10 @@ I will conclude this post with a few scripts that use the two scripts above,
 but target the AppVM that is running the currently focused window.
 I find myself using all three of the following scripts quite heavily,
 and I even have keyboard shortcuts for these.
+The key idea is to use [`xdotool`][xdotool] utility to get information regarding
+the active window, in particular the _window class name_.
+Qubes OS sets the window class name for non-$\DomZ$ windows as: `<AppVM Name>:<Window Title>`,
+so we use that (the prefix before `:`) to identify the AppVM running the active window.
 
 This first script grabs the AppVM name from the currently focused window,
 and raises the volume of audio streams from this AppVM by 10%.  
@@ -424,13 +428,13 @@ qvm-mute 0 $vm
 
 
 
-[^audiovm]:    The Qubes developers are working on further minimizing the audio attack surface
-               by providing [a dedicated audio domain](https://www.qubes-os.org/news/2020/03/18/gui-domain/#audio-domain).
-               This is still a work in progress, but I believe the solutions I describe in this post
-               should translate easily to this configuration.
+[^audiovm]: [A dedicated audio domain](https://www.qubes-os.org/news/2020/03/18/gui-domain/#audio-domain)
+            is being planned by the Qubes OS developers to further minimize the audio attack surface.
+            This is still a work in progress, but I believe the solutions I describe in this post
+            should translate easily to this configuration.
 
-[^pipewire]:   Qubes OS is going to eventually use [PipeWire](https://pipewire.org/) in place of PulseAudio.
-               This is still a [work in progress](https://www.qubes-os.org/doc/releases/4.2/release-notes/) as of R4.2.
+[^pipewire]: Qubes OS is going to eventually use [PipeWire](https://pipewire.org/) in place of PulseAudio.
+             This is still a [work in progress](https://www.qubes-os.org/doc/releases/4.2/release-notes/) as of R4.2.
 
 [^qvm-volume]: [`qvm-volume`][qvm-volume] is a Qubes OS system utility for volume and block device management.
                Be sure not to _shadow_ this utility; save the audio volume adjustment script with another name.
@@ -443,3 +447,4 @@ qvm-mute 0 $vm
 [PulseAudio]:             https://www.freedesktop.org/wiki/Software/PulseAudio/
 [Qubes OS]:               https://www.qubes-os.org/
 [qvm-volume]:             https://dev.qubes-os.org/projects/core-admin-client/en/latest/manpages/qvm-volume.html
+[xdotool]:                https://github.com/jordansissel/xdotool

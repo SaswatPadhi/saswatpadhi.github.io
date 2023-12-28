@@ -12,8 +12,12 @@ html, button, input, select, textarea,
   font-family: $site-font-stack-base;
 }
 
-code, kbd, pre, samp, .mono {
+code, kbd, pre, samp {
   font-family: $site-font-stack-mono;
+}
+
+.mono {
+  font-family: $site-font-stack-mono !important;
 }
 
 kbd {
@@ -30,7 +34,7 @@ kbd {
   position: relative;
   top: -1px;
 
-  &:hover {
+  &:active, &:focus, &:hover {
     box-shadow: 0 1px 0 0.5px #cbcccd;
     top: 1px;
   }
@@ -167,6 +171,7 @@ details {
   transition: color 0.2s ease;
 }
 
+.tweet:active p::before, .tweet:focus p::before, 
 .tweet:hover p::before, .tweet.hovering p::before {
   color: #38A1F3;
 }

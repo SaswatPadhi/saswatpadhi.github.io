@@ -5,7 +5,7 @@ mathjax: true
 
 css: [ 'updates' ]
 
-icon: timeline
+icon: timeline fa-xs fa-rotate-270
 title: Updates
 ---
 

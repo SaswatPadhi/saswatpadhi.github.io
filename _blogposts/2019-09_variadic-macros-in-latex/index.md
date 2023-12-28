@@ -203,7 +203,7 @@ variadic part had been expanded.
 After a fair bit of hacking, I gave up and turned to the TeX gurus ---
 I opened [this question on TeX.StackExchange][variadic-macro-question].
 
-<kbd>@siracusa</kbd> came up with a brilliant solution ---
+`@siracusa`{: .transparent .mono } came up with a brilliant solution ---
 accept the macro name as a parameter,
 accumulate the variadic expansion result in an additional parameter
 to each intermediate macro,

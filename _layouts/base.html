@@ -58,8 +58,8 @@
     </script>
     {%- endif -%}
 
-    {% if layout.mathjax or page.mathjax %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+    {% if layout.pseudocode or page.pseudocode %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css">
     {%- endif -%}
 
     {% for sheet in layout.css -%}
@@ -68,66 +68,79 @@
     {% for sheet in page.css %}
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
     {%- endfor %}
-  </head>
-
-  <body>
-    {{ content }}
 
     {% if layout.prismjs or page.prismjs -%}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
             integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.js"
             integrity="sha512-h92O152CCXt3xEUWDYTGLz58u+IOpZU8Z2MEkkBsXsRlAhckPFeEolarVn7tOhTVbjsJPpyknL0CFUrc2rlgPQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
             integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js"
             integrity="sha512-6nsaJ4jytF/0bh+5QJY4SOLuZZmcd/TAXHBkLIX/SH1ENpWezpQDJ4LpK2D1IfpjKVyhJQQaNSSvfsQjuYfTow=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css-extras.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css-extras.min.js"
             integrity="sha512-5tPZiBRejDT7LdjPEytO8cQEox9psTNkjppGOA457LZ/mXVmPY336d9jq4FFpeeCdYz6aMkbVU+8kvhAC2xCZQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/filter-highlight-all/prism-filter-highlight-all.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/filter-highlight-all/prism-filter-highlight-all.min.js"
             integrity="sha512-Dj7Y7jQDpkXQSBiea4ZtcGAy+3EBAO8Vy5pOdbfWKxaceDgeoAnUMaCVzNDg2wCI5Ye+rJb9eS3NnlkBheiacA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
+            crossorigin="anonymous" referrerpolicy="no-referrer"
+            data-reject-selector=".no-highlight *">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/inline-color/prism-inline-color.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/inline-color/prism-inline-color.min.js"
             integrity="sha512-QK2YjLmowNZnKMI1UZNu0NxMPQZ3oxsbz2rRzmHt+xth2mKyFqied1D2TSDbSX+vAjHEgdWYZF/i4YI9sD0aNw=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.js"
             integrity="sha512-255MpVHZHmxNdOj/PivQ+WSTYFjBxTMfmIszxwsJobUeaoDNUAnAQjYF5TznbiZXrXqpCy8q4QyvJzhykpof3Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
             integrity="sha512-BttltKXFyWnGZQcRWj6osIg7lbizJchuAMotOkdLxHxwt/Hyo+cl47bZU0QADg+Qt5DJwni3SbYGXeGMB5cBcw=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.js"
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.js"
             integrity="sha256-A5GMUmGHpY8mVpfcaRLQFeHtmdjZLumKBOMpf81FXX0="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script>
-      Prism.plugins.filterHighlightAll.reject.addSelector('.no-highlight *');
-    </script>
-    {%- endif -%}
+    {%- endif %}
 
     {% if layout.mermaid or page.mermaid -%}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"
             integrity="sha512-yD6UxqB1PGCP/nC8vd2pcozgicMkT/FEFo98T0ian+EtJPkbAL+h5gYV3r5Fpy1XWTVdDVoHx/E/9fFHdrHu1g=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"
             integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y="
-            crossorigin="anonymous">
+            crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
+    {%- endif %}
+
+    {% if layout.mathjax or page.mathjax %}
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.min.js"
+            integrity="sha512-PbLRl9V4qEM7j3xggKupLNdcodHT0w+x77S/JoTWxrhPEVZ0NkTPp90bzUeTyFXsBzsaApVOZdCHIzL6o51KiA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    {%- endif %}
+
+    {% if layout.pseudocode or page.pseudocode %}
+    <script src="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js">
+    </script>
+    {%- endif %}
+  </head>
+
+  <body>
+    {{ content }}
+
+    {% if layout.mermaid or page.mermaid -%}
     <script>
       const mermaidLabelsSelector = "code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class$='Label'], \
                                      code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class*='Label ']";
@@ -200,20 +213,20 @@
             }
           );
         });
-      }, false);
 
-      Array.prototype.forEach.call(
-        document.getElementsByTagName('details'),
-        details => details.addEventListener("toggle",
-                                            (e) => {
-                                              if (details.open) {
-                                                mermaid.run({
-                                                  nodes: details.querySelectorAll('.language-mermaid'),
-                                                  postRenderCallback: mermaidCallback,
-                                                });
-                                              }
-                                            })
-      );
+        Array.prototype.forEach.call(
+          document.getElementsByTagName('details'),
+          details => details.addEventListener("toggle",
+                                              (e) => {
+                                                if (details.open) {
+                                                  mermaid.run({
+                                                    nodes: details.querySelectorAll('.language-mermaid'),
+                                                    postRenderCallback: mermaidCallback,
+                                                  });
+                                                }
+                                              })
+        );
+      }, false);
     </script>
     {%- endif -%}
 
@@ -267,12 +280,6 @@
           }
         {%- endif %}
       }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.min.js"
-            integrity="sha512-PbLRl9V4qEM7j3xggKupLNdcodHT0w+x77S/JoTWxrhPEVZ0NkTPp90bzUeTyFXsBzsaApVOZdCHIzL6o51KiA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js">
     </script>
     {%- endif %}
   </body>

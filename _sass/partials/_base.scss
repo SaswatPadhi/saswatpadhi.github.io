@@ -45,7 +45,7 @@ $site-max-width: 976;
   @if $site-hover-light == enabled {
     transition: $color-attrib ($default-delay-small + s) ease;
 
-    &:hover, &:focus, &.hovering {
+    &:active, &:focus, &:hover, &.hovering {
       #{$color-attrib}: if($factor < 0, darken($color, -$factor), lighten($color, $factor));
     }
   }

@@ -38,7 +38,7 @@ svg[id^='mermaid'] {
     transition: opacity 0.8s ease;
   }
 
-  &:hover, &:focus, &.hovering {
+  &:active, &:focus, &:hover {
     g.svg-pan-zoom-control {
       opacity: 1;
       transition: opacity 0.2s ease;

@@ -49,7 +49,7 @@ pre[class*="language-"] {
   border-radius: 0.25em;
   padding: 0.1875em .25em 0.25em;
   margin: 0 0.05em;
-  &:hover {
+  &:active, &:focus, &:hover {
     background-color: #faf4e8;
   }
 }

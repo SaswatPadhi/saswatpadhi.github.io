@@ -71,7 +71,12 @@ to aid development of formally verified software.
 </div>
 <div class='pure-u-1 pure-u-md-11-24 bot-right' markdown='1'>
 
-#### <i class='far fa-fw fa-sm fa-clock'></i> Recent Updates *&middot; &middot; &middot;* ([&#x200a;Details&#x200a;]({{ site.baseurl }}/updates))
+<h4>
+  <i class='fas fa-fw fa-xs fa-rotate-90 fa-timeline'></i>
+  Recent Updates
+  <b>&middot; &middot; &middot;</b>
+  (<a href='{{ site.baseurl }}/updates'>&#x200a;Details&#x200a;</a>)
+</h4>
 
 <div class='pure-g table'>
   {%- assign sorted_updates = site.updates | sort: 'date' | reverse -%}
