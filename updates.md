@@ -14,37 +14,37 @@ title: Updates
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-trophy'></i>
     &nbsp;
-    <p class='visible-at-small'><br>awards</p>
+    <p class='visible-above-small'><br>awards</p>
   </div>
   <div class='cat type-position'>
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-business-time'></i>
     &nbsp;
-    <p class='visible-at-small'><br>positions</p>
+    <p class='visible-above-small'><br>positions</p>
   </div>
   <div class='cat type-publication'>
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-file-invoice'></i>
     &nbsp;
-    <p class='visible-at-small'><br>publications</p>
+    <p class='visible-above-small'><br>publications</p>
   </div>
   <div class='cat type-service'>
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-hands-helping'></i>
     &nbsp;
-    <p class='visible-at-small'><br>service</p>
+    <p class='visible-above-small'><br>service</p>
   </div>
   <div class='cat type-talk'>
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-microphone-alt'></i>
     &nbsp;
-    <p class='visible-at-small'><br>talks</p>
+    <p class='visible-above-small'><br>talks</p>
   </div>
   <div class='cat type-life_event'>
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-cake-candles'></i>
     &nbsp;
-    <p class='visible-at-small'><br>life events</p>
+    <p class='visible-above-small'><br>life events</p>
   </div>
 </div>
 
@@ -65,7 +65,7 @@ title: Updates
     </div>
     <div class='pure-u-19-24 pure-u-sm-5-6 event-description'>
       {% if event.photo != null -%}
-        <div class='visible-at-medium float-right-medium' style='height:100%'>
+        <div class='visible-above-medium float-right-medium' style='height:100%'>
           <a class='photo-box' href='{{event_photo}}'><img src='{{event_photo}}'/></a>
         </div>
       {%- endif %}
@@ -83,7 +83,7 @@ title: Updates
         {%- endif -%}
         {% if event.photo != null -%}
           <br>
-          <a class='hidden-at-medium' href='{{event_photo}}'><img src='{{event_photo}}'/></a>
+          <a class='hidden-above-medium' href='{{event_photo}}'><img src='{{event_photo}}'/></a>
         {%- endif %}
       </p>
     </div>

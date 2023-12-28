@@ -32,8 +32,19 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-/* Inline */
-:not(pre) > code {
+/* Inline transparent */
+:not(pre) > code.transparent {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  span.inline-color-wrapper {
+    margin: 0 0.75ch 0 0;
+  }
+}
+
+/* Inline not transparent */
+:not(pre) > code:not(.transparent) {
   background-color: #faf4e8;
   border-radius: 0.25em;
   padding: 0.1875em .25em 0.25em;
@@ -64,6 +75,12 @@ pre[class*="language-"] {
 
   .line-highlight {
     margin-top: 0.29em;
+  }
+
+  &.no-highlight-numbers{
+    .line-highlight::before, .line-highlight::after {
+      display: none;
+    }
   }
 
   .command-line-prompt {

@@ -1,3 +1,6 @@
+{%- assign base_font = site.fonts.base | default: 'Noto Sans' -%}
+{%- assign head_font = site.fonts.head | default: 'Montserrat' -%}
+{%- assign mono_font = site.fonts.mono | default: 'Ubuntu Mono' -%}
 <!DOCTYPE html>
 <html lang='en-US'>
   <head>
@@ -30,13 +33,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.css"
           integrity="sha512-EgIkdlA87NL5dPmI6HztTCpg7XKfZRFQHbpEdDF3hCT45HjjmIJOx8K73r+YZha0vKyOcMpzC7fZ4RajCX25tg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
-          integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/inline-color/prism-inline-color.min.css"
+          integrity="sha512-jPGdTBr51+zDG6sY0smU+6rV19GOIN9RXAdVT8Gyvb55dToNJwq2n9SgCa764+z0xMuGA3/idik1tkQQhmALSA=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.css"
           integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+          integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     {%- endif -%}
+
     {% if layout.revealjs or page.revealjs -%}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css"
           integrity="sha512-1vDOkqtCXgcn0zgLIrxVjSIHvXOB/Ho2k33zwIDMqStDdHWvQyVU+BGG2fK4nnOgDbg0jEzVqzTYTL65orMyWw=="
@@ -50,9 +57,11 @@
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     {%- endif -%}
+
     {% if layout.mathjax or page.mathjax %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
     {%- endif -%}
+
     {% for sheet in layout.css -%}
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
     {%- endfor -%}
@@ -63,38 +72,152 @@
 
   <body>
     {{ content }}
+
     {% if layout.prismjs or page.prismjs -%}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
             integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
-            integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.js"
             integrity="sha512-h92O152CCXt3xEUWDYTGLz58u+IOpZU8Z2MEkkBsXsRlAhckPFeEolarVn7tOhTVbjsJPpyknL0CFUrc2rlgPQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+            integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js"
             integrity="sha512-6nsaJ4jytF/0bh+5QJY4SOLuZZmcd/TAXHBkLIX/SH1ENpWezpQDJ4LpK2D1IfpjKVyhJQQaNSSvfsQjuYfTow=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
-            integrity="sha512-BttltKXFyWnGZQcRWj6osIg7lbizJchuAMotOkdLxHxwt/Hyo+cl47bZU0QADg+Qt5DJwni3SbYGXeGMB5cBcw=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css-extras.min.js"
+            integrity="sha512-5tPZiBRejDT7LdjPEytO8cQEox9psTNkjppGOA457LZ/mXVmPY336d9jq4FFpeeCdYz6aMkbVU+8kvhAC2xCZQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/filter-highlight-all/prism-filter-highlight-all.min.js"
+            integrity="sha512-Dj7Y7jQDpkXQSBiea4ZtcGAy+3EBAO8Vy5pOdbfWKxaceDgeoAnUMaCVzNDg2wCI5Ye+rJb9eS3NnlkBheiacA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/inline-color/prism-inline-color.min.js"
+            integrity="sha512-QK2YjLmowNZnKMI1UZNu0NxMPQZ3oxsbz2rRzmHt+xth2mKyFqied1D2TSDbSX+vAjHEgdWYZF/i4YI9sD0aNw=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.js"
             integrity="sha512-255MpVHZHmxNdOj/PivQ+WSTYFjBxTMfmIszxwsJobUeaoDNUAnAQjYF5TznbiZXrXqpCy8q4QyvJzhykpof3Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
+            integrity="sha512-BttltKXFyWnGZQcRWj6osIg7lbizJchuAMotOkdLxHxwt/Hyo+cl47bZU0QADg+Qt5DJwni3SbYGXeGMB5cBcw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.js"
             integrity="sha256-A5GMUmGHpY8mVpfcaRLQFeHtmdjZLumKBOMpf81FXX0="
             crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
+    </script>
+    <script>
+      Prism.plugins.filterHighlightAll.reject.addSelector('.no-highlight *');
     </script>
     {%- endif -%}
-    {%- if layout.mathjax or page.mathjax %}
+
+    {% if layout.mermaid or page.mermaid -%}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"
+            integrity="sha512-yD6UxqB1PGCP/nC8vd2pcozgicMkT/FEFo98T0ian+EtJPkbAL+h5gYV3r5Fpy1XWTVdDVoHx/E/9fFHdrHu1g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"
+            integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y="
+            crossorigin="anonymous">
+    </script>
+    <script>
+      const mermaidLabelsSelector = "code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class$='Label'], \
+                                     code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class*='Label ']";
+
+      function SVGPanZoomResize (panZoom) {
+        panZoom.resize();
+        panZoom.fit();
+        panZoom.center();
+      }
+
+      function mermaidCallback (svgId) {
+        const svg = document.getElementById(svgId);
+        svg.style.maxWidth = 'unset';
+
+        {% if layout.mathjax or page.mathjax -%}
+          MathJax.typeset(svg.querySelectorAll(mermaidLabelsSelector));
+        {%- endif -%}
+
+        const beforePan = function (oldPan, newPan) {
+          const stopHorizontal = false
+              , stopVertical = false
+              , gutterWidth = 100
+              , gutterHeight = 100
+              , sizes = this.getSizes()
+              , leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth
+              , rightLimit = sizes.width - gutterWidth - (sizes.viewBox.x * sizes.realZoom)
+              , topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight
+              , bottomLimit = sizes.height - gutterHeight - (sizes.viewBox.y * sizes.realZoom)
+
+          return {
+            x: Math.max(leftLimit, Math.min(rightLimit, newPan.x)),
+            y: Math.max(topLimit, Math.min(bottomLimit, newPan.y))
+          }
+        }
+
+        const oldHeight = svg.getBoundingClientRect().height;
+        const panZoom = svgPanZoom(svg, {
+          beforePan: beforePan,
+          controlIconsEnabled: true,
+          mouseWheelZoomEnabled: false,
+        });
+        svg.style.height = Math.round(oldHeight) + 'px';
+        SVGPanZoomResize(panZoom);
+      }
+      
+      document.addEventListener('DOMContentLoaded', function () {
+        mermaid.initialize({
+          fontFamily: '{{ head_font }}',
+          htmlLabels: true,
+          securityLevel: 'antiscript',
+          startOnLoad: true,
+        });
+        mermaid.run({
+          querySelector: 'details[open] .language-mermaid, .language-mermaid:not(details .language-mermaid)',
+          postRenderCallback: mermaidCallback,
+        });
+
+        window.addEventListener("resize", function () {
+          Array.prototype.forEach.call(
+            document.getElementsByTagName('svg'),
+            svg => {
+              if (svg.querySelectorAll('g.svg-pan-zoom-control')) {
+                const panZoom = svgPanZoom(svg);
+                SVGPanZoomResize(panZoom);
+                const viewportHeight = svg.querySelector('g.svg-pan-zoom_viewport').getBoundingClientRect().height
+                    , viewportWidth = svg.querySelector('g.svg-pan-zoom_viewport').getBoundingClientRect().width;
+                svg.style.height = Math.round(svg.getBoundingClientRect().width * viewportHeight / viewportWidth) + 'px';
+                SVGPanZoomResize(panZoom);
+              }
+            }
+          );
+        });
+      }, false);
+
+      Array.prototype.forEach.call(
+        document.getElementsByTagName('details'),
+        details => details.addEventListener("toggle",
+                                            (e) => {
+                                              if (details.open) {
+                                                mermaid.run({
+                                                  nodes: details.querySelectorAll('.language-mermaid'),
+                                                  postRenderCallback: mermaidCallback,
+                                                });
+                                              }
+                                            })
+      );
+    </script>
+    {%- endif -%}
+
+    {% if layout.mathjax or page.mathjax %}
     <script>
       MathJax = {
         options: {

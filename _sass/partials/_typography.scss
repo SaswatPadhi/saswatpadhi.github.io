@@ -16,6 +16,26 @@ code, kbd, pre, samp, .mono {
   font-family: $site-font-stack-mono;
 }
 
+kbd {
+  color: #222325;
+  border-radius: 0.25rem;
+  border: 1px solid #cbcccd;
+  box-shadow: 0 2px 0 1px #cbcccd;
+  cursor: default;
+  font-size: 0.9em;
+  line-height: 1.1;
+  min-width: 0.75rem;
+  text-align: center;
+  padding: 2px 5px;
+  position: relative;
+  top: -1px;
+
+  &:hover {
+    box-shadow: 0 1px 0 0.5px #cbcccd;
+    top: 1px;
+  }
+}
+
 blockquote {
   font-size: 0.9em;
   text-align: justify;
@@ -271,4 +291,8 @@ ol.custom {
   &[name]:before {
     content: "Theorem " counter(theorem) " (" attr(name) "). ";
   }
+}
+
+code.language-mermaid[data-processed='true'] svg[id^='mermaid'] p {
+  margin: unset;
 }

@@ -17,7 +17,7 @@ title: Blog
         {{- post.post_date | date: "%b =qq= %y" -}}
       {%- endcapture -%}
       {%- include tools/text_process.md data=post_date -%}
-      &thinsp;<i class='fas fa-fw fa-sm fa-chevron-right'></i>
+      &thinsp;<i class='fas fa-fw fa-2xs fa-caret-right'></i>
     </span>
     <i class='fas fa-sm fa-fw fa-{{ post.icon }}'></i>
     &thinsp;<a href='{{ post_url }}' class='title'>

@@ -68,12 +68,12 @@ $site-max-width: 976;
 }
 
 @each $med in (small, medium, large, xlarge) {
-  .visible-at-#{$med} {
+  .visible-above-#{$med} {
     display: none;
     @include media($med) { display: initial; }
   }
 
-  .hidden-at-#{$med} {
+  .hidden-above-#{$med} {
     @include media($med) { display: none; }
   }
 

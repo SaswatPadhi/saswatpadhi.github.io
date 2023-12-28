@@ -129,7 +129,7 @@ I used `/etc/qubes-rpc/custom.SetWiFiLED`, for instance.
 We should be able to control the WiFi/Bluetooth LED now
 by invoking this script in $\DomZ$.
 
-```console
+```bash
 /etc/qubes-rpc/custom.SetWiFiLED up
 /etc/qubes-rpc/custom.SetWiFiLED down
 ```
@@ -163,7 +163,7 @@ when WiFi is connected or disconnected.
 But, before automating this trigger,
 we should first manually test the RPC by running :
 
-```console
+```bash
 qrexec-client-vm dom0 custom.SetWiFiLED+up
 qrexec-client-vm dom0 custom.SetWiFiLED+down
 ```

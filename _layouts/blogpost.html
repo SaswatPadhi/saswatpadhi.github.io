@@ -18,7 +18,7 @@ css: [ 'blogpost' ]
 
 <div class='post-header clearfix'>
 <div class='date'>{{ page.post_date | date_to_long_string }}</div>
-<span class='visible-at-medium'>
+<span class='visible-above-medium'>
 &nbsp;&bull;&thinsp;
 {% include tools/category_links.md categories=page.categories %}
 </span>
@@ -27,7 +27,7 @@ css: [ 'blogpost' ]
   <b>&VerticalLine;</b>
   {{ content | number_of_words | divided_by: 175.0 | ceil }} min.)
 </span>
-<div class='hidden-at-medium' style='margin-top:1em;'>
+<div class='hidden-above-medium' style='margin-top:1em;'>
   {% include tools/category_links.md categories=page.categories %}
 </div>
 </div>

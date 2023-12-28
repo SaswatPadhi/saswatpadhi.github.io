@@ -95,7 +95,7 @@ With some minor modifications, I had my first working version of a variadic `\Li
 \newcommand{\List}[1]{[#1\CheckListArg}
 {% endraw %} ```
 
-<details markdown='1'>
+<details>
 <summary>How does this work?</summary>
 Here is how this macro works:
 

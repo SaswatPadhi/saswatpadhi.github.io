@@ -15,7 +15,9 @@ figure {
 
   pre {
     margin: 0 !important;
-    margin-bottom: 0.5em !important;
+    &:not(&.no-highlight) {
+      margin-bottom: 0.5em !important;
+    }
   }
 
   figcaption {
@@ -27,5 +29,19 @@ figure {
     font-weight: bold;
     counter-increment: figure;
     content: 'Fig. ' counter(figure) '\00A0\2022\00A0';
+  }
+}
+
+svg[id^='mermaid'] {
+  g.svg-pan-zoom-control {
+    opacity: 0.5;
+    transition: opacity 0.8s ease;
+  }
+
+  &:hover, &:focus, &.hovering {
+    g.svg-pan-zoom-control {
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
   }
 }

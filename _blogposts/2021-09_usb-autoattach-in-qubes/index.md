@@ -214,7 +214,7 @@ when USB devices are connected to automatically attach them to desired VMs.
 But, before automating this process with udev,
 we should first manually test the RPC by running:
 
-```console
+```bash
 qrexec-client-vm dom0 custom.USBDeviceAttach+my-vm+__+sda
 ```
 {: .command-line data-user="user" data-host="sys-usb" }
