@@ -23,7 +23,7 @@
 
     <meta property='og:title' content='{{ clean_title | strip_html }}'>
 
-    <link rel='canonical' href='{{ page.url }}' />
+    <link rel='canonical' href='{{ site.url }}{{ page.url | replace: "index.html", ""}}' />
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/purity.css'>
 
     {% if layout.prismjs or page.prismjs -%}
@@ -66,7 +66,12 @@
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
     {%- endfor -%}
     {% for sheet in page.css %}
-    <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
+      {%- assign pre = sheet | slice: 0,2 -%}
+      {%- if pre == './' -%}
+        <link rel='stylesheet' href='{{ page.url | replace: "index.html", ""}}{{ sheet | split: "./" | last }}.css'>
+      {%- else -%}
+        <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>
+      {%- endif %}
     {%- endfor %}
 
     {% if layout.prismjs or page.prismjs -%}
@@ -124,14 +129,14 @@
     </script>
     {%- endif %}
 
-    {% if layout.mathjax or page.mathjax %}
+    {% if layout.mathjax or page.mathjax -%}
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.min.js"
             integrity="sha512-PbLRl9V4qEM7j3xggKupLNdcodHT0w+x77S/JoTWxrhPEVZ0NkTPp90bzUeTyFXsBzsaApVOZdCHIzL6o51KiA=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     {%- endif %}
 
-    {% if layout.pseudocode or page.pseudocode %}
+    {% if layout.pseudocode or page.pseudocode -%}
     <script defer src="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js">
     </script>
     {%- endif %}
@@ -142,89 +147,67 @@
 
     {% if layout.mermaid or page.mermaid -%}
     <script>
-      const mermaidLabelsSelector = "code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class$='Label'], \
-                                     code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class*='Label ']";
+      const mmdCodeSelector = "pre.no-highlight code.language-mermaid:not(details:not([open]) .language-mermaid)";
+      const mmdLabelSelector =
+        "code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class$='Label'], \
+         code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class*='Label ']";
 
       function SVGPanZoomResize (panZoom) {
-        panZoom.resize();
-        panZoom.fit();
-        panZoom.center();
+        panZoom.resize().fit().center();
       }
 
       function mermaidCallback (svgId) {
         const svg = document.getElementById(svgId);
-        svg.style.maxWidth = 'unset';
+        svg.style.fontSize = '15px';
 
         {% if layout.mathjax or page.mathjax -%}
-          MathJax.typeset(svg.querySelectorAll(mermaidLabelsSelector));
+          MathJax.typeset(svg.querySelectorAll(mmdLabelSelector));
         {%- endif -%}
 
-        const beforePan = function (oldPan, newPan) {
-          const stopHorizontal = false
-              , stopVertical = false
-              , gutterWidth = 100
-              , gutterHeight = 100
-              , sizes = this.getSizes()
-              , leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth
-              , rightLimit = sizes.width - gutterWidth - (sizes.viewBox.x * sizes.realZoom)
-              , topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight
-              , bottomLimit = sizes.height - gutterHeight - (sizes.viewBox.y * sizes.realZoom)
-
-          return {
-            x: Math.max(leftLimit, Math.min(rightLimit, newPan.x)),
-            y: Math.max(topLimit, Math.min(bottomLimit, newPan.y))
-          }
+        if (!svg.parentElement.parentElement.classList.contains('no-pan-zoom')) {
+          svg.style.maxWidth = 'unset';
+          const oldHeight = svg.getBoundingClientRect().height;
+          const panZoom = svgPanZoom(svg, {
+            controlIconsEnabled: !svg.parentElement.parentElement.classList.contains('no-pan-zoom-controls'),
+            mouseWheelZoomEnabled: false,
+          });
+          svg.style.height = Math.round(oldHeight) + 'px';
+          SVGPanZoomResize(panZoom);
         }
-
-        const oldHeight = svg.getBoundingClientRect().height;
-        const panZoom = svgPanZoom(svg, {
-          beforePan: beforePan,
-          controlIconsEnabled: true,
-          mouseWheelZoomEnabled: false,
-        });
-        svg.style.height = Math.round(oldHeight) + 'px';
-        SVGPanZoomResize(panZoom);
       }
       
       document.addEventListener('DOMContentLoaded', function () {
         mermaid.initialize({
           fontFamily: '{{ head_font }}',
           htmlLabels: true,
-          securityLevel: 'antiscript',
-          startOnLoad: true,
+          startOnLoad: false,
         });
         mermaid.run({
-          querySelector: 'details[open] .language-mermaid, .language-mermaid:not(details .language-mermaid)',
+          querySelector: mmdCodeSelector,
           postRenderCallback: mermaidCallback,
         });
 
         window.addEventListener("resize", function () {
           Array.prototype.forEach.call(
-            document.getElementsByTagName('svg'),
-            svg => {
-              if (svg.querySelectorAll('g.svg-pan-zoom-control')) {
-                const panZoom = svgPanZoom(svg);
-                SVGPanZoomResize(panZoom);
-                const viewportHeight = svg.querySelector('g.svg-pan-zoom_viewport').getBoundingClientRect().height
-                    , viewportWidth = svg.querySelector('g.svg-pan-zoom_viewport').getBoundingClientRect().width;
-                svg.style.height = Math.round(svg.getBoundingClientRect().width * viewportHeight / viewportWidth) + 'px';
-                SVGPanZoomResize(panZoom);
-              }
+            document.querySelectorAll('code.language-mermaid svg[id^=mermaid] > g.svg-pan-zoom_viewport'),
+            g => {
+              const svg = g.parentElement;
+              const panZoom = svgPanZoom(svg);
+              SVGPanZoomResize(panZoom);
+              const vh = g.getBoundingClientRect().height
+                  , vw = g.getBoundingClientRect().width;
+              svg.style.height = Math.round(svg.getBoundingClientRect().width * vh / vw) + 'px';
+              SVGPanZoomResize(panZoom);
             }
           );
         });
 
         Array.prototype.forEach.call(
           document.getElementsByTagName('details'),
-          details => details.addEventListener("toggle",
-                                              (e) => {
-                                                if (details.open) {
-                                                  mermaid.run({
-                                                    nodes: details.querySelectorAll('.language-mermaid'),
-                                                    postRenderCallback: mermaidCallback,
-                                                  });
-                                                }
-                                              })
+          d => d.addEventListener(
+            "toggle",
+            (e) => mermaid.run({ nodes: d.querySelectorAll(mmdCodeSelector), postRenderCallback: mermaidCallback })
+          )
         );
       }, false);
     </script>
@@ -282,5 +265,19 @@
       }
     </script>
     {%- endif %}
+
+    {% for script in layout.js -%}
+    <script src='{{ site.baseurl }}/assets/js/{{ script }}.js'>
+    </script>
+    {%- endfor -%}
+    {% for script in page.js %}
+      {%- assign pre = script | slice: 0,2 -%}
+      {%- if pre == './' -%}
+        <script src='{{ page.url | replace: "index.html", ""}}{{ script | split: "./" | last }}.js'>
+      {%- else -%}
+        <script src='{{ site.baseurl }}/assets/js/{{ script }}.js'>
+      {%- endif %}
+    </script>
+    {%- endfor %}
   </body>
 </html>

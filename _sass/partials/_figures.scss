@@ -32,16 +32,24 @@ figure {
   }
 }
 
-svg[id^='mermaid'] {
-  g.svg-pan-zoom-control {
-    opacity: 0.5;
-    transition: opacity 0.8s ease;
-  }
+code[data-processed='true'] {
+  display: block;
+  text-align: center;
 
-  &:active, &:focus, &:hover {
+  svg[id^='mermaid'] {
+    min-height: 85px;
+    min-width: 75px;
+
     g.svg-pan-zoom-control {
-      opacity: 1;
-      transition: opacity 0.2s ease;
+      opacity: 0.5;
+      transition: opacity 0.8s ease;
+    }
+
+    &:active, &:focus, &:hover {
+      g.svg-pan-zoom-control {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+      }
     }
   }
 }

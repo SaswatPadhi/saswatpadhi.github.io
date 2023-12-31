@@ -294,7 +294,7 @@ homelab;0
 my-appvm;1
 work;2
 ```
-{: .command-line .no-highlight-numbers data-user="user" data-host="dom0" data-output="2-10,14-16" data-line="11-13" }
+{: .command-line data-user="user" data-host="dom0" data-output="2-10,14-16" data-line="11-13" }
 
 This formatting allows me to operate on a CSV-ish (`;`-separated) output,
 in place of an unstructured text dump.

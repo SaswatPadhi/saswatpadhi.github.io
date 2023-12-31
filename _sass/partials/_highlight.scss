@@ -37,6 +37,7 @@ pre[class*="language-"] {
   font-family: inherit;
   line-height: inherit;
   color: inherit;
+  background-color: inherit;
 
   span.inline-color-wrapper {
     margin: 0 0.75ch 0 0;
@@ -77,10 +78,8 @@ pre[class*="language-"] {
     margin-top: 0.29em;
   }
 
-  &.no-highlight-numbers{
-    .line-highlight::before, .line-highlight::after {
-      display: none;
-    }
+  .line-highlight::before, .line-highlight::after {
+    display: none;
   }
 
   .command-line-prompt {

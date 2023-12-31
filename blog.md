@@ -10,7 +10,7 @@ title: Blog
 <div class='container'>
 {% assign blogposts = site.blogposts | sort: 'post_date' | reverse -%}
 {% for post in blogposts -%}
-  {% assign post_url = post.url | split: "index.html" | first %}
+  {% assign post_url = post.url | replace: "index.html", "" %}
   <div class='post'>
     <span class='date heading'>
       {%- capture post_date -%}
