@@ -42,8 +42,15 @@ code[data-processed='true'] {
       min-width: 75px;
     }
 
+    @supports not #{'selector\(:has\(g.svg-pan-zoom-control\)\)'} {
+      & {
+        min-height: 85px;
+        min-width: 75px;
+      }
+    }
+  
     g.svg-pan-zoom-control {
-      opacity: 0.5;
+      opacity: 0.25;
       transition: opacity 0.8s ease;
     }
 

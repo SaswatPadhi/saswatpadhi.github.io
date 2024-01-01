@@ -169,6 +169,7 @@
           const oldHeight = svg.getBoundingClientRect().height;
           const panZoom = svgPanZoom(svg, {
             controlIconsEnabled: !svg.parentElement.parentElement.classList.contains('no-pan-zoom-controls'),
+            preventMouseEventsDefault: false,
             mouseWheelZoomEnabled: false,
           });
           svg.style.height = Math.round(oldHeight) + 'px';
