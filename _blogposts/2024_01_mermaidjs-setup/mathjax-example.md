@@ -1,4 +1,4 @@
-```{{ include.lang }} {% raw %}
+```{{ include.lang | default: 'mermaid' }} {% raw %}
   graph LR
 
   classDef invisible fill:black,stroke:black

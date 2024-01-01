@@ -123,26 +123,19 @@ I show an example in the right-most column below:
 <div class='pure-g' markdown='1' style='margin-bottom: 0;'>
   <div class='pure-u-1-2'>
   <center><strong>Mermaid then Prism</strong></center>
-  ```mermaid
-  graph LR
-
-  A --> B
-  ```
-  {: #prism-on-mermaid style='margin: 0.25em 0.25em 0 0.25em;' }
+  {% include_relative basic-example.md id='#prism-on-mermaid'
+      more='style="margin: 0.25em 0.25em 0 0.25em;"' hl=' ' pz=' ' %}
   </div>
   <div class='pure-u-1-2'>
   <center><strong>Prism then Mermaid</strong></center>
-  ```mermaid
-  graph LR
-
-  A --> B
-  ```
-  {: #mermaid-on-prism style='margin: 0.25em 0.25em 0 0.25em;' }
+  {% include_relative basic-example.md id='#mermaid-on-prism'
+     more='style="margin: 0.25em 0.25em 0 0.25em;"' hl=' ' pz=' ' %}
   </div>
 </div>
 
-In the left-most column, I show the same syntax highlighted snippet from Prism,
-and in the center column, I show the Mermaid-rendered diagram of the same snippet.
+In the left-most column,
+I show result when Mermaid successfully renders a diagram
+but then Prism picks it up again for syntax highlighting.
 It became clear that Prism and Mermaid must run mutually exclusively:
 
 1. _Prism_ runs only on snippets that are to be _syntax highlighted_;
@@ -150,24 +143,18 @@ It became clear that Prism and Mermaid must run mutually exclusively:
 2. _Mermaid_ runs only on snippets that are to be _rendered as diagrams_;
    Prism syntax highlighting must be disabled on them.
 
+Here are the expected results when neither interferes with the other:
+
 <div class='pure-g' markdown='1' style='margin-bottom: 0;'>
   <div class='pure-u-1-2'>
   <center><strong>Expected Highlighting</strong></center>
-  ```mermaid
-  graph LR
-
-  A --> B
-  ```
-  {: style='margin: 0.25em 0 0 0;' }
+  {% include_relative basic-example.md
+     more='style="margin: 0.25em 0 0 0;"' hl=' ' pz=' ' %}
   </div>
   <div class='pure-u-1-2'>
   <center><strong>Expected Rendering</strong></center>
-  ```mermaid
-  graph LR
-
-  A --> B
-  ```
-  {: .no-highlight .no-pan-zoom style='margin: 0.25em 0 0 0;' }
+  {% include_relative basic-example.md
+     more='style="margin: 0.25em 0 0 0;"' %}
   </div>
 </div>
 
@@ -250,24 +237,14 @@ Here's an example:
   <center><strong>Default Behavior</strong></center>
   <details style='margin: 0.25em 0.25em 0;'>
   <summary>Tiny diagram</summary>
-  ```mermaid
-  graph LR
-
-  A --> B
-  ```
-  {: #mermaid-in-details .no-highlight .no-pan-zoom }
+  {% include_relative basic-example.md id='#mermaid-in-details' %}
   </details>
   </div>
   <div class='pure-u-1-2'>
   <center><strong>Expected Behavior</strong></center>
   <details style='margin: 0.25em 0.25em 0;'>
-  <summary>Proper diagram</summary>
-  ```mermaid
-  graph LR
-
-  A --> B
-  ```
-  {: .no-highlight .no-pan-zoom }
+  <summary>Good diagram</summary>
+  {% include_relative basic-example.md %}
   </details>
   </div>
 </div>
@@ -357,7 +334,7 @@ inside labels. For example:
   </div>
   <div class='pure-u-1-2'>
   <center><strong>Expected Rendering</strong></center>
-  {% include_relative mathjax-example.md lang="mermaid" %}
+  {% include_relative mathjax-example.md %}
   </div>
 </div>
 
@@ -523,20 +500,20 @@ so we can observe its dimensions compared to the dimensions of the diagram.
 
 <div class='pure-g' markdown='1' style='margin-bottom: 0;'>
   <div class='pure-u-1-3'>
-  <center><strong>Default Behavior</strong></center>
+  <center><strong>Default</strong></center>
   {% include_relative svgpanzoom-example.md id="#svgpanzoom-1" lang="none" %}
   </div>
   <div class='pure-u-1-3'>
-  <center><strong>Demo Resize</strong></center>
+  <center><strong>Demo</strong></center>
   {% include_relative svgpanzoom-example.md id="#svgpanzoom-2" lang="none" %}
   </div>
   <div class='pure-u-1-3'>
-  <center><strong>Expected Behavior</strong></center>
-  {% include_relative svgpanzoom-example.md lang="mermaid" %}
+  <center><strong>Expected</strong></center>
+  {% include_relative svgpanzoom-example.md %}
   </div>
 </div>
 
-On resizing the page, specifically on shrinking it,
+On resizing the page, specifically on shrinking the page width,
 we observe that:
 
 - the diagram in the left column isn't resized,
@@ -545,6 +522,10 @@ we observe that:
   but its container `svg`'s height isn't
 - the diagram and its container `svg`'s height in the right column are resized,
   thus leaving no additional padding around it
+
+To observe this issue on a mobile device,
+try loading this page in landscape mode
+and then rotate your phone to portrait mode to shrink the page width.
 
 Fortunately, this issue is pretty easy to fix.
 I list my window resize event listener below:

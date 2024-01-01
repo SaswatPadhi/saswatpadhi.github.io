@@ -37,8 +37,10 @@ code[data-processed='true'] {
   text-align: center;
 
   svg[id^='mermaid'] {
-    min-height: 85px;
-    min-width: 75px;
+    &:has(g.svg-pan-zoom-control) {
+      min-height: 85px;
+      min-width: 75px;
+    }
 
     g.svg-pan-zoom-control {
       opacity: 0.5;
