@@ -5,6 +5,12 @@ post_date: 2024-01-01
 
 title: 'My Mermaid Setup'
 tagline: 'MathJax support, pan and zoom, auto resizing, and more'
+description: '
+In this post I describe several improvements to a default Mermaid
+(MermaidJS) setup that allow using MathJax in node labels,
+auto-resizing of diagrams on window resizing events,
+and displaying simple pan-and-zooom controls on diagrams.
+'
 
 categories: [ 'sw/js' ]
 
@@ -226,10 +232,12 @@ that filters out snippets with `.no-highlight` class.
 
 #### <i class='fas fa-eye-slash'></i> Rendering Inside `<details>`
 
-The next issue on my plate was debugging invisible Mermaid diagrams inside `<details>` ---
-I didn't see any errors on the console
-and DOM inspection revealed that diagrams were indeed being generated,
-but they were super, ultra, tiny!
+The next issue on my plate was debugging invisible Mermaid diagrams inside `<details>`
+This was only onbserved on Firefox (my default web browser on PC) though;
+maybe Chrome has some special sauce that somehow mitigates this issue.
+On Firefox, I saw no errors on the console,
+and DOM inspection revealed that diagrams were indeed being generated!
+But, they were super, ultra, tiny!
 Here's an example:
 
 <div class='pure-g' markdown='1' style='margin-bottom: 0;'>

@@ -5,6 +5,11 @@ post_date: 2023-12-27
 
 title: 'CLI Audio Control in Qubes'
 tagline: 'Controlling Qubes AppVM volume from a shell'
+description: '
+In this post I describe several shell scripts to easily
+control the volume and mute states of AppVMs in Qubes OS
+using the PulseAudio server running in dom0.
+'
 
 categories: [ 'hw/audio', 'sw/qubes' ]
 
@@ -379,7 +384,7 @@ This allows me to do things like:
 
 I will conclude this post with a few scripts that use the two scripts above,
 but target the AppVM that is running the currently focused window.
-I find myself using all three of the following scripts quite heavily,
+I find myself using the following scripts quite heavily,
 and I even have keyboard shortcuts for these.
 The key idea is to use [`xdotool`][xdotool] utility to get information regarding
 the active window, in particular the _window class name_.
@@ -387,34 +392,24 @@ Qubes OS sets the window class name for non-$\DomZ$ windows as: `<AppVM Name>:<W
 so we use that (the prefix before `:`) to identify the AppVM running the active window.
 
 This first script grabs the AppVM name from the currently focused window,
-and raises the volume of audio streams from this AppVM by 10%.  
-(_Keyboard shortcut_: <kbd>Shift</kbd> + <kbd>Volume Up</kbd>)
+and raises/reduces the volume of audio streams from this AppVM by 10%.  
+(&hairsp;_Keyboard shortcut_:
+  <kbd>Shift</kbd> + <kbd>Volume Up</kbd> $\mapsto$ `+10`
+  &nbsp;&amp;&nbsp;
+  <kbd>Shift</kbd> + <kbd>Volume Down</kbd> $\mapsto$ `-10`&hairsp;)
 
 ```bash
 #!/usr/bin/env bash
 
 vm="$(xdotool getactivewindow getwindowclassname | cut -d':' -f1)"
 
-qvm-audio-volume +10 $vm
+qvm-audio-volume $1 $vm
 ```
 {: .line-numbers }
 
-This second script grabs the AppVM name from the currently focused window,
-and reduces the volume of audio streams from this AppVM by 10%.  
-(_Keyboard shortcut_: <kbd>Shift</kbd> + <kbd>Volume Down</kbd>)
-
-```bash
-#!/usr/bin/env bash
-
-vm="$(xdotool getactivewindow getwindowclassname | cut -d':' -f1)"
-
-qvm-audio-volume -10 $vm
-```
-{: .line-numbers }
-
-The third script grabs the AppVM name from the currently focused window,
+The second script grabs the AppVM name from the currently focused window,
 and mutes all audio from all AppVMs except for the AppVM in focus.  
-(_Keyboard shortcut_: <kbd>Shift</kbd> + <kbd>Audio Mute</kbd>)
+(&hairsp;_Keyboard shortcut_: <kbd>Shift</kbd> + <kbd>Audio Mute</kbd>&hairsp;)
 
 ```bash
 #!/usr/bin/env bash

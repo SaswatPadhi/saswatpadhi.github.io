@@ -38,7 +38,8 @@ title: Home
 #### <i class='fas fa-fw fa-sm fa-glasses'></i> Research Interests
 
 <p>
-  Programming Languages, &nbsp; Software Verification, &nbsp; Statistical Learning, &nbsp; Program Synthesis
+  Statistical Learning,
+  Software Synthesis &amp; Verification
 </p>
 
 </div>

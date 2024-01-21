@@ -5,6 +5,11 @@ post_date: 2021-09-06
 
 title: 'USB Auto-Attach in Qubes'
 tagline: 'Allowing Qubes USB VM to automatically attach devices to other VMs'
+description: '
+In this post I describe an RPC implementation and a Qrexec policy
+for Qubes OS to automatically attach specific USB devices to desired VMs
+when they are connected to sys-usb.
+'
 
 categories: [ 'hw/usb', 'sw/qubes' ]
 ---

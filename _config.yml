@@ -3,6 +3,9 @@
 liquid:
   error_mode: strict
 
+plugins:
+  - jekyll-sitemap
+
 markdown: kramdown
 
 kramdown:

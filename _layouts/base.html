@@ -1,6 +1,8 @@
 {%- assign base_font = site.fonts.base | default: 'Noto Sans' -%}
 {%- assign head_font = site.fonts.head | default: 'Montserrat' -%}
 {%- assign mono_font = site.fonts.mono | default: 'Ubuntu Mono' -%}
+{%- capture NEWLINE %}
+{% endcapture -%}
 <!DOCTYPE html>
 <html lang='en-US'>
   <head>
@@ -15,13 +17,27 @@
       {%- capture clean_title -%}
         {%- include tools/text_process.md strip=true data=title -%}
       {%- endcapture -%}
-      {{- clean_title | strip_html }}
+      {{- clean_title | strip_html -}}
     </title>
 
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=2'>
+    <meta property='og:locale' content='en_US' />
+    <meta property="og:type" content='article' />
 
+    <meta name='author' content='{{ author.name }}' />
+    <meta property='og:site_name' content='{{ author.name }}' />
     <meta property='og:title' content='{{ clean_title | strip_html }}'>
+    <meta property='og:url' content='{{ site.url }}{{ page.url | replace: "index.html", ""}}' />
+    <meta property='article:published_time' content='{{ page.post_date | date_to_long_string }}' />
+
+    {% capture desc -%}
+      {{ page.description | default:page.tweet | default: page.tagline }}
+    {%- endcapture -%}
+    {% if desc -%}
+    <meta name='description' content='{{ desc | strip | replace: NEWLINE, " " }}' />
+    <meta property='og:description' content='{{ desc | strip | replace: NEWLINE, " " }}' />
+    {%- endif %}
 
     <link rel='canonical' href='{{ site.url }}{{ page.url | replace: "index.html", ""}}' />
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/purity.css'>
@@ -42,7 +58,7 @@
     <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
           integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {%- endif -%}
+    {%- endif %}
 
     {% if layout.revealjs or page.revealjs -%}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css"
@@ -56,11 +72,11 @@
             integrity="sha512-TC5IA+BA/5YPBb/MJyk97ypzvXYUIlAksfuxlUXlhD7cM7y/stM4JuytDeYJlsiKxmRDV5krDyuugOoMOHwyJg=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    {%- endif -%}
+    {%- endif %}
 
-    {% if layout.pseudocode or page.pseudocode %}
+    {% if layout.pseudocode or page.pseudocode -%}
     <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css">
-    {%- endif -%}
+    {%- endif %}
 
     {% for sheet in layout.css -%}
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/{{ sheet }}.css'>

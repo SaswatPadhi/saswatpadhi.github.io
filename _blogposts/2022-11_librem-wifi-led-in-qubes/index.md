@@ -5,6 +5,12 @@ post_date: 2022-11-17
 
 title: 'Librem LED Triggers in Qubes'
 tagline: 'Accessing Librem 14''s LEDs from within Qubes VMs'
+description: '
+In this post I describe a simple RPC and Qrexec policy for Qubes OS
+to control the LEDs on the Librem 14 laptop from the DomU.
+I also show an example of triggering the WiFi LED
+when sys-net connects to WiFi.
+'
 
 categories: [ 'hw/librem', 'sw/qubes' ]
 ---
