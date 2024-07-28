@@ -2,15 +2,15 @@
 layout: article
 
 type: patent
-year: 2020
-month: 01
+year: 2024
+month: 07
 
 title: 'Systems, Methods, and Computer-Readable Media for Improved Table Identification Using a Neural Network'
 authors: ['[Ben Zorn]', '[Marc Brockschmidt]', 'Pallavi Choudhury', '[Oleksandr Polozov]', '[Rishabh Singh]', 'Saswat Padhi']
 
 DOI:
-  target: App.
-  number: 20200019603A1
+  target: Grant
+  number: 12039257B2
 
 target:
   full: 'United States Patent Application Publication (2020)'
@@ -35,17 +35,17 @@ based on the one or more identified classes for each cell of the received spread
 ###### BibTeX Citation
 
 ```bibtex {% raw %}
-@misc{patent/US20200019603A1,
+@misc{patent/US12039257B2,
   title     = {Syntactic Profiling of Alphanumeric Strings},
-  number    = {US20200019603A1},
+  number    = {US12039257B2},
   author    = {Benjamin G. Zorn and
                Marc M. J. Brockschmidt and
                Pallavi Choudhury and
                Oleksandr Polozov and
                Rishabh Singh and
                Saswat Padhi},
-  year      = {2020},
-  month     = {January},
-  url       = {https://patents.google.com/patent/US20200019603A1}
+  year      = {2024},
+  month     = {July},
+  url       = {https://patents.google.com/patent/US12039257B2}
 }
 {% endraw %} ```
