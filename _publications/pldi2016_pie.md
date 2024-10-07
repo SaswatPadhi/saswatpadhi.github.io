@@ -3,7 +3,7 @@ layout: article
 
 type: conference
 year: 2016
-month: 06
+month: 6
 
 title: 'Data-Driven Precondition Inference with Learned Features'
 authors: ['Saswat Padhi', '[Rahul Sharma]', '[Todd Millstein]']

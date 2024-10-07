@@ -3,7 +3,7 @@ layout: article
 
 type: conference
 year: 2019
-month: 02
+month: 2
 
 title: 'A Static Slicing Method for Functional Programs and Its Incremental Version'
 authors: ['Prasanna Kumar K.', 'Amitabha Sanyal', '[Amey Karkare]', 'Saswat Padhi']

@@ -3,7 +3,7 @@ layout: article
 
 type: patent
 year: 2024
-month: 07
+month: 7
 
 title: 'Systems, Methods, and Computer-Readable Media for Improved Table Identification Using a Neural Network'
 authors: ['[Ben Zorn]', '[Marc Brockschmidt]', 'Pallavi Choudhury', '[Oleksandr Polozov]', '[Rishabh Singh]', 'Saswat Padhi']
@@ -13,7 +13,7 @@ DOI:
   number: 12039257B2
 
 target:
-  full: 'United States Patent Application Publication (2020)'
+  full: 'United States Patent Application Publication (2024)'
   owner: 'Microsoft Technology Licensing, LLC'
 
 links:

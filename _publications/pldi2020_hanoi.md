@@ -3,7 +3,7 @@ layout: article
 
 type: conference
 year: 2020
-month: 06
+month: 6
 
 title: 'Data-Driven Inference of Representation Invariants'
 authors: ['Anders Miltner', 'Saswat Padhi', '[Todd Millstein]', '[David Walker]']

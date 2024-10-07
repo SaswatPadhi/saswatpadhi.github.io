@@ -3,7 +3,7 @@ layout: article
 
 type: conference
 year: 2019
-month: 07
+month: 7
 
 title: 'Overfitting in Synthesis: Theory and Practice'
 authors: ['Saswat Padhi', '[Todd Millstein]', '[Aditya Nori]', '[Rahul Sharma]']

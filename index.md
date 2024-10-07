@@ -52,7 +52,7 @@ title: Home
 <div id='bio' class='pure-u-1 pure-u-md-22-24' markdown='1'>
 
 I am a <span class='color-medium-accent'>senior software engineer</span>
-in the [chromeOS] performance team at Google.
+in the [chromeOS] organization at Google.
 Prior to that, I was an <span class='color-medium-accent'>applied scientist</span>
 in the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
 
@@ -60,11 +60,9 @@ Before joining the industry,
 I graduated with a <span class='color-medium-accent'>Ph.D.</span> in [CS][CS@UCLA] from [UCLA] in 2020,
 and a <span class='color-medium-accent'>B.Tech. (Hons.)</span> in [CSE][CS@IITB] from [IIT Bombay] in 2014.
 
-I am interested in
-<span class='color-highlight'>building high-performance systems
-with strong reliability guarantees</span>.
-My doctoral research was focused on using program synthesis and statistical learning techniques
-to aid development of formally verified software.
+I consider myself a <span class='color-highlight'>backend generalist</span>,
+and am primarily interested in <span class='color-highlight'>low-level systems software</span>.
+My doctoral research was specialized on software analysis, synthesis and formal verification.
 
 </div>
 </div>

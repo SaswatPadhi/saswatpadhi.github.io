@@ -3,7 +3,7 @@ layout: article
 
 type: industry
 year: 2023
-month: 07
+month: 7
 
 title: 'Automated Analyses of IoT Event Monitoring Systems'
 authors: ['Andrew Apicellii', 'Sam Bayless', '[Ankush Das]', 'Andrew Gacek', 'Dhiva Jaganathan', 'Saswat Padhi', '[Vaibhav Sharma]', '[Michael Whalen]', 'Raveesh Yadav']

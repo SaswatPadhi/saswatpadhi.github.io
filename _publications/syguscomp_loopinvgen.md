@@ -3,7 +3,7 @@ layout: article
 
 type: report
 year: 2019
-month: 06
+month: 6
 
 title: 'LoopInvGen: A Loop Invariant Generator based on Precondition Inference'
 authors: ['Saswat Padhi', '[Rahul Sharma]', '[Todd Millstein]']
