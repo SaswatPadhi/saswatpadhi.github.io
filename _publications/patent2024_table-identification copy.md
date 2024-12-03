@@ -17,7 +17,7 @@ target:
   owner: 'Microsoft Technology Licensing, LLC'
 
 links:
-  PDF: 'https://patentimages.storage.googleapis.com/89/d3/fe/0d7e08345217e9/US20200019603A1.pdf'
+  PDF: 'https://patentimages.storage.googleapis.com/42/7c/7f/f6737b826e70f7/US12039257.pdf'
 ---
 
 ###### Abstract

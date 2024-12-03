@@ -10,14 +10,14 @@ authors: ['Daniel G. Simmons', 'Kevin D. J. Grealish', '[Sumit Gulwani]', 'Ranvi
 
 DOI:
   target: Grant
-  number: 10394874B2
+  number: 10846298B2
 
 target:
   full: 'United States Patent Application Publication (2020)'
   owner: 'Microsoft Technology Licensing, LLC'
 
 links:
-  PDF: 'https://patentimages.storage.googleapis.com/b1/74/90/ca18093fcc5a52/US10394874.pdf'
+  PDF: 'https://patentimages.storage.googleapis.com/0d/f7/10/b2f45bd19b45fa/US10846298.pdf'
 ---
 
 ###### Abstract
@@ -39,9 +39,9 @@ and a representation status of the pattern in the smaller dataset.
 ###### BibTeX Citation
 
 ```bibtex {% raw %}
-@misc{patent/US10394874B2,
+@misc{patent/US10846298B2,
   title     = {Record Profiling for Dataset Sampling},
-  number    = {US10394874B2},
+  number    = {US10846298B2},
   author    = {Daniel G. Simmons and
                Kevin D. J. Grealish and
                Sumit Gulwani and
@@ -50,6 +50,6 @@ and a representation status of the pattern in the smaller dataset.
                Saswat Padhi},
   year      = {2020},
   month     = {November},
-  url       = {https://patents.google.com/patent/US10394874B2}
+  url       = {https://patents.google.com/patent/US10846298B2}
 }
 {% endraw %} ```
