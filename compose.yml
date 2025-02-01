@@ -1,0 +1,11 @@
+services:
+  pages:
+    build: .
+
+    command: bundle exec jekyll serve --force_polling --host 0.0.0.0 --incremental --livereload
+
+    ports:
+    - 4000:4000
+
+    volumes:
+    - .:/srv/jekyll
