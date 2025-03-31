@@ -10,7 +10,7 @@ authors: ['[Rajeev Alur]', '[Dana Fisman]', 'Saswat Padhi', '[Rishabh Singh]', '
 
 DOI:
   target: arXiv
-  number: 1904.07146
+  id: 1904.07146
 
 target:
   short: SyGuS-Comp

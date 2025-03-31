@@ -10,7 +10,7 @@ authors: ['Saswat Padhi', '[Todd Millstein]', '[Aditya Nori]', '[Rahul Sharma]']
 
 DOI:
   target: Springer
-  number: 10.1007/978-3-030-25540-4_17
+  id: 10.1007/978-3-030-25540-4_17
 
 tweet: 'We define _overfitting_ in the context of CEGIS-based SyGuS,
         and show that there exists a tradeoff between expressiveness and performance.

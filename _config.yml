@@ -46,13 +46,13 @@ default_icon:
   publication: file-alt
   service: user-cog
   talk: microphone
-  life_event: cake-candles
+  milestone: cake-candles
 
 default_highlight:
   award: accent
   position: medium-accent
   publication: highlight
-  life_event: hyperlink
+  milestone: hyperlink
 
 # Defaults:
 # ---------

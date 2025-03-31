@@ -10,7 +10,7 @@ authors: ['Saswat Padhi', '[Rahul Sharma]', '[Todd Millstein]']
 
 DOI:
   target: ACM DL
-  number: 10.1145/2908080.2908099
+  id: 10.1145/2908080.2908099
 
 awards:
   - icon: trophy

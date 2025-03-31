@@ -1,7 +1,7 @@
 ---
 date: 2021-12-05
 
-type: life_event
+type: milestone
 
 icon: user-group
 

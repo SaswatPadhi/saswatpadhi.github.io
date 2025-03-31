@@ -40,6 +40,7 @@
 
 {% comment%}              GROUPS
 {% endcomment %}
+[Android]:                https://www.android.com/
 [ARG]:                    https://aws.amazon.com/security/provable-security/
 [AWS]:                    https://aws.amazon.com/
 [chromeOS]:               https://www.google.com/chromebook/chrome-os/
@@ -51,8 +52,9 @@
 [Microsoft Research]:     https://www.microsoft.com/en-us/research/
 [MSR AI]:                 https://www.microsoft.com/en-us/research/lab/microsoft-research-ai
 [MSRI Systems]:           https://www.microsoft.com/en-us/research/group/systems
-[PROSE]:                  https://microsoft.github.io/prose
 [PL@Princeton]:           https://pl.cs.princeton.edu/
+[PROSE]:                  https://microsoft.github.io/prose
+[P&D]:                    https://blog.google/products/platforms-devices/
 [RiSE]:                   https://www.microsoft.com/en-us/research/group/research-in-software-engineering-rise
 [SoCalPLS]:               https://socalpls.github.io
 [SyGuS]:                  https://www.sygus.org

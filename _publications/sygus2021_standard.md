@@ -10,7 +10,7 @@ authors: ['Saswat Padhi', '[Elizabeth Polgreen]', '[Mukund Raghothaman]', '[Andr
 
 DOI:
   target: arXiv
-  number: 2312.06001
+  id: 2312.06001
 
 target:
   short: 'SyGuS Standard'

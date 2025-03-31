@@ -9,12 +9,14 @@ title: 'Systems, Methods, and Computer-Readable Media for Improved Table Identif
 authors: ['[Ben Zorn]', '[Marc Brockschmidt]', 'Pallavi Choudhury', '[Oleksandr Polozov]', '[Rishabh Singh]', 'Saswat Padhi']
 
 DOI:
-  target: Grant
-  number: 12039257B2
+  target: US
+  id: 12039257B2
 
 target:
-  full: 'United States Patent Application Publication (2024)'
-  owner: 'Microsoft Technology Licensing, LLC'
+  type: Patent
+  assignee:
+    short: Microsoft
+    full: 'Microsoft Technology Licensing, LLC'
 
 links:
   PDF: 'https://patentimages.storage.googleapis.com/42/7c/7f/f6737b826e70f7/US12039257.pdf'

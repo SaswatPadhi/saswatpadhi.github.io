@@ -10,7 +10,7 @@ authors: ['Saswat Padhi', '[Prateek Jain]', 'Daniel Perelman', '[Oleksandr Poloz
 
 DOI:
   target: ACM DL
-  number: 10.1145/3276520
+  id: 10.1145/3276520
 
 artifact_badges: ['acm_available', 'acm_functional']
 

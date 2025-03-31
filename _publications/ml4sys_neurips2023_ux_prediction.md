@@ -10,7 +10,7 @@ authors: ['Saswat Padhi', 'Sunil Bhasin', 'Udaya Kiran Ammu', 'Alex Bergman', 'A
 
 DOI:
   target: OpenReview
-  number: mHShSE7MSU
+  id: mHShSE7MSU
 
 awards:
   - icon: microphone

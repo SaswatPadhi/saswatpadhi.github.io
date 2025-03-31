@@ -9,12 +9,14 @@ title: 'Syntactic Profiling of Alphanumeric Strings'
 authors: ['[Sumit Gulwani]', '[Prateek Jain]', 'Daniel A. Perelman' , 'Saswat Padhi', '[Oleksandr Polozov]']
 
 DOI:
-  target: Grant
-  number: 11210327B2
+  target: US
+  id: 11210327B2
 
 target:
-  full: 'United States Patent Application Publication (2021)'
-  owner: 'Microsoft Technology Licensing, LLC'
+  type: Patent
+  assignee:
+    short: Microsoft
+    full: 'Microsoft Technology Licensing, LLC'
 
 links:
   PDF: 'https://patentimages.storage.googleapis.com/df/e4/fe/26362bc393c571/US11210327.pdf'

@@ -40,11 +40,11 @@ title: Updates
     &nbsp;
     <p class='visible-above-small'><br>talks</p>
   </div>
-  <div class='cat type-life_event'>
+  <div class='cat type-milestone'>
     &nbsp;
     <i class='color-more-faded fas fa-fw fa-cake-candles'></i>
     &nbsp;
-    <p class='visible-above-small'><br>life events</p>
+    <p class='visible-above-small'><br>milestones</p>
   </div>
 </div>
 

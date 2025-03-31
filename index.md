@@ -10,17 +10,16 @@ title: Home
 <div class='pure-g'>
 
 <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-13-24 top-left'> 
-{% if site.author.photo %}
+{%- if site.author.photo -%}
   {%- if site.author.photo.local -%}
     {%- assign photo_url = site.baseurl | append: '/' | append: site.author.photo.local -%}
   {%- else -%}
     {%- assign photo_url = site.author.photo.remote -%}
   {%- endif %}
   <div>
-    <img alt='{{ site.author.photo.alt }}' src='{{ photo_url }}'
-         style='width: 60%; max-width: 200px; margin: 1.25em auto 0 auto; border-radius: 0.5em; box-shadow: 0em 0.15em 0.5em gray; display: block;'/>
+    <img alt='{{ site.author.photo.alt }}' src='{{ photo_url }}'/>
   </div>
-{% endif %}
+{% endif -%}
 </div>
 
 <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-11-24 top-right' markdown='1'>
@@ -28,18 +27,21 @@ title: Home
 #### <i class='far fa-fw fa-sm fa-paper-plane'></i> Contact Me
 
 <p class='indented' markdown='1'>
-  <em>Office</em>: &nbsp; [Google TM-2], San Jose, CA
+  <em>Office</em>:&nbsp; [Google TM-2], San Jose, CA
   <br>
-  <em>Email (Work)</em>: &nbsp; spadhi <i class='fas fa-fw fa-sm fa-at'></i> google &bull; com
+  <em>Email (Work)</em>:&nbsp; spadhi <i class='fas fa-fw fa-sm fa-at'></i> google &bull; com
   <br>
-  <em>Email (Personal)</em>: &nbsp; saswatpadhi <i class='fas fa-fw fa-sm fa-at'></i> protonmail &bull; com
+  <em>Email (Personal)</em>:&nbsp; saswatpadhi <i class='fas fa-fw fa-sm fa-at'></i> protonmail &bull; com
 </p>
 
-#### <i class='fas fa-fw fa-sm fa-glasses'></i> Research Interests
+#### <i class='fas fa-fw fa-sm fa-glasses'></i> Technical Expertise
 
-<p>
-  Statistical Learning,
-  Software Synthesis &amp; Verification
+<p class='indented' markdown='1'>
+  &#x2B29;&nbsp; Program (Performance, Correctness) Analysis
+  <br>
+  &#x2B29;&nbsp; Systems Architecture (OS, Virtualization)
+  <br>
+  &#x2B29;&nbsp; Data-Driven Statistical Inference
 </p>
 
 </div>
@@ -52,17 +54,19 @@ title: Home
 <div id='bio' class='pure-u-1 pure-u-md-22-24' markdown='1'>
 
 I am a <span class='color-medium-accent'>senior software engineer</span>
-in the [chromeOS] organization at Google.
+working on [Platforms & Devices][P&D] at Google,
+specifically on [chromeOS] and [Android].
 Prior to that, I was an <span class='color-medium-accent'>applied scientist</span>
 in the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
 
 Before joining the industry,
-I graduated with a <span class='color-medium-accent'>Ph.D.</span> in [CS][CS@UCLA] from [UCLA] in 2020,
-and a <span class='color-medium-accent'>B.Tech. (Hons.)</span> in [CSE][CS@IITB] from [IIT Bombay] in 2014.
+I earned a <span class='color-medium-accent'>Ph.D.</span> in [CS][CS@UCLA] at [UCLA] in 2020,
+specializing in program analysis.
+Prior to that, I completed my <span class='color-medium-accent'>B.Tech. (Hons.)</span>
+in [Computer Science and Engineering][CS@IITB] from [IIT Bombay] in 2014.
 
-I consider myself a <span class='color-highlight'>backend generalist</span>,
-and am primarily interested in <span class='color-highlight'>low-level systems software</span>.
-My doctoral research was specialized on software analysis, synthesis and formal verification.
+I consider myself to be a <span class='color-highlight'>backend generalist</span>;
+primarily interested in <span class='color-highlight'>low-level systems architecture</span>.
 
 </div>
 </div>
@@ -72,14 +76,12 @@ My doctoral research was specialized on software analysis, synthesis and formal 
 
 <h4>
   <i class='fas fa-fw fa-xs fa-rotate-90 fa-timeline'></i>
-  Recent Updates
-  <b>&middot; &middot; &middot;</b>
-  (<a href='{{ site.baseurl }}/updates'>&#x200a;Details&#x200a;</a>)
+  Recent <a href='{{ site.baseurl }}/updates'>Updates</a>
 </h4>
 
 <div class='pure-g table'>
   {%- assign sorted_updates = site.updates | sort: 'date' | reverse -%}
-  {%- for event in sorted_updates limit: 6 -%}
+  {%- for event in sorted_updates limit: 5 -%}
     {%- assign eventdate = event.date | date: '%s' -%}
     {%- assign highlight = event.highlight | default: site.default_highlight[event.type] -%}
     <div class='pure-u-1-8 pure-u-sm-1-12 pure-u-md-1-6 event-date'>

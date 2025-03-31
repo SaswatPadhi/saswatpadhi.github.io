@@ -10,7 +10,7 @@ authors: ['Prasanna Kumar K.', 'Amitabha Sanyal', '[Amey Karkare]', 'Saswat Padh
 
 DOI:
   target: ACM DL
-  number: 10.1145/3302516.3307345
+  id: 10.1145/3302516.3307345
 
 tweet: 'We propose a static analysis for slicing functional programs,
         which precisely captures structure-transmitted dependencies

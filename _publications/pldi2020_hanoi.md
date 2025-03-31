@@ -12,7 +12,7 @@ artifact_badges: ['acm_available', 'acm_functional', 'acm_reusable']
 
 DOI:
   target: ACM DL
-  number: 10.1145/3385412.3385967
+  id: 10.1145/3385412.3385967
 
 awards:
   - icon: star

@@ -10,7 +10,7 @@ authors: ['Andrew Apicellii', 'Sam Bayless', '[Ankush Das]', 'Andrew Gacek', 'Dh
 
 DOI:
   target: Springer
-  number: 10.1007/978-3-031-37706-8_2
+  id: 10.1007/978-3-031-37706-8_2
 
 tweet: 'We present a collection of automated analyzers that help AWS customers
         verify that their IoT Event detector models are free of common defects.'
