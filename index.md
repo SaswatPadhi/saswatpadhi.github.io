@@ -56,7 +56,7 @@ title: Home
 I am a <span class='color-medium-accent'>senior software engineer</span>
 working on [Platforms & Devices][P&D] at Google,
 specifically on [chromeOS] and [Android].
-Prior to that, I was an <span class='color-medium-accent'>applied scientist</span>
+Previously, I was an <span class='color-medium-accent'>applied scientist</span>
 in the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
 
 Before joining the industry,
@@ -65,8 +65,9 @@ specializing in program analysis.
 Prior to that, I completed my <span class='color-medium-accent'>B.Tech. (Hons.)</span>
 in [Computer Science and Engineering][CS@IITB] from [IIT Bombay] in 2014.
 
-I consider myself to be a <span class='color-highlight'>backend generalist</span>;
-primarily interested in <span class='color-highlight'>low-level systems architecture</span>.
+I consider myself to be a <span class='color-highlight'>systems generalist</span>;
+interested in <span class='color-highlight'>low-level architecture</span>
+and <span class='color-highlight'>performance optimization</span>.
 
 </div>
 </div>
