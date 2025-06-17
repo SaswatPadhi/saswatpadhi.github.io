@@ -9,17 +9,14 @@ title: 'Record Profiling for Dataset Sampling'
 authors: ['Daniel G. Simmons', 'Kevin D. J. Grealish', '[Sumit Gulwani]', 'Ranvijay Kumar', '[Kevin Michael Ellis]' , 'Saswat Padhi']
 
 DOI:
-  target: US
-  id: 10846298B2
+  - target: US
+    id: 10846298B2
 
 target:
-  type: Patent
+  type: Grant
   assignee:
     short: Microsoft
     full: 'Microsoft Technology Licensing, LLC'
-
-links:
-  PDF: 'https://patentimages.storage.googleapis.com/0d/f7/10/b2f45bd19b45fa/US10846298.pdf'
 ---
 
 ###### Abstract

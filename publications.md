@@ -51,17 +51,22 @@ title: Publications
 <div class='pure-g paper-table'>
   <div class='pure-u-1-3 pure-u-sm-1-4 pure-u-md-5-24 pure-u-lg-1-6 paper-left'>
     <span class='target'>
-      {{ article.DOI.target }} {{ article.target.type }} {{ article.year }}
+      {{ article.year }} {{ article.target.type }}
     </span>
     <br>
-    <sup>[&hairsp;{{ article.target.assignee.short }}
-    &middot;
-    <a href='https://patents.google.com/patent/{{ article.DOI.target }}{{ article.DOI.id }}/en'>{{ article.DOI.id }}</a>
-    &hairsp;]</sup>
+    <sup>{{ article.target.assignee.short }}</sup>
   </div>
   <div class='pure-u-2-3 pure-u-sm-3-4 pure-u-md-19-24 pure-u-lg-5-6 paper-right'>
     <div>
       <a class='title color-highlight' href='{{ article.url }}'>{{ article.title }}</a><br>
+      <div class='dois'>
+      {%- assign first_doi = 1 -%}
+      {% for doi in article.DOI -%}
+        {%- if first_doi != 1 %} &nbsp; &middot; &nbsp; {% endif -%}
+        <a href='https://patents.google.com/patent/{{ doi.target }}{{ doi.id }}/en'>{{ doi.target }} {{ doi.id }}</a>
+        {%- assign first_doi = 0 -%}
+      {%- endfor %}
+      </div>
       <div class='authors'>{% include tools/format_authors.md data=article.authors %}</div>
     </div>
   </div>

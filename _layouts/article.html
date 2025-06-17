@@ -67,28 +67,38 @@ icons:
       {{ page.target.short }}{% if page.type != 'manuscript' %} {{ page.year }}{% endif %}
     {%- endif %}&thinsp;&rangle;
   {%- else -%}
-    <p>{{ page.year }} {{ page.DOI.target }} {{ page.target.type }} {{ page.DOI.id }} assigned to <em>{{ page.target.assignee.full }}</em></p>
+    <p>{{ page.year }} Patent {{ page.target.type }} assigned to <em>{{ page.target.assignee.full }}</em></p>
   {%- endif %}
 </p>
 
 {% if page.links or page.DOI -%}
 <div class='pure-g' style='font-size: 1.2em; text-align: center;'>
-  {%- if page.DOI %}
+  {%- if page.DOI and page.type != 'patent' %}
     <div class='pure-u-1-3 pure-u-sm-1-5'>
       <i class='fas fa-fw fa-{{ layout.icons.DOI }}'></i>&nbsp;
       {% if page.DOI.target == 'OpenReview' -%}
         <a href='https://openreview.net/forum?id={{ page.DOI.id }}'>OpenReview</a>
       {%- elsif page.DOI.target == 'arXiv' -%}
         <a href='https://arxiv.org/abs/{{ page.DOI.id }}'>arXiv</a>
-      {%- elsif page.type != 'patent' -%}
-        <a href='https://doi.org/{{ page.DOI.id }}'>{{ page.DOI.target }}</a>
       {%- else -%}
-        <a href='https://patents.google.com/patent/{{ page.DOI.target }}{{ page.DOI.id }}/en'>Details</a>
+        <a href='https://doi.org/{{ page.DOI.id }}'>{{ page.DOI.target }}</a>
       {%- endif %}
     </div>
   {%- endif %}
+  {%- if page.DOI and page.type == 'patent' -%}
+    {% for doi in page.DOI -%}
+    <div class='pure-u-1-1 pure-u-sm-1-3'>
+      <i class='fas fa-fw fa-{{ layout.icons.DOI }}'></i>&nbsp;
+      <a href='https://patents.google.com/patent/{{ doi.target }}{{ doi.id }}/en'>{{ doi.target }} {{ doi.id }}</a>
+    </div>
+    {%- endfor %}
+  {%- endif -%}
   {%- for link_data in page.links %}
-    <div class='pure-u-1-3 pure-u-sm-1-5'>
+    {% if page.type == 'patent' -%}
+      <div class='pure-u-1-1 pure-u-sm-1-3'>
+    {%- else -%}
+      <div class='pure-u-1-3 pure-u-sm-1-5'>
+    {%- endif -%}
       {% assign link_name = link_data[0] -%}
       {% assign link_url = link_data[1] -%}
       <i class='fas fa-fw fa-{{ layout.icons[link_name] }}'></i>&nbsp;

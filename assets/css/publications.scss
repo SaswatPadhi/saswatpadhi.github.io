@@ -39,12 +39,20 @@ hr {
 
   sup {
     top: -0.125em;
+    font-size: 0.875em;
+    font-style: italic;
   }
 }
 
 .paper-right {
   > div {
     margin-left: 1em;
+  }
+
+  .dois {
+    font-size: 0.875em;
+    margin-top: -0.05em;
+    margin-bottom: 0.05em;
   }
 
   .authors {

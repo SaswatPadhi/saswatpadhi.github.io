@@ -9,17 +9,16 @@ title: 'IoT Event Detector Correctness Verification'
 authors: ['[Vaibhav Sharma]', 'Andrew Gacek', '[Michael Whalen]', 'Saswat Padhi', 'Andrew Apicelli', 'Raveesh Yadav', 'Samuel Bayless', 'Roman Pruzhanskiy', 'Rajat Gupta', 'Harshil Shah', 'Fernando Dias Pauer', '[Ankush Das]', 'Dhivashini Jaganathan']
 
 DOI:
-  target: US
-  id: 12093160B1
+  - target: US
+    id: 12093160B1
+  - target: US
+    id: 20240403186A1
 
 target:
-  type: Patent
+  type: Grant
   assignee:
     short: Amazon
     full: 'Amazon Technologies Inc.'
-
-links:
-  PDF: 'https://patentimages.storage.googleapis.com/49/83/ce/78d7f5d424bae9/US12093160.pdf'
 ---
 
 ###### Abstract

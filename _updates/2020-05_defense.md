@@ -10,7 +10,7 @@ headline: Defended PhD Thesis
 photo: 'phd_defense.png'
 ---
 
-I successfully defended my thesis (online). <i class='far fa-smile'></i>
+I successfully defended my thesis (online). =far^smile^fa=
 <br>
 It was an honor to have [Adnan Darwiche], [Jens Palsberg], [Miryung Kim],
 [Sumit Gulwani], and my advisor [Todd Millstein] on my committee!

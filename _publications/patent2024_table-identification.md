@@ -9,17 +9,22 @@ title: 'Systems, Methods, and Computer-Readable Media for Improved Table Identif
 authors: ['[Ben Zorn]', '[Marc Brockschmidt]', 'Pallavi Choudhury', '[Oleksandr Polozov]', '[Rishabh Singh]', 'Saswat Padhi']
 
 DOI:
-  target: US
-  id: 12039257B2
+  - target: US
+    id: 12039257B2
+  - target: CN
+    id: 112424784B
+  - target: IN
+    id: 565686
+  - target: EP
+    id: 3821366A1
+  - target: US
+    id: 20250068837A1
 
 target:
-  type: Patent
+  type: Grant
   assignee:
     short: Microsoft
     full: 'Microsoft Technology Licensing, LLC'
-
-links:
-  PDF: 'https://patentimages.storage.googleapis.com/42/7c/7f/f6737b826e70f7/US12039257.pdf'
 ---
 
 ###### Abstract
