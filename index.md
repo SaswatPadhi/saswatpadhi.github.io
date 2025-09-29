@@ -27,7 +27,7 @@ title: Home
 #### <i class='far fa-fw fa-sm fa-paper-plane'></i> Contact Me
 
 <p class='indented' markdown='1'>
-  <em>Office</em>:&nbsp; [Google TM-2], San Jose, CA
+  <em>Office</em>:&nbsp; [Google Mercer], Seattle, WA
   <br>
   <em>Email (Work)</em>:&nbsp; spadhi <i class='fas fa-fw fa-sm fa-at'></i> google &bull; com
   <br>
@@ -54,9 +54,10 @@ title: Home
 <div id='bio' class='pure-u-1 pure-u-md-22-24' markdown='1'>
 
 I am a <span class='color-medium-accent'>senior software engineer</span>
-working on [Platforms & Devices][P&D] at Google,
-specifically on [chromeOS] and [Android].
-Previously, I was an <span class='color-medium-accent'>applied scientist</span>
+working on the [Compute Engine][GCE] within the [Google Cloud Platform][GCP].
+Previously, I haved worked on virtualization projects
+across [chromeOS] and [Android] platforms within Google,
+and as an <span class='color-medium-accent'>applied scientist</span>
 in the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
 
 Before joining the industry,
@@ -82,7 +83,7 @@ and <span class='color-highlight'>performance optimization</span>.
 
 <div class='pure-g table'>
   {%- assign sorted_updates = site.updates | sort: 'date' | reverse -%}
-  {%- for event in sorted_updates limit: 5 -%}
+  {%- for event in sorted_updates limit: 6 -%}
     {%- assign eventdate = event.date | date: '%s' -%}
     {%- assign highlight = event.highlight | default: site.default_highlight[event.type] -%}
     <div class='pure-u-1-8 pure-u-sm-1-12 pure-u-md-1-6 event-date'>
@@ -114,4 +115,4 @@ and <span class='color-highlight'>performance optimization</span>.
 {% include common_abbrv.md %}
 {% include common_links.md %}
 
-[Google TM-2]:           https://www.google.com/maps/place/255+W+Tasman+Dr,+San+Jose,+CA+95134/@37.4119214,-121.9559877,17z/data=!3m1!4b1!4m6!3m5!1s0x808fc9ac1afd3753:0xf9adfba7f8b6bdac!8m2!3d37.4119214!4d-121.953799!16s%2Fg%2F11bw4pl794
+[Google Mercer]:           https://www.google.com/maps/place/Google+Mercer/@47.6248655,-122.3389669,742m/data=!3m2!1e3!4b1!4m6!3m5!1s0x5490150074d45627:0xa8f9d4181a08bcb1!8m2!3d47.6248619!4d-122.3363866!16s%2Fg%2F11y3lwdhml

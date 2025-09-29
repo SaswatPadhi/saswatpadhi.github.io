@@ -46,7 +46,9 @@
 [chromeOS]:               https://www.google.com/chromebook/chrome-os/
 [CS@IITB]:                https://www.cse.iitb.ac.in
 [CS@UCLA]:                https://cs.ucla.edu
+[GCE]:                    https://cloud.google.com/products/compute
 [GCC]:                    https://gcc.gnu.org
+[GCP]:                    https://cloud.google.com/
 [Google Brain]:           https://ai.google/research/teams/brain
 [IFIS]:                   https://www.ifis.cs.tu-bs.de
 [Microsoft Research]:     https://www.microsoft.com/en-us/research/
