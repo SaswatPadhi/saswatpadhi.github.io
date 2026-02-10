@@ -72,7 +72,7 @@ which I attach to specific VMs immediately after plugging in.
 It would be nice to be able to attach trusted devices to certain VMs automatically.
 
 On a "regular" OS, such as [Debian] or [Fedora],
-triggering actions on connecting / disconnecting USBs devices
+triggering actions on connecting / disconnecting USB devices
 is typically achieved using [udev] rules.
 We could match on the Vendor ID / Model ID etc.
 to detect when a particular USB device is added or removed,

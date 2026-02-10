@@ -66,7 +66,7 @@ The `Lavender`{: .transparent .language-css } boxes in the figure above indicate
 and the `MistyRose`{: .transparent .language-css } ones indicate non-virtualized ones.
 Qubes OS creates virtualized I/O end points in $\DomZ$, virtualized sources and sinks in AppVMs,
 and establishes a simple, highly restricted protocol between them.
-The solid arrows indicate the usual intra-VM routing of audio streams by PulseAudion,
+The solid arrows indicate the usual intra-VM routing of audio streams by PulseAudio,
 and the dotted lines indicate the Qubes-specific communication protocol between the virtualized components.
 In this post, we are interested in the specific audio route
 that is highlighted in `Magenta`{: .transparent .language-css } ---
@@ -217,7 +217,7 @@ merge the output into some readable format ...
 but it's just not convenient.
 The situation gets even more complicated
 if we adjust volume on individual sink-input paths within AppVMs.
-It maybe quite confusing and frustrating to debug unexpected volume levels from certain AppVMs,
+It may be quite confusing and frustrating to debug unexpected volume levels from certain AppVMs,
 or even certain applications within an AppVM.
 
 In summary, we have the following trade off with this approach:
@@ -272,7 +272,7 @@ In summary, we have the following trade off:
 
 #### =fa^user-lock^fa= Implementation in $\DomZ$
 
-Based on these tradeoffs in mind, I decided to go with the second approach.
+With these tradeoffs in mind, I decided to go with the second approach.
 Being able to set per-AppVM volume from a CLI is enough for my current use cases.
 In the remainder of this post, I will list the scripts that I use with this approach.
 

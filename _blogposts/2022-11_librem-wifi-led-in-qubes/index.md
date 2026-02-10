@@ -35,7 +35,7 @@ However, I do now feel quite happy that I pulled the trigger on L14.
 It's an impressive device and with 64&thinsp;GB memory, it's perfect for running [Qubes].
 So, huge kudos to the Purism team for their excellent Librem devices!
 
-The L14 exposes a number LEDs that can be controlled by software,
+The L14 exposes a number of LEDs that can be controlled by software,
 via the Librem embedded controller (EC) driver.
 The [L14 Rave blog post] provides an excellent high-level overview of these LEDs.
 Since the EC driver comes preinstalled only in Purism's own [Pure OS] distribution,
@@ -43,7 +43,7 @@ as of now, it must be manually installed in Qubes.
 Installing the L14 EC driver in $\DomZ$ is pretty straightforward,
 and the exact steps can be found on [the Purism forum][EC installation].
 Although the EC driver makes Qubes aware of these LEDs,
-controlling them from user applications, however, is somewhat tricky.
+controlling them from user applications is somewhat tricky.
 
 <figure>
   <img src='l14_leds.png' alt='Librem 14 LEDs'/>
@@ -108,7 +108,7 @@ The script itself is pretty straightforward, as I show below.
 {: .line-numbers }
 
 The service accepts a single argument, which may either be `up` or `down`,
-and sets the brightness of the the `librem_ec:airplane` LED accordingly.
+and sets the brightness of the `librem_ec:airplane` LED accordingly.
 Note that, the EC uses the LED to indicate if the laptop is in "[airplane mode],"
 i.e. "on" when WiFi is disconnected and "off" when WiFi is connected.
 
@@ -194,7 +194,7 @@ in a new file `/etc/NetworkManager/dispatcher.d/99-librem-wifi-led`:
 
 The script essentially checks if the interface that has changed state
 is a WiFi interface (prefixed with `wls` in Fedora),
-and then makes the Qrexec call with if the new state.
+and then makes the Qrexec call with the new state.
 States other than `up` and `down`, such as `pre-up`, `dhcp4-change` etc.
 are ignored.
 The script should be effective immediately, without any restarts.

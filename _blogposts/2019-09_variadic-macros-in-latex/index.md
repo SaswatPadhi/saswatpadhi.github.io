@@ -87,7 +87,7 @@ but there were two main aspects of these solutions that left me wishing for some
 - _Violated **P1**_:
   They had to be invoked via the `\usedecl` macro, e.g. `\usedecl{List}{1}{2}{3}`.
 - _Violated **P2**_:
-  They used third-party packages, such `etoolbox` or `xparse`.
+  They used third-party packages, such as `etoolbox` or `xparse`.
 
 After some more searching, I came across [this blog post][variadic-macro-blog-post],
 which took the essence of these answers and outlined a very neat solution.
@@ -184,7 +184,7 @@ there are two other key ideas here:
   e.g. while `#1` expands to the first argument to `\VARIADIC` itself,
   `###1` expands to `#1` which becomes the first argument to the generated macro.
 
-Also see [this TeX.StakExchange thread](https://tex.stackexchange.com/a/519/187728)
+Also see [this TeX.StackExchange thread](https://tex.stackexchange.com/a/519/187728)
 to learn more about `\expandafter`.
 
 Awesome! But, there was still something missing ...
@@ -291,8 +291,8 @@ and "reduces" the given arguments by repeating applying this macro.
    e.g. `\List{1}{2}   {\bf X}` would render $[1;2;{\bf X}]$.
 1. **Can I use multiple macros in the `before` argument?**
    <br>
-   Not directly, but you could create a intermediate unary macro
-   that applies your macros to the its input, and use this intermediate macro as the `before` argument.
+   Not directly, but you could create an intermediate unary macro
+   that applies your macros to its input, and use this intermediate macro as the `before` argument.
 1. **Does it work with [MathJax](https://www.mathjax.org)?**
    <br>
    Unfortunately no, at least I wasn't able to get it working.

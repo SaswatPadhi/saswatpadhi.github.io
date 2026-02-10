@@ -31,10 +31,10 @@ Mermaid _just works_, right out of the box, and beautifully so!
 However, since I was already using [Prism] for syntax highlighting,
 and [MathJax] for rendering math on my blog,
 I quickly ran into a few issues
-in getting all of the to play nice with each other.
+in getting all of them to play nice with each other.
 Given how popular each of these libraries is,
-I was hoping to find some answers on StackOverflow or or their GitHub repos,
-but unfortunately I didn't any solutions that worked for me.
+I was hoping to find some answers on StackOverflow or their GitHub repos,
+but unfortunately I didn't find any solutions that worked for me.
 Since I spent a few hours tweaking various configs
 and finally got everything to work nicely together,
 in less than 100 lines of changes,
@@ -233,7 +233,7 @@ that filters out snippets with `.no-highlight` class.
 #### <i class='fas fa-eye-slash'></i> Rendering Inside `<details>`
 
 The next issue on my plate was debugging invisible Mermaid diagrams inside `<details>`
-This was only onbserved on Firefox (my default web browser on PC) though;
+This was only observed on Firefox (my default web browser on PC) though;
 maybe Chrome has some special sauce that somehow mitigates this issue.
 On Firefox, I saw no errors on the console,
 and DOM inspection revealed that diagrams were indeed being generated!
@@ -304,7 +304,7 @@ which are currently visible (not within a collapsed `details`).
 In line 6, we locate all such `code` elements under `body`,
 and perform the first round of rendering right after DOM initialization.
 In line 9, we defer the rendering of the collapsed `code` elements,
-until a `toggle` event is triggered on an an ancestor `details` element.
+until a `toggle` event is triggered on an ancestor `details` element.
 Upon receiving this trigger, we use our selector again
 to locate and render _newly visible_ `code` elements
 _only under the toggled_ `details` _element_.
@@ -365,7 +365,7 @@ via this PR:
 But from what I understood from the changes,
 I think they are adding the rendering logic to Mermaid,
 and trying to avoid external dependencies.
-I the mean time, I could come up with a pretty easy _fix_,
+In the mean time, I could come up with a pretty easy _fix_,
 using Mermaid's _secret_ `postRenderCallback` option.
 I didn't find anything in the Mermaid 10.x documentation regarding this function,
 but a few searches for "mermaidjs callback support" took me to this bug report:
@@ -426,7 +426,7 @@ which finds:
   _(so it is some label, typically NodeLabel or EdgeLabel, in a Mermaid diagram)_
 
 The selector looks long and ugly because
-Selecting elements with a particular class-name suffix is a bit hacky
+selecting elements with a particular class-name suffix is a bit hacky
 because of limitations of the CSS specification.
 Essentially, under the appropriate `code` and `svg` elements, we look for
 
@@ -495,7 +495,7 @@ Finally, I resize, fit and center the image in line 12, since the height is chan
 So far so good!
 The svg-pan-zoom library is quite small and takes care of basic pan and zoom.
 However, the diagrams are no longer responsive ---
-resizing a page, doesn't automatically resize the diagrams if needed.
+resizing a page doesn't automatically resize the diagrams if needed.
 Thankfully, the library authors have [considered this use case](https://github.com/bumbu/svg-pan-zoom#demos),
 and have provided [a demo](http://bumbu.me/svg-pan-zoom/demo/resize.html)
 that shows how to achieve this.
