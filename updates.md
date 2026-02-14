@@ -92,34 +92,70 @@ title: Updates
 </div>
 
 <script>
-  var events_container = document.getElementsByClassName('events')[0];
+  const events_container = document.getElementsByClassName('events')[0];
 
-  function select(cat) {
+  function selectType(catType) {
     setTimeout(function() {
-      Array.prototype.forEach.call(document.getElementsByClassName('event'), function(e) {
-        if(typeof cat === 'undefined' || e.classList.contains(cat)) {
-          e.style.display = 'flex';
-        } else {
-          e.style.display = 'none';
+      Array.prototype.forEach.call(
+        document.getElementsByClassName('event'),
+        function(e) {
+          if(typeof catType === 'undefined' || e.classList.contains(catType)) {
+            e.style.display = 'flex';
+          } else {
+            e.style.display = 'none';
+          }
         }
-      });
+      );
       events_container.style.opacity = 1;
     }, 150);
   }
 
-  Array.prototype.forEach.call(document.getElementsByClassName('cat'), function(cat) {
-    cat.onclick = function(){
-      events_container.style.opacity = 0;
-      if(cat.classList.contains('selected')) {
-        cat.classList.remove('selected');
-        select();
-      } else {
-        Array.prototype.forEach.call(document.getElementsByClassName('cat'),
-                                     cat => cat.classList.remove('selected'));
-        class_cat = Array.from(cat.classList).filter(c => c.startsWith('type-'))[0];
-        cat.classList.add('selected');
-        select(class_cat);
-      }
-    };
-  });
+  function setCat(cat) {
+    events_container.style.opacity = 0;
+    Array.prototype.forEach.call(
+      document.getElementsByClassName('cat'),
+      c => c.classList.remove('selected')
+    );
+    if (cat) {
+      cat.classList.add('selected');
+      selectType(Array.from(cat.classList).filter(c => c.startsWith('type-'))[0]);
+    } else {
+      selectType();
+    }
+  }
+
+  Array.prototype.forEach.call(
+    document.getElementsByClassName('cat'),
+    function(cat) {
+      cat.onclick = function() {
+        var catType = Array.from(cat.classList).filter(c => c.startsWith('type-'))[0].substring(5);
+        if (cat.classList.contains('selected')) {
+          window.location.hash = '';
+          history.replaceState('', document.title, window.location.pathname);
+        } else {
+          window.location.hash = catType;
+        }
+      };
+    }
+  );
+
+  function checkHash() {
+    var hash = window.location.hash.substring(1).toLowerCase();
+    if (hash) {
+      Array.prototype.forEach.call(
+        document.getElementsByClassName('cat'),
+        function(cat) {
+          var catType = Array.from(cat.classList).filter(c => c.startsWith('type-'))[0].substring(5);
+          if (catType === hash && !cat.classList.contains('selected')) {
+            setCat(cat);
+          }
+        }
+      );
+    } else if (document.querySelector('.cat.selected')) {
+      setCat();
+    }
+  }
+
+  window.addEventListener('load', checkHash);
+  window.addEventListener('hashchange', checkHash);
 </script>
