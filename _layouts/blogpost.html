@@ -36,6 +36,23 @@ css: [ 'blogpost' ]
 {% endif %}
 </div>
 
+{% if page.changelog -%}
+<div class='changelog'>
+  {%- assign changes = page.changelog | sort: 'date' | reverse -%}
+  {% for change in changes %}
+  <details>
+    <summary>
+      Updated on {{ change.date }}
+      <i class='fas fa-fw fa-ellipsis-vertical'></i>
+      {% include tools/text_process.md data=change.title %}
+    </summary>
+
+    {% include tools/text_process.md para=true data=change.details %}
+  </details>
+  {% endfor %}
+</div>
+{% endif %}
+
 <div class='post-content'>
   {% include tools/text_process.md para=true data=content %}
 </div>

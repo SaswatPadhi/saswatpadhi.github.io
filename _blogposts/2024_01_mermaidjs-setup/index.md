@@ -5,14 +5,27 @@ post_date: 2024-01-01
 
 title: 'My Mermaid Setup'
 tagline: 'MathJax support, pan and zoom, auto resizing, and more'
-description: '
-In this post I describe several improvements to a default Mermaid
-(MermaidJS) setup that allow using MathJax in node labels,
-auto-resizing of diagrams on window resizing events,
-and displaying simple pan-and-zooom controls on diagrams.
-'
+description: >
+  In this post I describe several improvements to a default Mermaid
+  (MermaidJS) setup that allow using MathJax in node labels,
+  auto-resizing of diagrams on window resizing events,
+  and displaying simple pan-and-zooom controls on diagrams.
 
-categories: [ 'sw/js' ]
+changelog:
+- date: 2026-02-14
+  title: Tested on Mermaid 11.12; improved MathJax typesetting
+  details: >
+    This post was originally written
+    when the latest available version of Mermaid was 10.6.
+    I recently updated the Mermaid version
+    used throughout this website to 11.12,
+    and re-tested all the bugs mentioned below.
+    Only the [tiny-render bug inside `&lt;details&gt;`](#-rendering-inside-details),
+    seems to have been fixed now; all the other bugs persist.
+    I also took the opportunity to improve the code for
+    typesetting MathJax inside Mermaid labels.
+
+categories: [ 'sw/js'  ]
 
 mermaid: true
 
@@ -71,7 +84,20 @@ I thought I'd document my journey in this blog post.
 
       /* Mermaid callback for MathJax typesetting and SVG Pan Zoom */
       function mmdCallback (svgId) {
-        MathJax.typeset(document.getElementById(svgId).querySelectorAll(mmdLabelSelector));
+        var svg = document.getElementById(svgId);
+        const scale = svg.clientWidth / svg.viewBox.baseVal.width;
+
+        svg.querySelectorAll(mmdLabelSelector).forEach(label => {
+          MathJax.typesetPromise([label]).then(() => {
+            var math = label.querySelectorAll('mjx-container')[0];
+            if (math.innerText != label.innerText) return;
+            label.parentNode.style.removeProperty('width');
+            var fo = label.parentNode.parentNode;
+            fo.setAttribute('width', math.getBoundingClientRect().width / scale);
+            var h = fo.getAttribute('height'), w = fo.getAttribute('width');
+            fo.parentNode.setAttribute('transform', 'translate(-' + w/2 + ', -' + h/2 + ')');
+          });
+        });
 
         svg.style.maxWidth = 'unset';
         const oldHeight = svg.getBoundingClientRect().height;
@@ -366,7 +392,7 @@ But from what I understood from the changes,
 I think they are adding the rendering logic to Mermaid,
 and trying to avoid external dependencies.
 In the mean time, I could come up with a pretty easy _fix_,
-using Mermaid's _secret_ `postRenderCallback` option.
+using Mermaid's `postRenderCallback` option.
 I didn't find anything in the Mermaid 10.x documentation regarding this function,
 but a few searches for "mermaidjs callback support" took me to this bug report:
 
@@ -380,7 +406,11 @@ The idea is to invoke MathJax typesetting on each node and edge label,
 after Mermaid is done rendering a diagram.
 And since this is to be done _after_ Mermaid rendering,
 we don't even need to weaken our [`securityLevel`](https://mermaid.js.org/config/usage.html#securitylevel).
-To achieve this, once again, we extend our `DOMContentLoaded` listener:
+However, MathJax typesetting obviously tweaks the dimensions of the label element,
+and again since this happens _after_ Mermaid rendering,
+we must manually re-adjust the dimensions of the rendered labels.
+To achieve this, once again, we extend our `DOMContentLoaded` listener,
+with a callback function for Mermaid:
 
 ```js {% raw %}
 const mmdCodeSelector =
@@ -390,7 +420,21 @@ const mmdLabelSelector =
    code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class*='Label ']";
 
 function mmdCallback (svgId) {
-  MathJax.typeset(document.getElementById(svgId).querySelectorAll(mmdLabelSelector));
+  var svg = document.getElementById(svgId);
+  const scale = svg.clientWidth / svg.viewBox.baseVal.width;
+
+  svg.querySelectorAll(mmdLabelSelector).forEach(label => {
+    MathJax.typesetPromise([label]).then(() => {
+      var math = label.querySelectorAll('mjx-container')[0];
+      if (math.innerText != label.innerText) return;
+
+      label.parentNode.style.removeProperty('width');
+      var fo = label.parentNode.parentNode;
+      fo.setAttribute('width', math.getBoundingClientRect().width / scale);
+      var h = fo.getAttribute('height'), w = fo.getAttribute('width');
+      fo.parentNode.setAttribute('transform', 'translate(-' + w/2 + ', -' + h/2 + ')');
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -412,10 +456,9 @@ document.addEventListener('DOMContentLoaded', function () {
   )
 });
 {% endraw %} ```
-{: .line-numbers data-line="3-5,7-9,15,24" }
+{: .line-numbers data-line="3-5,7-22,28,37" }
 
-Other than the callback stuff, which is self-explanatory,
-one interesting bit here is the `mmdLabelSelector`,
+The first interesting bit here is the `mmdLabelSelector`,
 which finds:
 
 - `code` element(s) of `language-mermaid` class with `data-processed` attribute set to `true`, <br>
@@ -432,6 +475,17 @@ Essentially, under the appropriate `code` and `svg` elements, we look for
 
 - `span` elements with their space-separated class list ending in `Label`, or
 - `span` elements with their space-separated class list containing `Label `.
+
+Next, let's unpack the `mmdCallback` function that runs on each rendered SVG.
+It uses the `mmdLabelSelector` to look for labels, renders each label using
+[MathJax's `typesetPromise`](https://docs.mathjax.org/en/stable/web/typeset.html#MathJax.typesetPromise),
+and uses the promise to adjust the dimensions of the label within Mermaid's SVG
+after MathJax typesetting is complete.
+As of now, the adjustment seems to be necessary only when a label
+solely contains MathJax content (and no other text).
+The dimension tweaks essentially boil down to removing the height and width
+set by Mermaid (based on the pre-rendered textual content) on the label and its parents,
+and replacing those with the real height and width of rendered MathJax content.
 
 #### <i class='fas fa-magnifying-glass-plus'></i> Pan & Zoom Support
 

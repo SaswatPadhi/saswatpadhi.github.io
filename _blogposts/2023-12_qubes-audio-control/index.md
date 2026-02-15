@@ -5,11 +5,10 @@ post_date: 2023-12-27
 
 title: 'CLI Audio Control in Qubes'
 tagline: 'Controlling Qubes AppVM volume from a shell'
-description: '
-In this post I describe several shell scripts to easily
-control the volume and mute states of AppVMs in Qubes OS
-using the PulseAudio server running in dom0.
-'
+description: >
+  In this post I describe several shell scripts to easily
+  control the volume and mute states of AppVMs in Qubes OS
+  using the PulseAudio server running in dom0.
 
 categories: [ 'hw/audio', 'sw/qubes' ]
 

@@ -10,6 +10,6 @@
 
   A --- X
   B --- X
-  X -- $\mathrm{\ transitivity\ }$ --> C
+  X -- $\mathrm{transitivity}$ --> C
 {% endraw %} ```
 {: {{ include.id }} .no-highlight .no-pan-zoom style='margin: 0.25em 1em 0;' }

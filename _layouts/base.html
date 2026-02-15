@@ -135,10 +135,9 @@
     {%- endif %}
 
     {% if layout.mermaid or page.mermaid -%}
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"
-            integrity="sha512-yD6UxqB1PGCP/nC8vd2pcozgicMkT/FEFo98T0ian+EtJPkbAL+h5gYV3r5Fpy1XWTVdDVoHx/E/9fFHdrHu1g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.12.0/mermaid.min.js"
+            integrity="sha512-5TKaYvhenABhlGIKSxAWLFJBZCSQw7HTV7aL1dJcBokM/+3PNtfgJFlv8E6Us/B1VMlQ4u8sPzjudL9TEQ06ww=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"
             integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y="
             crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -174,10 +173,20 @@
 
       function mermaidCallback (svgId) {
         const svg = document.getElementById(svgId);
-        svg.style.fontSize = '15px';
+        const scale = svg.clientWidth / svg.viewBox.baseVal.width;
 
         {% if layout.mathjax or page.mathjax -%}
-          MathJax.typeset(svg.querySelectorAll(mmdLabelSelector));
+          svg.querySelectorAll(mmdLabelSelector).forEach(label => {
+            MathJax.typesetPromise([label]).then(() => {
+              var math = label.querySelectorAll('mjx-container')[0];
+              if (math.innerText != label.innerText) return;
+              label.parentNode.style.removeProperty('width');
+              var fo = label.parentNode.parentNode;
+              fo.setAttribute('width', math.getBoundingClientRect().width / scale);
+              var h = fo.getAttribute('height'), w = fo.getAttribute('width');
+              fo.parentNode.setAttribute('transform', 'translate(-' + w/2 + ', -' + h/2 + ')');
+            });
+          });
         {%- endif -%}
 
         if (!svg.parentElement.parentElement.classList.contains('no-pan-zoom')) {
@@ -223,7 +232,10 @@
           document.getElementsByTagName('details'),
           d => d.addEventListener(
             "toggle",
-            (e) => mermaid.run({ nodes: d.querySelectorAll(mmdCodeSelector), postRenderCallback: mermaidCallback })
+            (e) => mermaid.run({
+              nodes: d.querySelectorAll(mmdCodeSelector),
+              postRenderCallback: mermaidCallback
+            })
           )
         );
       }, false);

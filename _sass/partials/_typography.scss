@@ -298,6 +298,16 @@ ol.custom {
   }
 }
 
-code.language-mermaid[data-processed='true'] svg[id^='mermaid'] p {
-  margin: unset;
+code.language-mermaid[data-processed='true'] svg[id^='mermaid'] {
+  p {
+    margin: unset;
+  }
+
+  .edge-thickness-normal {
+    stroke-width: 2px !important;
+  }
+
+  .edge-pattern-dotted {
+    stroke-dasharray: 3 !important;
+  }
 }
