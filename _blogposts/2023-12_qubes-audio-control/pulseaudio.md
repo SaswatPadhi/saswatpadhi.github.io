@@ -6,13 +6,13 @@ classDef actual fill:#FFE9EA,stroke:#FF787E
 classDef program fill:#E5FFAA,stroke:#A6F100
 
 subgraph "`**Application**`"
-    I(fa:fa-circle-play \n Input):::actual
-    O(fa:fa-wave-square \n Output):::actual
+    I(fa:fa-circle-play <br> Input):::actual
+    O(fa:fa-wave-square <br> Output):::actual
 end
 
 subgraph "`**Hardware**`"
-    So(fa:fa-microphone \n Source):::actual
-    Si(fa:fa-headphones \n Sink):::actual
+    So(fa:fa-microphone <br> Source):::actual
+    Si(fa:fa-headphones <br> Sink):::actual
 end
 
 P{{PulseAudio}}:::program

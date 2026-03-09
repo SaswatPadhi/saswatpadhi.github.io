@@ -6,7 +6,7 @@ function unstylize () {
   document.getElementById('stateOfTheArt').style.boxShadow = 'none'
 }
 </script>
-<svg id='stateOfTheArt' viewBox='0 0 500 147.5' xmlns='http://www.w3.org/2000/svg'
+<svg id='stateOfTheArt' viewBox='0 0 1000 295' xmlns='http://www.w3.org/2000/svg'
      style='margin-top:0.25em; border-radius:0.25em'>
   <defs>
     <image id='chart' height='225px' width='1391px' href='images/all-failures.png' />
@@ -16,177 +16,230 @@ function unstylize () {
         class='fragment' data-fragment-index='1'
         data-fragment-show-callback='stylize' data-fragment-hide-callback='unstylize' />
 
-  <svg x='8.5' y='8' width='10' height='10' viewBox='1226 180 23 23'
+  <svg x='17' y='16' width='20' height='20' viewBox='1226 180 23 23'
        class='fragment' data-fragment-index='1'>
     <use href='#chart' x='0' y='0' />
   </svg>
-  <text x='22' y='14.5' fill='DarkMagenta' font-size='0.325em' class='subheading'
+  <text x='44' y='29' fill='DarkMagenta' font-size='1.3em' class='subheading'
+        transform='scale(0.5)' transform-origin='44 29'
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     LoopInvGen
   </text>
-  <text x='104' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
+  <text x='204' y='20' font-size='0.5em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='204 20'>
     <a href='https://github.com/SaswatPadhi/LoopInvGen'>
       [&nearr;]
     </a>
   </text>
-  <text x='22.5' y='26' font-size='0.175em' class='subheading' dominant-baseline='middle'>
+  <text x='45' y='52' font-size='0.7em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='45 52'>
     <a href='https://doi.org/10.1145/2908080.2908099'>
       [PLDI'16]
     </a>
   </text>
 
-  <svg x='114' y='8' width='10' height='10' viewBox='1259 180 23 23'
+  <svg x='228' y='16' width='20' height='20' viewBox='1259 180 23 23'
        class='fragment' data-fragment-index='1'>
     <use href='#chart' x='0' y='0' />
   </svg>
-  <text x='127.5' y='14.5' fill='DarkMagenta' font-size='0.325em' class='subheading'
+  <text x='255' y='29' fill='DarkMagenta' font-size='1.3em' class='subheading'
+        transform='scale(0.5)' transform-origin='255 29'
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     SketchAC
   </text>
-  <text x='194.5' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
+  <text x='385' y='20' font-size='0.5em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='385 20'>
     <a href='https://github.com/plum-umd/adaptive-concretization'>
       [&nearr;]
     </a>
   </text>
-  <text x='127.5' y='26' font-size='0.175em' class='subheading' dominant-baseline='middle'>
+  <text x='255' y='52' font-size='0.7em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='255 52'>
     <a href='https://doi.org/10.1007/978-3-319-21668-3_22'>
       [Jeon et al, CAV'15]
     </a>
   </text>
 
-  <svg x='209' y='8' width='10' height='10' viewBox='1291 180 23 23'
+  <svg x='418' y='16' width='20' height='20' viewBox='1291 180 23 23'
        class='fragment' data-fragment-index='1'>
     <use href='#chart' x='0' y='0' />
   </svg>
-  <text x='222.5' y='14.5' fill='DarkMagenta' font-size='0.325em' class='subheading'
+  <text x='445' y='29' fill='DarkMagenta' font-size='1.3em' class='subheading'
+        transform='scale(0.5)' transform-origin='445 29'
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     EUSolver
   </text>
-  <text x='290' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
+  <text x='576' y='20' font-size='0.5em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='576 20'>
     <a href='https://bitbucket.org/abhishekudupa/eusolver/src/master/'>
       [&nearr;]
     </a>
   </text>
-  <text x='222.5' y='26' font-size='0.175em' class='subheading' dominant-baseline='middle'>
+  <text x='445' y='52' font-size='0.7em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='445 52'>
     <a href='https://doi.org/10.1007/978-3-662-54577-5_18'>
       [Alur et al, TACAS'17]
     </a>
   </text>
 
-  <svg x='304' y='8' width='10' height='10' viewBox='1324 180 23 23'
+  <svg x='608' y='16' width='20' height='20' viewBox='1324 180 23 23'
        class='fragment' data-fragment-index='1'>
     <use href='#chart' x='0' y='0' />
   </svg>
-  <text x='317.5' y='14.5' fill='DarkMagenta' font-size='0.325em' class='subheading'
+  <text x='635' y='29' fill='DarkMagenta' font-size='1.3em' class='subheading'
+        transform='scale(0.5)' transform-origin='635 29'
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     CVC4
   </text>
-  <text x='359.5' y='10' font-size='0.125em' class='subheading' dominant-baseline='middle'>
+  <text x='710' y='20' font-size='0.5em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='710 20'>
     <a href='https://github.com/CVC4/CVC4'>
       [&nearr;]
     </a>
   </text>
-  <text x='317.5' y='26' font-size='0.175em' class='subheading' dominant-baseline='middle'>
+  <text x='635' y='52' font-size='0.7em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='635 52'>
     <a href='https://doi.org/10.1007/978-3-319-21668-3_12'>
       [Reynolds et al, CAV'15]
     </a>
   </text>
 
-  <svg x='406.5' y='8' width='10' height='10' viewBox='1357 180 23 23'
+  <svg x='813' y='16' width='20' height='20' viewBox='1357 180 23 23'
        class='fragment' data-fragment-index='1'>
     <use href='#chart' x='0' y='0' />
   </svg>
-  <text x='420' y='14.5' fill='DarkMagenta' font-size='0.325em' class='subheading'
+  <text x='840' y='29' fill='DarkMagenta' font-size='1.3em' class='subheading'
+        transform='scale(0.5)' transform-origin='840 29'
         font-variant='small-caps' letter-spacing='0.5' dominant-baseline='middle'>
     Stoch
   </text>
-  <text x='420' y='26' font-size='0.175em' class='subheading' dominant-baseline='middle'>
+  <text x='840' y='52' font-size='0.7em' class='subheading' dominant-baseline='middle'
+        transform='scale(0.5)' transform-origin='840 52'>
     <a href='http://ieeexplore.ieee.org/document/6679385/'>
       [Alur et al, FMCAD'13]
     </a>
   </text>
 
-  <use href='#chart' x='-12.5' y='110' transform='scale(0.36 0.36)'
+  <use href='#chart' x='-12.5' y='110' transform='scale(0.72 0.72)'
        class='fragment' data-fragment-index='1' />
 
-  <text x='62.5' y='129' font-size='0.225em' class='fragment' data-fragment-index='1'>
+  <text x='125' y='258' font-size='0.9em'
+        transform='scale(0.5)' transform-origin='125 258'
+        class='fragment' data-fragment-index='1'>
     <a href='https://github.com/SaswatPadhi/2019_CAV_Artifact_100/blob/master/grammars/Equalities.g'>
       Equalities
     </a>
   </text>
-  <foreignObject x='59' y='126.5' width='10%' height='10%' class='fragment' data-fragment-index='1'>
-<span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.15em; color:#999;'>
-  $$ \boldsymbol{(x = y)} $$
-</span>
+  <foreignObject x='140' y='253' width='20%' height='20%'
+                 transform='scale(0.5)' transform-origin='140 253'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.6em; color:#999;'>
+      $ \boldsymbol{(x = y)} $
+    </span>
   </foreignObject>
 
-  <foreignObject x='92.5' y='114.25' width='10%' height='60%' class='fragment' data-fragment-index='1'>
-    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.2em'> $$ \subset $$ </span>
+  <foreignObject x='225' y='245' width='20%' height='20%'
+                 transform='scale(0.5)' transform-origin='225 245'
+                class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.8em'>$ \subset $</span>
   </foreignObject>
-  <text x='132.5' y='129' font-size='0.225em' class='fragment' data-fragment-index='1'>
+
+  <text x='265' y='258' font-size='0.9em'
+        transform='scale(0.5)' transform-origin='265 258'
+        class='fragment' data-fragment-index='1'>
     <a href='https://github.com/SaswatPadhi/2019_CAV_Artifact_100/blob/master/grammars/Intervals.g'>
       Inequalities
     </a>
   </text>
-  <foreignObject x='132.5' y='126.5' width='10%' height='10%' class='fragment' data-fragment-index='1'>
-<span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.15em; color:#999;'>
-  $$ \boldsymbol{(x \leq y)} $$
-</span>
+  <foreignObject x='290' y='253' width='20%' height='20%'
+                 transform='scale(0.5)' transform-origin='290 253'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.6em; color:#999;'>
+      $ \boldsymbol{(x \leq y)} $
+    </span>
   </foreignObject>
 
-  <foreignObject x='172.5' y='114.25' width='10%' height='60%' class='fragment' data-fragment-index='1'>
-    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.2em'> $$ \subset $$ </span>
+  <foreignObject x='385' y='245' width='10%' height='20%'
+                 transform='scale(0.5)' transform-origin='385 245'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.8em'>$ \subset $</span>
   </foreignObject>
-  <text x='213.5' y='129' font-size='0.225em' class='fragment' data-fragment-index='1'>
+
+  <text x='427' y='258' font-size='0.9em'
+        transform='scale(0.5)' transform-origin='427 258'
+        class='fragment' data-fragment-index='1'>
     <a href='https://github.com/SaswatPadhi/2019_CAV_Artifact_100/blob/master/grammars/Octagons.g'>
       Octagons
     </a>
   </text>
-  <foreignObject x='209.5' y='126.5' width='10%' height='10%' class='fragment' data-fragment-index='1'>
-<span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.15em; color:#999;'>
-  $$ \boldsymbol{(x > y + 2)} $$
-</span>
+  <foreignObject x='430' y='253' width='20%' height='20%'
+                 transform='scale(0.5)' transform-origin='430 253'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.6em; color:#999;'>
+      $ \boldsymbol{(x > y + 2)} $
+    </span>
   </foreignObject>
 
-  <foreignObject x='247.5' y='114.25' width='10%' height='60%' class='fragment' data-fragment-index='1'>
-    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.2em'> $$ \subset $$ </span>
+  <foreignObject x='540' y='245' width='10%' height='20%'
+                 transform='scale(0.5)' transform-origin='540 245'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.8em'> $ \subset $ </span>
   </foreignObject>
-  <text x='289.5' y='129' font-size='0.225em' class='fragment' data-fragment-index='1'>
+
+  <text x='575' y='258' font-size='0.9em'
+        transform='scale(0.5)' transform-origin='575 258'
+        class='fragment' data-fragment-index='1'>
     <a href='https://github.com/SaswatPadhi/2019_CAV_Artifact_100/blob/master/grammars/Polyhedra.g'>
       Polyhedra
     </a>
   </text>
-  <foreignObject x='286.25' y='126.5' width='10%' height='10%' class='fragment' data-fragment-index='1'>
-<span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.15em; color:#999;'>
-  $$ \boldsymbol{(x \geq 3 * y - 5)} $$
-</span>
+  <foreignObject x='570' y='253' width='20%' height='20%'
+                 transform='scale(0.5)' transform-origin='570 253'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.6em; color:#999;'>
+      $ \boldsymbol{(x \geq 3 * y - 5)} $
+    </span>
   </foreignObject>
 
-  <foreignObject x='325' y='114.25' width='10%' height='60%' class='fragment' data-fragment-index='1'>
-    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.2em'> $$ \subset $$ </span>
+  <foreignObject x='692' y='245' width='10%' height='20%'
+                 transform='scale(0.5)' transform-origin='692 245'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.8em'> $ \subset $ </span>
   </foreignObject>
-  <text x='362.5' y='129' font-size='0.225em' class='fragment' data-fragment-index='1'>
+
+  <text x='725' y='258' font-size='0.9em'
+        transform='scale(0.5)' transform-origin='725 258'
+        class='fragment' data-fragment-index='1'>
     <a href='https://github.com/SaswatPadhi/2019_CAV_Artifact_100/blob/master/grammars/Polynomials.g'>
       Polynomials
     </a>
   </text>
-  <foreignObject x='352' y='126.5' width='15%' height='10%' class='fragment' data-fragment-index='1'>
-<span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.15em; color:#999;'>
-  $$ \boldsymbol{(x \leq 7 * y * z + 11)} $$
-</span>
+  <foreignObject x='715' y='253' width='25%' height='20%'
+                 transform='scale(0.5)' transform-origin='715 253'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.6em; color:#999;'>
+      $ \boldsymbol{(x \leq 7 * y * z + 11)} $
+    </span>
   </foreignObject>
 
-  <foreignObject x='410' y='114.25' width='10%' height='60%' class='fragment' data-fragment-index='1'>
-    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.2em'> $$ \subset $$ </span>
+  <foreignObject x='850' y='245' width='10%' height='20%'
+                 transform='scale(0.5)' transform-origin='850 245'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.8em'> $ \subset $ </span>
   </foreignObject>
-  <text x='451.5' y='129' font-size='0.225em' class='fragment' data-fragment-index='1'>
+
+  <text x='902' y='258' font-size='0.9em'
+        transform='scale(0.5)' transform-origin='902 258'
+        class='fragment' data-fragment-index='1'>
     <a href='https://github.com/SaswatPadhi/2019_CAV_Artifact_100/blob/master/grammars/Peano.g'>
       Peano
     </a>
   </text>
-  <foreignObject x='416' y='126.5' width='20%' height='10%' class='fragment' data-fragment-index='1'>
-<span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.15em; color:#999;'>
-  $$ \boldsymbol{(x = y \,\%\, z\, - 13)} $$
-</span>
+  <foreignObject x='875' y='253' width='25%' height='20%'
+                 transform='scale(0.5)' transform-origin='875 253'
+                 class='fragment' data-fragment-index='1'>
+    <span xmlns='http://www.w3.org/1999/xhtml' style='font-size:0.6em; color:#999;'>
+      $ \boldsymbol{(x = y \,\%\, z\, - 13)} $
+    </span>
   </foreignObject>
 </svg>

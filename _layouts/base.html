@@ -1,6 +1,4 @@
-{%- assign base_font = site.fonts.base | default: 'Noto Sans' -%}
-{%- assign head_font = site.fonts.head | default: 'Montserrat' -%}
-{%- assign mono_font = site.fonts.mono | default: 'Ubuntu Mono' -%}
+{%- include sass_config.md liquid_only=1 -%}
 {%- capture NEWLINE %}
 {% endcapture -%}
 <!DOCTYPE html>
@@ -41,6 +39,12 @@
 
     <link rel='canonical' href='{{ site.url }}{{ page.url | replace: "index.html", ""}}' />
     <link rel='stylesheet' href='{{ site.baseurl }}/assets/css/purity.css'>
+
+    {% if layout.math or page.math -%}
+      <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css"
+            integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T"
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {%- endif %}
 
     {% if layout.prismjs or page.prismjs -%}
     <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autolinker/prism-autolinker.min.css"
@@ -135,20 +139,23 @@
     {%- endif %}
 
     {% if layout.mermaid or page.mermaid -%}
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"
-            integrity="sha512-yD6UxqB1PGCP/nC8vd2pcozgicMkT/FEFo98T0ian+EtJPkbAL+h5gYV3r5Fpy1XWTVdDVoHx/E/9fFHdrHu1g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.12.0/mermaid.min.js"
+            integrity="sha512-5TKaYvhenABhlGIKSxAWLFJBZCSQw7HTV7aL1dJcBokM/+3PNtfgJFlv8E6Us/B1VMlQ4u8sPzjudL9TEQ06ww=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"
             integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y="
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     {%- endif %}
 
-    {% if layout.mathjax or page.mathjax -%}
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.min.js"
-            integrity="sha512-PbLRl9V4qEM7j3xggKupLNdcodHT0w+x77S/JoTWxrhPEVZ0NkTPp90bzUeTyFXsBzsaApVOZdCHIzL6o51KiA=="
+    {% if layout.math or page.math -%}
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js"
+            integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt"
             crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js"
+            integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+            crossorigin="anonymous">
     </script>
     {%- endif %}
 
@@ -161,8 +168,21 @@
   <body>
     {{ content }}
 
-    {% if layout.mermaid or page.mermaid -%}
     <script>
+      {% if layout.math or page.math -%}
+      var latexGlobalMacros = (typeof latexGlobalMacros !== 'undefined')
+                            ? latexGlobalMacros
+                            : {};
+      var katexOptions = {
+        delimiters: [
+          {left: 'DISPLAY$', right: '$DISPLAY', display: true},
+          {left: '$', right: '$', display: false},
+        ],
+        macros: latexGlobalMacros
+      };
+      {%- endif %}
+
+      {% if layout.mermaid or page.mermaid -%}
       const mmdCodeSelector = "pre.no-highlight code.language-mermaid:not(details:not([open]) .language-mermaid)";
       const mmdLabelSelector =
         "code.language-mermaid[data-processed='true'] svg[id^='mermaid'] span[class$='Label'], \
@@ -174,12 +194,6 @@
 
       function mermaidCallback (svgId) {
         const svg = document.getElementById(svgId);
-        svg.style.fontSize = '15px';
-
-        {% if layout.mathjax or page.mathjax -%}
-          MathJax.typeset(svg.querySelectorAll(mmdLabelSelector));
-        {%- endif -%}
-
         if (!svg.parentElement.parentElement.classList.contains('no-pan-zoom')) {
           svg.style.maxWidth = 'unset';
           const oldHeight = svg.getBoundingClientRect().height;
@@ -192,14 +206,36 @@
           SVGPanZoomResize(panZoom);
         }
       }
-      
-      document.addEventListener('DOMContentLoaded', function () {
+      {%- endif %}
+
+      document.addEventListener('DOMContentLoaded', async function () {
+        {% if layout.mermaid or page.mermaid -%}
+        {% if layout.math or page.math -%}
+        if (!RegExp.escape) {
+          RegExp.escape = function(s) { return String(s).replace(/[\\^$*+?.()|[\]{}]/g, '\\$&'); };
+        }
+
+        document.querySelectorAll(mmdCodeSelector).forEach(mmd => {
+          var content = mmd.textContent;
+          katexOptions.delimiters.forEach(d => {
+            content = content.replace(
+              new RegExp(RegExp.escape(d.left) + '([\\s\\S]+?)' + RegExp.escape(d.right), 'g'),
+              function(m, math) {
+                return katex.renderToString(math, {...katexOptions, displayMode: d.display})
+                            .replace(/\"/g, "'");
+              }
+            );
+          });
+          mmd.textContent = content;
+        });
+        {%- endif %}
+
         mermaid.initialize({
           fontFamily: '{{ head_font }}',
           htmlLabels: true,
           startOnLoad: false,
         });
-        mermaid.run({
+        await mermaid.run({
           querySelector: mmdCodeSelector,
           postRenderCallback: mermaidCallback,
         });
@@ -223,69 +259,26 @@
           document.getElementsByTagName('details'),
           d => d.addEventListener(
             "toggle",
-            (e) => mermaid.run({ nodes: d.querySelectorAll(mmdCodeSelector), postRenderCallback: mermaidCallback })
+            (e) => mermaid.run({
+              nodes: d.querySelectorAll(mmdCodeSelector),
+              postRenderCallback: mermaidCallback
+            })
           )
         );
-      }, false);
-    </script>
-    {%- endif -%}
-
-    {% if layout.mathjax or page.mathjax %}
-    <script>
-      MathJax = {
-        options: {
-          enableMenu: false,
-          renderActions: {
-            findScripts: [11, function (doc) {
-              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-                const display = !!node.type.match(/; *mode=display/)
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-                const text = document.createTextNode('')
-                node.parentNode.replaceChild(text, node)
-                math.start = {node: text, delim: '', n: 0}
-                math.end = {node: text, delim: '', n: 0}
-                doc.math.push(math)
-              }
-            }, '']
-          }
-        },
-        loader: {
-          load: [
-            '[tex]/color',
-            '[tex]/newcommand',
-          ]
-        },
-        tex : {
-          inlineMath : [ ['$','$'] ],
-          displayMath : [ ['DISPLAY$', '$DISPLAY'] ],
-          packages: {
-            '[+]': [
-              'color',
-              'newcommand',
-            ],
-          },
-          processEnvironments : false,
-          processEscapes : false,
-          processRefs : false,
-          tags : 'ams',
-        }
-        {%- if layout.revealjs or page.revealjs -%},
-        startup : {
-            ready: () => {
-              MathJax.startup.defaultReady()
-              MathJax.startup.promise.then(() => {
-                Reveal.togglePause()
-              })
-            }
-          }
         {%- endif %}
-      }
+
+        {% if layout.math or page.math -%}
+        renderMathInElement(document.body, katexOptions);
+        {%- endif %}
+
+        {% if layout.revealjs or page.revealjs -%}
+        if (typeof Reveal !== 'undefined') { Reveal.layout(); }
+        {%- endif %}
+      });
     </script>
-    {%- endif %}
 
     {% for script in layout.js -%}
-    <script src='{{ site.baseurl }}/assets/js/{{ script }}.js'>
-    </script>
+    <script src='{{ site.baseurl }}/assets/js/{{ script }}.js'></script>
     {%- endfor -%}
     {% for script in page.js %}
       {%- assign pre = script | slice: 0,2 -%}

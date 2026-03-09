@@ -12,16 +12,16 @@
   subgraph "`**AppVM Audio Setup**`"
       direction LR
 
-      subgraph "`**Virtual HW**`"
-          VSo(Virtual \n Source)
-          VSi(Virtual \n Sink)
-      end
-
-      VP{{AppVM \n PulseAudio}}:::program
-
       subgraph "`**Application**`"
           Ai(Input):::actual
           Ao(Output):::actual
+      end
+
+      VP{{AppVM <br> PulseAudio}}:::program
+
+      subgraph "`**Virtual HW**`"
+          VSo(Virtual <br> Source)
+          VSi(Virtual <br> Sink)
       end
 
       VSo --> VP --> Ao
@@ -32,16 +32,16 @@
   subgraph "`**$\DomZ$ Audio Setup**`"
       direction LR
 
+      subgraph "`**Virtual IO**`"
+          Vi(Virtual <br> Input)
+          Vo(Virtual <br> Output)
+      end
+
+      DP{{$\DomZ$ <br> PulseAudio}}:::program
+
       subgraph "`**Hardware**`"
           HSo(Source):::actual
           HSi(Sink):::actual
-      end
-
-      DP{{$\DomZ$ \n PulseAudio}}:::program
-
-      subgraph "`**Virtual IO**`"
-          Vi(Virtual \n Input)
-          Vo(Virtual \n Output)
       end
 
       HSo --> DP --> Vo

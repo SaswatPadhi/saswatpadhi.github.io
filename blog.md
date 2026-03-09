@@ -8,7 +8,7 @@ title: Blog
 ---
 
 <div class='container pure-g'>
-  <div class='posts pure-u-1-1 pure-u-sm-4-5'>
+  <div class='posts pure-u-1-1 pure-u-sm-3-4'>
     {%- assign raw_tree = "" %}
     {%- assign blogposts = site.blogposts | sort: 'post_date' | reverse -%}
     {% for post in blogposts -%}
@@ -51,10 +51,20 @@ title: Blog
           {% endfor -%}
         </div>
         {%- endif -%}
+        {% for change in post.changelog -%}
+        <div class='change'>
+          {%- capture change_date -%}
+            {{- change.date | date: "%b =qq= %y" -}}
+          {%- endcapture -%}
+          <b>{%- include tools/text_process.md data=change_date -%}</b>
+          &hairsp;<i class='fas fa-fw fa-2xs fa-caret-right'></i>&nbsp;
+          {%- include tools/text_process.md data=change.title -%}
+        </div>
+        {%- endfor -%}
       </div>
     {%- endfor %}
   </div>
-  <div class='cat-explorer pure-u-1-1 pure-u-sm-1-5'>
+  <div class='cat-explorer pure-u-1-1 pure-u-sm-1-4'>
     <h3>Categories</h3>
     <div class='pure-g'>
       {%- assign unique_tree = raw_tree | split: "," | uniq | sort -%}
@@ -96,7 +106,7 @@ title: Blog
           {%- endif %}
           <div id='{{ all_parts }}'
                class="cat {% if depth == 0 -%}cat-root{%- endif -%}"
-               style="padding-left: {{ depth }}em">
+               style="padding-left: {{ depth | times: 0.625 }}em">
             {% if depth == 0 -%}
               <i class="cat-icon fas fa-fw fa-folder-open"></i>
             {% else -%}

@@ -1,7 +1,7 @@
 ---
 layout: page
 
-mathjax: true
+math: true
 
 css: [ 'publications' ]
 

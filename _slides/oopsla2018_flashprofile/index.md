@@ -15,5 +15,8 @@ presented_on: 2018-11-08
 
 time: 20
 frames: 14
-tech: {icon: 'far fa-file-pdf', name: 'Latex (beamer)'}
+tech:
+  icon: 'far fa-file-pdf'
+  name: 'Latex (beamer)'
+
 ---

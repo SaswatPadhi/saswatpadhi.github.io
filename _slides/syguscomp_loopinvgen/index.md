@@ -12,5 +12,8 @@ publink: syguscomp_loopinvgen
 target: '[SyGuS-Comp](https://sygus.org)'
 
 frames: 20
-tech: {icon: 'fab fa-google', name: 'Google Slides'}
+tech:
+  icon: 'fab fa-google'
+  name: 'Google Slides'
+
 ---

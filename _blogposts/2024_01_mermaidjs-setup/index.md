@@ -5,14 +5,35 @@ post_date: 2024-01-01
 
 title: 'My Mermaid Setup'
 tagline: 'MathJax support, pan and zoom, auto resizing, and more'
-description: '
-In this post I describe several improvements to a default Mermaid
-(MermaidJS) setup that allow using MathJax in node labels,
-auto-resizing of diagrams on window resizing events,
-and displaying simple pan-and-zooom controls on diagrams.
-'
+description: >
+  In this post I describe several improvements to a default Mermaid
+  (MermaidJS) setup that allow using MathJax in node labels,
+  auto-resizing of diagrams on window resizing events,
+  and displaying simple pan-and-zooom controls on diagrams.
 
-categories: [ 'sw/js' ]
+changelog:
+- date: 2026-02-20
+  title: An update on Mermaid 11.12 & KaTeX
+  details: >
+    This post was originally written
+    when the latest available version of Mermaid was 10.6.
+    I recently updated the Mermaid version
+    used throughout this website to 11.12,
+    and re-tested all the issues mentioned below.
+
+
+    It appears that the [tiny-render inside `&lt;details&gt;` bug](#-rendering-inside-details) has been fixed now.
+    Also, [rendering math via KaTeX is now supported](https://mermaid.ai/open-source/config/math.html),
+    thus partially resolving [the math-rendering issue discussed below](#-rendering-math).
+
+
+    The other issues: compatibility with Prism,
+    and pan+zoom support appear to persist.
+
+categories:
+- 'markup/diagrams'
+- 'markup/math'
+- 'software/javascript'
 
 mermaid: true
 
@@ -232,6 +253,16 @@ that filters out snippets with `.no-highlight` class.
 
 #### <i class='fas fa-eye-slash'></i> Rendering Inside `<details>`
 
+<div>
+# =fa^square-check^fa= Update on 2026-02-20: Fixed? =fa^square-check^fa=
+
+I no longer encounter this issue on Firefox with Mermaid 11.12.
+Although I couldn't find a recent specific PR addressing this,
+I consider the bug fixed as it is no longer reproducible
+on modern browsers.
+</div>
+{: .focus-box .color-highlight }
+
 The next issue on my plate was debugging invisible Mermaid diagrams inside `<details>`
 This was only observed on Firefox (my default web browser on PC) though;
 maybe Chrome has some special sauce that somehow mitigates this issue.
@@ -328,7 +359,35 @@ In a nutshell, the selector identifies:
   - a `details` ancestor that does `:not` currently have the `open` attribute <br>
     _(so it is not currently not-open, i.e. it is visible)_
 
-#### <i class='fas fa-infinity'></i> Rendering MathJax
+#### <i class='fas fa-infinity'></i> Rendering Math
+
+<div>
+# =fa^exclamation-triangle^fa= Update on 2026-02-20: Mermaid 10.9 supports KaTeX =fa^exclamation-triangle^fa=
+
+Mermaid now supports rendering math,
+at least in flowcharts and sequence diagrams,
+via KaTeX using the double-dollar (`$$ ... $$`) delimiter.
+For more details, check [their docs on this topic](https://mermaid.ai/open-source/config/math.html).
+
+Although this is a step forward, there still are a few rough edges:
+
+1. The Markdown-to-HTML converter that I use, [kramdown](https://kramdown.gettalong.org),
+   also uses double dollars for [Math Blocks](https://kramdown.gettalong.org/syntax.html#math-blocks).
+   And, despite [several](https://github.com/gettalong/kramdown/issues/342) requests from users,
+   [kramdown's official stance](https://github.com/gettalong/kramdown/issues/828#issuecomment-2750764070) is,
+   "*You can't prevent kramdown from parsing the math syntax globally.*"
+   So, this conflicts with Mermaid, just like Prism.
+2. Mermaid renders diagrams in an isolated KaTeX context,
+   so global macros aren't shared between the diagrams and the rest of the page!
+
+So, I actually ditched Mermaid's built-in math rendering entirely.
+Instead, I have my own JS snippet to render _all_ the math on a page
+in a single, shared context.
+But maybe that's a topic for another blog post.
+For the curious reader, the JS snippet is available
+on my [GitHub repo](https://github.com/SaswatPadhi/saswatpadhi.github.io/blob/master/_layouts/base.html#L171).
+</div>
+{: .focus-box .color-warning }
 
 The next issue is a bit of a niche one,
 but I was surprised to see it reported on Mermaid repo before ---
@@ -342,7 +401,7 @@ inside labels. For example:
   </div>
   <div class='pure-u-1-2'>
   <center><strong>Expected Rendering</strong></center>
-  {% include_relative mathjax-example.md %}
+  {% include_relative mathjax-example-rendered.md %}
   </div>
 </div>
 

@@ -15,5 +15,8 @@ presented_on: 2016-06-15
 
 time: 25
 frames: 26
-tech: {icon: 'fab fa-google', name: 'Google Slides'}
+tech:
+  icon: 'fab fa-google'
+  name: 'Google Slides'
+
 ---

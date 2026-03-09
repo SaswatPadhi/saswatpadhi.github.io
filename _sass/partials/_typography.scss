@@ -115,6 +115,10 @@ details {
   border-radius: 0.25em;
   padding: 0.25em 0.5em 0.35em;
 
+  ol, ul {
+    margin-right: 0.75em;
+  }
+
   &[open] {
     padding: 0.25em 0.5em 0;
 
@@ -176,20 +180,31 @@ details {
   color: #38A1F3;
 }
 
-ol.custom {
-  list-style: none;
-  counter-reset: item;
-  margin-left: 0em;
+li {
+  margin-top: 0.375em;
 
-  > li {
-    counter-increment: item;
+  &:first-of-type {
+    margin-top: inherit;
+  }
+}
 
-    &::before {
-      content: var(--prefix) counter(item) ".";
-      font-weight: bold;
-      display: inline-block;
-      width: 2em;
-      margin-left: -2em;
+ol {
+  margin: 0.5em 0;
+
+  &.custom {
+    list-style: none;
+    counter-reset: item;
+
+    > li {
+      counter-increment: item;
+
+      &::before {
+        content: var(--prefix) counter(item) ".";
+        font-weight: bold;
+        display: inline-block;
+        width: 2em;
+        margin-left: -2em;
+      }
     }
   }
 }
@@ -210,7 +225,6 @@ ol.custom {
 
   ol {
     list-style: none;
-    margin: 0;
 
     li {
       counter-increment: footnote;
@@ -298,6 +312,16 @@ ol.custom {
   }
 }
 
-code.language-mermaid[data-processed='true'] svg[id^='mermaid'] p {
-  margin: unset;
+code.language-mermaid[data-processed='true'] svg[id^='mermaid'] {
+  p {
+    margin: unset;
+  }
+
+  .edge-thickness-normal {
+    stroke-width: 2px !important;
+  }
+
+  .edge-pattern-dotted {
+    stroke-dasharray: 3 !important;
+  }
 }

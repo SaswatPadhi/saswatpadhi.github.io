@@ -2,24 +2,28 @@
      style='margin:0.35em auto 0; width:83%'
      class='fragment' data-fragment-index='4'>
 
-  <svg x='-68' y='12' width='230' height='64'>
-    <foreignobject x='25%' y='-38%' width='100%' height='125%'>
-      <span style='color:Olive; font-size:0.325em'>
+  <svg x='-57' y='12' width='230' height='64'>
+    <foreignobject x='25%' y='-38%' width='400%' height='500%'
+                   transform='scale(0.25)' transform-origin='25% 14%'>
+      <span style='color:Olive; font-size:1.3em'>
       $t_1 = \mathtt{("pie", 1, -1)}$
       </span>
     </foreignobject>
-    <foreignobject x='25%' y='-16%' width='100%' height='125%'>
-      <span style='color:Olive; font-size:0.325em'>
+    <foreignobject x='25%' y='-16%' width='400%' height='500%'
+                   transform='scale(0.25)' transform-origin='25% 40%'>
+      <span style='color:Olive; font-size:1.3em'>
       $t_2 = \mathtt{("xy", 2, 3)}$
       </span>
     </foreignobject>
-    <foreignobject x='25%' y='6%' width='100%' height='125%'>
-      <span style='color:Olive; font-size:0.325em'>
+    <foreignobject x='25%' y='6%' width='400%' height='500%'
+                   transform='scale(0.25)' transform-origin='25% 66%'>
+      <span style='color:Olive; font-size:1.3em'>
       $t_3 = \mathtt{("a", -1, 3)}$
       </span>
     </foreignobject>
-    <foreignobject x='25%' y='28%' width='100%' height='125%'>
-      <span style='color:Olive; font-size:0.325em'>
+    <foreignobject x='25%' y='28%' width='400%' height='500%'
+                   transform='scale(0.25)' transform-origin='25% 92%'>
+      <span style='color:Olive; font-size:1.3em'>
       $t_4 = \mathtt{("siva", 1, 2)}$
       </span>
     </foreignobject>
@@ -49,9 +53,9 @@
   <svg x='196' y='90' width='120' height='36'>
     <polygon points='59.5,34 60.5,34 118,18 60.5,2 59.5,2 2,18' fill='#444'
              stroke-linejoin='round' stroke-width='4' stroke='#444' />
-    <text x='50%' y='50%' fill='LightGray' font-size='0.37em' font-weight='bold' class='mono'
+    <text x='50%' y='50%' fill='LightGray' font-size='0.325em' font-weight='bold' class='mono'
           dominant-baseline='middle' text-anchor='middle'>
-      no exception
+      [no exception]
     </text>
   </svg>
 
@@ -60,8 +64,9 @@
         class='fragment' data-fragment-index='5' />
   <svg x='126' y='148' width='100' height='36' class='fragment' data-fragment-index='5'>
     <ellipse cx='50%' cy='50%' rx='49%' ry='47%' fill='#FAFFFA' stroke='ForestGreen' stroke-width='2' />
-    <foreignobject x='46%' y='-52%' width='100%' height='125%'>
-      <span style='color:ForestGreen; font-size:0.4em'>
+    <foreignobject x='46%' y='-52%' width='400%' height='500%'
+                   transform='scale(0.25)' transform-origin='46% 42%'>
+      <span style='color:ForestGreen; font-size:1.6em'>
       $t_4$
       </span>
     </foreignobject>
@@ -72,8 +77,9 @@
         class='fragment' data-fragment-index='5' />
   <svg x='286' y='148' width='100' height='36' class='fragment' data-fragment-index='5'>
     <ellipse cx='50%' cy='50%' rx='49%' ry='47%' fill='#FFFAFA' stroke='DarkRed' stroke-width='2' />
-    <foreignobject x='25%' y='-52%' width='100%' height='125%'>
-      <span style='color:DarkRed; font-size:0.4em'>
+    <foreignobject x='25%' y='-52%' width='400%' height='500%'
+                   transform='scale(0.25)' transform-origin='26% 42%'>
+      <span style='color:DarkRed; font-size:1.6em'>
       $t_1, t_2, t_3$
       </span>
     </foreignobject>
@@ -133,8 +139,9 @@
   <svg x='10' y='90' width='111' height='35' class='fragment' data-fragment-index='8'>
     <rect x='0' y='0' width='100%' height='100%' fill='none'
           stroke='ForestGreen' stroke-width='1.5' stroke-dasharray='1.5 2.5' />
-    <foreignobject x='12%' y='-55%' width='100%' height='140%'>
-      <span style='color:ForestGreen; font-size:0.35em'>
+    <foreignobject x='12%' y='-55%' width='400%' height='560%'
+                   transform='scale(0.25)' transform-origin='12% 45%'>
+      <span style='color:ForestGreen; font-size:1.3em'>
       $p(t_i) = \mathtt{true}$
       </span>
     </foreignobject>
@@ -146,8 +153,9 @@
   <svg x='382' y='90' width='111' height='35' class='fragment' data-fragment-index='8'>
     <rect x='0' y='0' width='100%' height='100%' fill='none'
           stroke='DarkRed' stroke-width='1.5' stroke-dasharray='1.5 2.5' />
-    <foreignobject x='12%' y='-55%' width='100%' height='140%'>
-      <span style='color:DarkRed; font-size:0.35em'>
+    <foreignobject x='12%' y='-55%' width='400%' height='560%'
+                   transform='scale(0.25)' transform-origin='12% 45%'>
+      <span style='color:DarkRed; font-size:1.3em'>
       $p(t_i) = \mathtt{false}$
       </span>
     </foreignobject>
@@ -157,20 +165,21 @@
         stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
         class='fragment' data-fragment-index='8' />
   <svg x='390' y='227' width='180' height='50' class='fragment' data-fragment-index='8'>
-    <foreignobject x='0' y='-52%' width='100%' height='150%'>
-      <span style='color:ForestGreen; font-size:0.5em'>
+    <foreignobject x='0' y='-10%' width='400%' height='600%'
+                   transform='scale(0.25)' transform-origin='0 -10%'>
+      <span style='color:ForestGreen; font-size:2em'>
       $p = $
       </span>
-      <span style='color:ForestGreen; font-size:0.35em' class='mono'>
+      <span style='color:ForestGreen; font-size:1.4em' class='mono'>
       (i &geq; 0) &wedge; (l &geq; 0)
       </span>
     </foreignobject>
-    <foreignobject x='14%' y='-15%' width='100%' height='150%'>
-      <span style='color:ForestGreen; font-size:0.35em' class='mono'>
+    <foreignobject x='14%' y='40%' width='400%' height='600%'
+                   transform='scale(0.25)' transform-origin='14% 40%'>
+      <span style='color:ForestGreen; font-size:1.4em' class='mono'>
       &wedge; (i + l &leq; s.length)
       </span> 
     </foreignobject>
   </svg>
-
 
 </svg>

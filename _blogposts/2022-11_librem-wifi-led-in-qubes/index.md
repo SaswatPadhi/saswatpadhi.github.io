@@ -5,23 +5,25 @@ post_date: 2022-11-17
 
 title: 'Librem LED Triggers in Qubes'
 tagline: 'Accessing Librem 14''s LEDs from within Qubes VMs'
-description: '
-In this post I describe a simple RPC and Qrexec policy for Qubes OS
-to control the LEDs on the Librem 14 laptop from the DomU.
-I also show an example of triggering the WiFi LED
-when sys-net connects to WiFi.
-'
+description: >
+  In this post I describe a simple RPC and Qrexec policy for Qubes OS
+  to control the LEDs on the Librem 14 laptop from the DomU.
+  I also show an example of triggering the WiFi LED
+  when sys-net connects to WiFi.
 
-categories: [ 'hw/librem', 'sw/qubes' ]
+categories:
+- 'hardware/librem'
+- 'software/qubes'
+
 ---
 
-{% if true -%}
-<span class='hidden'>$
-\newcommand{\DomZ}{\textsf{Dom0}}
-\newcommand{\sysnet}{\textsf{sys-net}}
-\newcommand{\sysusb}{\textsf{sys-usb}}
-$</span>
-{%- endif -%}
+<script>
+  var latexGlobalMacros = {
+    "\\DomZ": "\\textsf{Dom0}",
+    "\\sysnet": "\\textsf{sys-net}",
+    "\\sysusb": "\\textsf{sys-usb}"
+  };
+</script>
 
 [Purism]'s [Librem 14] is an excellent laptop.
 There were a few initial hiccups back when it was launched in 2020:

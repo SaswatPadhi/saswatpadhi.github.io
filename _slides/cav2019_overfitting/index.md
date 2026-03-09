@@ -16,7 +16,10 @@ presented_on: 2019-07-16
 time: 18
 frames: 17
 
-tech: {icon: 'fab fa-html5', name: 'HTML5 (Reveal.js)'}
+tech:
+  icon: 'fab fa-html5'
+  name: 'HTML5 (Reveal.js)'
+
 ---
 
 <section class='title-slide'>
@@ -24,21 +27,19 @@ tech: {icon: 'fab fa-html5', name: 'HTML5 (Reveal.js)'}
 {: style="margin-top:2em" }
 
 <br><br>
-<span class='color-faded color-accent'>Saswat Padhi</span><small>$ \,^1 $</small>
+<span class='color-faded color-accent'>Saswat Padhi</span> <small> ¹</small>
 
-[Todd Millstein]<small>$ ^1 $</small> &emsp;&emsp; [Aditya Nori]<small>$ \,^{2\,\texttt{GB}} $</small> &ensp;&ensp;&thinsp; [Rahul Sharma]<small>$ ^{2\,\texttt{IN}} $</small>
-
+[Todd Millstein] <small> ¹</small> &emsp;&emsp; [Aditya Nori] <small> ² ᴳᴮ</small> &ensp;&ensp;&thinsp; [Rahul Sharma] <small> ² ᴵᴺ</small>
+ 
 <p style='font-size:0.6em; margin-top:2.25em'>
-  <small>$ ^1 $</small>
-  ![UCLA logo]({{ site.baseurl }}/assets/img/logos/ucla.png){: .plain style='margin:0; height:1.275em; vertical-align:bottom' }
+   ¹ ![UCLA logo]({{ site.baseurl }}/assets/img/logos/ucla.png){: .plain style='margin:0; height:1.275em; vertical-align:bottom' }
   University of California, Los Angeles, USA
 </p>
 <p style='font-size:0.6em'>
-  <small>$ ^2 $</small>
-  ![Microsoft logo]({{ site.baseurl }}/assets/img/logos/microsoft.png){: .plain style='margin:0; height:1.275em; vertical-align:bottom' }
+  ² ![Microsoft logo]({{ site.baseurl }}/assets/img/logos/microsoft.png){: .plain style='margin:0; height:1.275em; vertical-align:bottom' }
   Microsoft Research
-  &ensp; <small>$ ^\texttt{GB}\, $</small>Cambridge, UK
-  &ensp; <small>$ ^\texttt{IN}\, $</small>Bengaluru, India
+  &ensp; ᴳᴮ Cambridge, UK
+  &ensp; ᴵᴺ Bengaluru, India
 </p>
 </section>
 
@@ -355,8 +356,7 @@ Potential for Overfitting = Number of such functions in the grammar
 ### _PLearn_{:.small-caps}
 
 <div style='font-size:0.95em'>
-A technique inspired by <span class='color-faded color-medium-accent'>ensemble methods</span><a class='superscript subheading' style='font-size:0.6em'
-                                                                                                 href='https://doi.org/10.1007/3-540-45014-9_1'>&hairsp;[Dietterich, MCS'00]</a>
+A technique inspired by <span class='color-faded color-medium-accent'>ensemble methods</span><a class='superscript subheading' style='font-size:0.6em' href='https://doi.org/10.1007/3-540-45014-9_1'>&hairsp;[Dietterich, MCS'00]</a>
 --- run several learners and aggregate their results
 </div>
 
@@ -446,16 +446,16 @@ A technique inspired by <span class='color-faded color-medium-accent'>ensemble m
 <section>
 ### Hybrid Enumeration (_HE_{:.small-caps})
 
-<div style='font-size:0.9em'>
+<div style='font-size:0.85em'>
 An efficient implementation of this 2-D search for <span class='color-faded color-medium-accent'>component-based</span> grammars&thinsp;[[Jha et al, ICSE&apos;10]](https://doi.org/10.1145/1806799.1806833){: .subheading .superscript style='font-size:0.65em' }
 <br>
-<div style='font-size:0.85em; margin-top:0.5em'>
+<div style='font-size:0.8em; margin-top:0.5em'>
 Arguments to _HE_{:.small-caps}:
 - A SyGuS Problem: a specification $ \phi $, a grammar $ \mathcal{E} $
 - Component-based grammars: $ \mathcal{E}_1 \subset \cdots \subset \mathcal{E}_n \subseteq \mathcal{E} $
 - A well-ordering relation: $ \lhd $
 - A size bound: $ q $
-{: style='margin-top:-0.5em' }
+{: style='margin-top:-0.25em' }
 </div>
 </div>
 
@@ -598,10 +598,10 @@ Arguments to _HE_{:.small-caps}:
 
 #### Links:
 
-<div style='font-size:0.75em; line-height:1.5; margin-top:-0.325em'>
+<div style='font-size:0.75em; line-height:1.125; margin-top:-0.325em'>
 - [Artifact](https://zenodo.org/record/2653957) (all benchmarks and scripts)
 - [LoopInvGen] (our up-to-date codebase)
-- [Our Full Paper]({{ site.base_root_url }}/publications/cav2019_overfitting) (with complete proofs)
+- [Our Extended Paper]({{ site.base_root_url }}/publications/cav2019_overfitting) (with complete proofs)
 </div>
 </div>
 </section>

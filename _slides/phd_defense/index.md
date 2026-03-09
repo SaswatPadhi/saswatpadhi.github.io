@@ -16,8 +16,17 @@ presented_on: 2020-05-29
 time: 60
 frames: 32
 
-tech: {icon: 'fab fa-html5', name: 'HTML5 (Reveal.js)'}
+tech:
+  icon: 'fab fa-html5'
+  name: 'HTML5 (Reveal.js)'
+
 ---
+
+<script>
+  var latexGlobalMacros = {
+    "\\argmin": "\\mathop{\\text{arg}\\,\\text{min}}"
+  };
+</script>
 
 <section class='title-slide' data-transition='fade-in fade-out'>
 ### Data-Driven Learning of
@@ -35,10 +44,6 @@ tech: {icon: 'fab fa-html5', name: 'HTML5 (Reveal.js)'}
   ![UCLA logo]({{ site.baseurl }}/assets/img/logos/ucla.png){: .plain style='margin:0; height:1.275em; vertical-align:bottom' }
   University of California, Los Angeles, USA
 </p>
-
-DISPLAY$
-  \newcommand{\argmin}{\mathop{\text{arg}\,\text{min}}}
-$DISPLAY
 </section>
 
 
@@ -104,7 +109,7 @@ reproducible builds, quality assurance (QA) &hellip;
 <div style='margin-top:1.25em; font-size:0.7em; width:85%'>
 - What limits the adoption of software verification?
 - How can we bridge this gap between research and practice?
-{: style='margin:0.125em 0 0 -0.5em; line-height:1.375em'}
+{: style='margin:0.125em 0 0 -0.5em; line-height:1.25em'}
 </div>
 {: .color-medium-accent .focus-box .fragment data-fragment-index='5' }
 
@@ -396,7 +401,7 @@ Microsoft SSDT
 - `&nbsp;204` &nbsp; ISBN: &blank; 0- <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong>
 - `&nbsp;113` &nbsp; <strong class='color-faded color-highlight'>.</strong><span class='superscript'>*</span>
 - `&nbsp;110` &nbsp; doi: &blank;<span class='superscript'>+</span> 10. <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> <strong class='color-faded color-highlight'>D</strong> / <strong class='color-faded color-highlight'>D</strong><span class='superscript'>+</span>
-{: style='margin:0 0 0.1em -1.625em; line-height:1.9'}
+{: style='margin:0.125em 0 0.1em -1.625em; line-height:1.5'}
 </div>
 {: .focus-box }
 </div>
@@ -413,7 +418,7 @@ Ataccama One
 - `&nbsp;&nbsp;34` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>L</strong>
 - `&nbsp;&nbsp;11` &nbsp; <strong class='color-faded color-highlight'>W</strong> : &blank; <strong class='color-faded color-highlight'>N</strong> . <strong class='color-faded color-highlight'>N</strong> / <strong class='color-faded color-highlight'>L</strong> <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>N</strong> ( <strong class='color-faded color-highlight'>N</strong> ) <strong class='color-faded color-highlight'>N</strong> - <strong class='color-faded color-highlight'>D</strong>
 - `&nbsp;&nbsp;&nbsp;5` &nbsp; <strong class='color-faded color-highlight'>W</strong> _ <strong class='color-faded color-highlight'>W</strong>
-{: style='margin:0 0 0.1em -1.625em; line-height:1.55'}
+{: style='margin:0.125em 0 0.1em -1.625em; line-height:1.2'}
 </div>
 {: .focus-box }
 </div>
@@ -431,7 +436,7 @@ _FlashProfile_{:.small-caps}
 - `&nbsp;&nbsp;34` &nbsp; ISBN: &blank; <strong class='color-faded color-highlight'>D</strong> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>3</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> -X
 - `&nbsp;&nbsp;11` &nbsp; doi: &blank;<span class='superscript'>+</span> 10.1016/ <strong class='color-faded color-highlight'>U</strong> <strong class='color-faded color-highlight'>D</strong><span class='superscript'>4</span> - <strong class='color-faded color-highlight'>D</strong><span class='superscript'>4</span> ( <strong class='color-faded color-highlight'>D</strong><span class='superscript'>2</span> ) <strong class='color-faded color-highlight'>D</strong><span class='superscript'>5</span> - <strong class='color-faded color-highlight'>D</strong>
 - `&nbsp;&nbsp;&nbsp;5` &nbsp; not_available<span class='superscript'>&nbsp;</span>
-{: style='margin:0 0 0.1em -1.375em; line-height:1.75'}
+{: style='margin:0 0 0.1em -1.375em; line-height:1.4'}
 </div>
 {: .focus-box .fragment data-fragment-index='3' }
 
@@ -442,7 +447,7 @@ _FlashProfile_{:.small-caps}
 - `&nbsp;301` &nbsp; ISBN: &blank; <strong class='color-faded color-medium-accent'>[ISBN]</strong><span class='superscript'>&nbsp;</span>
 - `&nbsp;121` &nbsp; doi: &blank;<span class='superscript'>+</span> <strong class='color-faded color-medium-accent'>[DOI]</strong>
 - `&nbsp;&nbsp;&nbsp;5` &nbsp; not_available<span class='superscript'>&nbsp;</span>
-{: style='margin:0 0 0.1em -2.5em; line-height:1.75'}
+{: style='margin:0 0 0.1em -2.5em; line-height:1.5'}
 </div>
 {: .focus-box .fragment data-fragment-index='4' }
 
@@ -530,7 +535,7 @@ $DISPLAY
 <div style='font-size:0.775em; margin-top:1.75em; text-align:center'>
 DISPLAY$
   \mathsf{Profile}(S,k) \triangleq
-    \big\\{ \argmin\limits_{P \,\raise{0.125ex}{\in}\, \mathsf{Synth}(S_i)} \\!
+    \big\\{ \argmin\limits_{P \,\raisebox{0.125ex}{$\scriptstyle\in$}\, \mathsf{Synth}(S_i)} \\!
              \mathsf{Cost}(P,S_i)
            :
            S_i \in \mathsf{Clusters}(S,k)
@@ -542,7 +547,7 @@ $DISPLAY
 $
   \mathsf{Clusters}(S,k)
   \triangleq
-  \argmin\limits_{\substack{ \small
+  \argmin\limits_{\substack{ \scriptstyle
                              \\{ S_1, \ldots, S_k \\} \\\
                              \text{s.t.} \\: S = \bigsqcup\limits_{i=1}^{k} S_i }}
     \\:
@@ -560,7 +565,7 @@ $
 <div style='font-size:0.775em; margin:0.75em auto -0.25em; text-align:center'>
 DISPLAY$
   \Omega_\text{ideal}(S_i) \triangleq
-    \hspace{-0.5em}\min\limits_{\,P \,\raise{0.125ex}{\in}\, \mathsf{Synth}(S_i)}
+    \hspace{-0.5em}\min\limits_{\,P \,\raisebox{0.125ex}{$\scriptstyle\in$}\, \mathsf{Synth}(S_i)}
       \mathsf{Cost}(P,S_i)
 $DISPLAY
 </div>
@@ -589,7 +594,7 @@ $DISPLAY
   _FlashProfile_{:.small-caps}
 </div>
 
-### Tractable Approximation
+### Tractable Approx.
 
 <div style='font-size:0.75em; margin-top:0.875em; width:85%'>
 Clustering with $\Omega_\text{ideal}$ requires $O(2^{|S|})$ synthesis calls
@@ -602,14 +607,14 @@ Clustering with $\Omega_\text{ideal}$ requires $O(2^{|S|})$ synthesis calls
 DISPLAY$
   \Omega_\text{CL}(S_i)
   \triangleq\\!\\!
-  \max_\limits{\,x,y\,\raise{0.125ex}{\in}\,S_i}
-    \,\min_\limits{\,P \,\raise{0.125ex}{\in}\, \mathsf{Synth}(\{x,y\})}
+  \max\limits_{\,x,y\,\raisebox{0.125ex}{$\scriptstyle\in$}\,S_i}
+    \,\min\limits_{\,P \,\raisebox{0.125ex}{$\scriptstyle\in$}\, \mathsf{Synth}(\{x,y\})}
     \mathsf{Cost}(P,\{x,y\})
 $DISPLAY
 </div>
 {: .color-medium-accent }
 
-<ul style='font-size:0.8em; line-height:1.6; margin-top:-0.25em'>
+<ul style='font-size:0.8em; line-height:1.4; margin-top:-0.25em'>
 <ul>
 <li>
   Worst-case $\mathsf{Cost}$ of the best pattern describing a pair of strings
@@ -627,7 +632,7 @@ $DISPLAY
   1. Profile a small random subset, add to the cumulative profile
   2. Recursively profile strings that do not match the cumulative profile
   3. Repeatedly merge two most similar partitions if profile size $> k$
-  {: .fragment data-fragment-index='4' style='font-size: 0.8em; line-height:1.55; margin-top:0.25em' }
+  {: .fragment data-fragment-index='4' style='font-size: 0.8em; line-height:1.35; margin-top:0.25em' }
 </div>
 {: .fragment data-fragment-index='3' }
 </div>
@@ -652,14 +657,14 @@ $DISPLAY
 {% include_relative flashprofile_design.svg %}
 
 <div class='columns' style='margin:0.875em 0 0 -0.75em;'>
-<div style='font-size:0.675em; line-height:1.55; width:25em'>
+<div style='font-size:0.675em; line-height:1.35; width:25em'>
 - Agglomerative Hierarchical Clustering (AHC)
   - An internal node corresponds to a subset of the dataset
     (annotated with a pattern)
   - Split hierarchy at depth $k$ for $k$ partitions
 </div>
 <div style='font-size:0.45em; width:17em'>
-<div style='margin:-0.5em 1em 0 -2em; background:white; padding:0.325em 0 0.125em; text-align:center'>
+<div style='margin:0 1em 0 -2em; background:white; padding:0.325em 0 0.125em; text-align:center'>
   <img src='images/flashprofile_hierarchy.png' class='plain' style='margin:0'>
   {: style='margin:0' }
 </div>
@@ -673,7 +678,7 @@ $DISPLAY
 {: .fragment data-fragment-index='4' }
 
 <div class='columns' style='margin:-0.125em 0 0 -0.75em;'>
-<div style='font-size:0.675em; line-height:1.45; width:25em'>
+<div style='font-size:0.675em; line-height:1.25; width:25em'>
 - A small regex-like grammar for patterns
   - Top-down recursive synthesis
     - Patterns match the prefix of _all_ strings
@@ -683,7 +688,7 @@ $DISPLAY
   - Implemented using Microsoft [PROSE]
 </div>
 <div style='font-size:0.45em; width:17em'>
-<div style='background:white; margin:4em 0 0 -2.25em; padding:0.25em 0.5em; width:100%'>
+<div style='background:white; margin:4em 0 0 -2.25em; padding:0 0.5em; width:100%'>
 DISPLAY$
 \begin{array}{rl}
   \text{Constant strings} & \;\text{Character classes} \\\\[0.25em]
@@ -1163,9 +1168,11 @@ computing $\mathbf{WP}$ requires inductive invariants
       assert (r == n*n);
   }
 {% endraw %} ```
+<center class='fragment' data-fragment-index='4'
+        style='font-size:0.8em; margin-top:-0.25em; width:95%;'>
 A sufficient loop invariant:
-DISPLAY$ r = k^2 \wedge s = 2k+1 $DISPLAY
-{: .fragment data-fragment-index='4' style='font-size:0.8em; margin:-0.25em auto; width:95%' }
+<span style='margin-top:-0.5em'>$ r = k^2 \wedge s = 2k+1 $</span>
+</center>
 </div>
 <div style='width:26em'>
 <div style='font-size:0.65em; margin-top:1.25em'>
@@ -1243,7 +1250,7 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 
 ### Results & Impact
 
-<div style='font-size:0.775em; line-height:1.5; margin-right:2rem'>
+<div style='font-size:0.775em; line-height:1.4; margin-right:2rem'>
 
 - _PIE_{:.small-caps}: Learning specifications for OCaml libraries$^\star$
   - Postconditions: emptiness, no exceptions
@@ -1251,7 +1258,7 @@ Prior data-driven approaches required a fixed set of features to be provided a p
   - Generated sufficient and necessary preconditions for first-order functions
     in <span class='mono color-medium-accent'>AVLTree</span>, <span class='mono color-medium-accent'>List</span>, <span class='mono color-medium-accent'>String</span>
   {: style='font-size:0.825em' }
-{: style='margin-top:-0.425em; margin-bottom:0.5em' }
+{: style='margin-top:-0.2em; margin-bottom:0.5em' }
 
 - _PIE_{:.small-caps}: <span class='color-faded color-highlight'>Adopted by several state-of-the-art tools</span>
   - _Alive-Infer_{:.small-caps} <span style='font-size:0.725em'>([D. Menendez et al. PLDI =qq= 17](https://doi.org/10.1145/3062341.3062372))</span>
@@ -1325,7 +1332,7 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 - <span class='subheading'>Grammars</span>&hairsp;: $ 6 $ commonly used arithmetic grammars
 - <span class='subheading'>Benchmarks</span>&hairsp;: $ 180 $ invariant-synthesis tasks over integers
 - <span class='subheading'>Tools</span>&hairsp;: $ 5 $ participants from [SyGuS-Comp&apos;18][SyGuS-Comp 2018]
-{: style='font-size:0.8em; line-height:1.4; margin:0 0 0 1.5em' }
+{: style='font-size:0.8em; line-height:1.2; margin:0 0 0 1.5em' }
 
 {% include_relative overfitting_sota.svg %}
 
@@ -1419,17 +1426,16 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 {: style='margin-bottom:-0.125em' }
 
 - Formal definition of learnability for example-guided synthesis:
-{: style='font-size:0.75em; margin:0.5em' }
+{: style='font-size:0.75em; margin:0.25em 0.5em' }
 
-<div style='font-size:0.65em; margin:-0.25em auto; width:92.5%'>
+<div style='font-size:0.65em; margin:0.125em auto; width:92.5%'>
   A specification $ \phi $ is $ m $-learnable by a synthesizer $ \mathcal{S} $
   if there <b>exists</b> some sequence of $ m $ examples
   with which $ \mathcal{S} $ learns an expression $e$ s.t. $e \models \phi $
-  {: style='line-height:1.3' }
 </div>
 {: .focus-box .color-highlight }
 
-<div style='font-size:0.55em; margin:-0.5em auto; text-align:center'>
+<div style='font-size:0.55em; margin:-0.75em auto; text-align:center'>
 (weaker than ML, which requires learning from any $m$ i.i.d. examples)
 </div>
 {: .fragment data-fragment-index='1' }
@@ -1443,11 +1449,11 @@ Prior data-driven approaches required a fixed set of features to be provided a p
   and $m \in \mathbb{Z}$ be an arbitrary number of examples s.t. $0 \leq m < |X|$. Then, either:
 
   - $\mathcal{E}$ captures only a small number$^\star$ of semantically distinct $X \to Y$ expressions
-  {: .fragment data-fragment-index='4' style='line-height:1.3; margin:0.1em 0' }
+  {: .fragment data-fragment-index='4' style='margin:0.1em 0' }
 
   - or, for every synthesizer $\mathcal{S}$, there exists a specification $\phi$ for an $X \to Y$ function
     that admits a solution in $\mathcal{E}$, but is not $m$-learnable by $\mathcal{S}$
-  {: .fragment data-fragment-index='5' style='line-height:1.3; margin:0.1em 0' }
+  {: .fragment data-fragment-index='5' style='margin:0.1em 0' }
 </div>
 {: .focus-box .color-accent .fragment data-fragment-index='3' }
 
@@ -1464,9 +1470,9 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 
 <div style='position:absolute; left:2rem; top:43.75rem; font-size:1rem'>
   $^\star$
-  The exact bounds for finite and infinite $X$ and $Y$ cases can be found in our CAV =qq= 19 paper
+  The exact bounds on $\mathcal{E}$ for finite and infinite $X$ and $Y$ cases can be found in our CAV =qq= 19 paper
 </div>
-{: .fragment data-fragment-index='3' }
+{: .fragment data-fragment-index='4' }
 </section>
 
 
@@ -1483,7 +1489,7 @@ Prior data-driven approaches required a fixed set of features to be provided a p
 A mitigation technique inspired by <span class='color-faded color-medium-accent'>ensemble methods</span>$^\star$
 - run several synthesizer instances each with a different grammar
 - provably lower overall degree of overfitting
-{: style='font-size:0.9em; margin:-0.5em 0 0 0.375em' }
+{: style='font-size:0.9em; margin:-0.25em 0 0 0.375em' }
 </div>
 
 {% include_relative overfitting_plearn-eval.svg %}
@@ -1890,14 +1896,14 @@ within individual tables
 - Specifications and invariants are <span class='color-accent'>difficult to state</span> accurately
   - <span class='color-faded color-highlight'>Learn from</span> readily available <span class='color-faded color-highlight'>program-related data</span>
   - Automatic learning and <span class='color-faded color-highlight'>user-driven refinement</span>
-  {: style='font-size:0.9em' }
-{: style='line-height:1.45; margin-left:0' }
+  {: style='font-size:0.85em' }
+{: style='line-height:1.25; margin-left:0' }
 
 - Require <span class='color-faded color-accent'>strong guarantees</span> and learning at <span class='color-accent'>large scale</span>
   - <span class='color-faded color-highlight'>Program synthesis</span> techniques for formal reasoning
   - Data-driven insights from <span class='color-faded color-highlight'>machine learning</span>
-  {: style='font-size:0.9em' }
-{: .fragment data-fragment-index='2' style='line-height:1.45; margin:0.25em 0 0' }
+  {: style='font-size:0.85em' }
+{: .fragment data-fragment-index='2' style='line-height:1.25; margin:0.25em 0 0' }
 </div>
 {: .focus-box }
 
@@ -1933,15 +1939,15 @@ within individual tables
 </div>
 {: .fragment data-fragment-index='3' }
 
-<div style='font-size:0.675em; line-height:1.45; margin:1em auto; width:95%'>
+<div style='font-size:0.675em; margin-top:-0.25em; width:95%'>
 #### Links
   - Papers: [saswatpadhi.github.io/publications/](https://saswatpadhi.github.io/publications/)
   - FlashProfile: [microsoft.github.io/prose/documentation/matching-text/intro/](https://microsoft.github.io/prose/documentation/matching-text/intro/)
   - PIE + LoopInvGen: [github.com/SaswatPadhi/LoopInvGen](https://github.com/SaswatPadhi/LoopInvGen)
-  {: style='font-size:0.85em; margin:-0.75em 0.5em' }
+  {: style='font-size:0.85em; margin:-0.25em 0.5em' }
 
 #### Contact: <span class='mono color-medium-accent' style='font-weight:normal'>padhi@cs.ucla.edu</span>
-{: style='margin:0.25em 0' }
+{: style='margin-top:0.5em' }
 </div>
 {: .fragment data-fragment-index='4' }
 </section>

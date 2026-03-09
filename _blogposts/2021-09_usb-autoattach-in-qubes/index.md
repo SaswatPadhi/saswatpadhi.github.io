@@ -5,21 +5,24 @@ post_date: 2021-09-06
 
 title: 'USB Auto-Attach in Qubes'
 tagline: 'Allowing Qubes USB VM to automatically attach devices to other VMs'
-description: '
-In this post I describe an RPC implementation and a Qrexec policy
-for Qubes OS to automatically attach specific USB devices to desired VMs
-when they are connected to sys-usb.
-'
+description: >
+  In this post I describe an RPC implementation and a Qrexec policy
+  for Qubes OS to automatically attach specific USB devices to desired VMs
+  when they are connected to sys-usb.
 
-categories: [ 'hw/usb', 'sw/qubes' ]
+categories:
+- 'hardware/usb'
+- 'software/qubes'
+- 'software/udev'
+
 ---
 
-{% if true -%}
-<span class='hidden'>$
-\newcommand{\sysusb}{\textsf{sys-usb}}
-\newcommand{\DomZ}{\textsf{Dom0}}
-$</span>
-{%- endif -%}
+<script>
+  var latexGlobalMacros = {
+    "\\DomZ": "\\textsf{Dom0}",
+    "\\sysusb": "\\textsf{sys-usb}"
+  };
+</script>
 
 I have been using [Qubes](https://www.qubes-os.org/intro/) as my primary OS[^qubes] for a while now,
 and I am extremely happy with the level of control it provides me over my apps.
@@ -124,9 +127,10 @@ You may compromise the security of your system, or damage it otherwise.
 
 #### =fa^user-lock^fa= Changes in $\DomZ$
 
-There are two main changes necessary in $\DomZ$:  
-(a) a new Qrexec service to listen to device attachment requests from $\sysusb$,  
-(b) a Qrexec policy to restrict the source and destination VMs for calls to this service.
+There are two main changes necessary in $\DomZ$:
+
+1. a new Qrexec service to listen to device attachment requests from $\sysusb$, and
+2. a Qrexec policy to restrict the source and destination VMs for calls to this service.
 
 ##### The Qrexec Service
 
@@ -155,7 +159,8 @@ An example prompt from my $\sysusb$ should be displayed below.
 and `work+__+sda` is the service argument.
 In this case, I pack the target VM name (`work`)
 and block device name (`sda` within $\sysusb$)
-together by concatenating both using `+__+`.
+together by concatenating both using `+__+`
+(a delimiter that isn't expected to appear in VM or device names).
 
 <figure>
   <img src='dom0_prompt.png' alt='A Dom0 Prompt'/>

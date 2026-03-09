@@ -17,7 +17,7 @@
       margin: 1.25em 0;
 
       .categories {
-        margin: 0.4em 0 0 6.5em;
+        margin: 0.2em 0 0 6.5em;
         opacity: 0.8;
         font-size: 0.85em;
 
@@ -25,7 +25,7 @@
           display: inline-block;
           height: 1.5em;
           letter-spacing: 0.025em;
-          margin: 0em 0.3125em;
+          margin: 0.2em 0.3125em;
           border-radius: 0.3125em;
           background: #e4e4e4;
         }
@@ -45,6 +45,12 @@
 
       .title {
         font-weight: bold;
+      }
+
+      .change {
+        margin: 0.15em 0 0 7.5em;
+        font-size: 0.775em;
+        opacity: 0.8;
       }
     }
   }
@@ -75,18 +81,17 @@
         }
       }
       .cat-icon {
-        margin-left: 1em;
+        margin-left: 0.25em;
         opacity: 0.65;
         color: #6c757d;
       }
 
       a {
         letter-spacing: 0.025em;
-        padding: 0em 0.5em;
+        padding: 0 0.5em 0 0.25em;
       }
 
       small {
-        margin-left: 8px;
         opacity: 0.5;
         font-size: 0.85em;
       }

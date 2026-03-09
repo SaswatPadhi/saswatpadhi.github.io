@@ -5,13 +5,15 @@ post_date: 2019-09-15
 
 title: 'Variadic Macros in LaTeX'
 tagline: 'Crafting LaTeX macros that accept any number of arguments'
-description: '
-In this post I describe a LaTeX command, \VARIADIC,
-that allows for easily generating new variadic LaTeX commands,
-i.e., commands that accept an arbitrary number of arguments.
-'
+description: >
+  In this post I describe a LaTeX command, \VARIADIC,
+  that allows for easily generating new variadic LaTeX commands,
+  i.e., commands that accept an arbitrary number of arguments.
 
-categories: [ 'sw/latex' ]
+categories:
+- 'markup/math'
+- 'software/latex'
+
 ---
 
 Recently, while drafting a paper I found myself wishing for arbitrary-arity macros in LaTeX.

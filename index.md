@@ -55,8 +55,7 @@ title: Home
 
 I am a <span class='color-medium-accent'>senior software engineer</span>
 working on the [Compute Engine][GCE] within the [Google Cloud Platform][GCP].
-Previously, I have worked on virtualization projects
-across [chromeOS] and [Android] platforms within Google,
+Previously, I have worked on virtualization projects across [chromeOS] and [Android],
 and as an <span class='color-medium-accent'>applied scientist</span>
 in the [Automated Reasoning Group][ARG] at [Amazon Web Services][AWS].
 

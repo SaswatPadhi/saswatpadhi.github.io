@@ -15,5 +15,8 @@ presented_on: 2023-12-16
 
 time: 10
 frames: 8
-tech: {icon: 'fab fa-google', name: 'Google Slides'}
+tech:
+  icon: 'fab fa-google'
+  name: 'Google Slides'
+
 ---

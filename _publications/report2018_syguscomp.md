@@ -23,9 +23,9 @@ links:
 
 ###### Abstract
 
-_Syntax-guided synthesis (SyGuS)_ is the computational problem of finding an implementation $$ f $$
-that meets both a semantic constraint given by a logical formula $$ \varphi $$ in a background theory $$ \mathbb{T} $$,
-and a syntactic constraint given by a grammar $$ G $$, which specifies the allowed set of candidate implementations.
+_Syntax-guided synthesis (SyGuS)_ is the computational problem of finding an implementation $ f $
+that meets both a semantic constraint given by a logical formula $ \varphi $ in a background theory $ \mathbb{T} $,
+and a syntactic constraint given by a grammar $ G $, which specifies the allowed set of candidate implementations.
 Such a synthesis problem can be formally defined in the _SyGuS input format (SyGuS-IF)_, a language that is built on top of SMT-LIB.
 
 The syntax-guided synthesis competition (_SyGuS-Comp_) is an effort to facilitate,

@@ -13,14 +13,13 @@
         stroke-linecap='round' stroke-linejoin='round' stroke='Olive' stroke-width='2'
         class='fragment' data-fragment-index='5' />
 
-  <svg x='5' y='28' width='150' height='40'
-       class='fragment' data-fragment-index='3'>
-    <foreignobject x='10%' y='-50%' width='100%' height='125%'>
-      <span style='color:SlateGray; font-size:0.375em'>
+    <foreignobject x='13' y='34' width='600' height='160'
+                   transform='scale(0.4)' transform-origin='13 34'
+                   class='fragment' data-fragment-index='3'>
+      <span style='color:SlateGray;'>
       $ \mathcal{I} := (\neg G \Rightarrow Q) $
       </span>
     </foreignobject>
-  </svg>
 
   <path d='M 139,45 L 185,45' marker-end='url(#arrow1)' fill='none'
         stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
@@ -32,9 +31,10 @@
              stroke-linejoin='round' stroke-width='4' stroke='#444' />
     <polygon points='89.5,49 90.5,49 179.5,25 90.5,1 89.5,1 0.5,25' fill='White'
              stroke-linejoin='round' stroke-width='2' stroke='#444' />
-    <foreignobject x='17%' y='-25.5%' width='100%' height='125%'>
-      <span style='color:DarkMagenta; font-size:0.35em'>
-      $ \\\{ \, \mathcal{I} \wedge G \, \\\} \;\;S\;\; \\\{ \, \mathcal{I} \, \\\} $
+    <foreignobject x='17%' y='-25.5%' width='400%' height='125%'
+                   transform='scale(0.35)' transform-origin='18% 58%'>
+      <span style='color:DarkMagenta;'>
+      $ \{ \, \mathcal{I} \wedge G \, \} \;\;S\;\; \{ \, \mathcal{I} \, \} $
       </span>
     </foreignobject>
   </svg>
@@ -47,14 +47,13 @@
         stroke-linecap='round' stroke-linejoin='round' stroke='SlateGray' stroke-width='2'
         class='fragment' data-fragment-index='5' />
 
-  <svg x='130' y='-40' width='285' height='40'
-       class='fragment' data-fragment-index='5'>
-    <foreignobject x='0' y='-50%' width='100%' height='125%'>
-      <span style='color:SlateGray; font-size:0.375em'>
-      $ \mathcal{I} := \mathcal{I} \;\wedge\; \mathsf{VPIE}([\mathtt{assume (}\mathcal{I} \wedge G\mathtt{) ;} S],\; \mathcal{I}) $
-      </span>
-    </foreignobject>
-  </svg>
+  <foreignobject x='130' y='-34' width='750' height='55'
+                 transform='scale(0.4)' transform-origin='130 -34'
+                 class='fragment' data-fragment-index='5'>
+    <span style='color:SlateGray;'>
+    $ \mathcal{I} := \mathcal{I} \; \wedge \; \mathsf{VPIE} ( [\mathtt{assume (}\mathcal{I} \wedge G\mathtt{) ;} S],\; \mathcal{I} ) $
+    </span>
+  </foreignobject>
 
   <svg x='420' y='25' width='80' height='40'
        class='fragment' data-fragment-index='6'>
@@ -62,8 +61,9 @@
              stroke-linejoin='round' stroke-width='4' stroke='#444' />
     <polygon points='39.5,39 40.5,39 79.5,20 40.5,1 39.5,1 0.5,20' fill='White'
              stroke-linejoin='round' stroke-width='2' stroke='#444' />
-    <foreignobject x='20%' y='-40%' width='100%' height='125%'>
-      <span style='color:DarkMagenta; font-size:0.35em'>
+    <foreignobject x='20%' y='-40%' width='400%' height='500%'
+                   transform='scale(0.35)' transform-origin='20% 60%'>
+      <span style='color:DarkMagenta;'>
       $ P \Rightarrow \mathcal{I} $
       </span>
     </foreignobject>
@@ -113,12 +113,11 @@
         stroke-linecap='round' stroke-linejoin='round' stroke='ForestGreen' stroke-width='2'
         class='fragment' data-fragment-index='9' />
 
-  <svg x='420' y='80' width='80' height='40'
-       class='fragment' data-fragment-index='9'>
-    <foreignobject x='43.5%' y='-40%' width='100%' height='125%'>
-      <span style='color:ForestGreen; font-size:0.375em'>
-      $ \mathcal{I} $
-      </span>
-    </foreignobject>
-  </svg>
+  <foreignobject x='455' y='90' width='320' height='160'
+                 transform='scale(0.4)' transform-origin='455 90'
+                 class='fragment' data-fragment-index='9'>
+    <span style='color:ForestGreen;'>
+    $ \mathcal{I} $
+    </span>
+  </foreignobject>
 </svg>
