@@ -44,7 +44,8 @@ title: Blog
               {%- endif -%}
               {%- assign raw_tree = raw_tree | append: "," | append: cur_path -%}
               {%- if forloop.first -%} # {%- else -%} / {%- endif -%}
-                &thinsp;<a href='' class='color-medium-accent'>{{ part }}</a>
+                &thinsp;<a href='/blog/#{{ prefix | join: "_"}}'
+                           class='color-medium-accent'>{{ part }}</a>
               {%- unless forloop.last -%} &thinsp; {%- endunless -%}
             {%- endfor -%}
             &ensp;</span>

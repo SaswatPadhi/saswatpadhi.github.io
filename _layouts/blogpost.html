@@ -36,7 +36,7 @@ css: [ 'blogpost' ]
   {% for change in changes %}
   <details>
     <summary>
-      Updated on {{ change.date | date_to_long_string }}
+      Edited on {{ change.date | date_to_long_string }}
       <i class='fas fa-fw fa-minus'></i>
       {% include tools/text_process.md data=change.title %}
     </summary>
